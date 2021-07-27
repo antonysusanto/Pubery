@@ -24,6 +24,10 @@
 		0AFBFBDD26AF4B970023A4DF /* CourseStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFBDC26AF4B970023A4DF /* CourseStoryViewController.swift */; };
 		0AFBFBDF26AF4BA00023A4DF /* CourseEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFBDE26AF4BA00023A4DF /* CourseEndViewController.swift */; };
 		0AFBFBE126AF4BAA0023A4DF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFBE026AF4BAA0023A4DF /* ProfileViewController.swift */; };
+		EA7EFBA726B00CBF00B684BA /* Children+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFBA326B00CBF00B684BA /* Children+CoreDataClass.swift */; };
+		EA7EFBA826B00CBF00B684BA /* Children+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFBA426B00CBF00B684BA /* Children+CoreDataProperties.swift */; };
+		EA7EFBA926B00CBF00B684BA /* Progress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFBA526B00CBF00B684BA /* Progress+CoreDataClass.swift */; };
+		EA7EFBAA26B00CBF00B684BA /* Progress+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFBA626B00CBF00B684BA /* Progress+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		0AFBFBDC26AF4B970023A4DF /* CourseStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStoryViewController.swift; sourceTree = "<group>"; };
 		0AFBFBDE26AF4BA00023A4DF /* CourseEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEndViewController.swift; sourceTree = "<group>"; };
 		0AFBFBE026AF4BAA0023A4DF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EA7EFBA326B00CBF00B684BA /* Children+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Children+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EA7EFBA426B00CBF00B684BA /* Children+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Children+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EA7EFBA526B00CBF00B684BA /* Progress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EA7EFBA626B00CBF00B684BA /* Progress+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,9 +287,21 @@
 		0AFBFBC826AF4ABE0023A4DF /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				EA7EFBAB26B00CC500B684BA /* Managed Object */,
 				0AFBFBA226AF478D0023A4DF /* Pubery.xcdatamodeld */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		EA7EFBAB26B00CC500B684BA /* Managed Object */ = {
+			isa = PBXGroup;
+			children = (
+				EA7EFBA326B00CBF00B684BA /* Children+CoreDataClass.swift */,
+				EA7EFBA426B00CBF00B684BA /* Children+CoreDataProperties.swift */,
+				EA7EFBA526B00CBF00B684BA /* Progress+CoreDataClass.swift */,
+				EA7EFBA626B00CBF00B684BA /* Progress+CoreDataProperties.swift */,
+			);
+			path = "Managed Object";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,8 +383,12 @@
 				0AFBFBDD26AF4B970023A4DF /* CourseStoryViewController.swift in Sources */,
 				0AFBFBDB26AF4B8C0023A4DF /* CourseCoverViewController.swift in Sources */,
 				0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */,
+				EA7EFBA926B00CBF00B684BA /* Progress+CoreDataClass.swift in Sources */,
 				0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */,
+				EA7EFBA826B00CBF00B684BA /* Children+CoreDataProperties.swift in Sources */,
 				0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */,
+				EA7EFBA726B00CBF00B684BA /* Children+CoreDataClass.swift in Sources */,
+				EA7EFBAA26B00CBF00B684BA /* Progress+CoreDataProperties.swift in Sources */,
 				0AFBFBE126AF4BAA0023A4DF /* ProfileViewController.swift in Sources */,
 				0AFBFBD726AF4B750023A4DF /* OnboardingViewController.swift in Sources */,
 				0AFBFBDF26AF4BA00023A4DF /* CourseEndViewController.swift in Sources */,
