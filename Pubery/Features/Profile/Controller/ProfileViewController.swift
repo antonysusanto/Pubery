@@ -11,14 +11,23 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var tableProfile: UITableView!
     
-    var check = 2
+    var check = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        navBar()
     }
     
-    func setupView(){
+    func navBar() {
+        if check == 0 {
+            navigationController?.setNavigationBarHidden(true, animated: false)
+        } else {
+            navigationController?.setNavigationBarHidden(false, animated: false)
+        }
+    }
+    
+    func setupView() {
         tableProfile.register(UINib(nibName: "EmptyViewCell", bundle: nil), forCellReuseIdentifier: "emptyID")
         tableProfile.register(UINib(nibName: "AddChildViewCell", bundle: nil), forCellReuseIdentifier: "addID")
         tableProfile.register(UINib(nibName: "ListDataViewCell", bundle: nil), forCellReuseIdentifier: "listID")
@@ -41,7 +50,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if check == 0 {
-            return 272
+            return 450
         } else {
             return 106
         }
