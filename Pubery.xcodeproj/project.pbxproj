@@ -24,6 +24,12 @@
 		0AFBFBDD26AF4B970023A4DF /* CourseStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFBDC26AF4B970023A4DF /* CourseStoryViewController.swift */; };
 		0AFBFBDF26AF4BA00023A4DF /* CourseEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFBDE26AF4BA00023A4DF /* CourseEndViewController.swift */; };
 		0AFBFBE126AF4BAA0023A4DF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFBE026AF4BAA0023A4DF /* ProfileViewController.swift */; };
+		EA7EFBB326B0F5D500B684BA /* EmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFBB126B0F5D500B684BA /* EmptyViewCell.swift */; };
+		EA7EFBB426B0F5D500B684BA /* EmptyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7EFBB226B0F5D500B684BA /* EmptyViewCell.xib */; };
+		EA7EFBB926B0F8EC00B684BA /* AddChildViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFBB726B0F8EC00B684BA /* AddChildViewCell.swift */; };
+		EA7EFBBA26B0F8EC00B684BA /* AddChildViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7EFBB826B0F8EC00B684BA /* AddChildViewCell.xib */; };
+		EA7EFBBF26B0FB4900B684BA /* ListDataViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFBBD26B0FB4900B684BA /* ListDataViewCell.swift */; };
+		EA7EFBC026B0FB4900B684BA /* ListDataViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7EFBBE26B0FB4900B684BA /* ListDataViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,12 @@
 		0AFBFBDC26AF4B970023A4DF /* CourseStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStoryViewController.swift; sourceTree = "<group>"; };
 		0AFBFBDE26AF4BA00023A4DF /* CourseEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEndViewController.swift; sourceTree = "<group>"; };
 		0AFBFBE026AF4BAA0023A4DF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EA7EFBB126B0F5D500B684BA /* EmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewCell.swift; sourceTree = "<group>"; };
+		EA7EFBB226B0F5D500B684BA /* EmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewCell.xib; sourceTree = "<group>"; };
+		EA7EFBB726B0F8EC00B684BA /* AddChildViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildViewCell.swift; sourceTree = "<group>"; };
+		EA7EFBB826B0F8EC00B684BA /* AddChildViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChildViewCell.xib; sourceTree = "<group>"; };
+		EA7EFBBD26B0FB4900B684BA /* ListDataViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataViewCell.swift; sourceTree = "<group>"; };
+		EA7EFBBE26B0FB4900B684BA /* ListDataViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDataViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +227,7 @@
 		0AFBFBBF26AF4A2A0023A4DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EA7EFBAC26B03E4000B684BA /* Table View Cell */,
 				0AFBFBD426AF4B630023A4DF /* Profile.storyboard */,
 			);
 			path = View;
@@ -284,6 +297,19 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		EA7EFBAC26B03E4000B684BA /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA7EFBB126B0F5D500B684BA /* EmptyViewCell.swift */,
+				EA7EFBB226B0F5D500B684BA /* EmptyViewCell.xib */,
+				EA7EFBB726B0F8EC00B684BA /* AddChildViewCell.swift */,
+				EA7EFBB826B0F8EC00B684BA /* AddChildViewCell.xib */,
+				EA7EFBBD26B0FB4900B684BA /* ListDataViewCell.swift */,
+				EA7EFBBE26B0FB4900B684BA /* ListDataViewCell.xib */,
+			);
+			path = "Table View Cell";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,9 +372,12 @@
 				0AFBFBD526AF4B630023A4DF /* Profile.storyboard in Resources */,
 				0AFBFBA926AF478E0023A4DF /* LaunchScreen.storyboard in Resources */,
 				0AFBFBCE26AF4B320023A4DF /* CourseCover.storyboard in Resources */,
+				EA7EFBC026B0FB4900B684BA /* ListDataViewCell.xib in Resources */,
+				EA7EFBB426B0F5D500B684BA /* EmptyViewCell.xib in Resources */,
 				0AFBFBD026AF4B3D0023A4DF /* CourseStory.storyboard in Resources */,
 				0AFBFBA626AF478E0023A4DF /* Assets.xcassets in Resources */,
 				0AFBFBCC26AF4B220023A4DF /* Home.storyboard in Resources */,
+				EA7EFBBA26B0F8EC00B684BA /* AddChildViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +392,10 @@
 				0AFBFBDD26AF4B970023A4DF /* CourseStoryViewController.swift in Sources */,
 				0AFBFBDB26AF4B8C0023A4DF /* CourseCoverViewController.swift in Sources */,
 				0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */,
+				EA7EFBB326B0F5D500B684BA /* EmptyViewCell.swift in Sources */,
 				0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */,
+				EA7EFBBF26B0FB4900B684BA /* ListDataViewCell.swift in Sources */,
+				EA7EFBB926B0F8EC00B684BA /* AddChildViewCell.swift in Sources */,
 				0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */,
 				0AFBFBE126AF4BAA0023A4DF /* ProfileViewController.swift in Sources */,
 				0AFBFBD726AF4B750023A4DF /* OnboardingViewController.swift in Sources */,
