@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
 
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.setNavigationBarHidden(true, animated: false)
 //        navigationController!.navigationBar.sizeToFit()
         
         tableView.register(CollectionViewTableViewCell.nib(), forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
@@ -23,22 +24,30 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
     }
     
+    func showEmptyView(){
+        let emptyView = EmptyProfile(frame: CGRect(x: 0, y: 40, width: 414, height: 180))
+        self.view.addSubview(emptyView)
+    }
+    
+    func showFilledView(){
+        let filledView = FilledProfile(frame: CGRect(x: 0, y: 40, width: 414, height: 180))
+        self.view.addSubview(filledView)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        }
+//        if section == 0 {
+//            return 1
+//        }
         return changesModel.responses.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            return UITableViewCell()
-        case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as! CollectionViewTableViewCell
             cell.changes = changesModel.responses[indexPath.row]
             return cell
@@ -51,8 +60,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section{
         case 0:
-            return 200
-        case 1:
             return 300
         default:
             return 300
