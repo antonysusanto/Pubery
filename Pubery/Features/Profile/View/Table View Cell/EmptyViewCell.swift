@@ -15,7 +15,7 @@ class EmptyViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        emptyButton.layer.cornerRadius = 14
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

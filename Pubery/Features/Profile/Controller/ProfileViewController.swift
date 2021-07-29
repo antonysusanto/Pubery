@@ -52,7 +52,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         if check == 0 {
             return 450
         } else {
-            return 106
+            return 140
         }
     }
     
