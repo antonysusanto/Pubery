@@ -16,9 +16,13 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 	
 	let pages:[[Any]] =
 		[
-			[UIImage(named: "avatar-user-persona-face")!,"this is content"],
-			[UIImage(named: "avatar-user-persona-face")!,"this is another content for page 2", "it has 2 paragraph"],
-			["this is page 3", UIImage(named: "avatar-user-persona-face")!, "the image is at the middle"]
+			[UIImage(named: "page1")!,"Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang."],
+			[UIImage(named: "page2a")!,"Putri merasakan perutnya seperti ditekan-tekan "],
+			[UIImage(named: "page3")!, "Ketika Putri membuka celana dalamnya di kamar mandi, Putri kaget karena menemukan bercak-bercak merah.", "Hmm, sepertinya Putri tahu apa yang terjadi pada dirinya, namun dia bingung apa yang harus dilakukan untuk pertama kali!"],
+			["Bisakah kamu menebak apa yang sedang terjadi pada Putri?"],
+			[UIImage(named: "page5")!, "Akhirnya, walau dengan perasaan sedikit malu, Putri memanggil ibunya.", "”Anak ibu sudah besar ya. Sudah dapat menstruasi pertama. Sekarang bersihkan dulu celananya lalu ambil celana yang bersih dan pakaikan pembalut,” ujar Ibu."],
+			["“Anak ibu pintar sekali! Sekarang yuk ambil celana dalam yang baru, kemudian pasangkan pembalut.”", UIImage(named: "page6")!],
+			["Setelah itu, Putri diminta untuk istirahat selagi Ibu menyiapkan air putih hangat.", UIImage(named: "page7")!, "Walaupun perutnya masih sedikit sakit, Putri justru merasa gembira. “Sekarang aku sudah besar. Aku sudah paham apa yang harus dilakukan ketika menstruasi!”"],
 		]
 		
 	var contentWidth: CGFloat = 0.0
@@ -58,16 +62,17 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 			
 			for elementIndex in 0..<pages[pageIndex].count {
 				if (pages[pageIndex][elementIndex] is UIImage){
-					let imageView = UIImageView(frame: CGRect(x: 0, y: 80 * (elementIndex+1), width: 100, height: 100))
+					let imageView = UIImageView(frame: CGRect(x: 0, y: 80 * (elementIndex+1), width: 200, height: 200))
 					imageView.image = pages[pageIndex][elementIndex] as? UIImage
 					imageView.contentMode = .scaleAspectFit
 					view.addSubview(imageView)
 				} else if (pages[pageIndex][elementIndex] is String) {
-					let label = UILabel(frame: CGRect(x: 0, y: 80 * (elementIndex+1), width: 100, height: 100))
+					let label = UILabel(frame: CGRect(x: 0, y: 120 + 80 * (elementIndex+1), width: 300, height: 120))
 					label.text = pages[pageIndex][elementIndex] as? String
 					label.numberOfLines = 0
 					label.lineBreakMode = .byWordWrapping
 //						l.textAlignment = .center
+					label.sizeToFit()
 					view.addSubview(label)
 				}
 			}
@@ -109,11 +114,7 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 		if (currentPage != pages.count-1){
 			scrollView.scrollRectToVisible(CGRect(x: contentWidth * CGFloat(currentPage+1), y: 0, width: contentWidth, height: 1), animated: true)
 		} else {
-//				let story = UIStoryboard(name: "Home", bundle:nil)
-//				let vc = story.instantiateViewController(withIdentifier: "TabBar")
-//				UIApplication.shared.windows.first?.rootViewController = vc
-//				UIApplication.shared.windows.first?.makeKeyAndVisible()
-//			UserDefaults.standard.set(true, forKey: "onboardingShown")
+
 		}
 
 	}
