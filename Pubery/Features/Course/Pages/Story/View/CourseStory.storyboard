@@ -11,17 +11,49 @@
         <!--Course Story View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="CourseStoryViewController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CourseStory" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CourseStoryViewController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9m-R2-EVA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="649"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aDv-5d-cHd">
+                                <rect key="frame" x="146" y="787" width="122" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INI-WJ-L8H">
+                                <rect key="frame" x="31" y="787" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-hx-yNX">
+                                <rect key="frame" x="348" y="787" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="H9m-R2-EVA" secondAttribute="bottom" constant="169" id="0r6-q4-VXq"/>
+                            <constraint firstItem="H9m-R2-EVA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Z8D-jN-TwC"/>
+                            <constraint firstItem="H9m-R2-EVA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="lxH-te-c1u"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="H9m-R2-EVA" secondAttribute="trailing" id="ubd-hg-gqM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="pCW-hx-yNX" id="4w9-UR-DVL"/>
+                        <outlet property="pageControl" destination="aDv-5d-cHd" id="ObE-S4-jsn"/>
+                        <outlet property="scrollView" destination="H9m-R2-EVA" id="tBR-6P-fH0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107" y="89"/>
+            <point key="canvasLocation" x="105.79710144927537" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
