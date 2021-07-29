@@ -9,126 +9,119 @@ import UIKit
 
 class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 
-		@IBOutlet weak var scrollView: UIScrollView!
-		@IBOutlet weak var pageControl: UIPageControl!
-		@IBOutlet weak var nextButton: UIButton!
+	@IBOutlet weak var scrollView: UIScrollView!
+	@IBOutlet weak var pageControl: UIPageControl!
+	@IBOutlet weak var nextButton: UIButton!
+	@IBOutlet weak var pageNumber: UILabel!
+	
+	let pages:[[Any]] =
+		[
+			[UIImage(named: "avatar-user-persona-face")!,"this is content"],
+			[UIImage(named: "avatar-user-persona-face")!,"this is another content for page 2", "it has 2 paragraph"],
+			["this is page 3", UIImage(named: "avatar-user-persona-face")!, "the image is at the middle"]
+		]
 		
-		let images = ["avatar-user-persona-face","avatar-user-persona-face","avatar-user-persona-face"]
-		let titles = ["Education through storytelling","Interactive and Fun","Personalized Material"]
-		let subtitles = ["Sekarang ayah dan ibu tidak perlu cemas bagaimana mengajarkan edukasi seks kepada anak","","Materi yang dipelajari akan disesuaikan dengan si kecil"]
+	var contentWidth: CGFloat = 0.0
+	var contentHeight: CGFloat = 0.0
+	var contentFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		self.view.layoutIfNeeded()
 		
-		var contentWidth: CGFloat = 0.0
-		var contentHeight: CGFloat = 0.0
-		var contentFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
+		setupScrollView()
+		setupContent()
+		setupPageControl()
+		updatePageControl()
+		setupButton()
+		self.scrollView.backgroundColor = .gray.withAlphaComponent(0.2)
+	}
+	
+	func setupScrollView(){
+		scrollView.delegate = self
+		scrollView.contentSize.width = scrollView.frame.size.width * CGFloat(pages.count)
+		scrollView.contentSize.height = 1
+		scrollView.isPagingEnabled = true
+		scrollView.bounces = false
+		scrollView.showsHorizontalScrollIndicator = false
+	}
+	
+	func setupContent(){
+		contentWidth = scrollView.frame.size.width
+		contentHeight = scrollView.frame.size.height
+		contentFrame.size = CGSize(width: contentWidth, height: contentHeight)
 		
-		override func viewDidLoad() {
-			super.viewDidLoad()
-			self.view.layoutIfNeeded()
+		for pageIndex in 0..<pages.count {
+			contentFrame.origin.x = contentWidth * CGFloat(pageIndex)
 			
-			setupScrollView()
-			setupContent()
-			setupPageControl()
-			setupButton()
-		}
-		
-		func setupScrollView(){
-			scrollView.delegate = self
-			scrollView.contentSize.width = scrollView.frame.size.width * CGFloat(titles.count)
-			scrollView.contentSize.height = 1
-			scrollView.isPagingEnabled = true
-			scrollView.bounces = false
-			scrollView.showsHorizontalScrollIndicator = false
-		}
-		
-		func setupContent(){
-			contentWidth = scrollView.frame.size.width
-			contentHeight = scrollView.frame.size.height
-			contentFrame.size = CGSize(width: contentWidth, height: contentHeight)
+			let view = UIView(frame: contentFrame)
 			
-			for index in 0..<titles.count {
-				contentFrame.origin.x = contentWidth * CGFloat(index)
-				let st = UIStackView(frame: contentFrame)
-				st.axis = .vertical
-//				st.translatesAutoresizingMaskIntoConstraints = false
-//				st.distribution = .fillProportionally
-				
-				
-				let im = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: 100, height: 50)))
-				im.image = UIImage(named: "avatar-user-persona-face")
-				im.contentMode = .scaleAspectFit
-				
-//				let imageViewWidthConstraint = NSLayoutConstraint(item: im, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 100)
-//				let imageViewHeightConstraint = NSLayoutConstraint(item: im, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
-//				im.addConstraints([imageViewWidthConstraint, imageViewHeightConstraint])
-				
-				let i = UIImageView(image: UIImage(named: "avatar-user-persona-face"))
-				i.frame = CGRect(origin: .zero, size: CGSize(width: 20, height: 20))
-				i.contentMode = .scaleAspectFit
-
-				
-				let l = UILabel()
-				l.text = "asdasd"
-				l.textAlignment = .center
-				let ll = UILabel()
-				ll.text = "asdqweqweqwqweq qwe asd"
-				
-				
-//				let page = CourseStory(frame: contentFrame)
-//				page.imageView.image = UIImage(named: images[index])
-//				page.title.text = titles[index]
-//				page.subtitle.text = subtitles[index]
-//				page.stack.addArrangedSubview(im)
-//				page.stack.addArrangedSubview(i)
-//				page.stack.addArrangedSubview(l)
-//				page.stack.addArrangedSubview(ll)
-				
-				st.addArrangedSubview(im)
-				st.addArrangedSubview(i)
-				st.addArrangedSubview(l)
-				st.addArrangedSubview(ll)
-//
-				scrollView.addSubview(st)
+			for elementIndex in 0..<pages[pageIndex].count {
+				if (pages[pageIndex][elementIndex] is UIImage){
+					let imageView = UIImageView(frame: CGRect(x: 0, y: 80 * (elementIndex+1), width: 100, height: 100))
+					imageView.image = pages[pageIndex][elementIndex] as? UIImage
+					imageView.contentMode = .scaleAspectFit
+					view.addSubview(imageView)
+				} else if (pages[pageIndex][elementIndex] is String) {
+					let label = UILabel(frame: CGRect(x: 0, y: 80 * (elementIndex+1), width: 100, height: 100))
+					label.text = pages[pageIndex][elementIndex] as? String
+					label.numberOfLines = 0
+					label.lineBreakMode = .byWordWrapping
+//						l.textAlignment = .center
+					view.addSubview(label)
+				}
 			}
+			scrollView.addSubview(view)
 		}
-		
-		func setupPageControl(){
-			pageControl.numberOfPages = titles.count
-			pageControl.currentPage = 0
-		}
-		
-		func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-			// used by swiping
-			updatePageControl()
-		}
-		
-		func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-			// used by scrollRectToVisible
-			updatePageControl()
-		}
-		
-		func getCurrentPage() -> Int {
-			return Int(scrollView.contentOffset.x / contentWidth)
-		}
-		
-		func updatePageControl()  {
-			self.pageControl.currentPage = self.getCurrentPage()
-		}
-		
-		func setupButton(){
-			nextButton.layer.cornerRadius = 14
+	}
+	
+	func setupPageControl(){
+		pageControl.numberOfPages = pages.count
+		pageControl.currentPage = 0
+	}
+	
+	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+		// used by swiping
+		updatePageControl()
+	}
+	
+	func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+		// used by scrollRectToVisible
+		updatePageControl()
+	}
+	
+	func getCurrentPage() -> Int {
+		return Int(scrollView.contentOffset.x / contentWidth)
+	}
+	
+	func updatePageControl()  {
+		self.pageControl.currentPage = self.getCurrentPage()
+		pageNumber.text = "\(self.getCurrentPage()+1) dari \(self.pages.count)"
+		pageNumber.sizeToFit()
+	}
+	
+	func setupButton(){
+		nextButton.layer.cornerRadius = 14
+	}
+
+	@IBAction func nextPage(_ sender: Any) {
+		let currentPage = getCurrentPage()
+		if (currentPage != pages.count-1){
+			scrollView.scrollRectToVisible(CGRect(x: contentWidth * CGFloat(currentPage+1), y: 0, width: contentWidth, height: 1), animated: true)
+		} else {
+//				let story = UIStoryboard(name: "Home", bundle:nil)
+//				let vc = story.instantiateViewController(withIdentifier: "TabBar")
+//				UIApplication.shared.windows.first?.rootViewController = vc
+//				UIApplication.shared.windows.first?.makeKeyAndVisible()
+//			UserDefaults.standard.set(true, forKey: "onboardingShown")
 		}
 
-		@IBAction func skip(_ sender: Any) {
-			let currentPage = getCurrentPage()
-			if (currentPage != titles.count-1){
-				scrollView.scrollRectToVisible(CGRect(x: contentWidth * CGFloat(currentPage+1), y: 0, width: contentWidth, height: 1), animated: true)
-			} else {
-				let story = UIStoryboard(name: "Home", bundle:nil)
-				let vc = story.instantiateViewController(withIdentifier: "TabBar")
-				UIApplication.shared.windows.first?.rootViewController = vc
-				UIApplication.shared.windows.first?.makeKeyAndVisible()
-	//			UserDefaults.standard.set(true, forKey: "onboardingShown")
-			}
+	}
 
+	@IBAction func previousPage(_ sender: Any) {
+		let currentPage = getCurrentPage()
+		if (currentPage != 0){
+			scrollView.scrollRectToVisible(CGRect(x: contentWidth * CGFloat(currentPage-1), y: 0, width: contentWidth, height: 1), animated: true)
 		}
+	}
 }

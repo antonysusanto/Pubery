@@ -20,21 +20,34 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="649"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aDv-5d-cHd">
-                                <rect key="frame" x="146" y="787" width="122" height="28"/>
+                                <rect key="frame" x="141" y="747" width="122" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INI-WJ-L8H">
-                                <rect key="frame" x="31" y="787" width="46" height="30"/>
+                                <rect key="frame" x="34" y="747" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="previousPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qXw-5D-UZ6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-hx-yNX">
-                                <rect key="frame" x="348" y="787" width="46" height="30"/>
+                                <rect key="frame" x="351" y="747" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <action selector="nextPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SdB-dF-1OQ"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zs-vi-QPr">
+                                <rect key="frame" x="181" y="772" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -48,6 +61,7 @@
                     <connections>
                         <outlet property="nextButton" destination="pCW-hx-yNX" id="4w9-UR-DVL"/>
                         <outlet property="pageControl" destination="aDv-5d-cHd" id="ObE-S4-jsn"/>
+                        <outlet property="pageNumber" destination="7Zs-vi-QPr" id="LOM-M2-fgu"/>
                         <outlet property="scrollView" destination="H9m-R2-EVA" id="tBR-6P-fH0"/>
                     </connections>
                 </viewController>
