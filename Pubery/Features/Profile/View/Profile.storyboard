@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Data Anak-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,19 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTz-Jm-9rs">
-                                <rect key="frame" x="186" y="438" width="49" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRO-3d-Mbo">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="3bQ-by-WZu"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="3ZB-3Z-IQ2"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JRO-3d-Mbo" secondAttribute="trailing" id="5qf-fe-kMJ"/>
+                            <constraint firstItem="JRO-3d-Mbo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BZ9-Xf-vXU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="JRO-3d-Mbo" secondAttribute="bottom" id="K75-y7-eR4"/>
+                            <constraint firstItem="JRO-3d-Mbo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="lDq-N6-Vbl"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MNa-B6-sRO"/>
+                    <navigationItem key="navigationItem" title="Data Anak" id="MNa-B6-sRO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableProfile" destination="JRO-3d-Mbo" id="yLG-oM-S73"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,8 +50,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eOR-6e-8a5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="avatar-user-persona-face" id="GeQ-F2-OcJ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iWi-vh-IZx">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="iWi-vh-IZx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
