@@ -11,8 +11,12 @@ class FilledProfile: UIView {
     
     @IBOutlet weak var namelabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
-    @IBOutlet weak var percentageLabel: UILabel!
     @IBOutlet weak var content: UIView!
+    @IBOutlet weak var progressView: CircularProgressBar!
+    
+    var changes: Change?
+    var changesModel: ChangeModel = HomeData.changesModel
+    var course: Course?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,12 +29,12 @@ class FilledProfile: UIView {
     }
     
     func commonInit(){
-        Bundle(for: EmptyProfile.self).loadNibNamed("EmptyProfile", owner: self, options: nil)
+        Bundle(for: FilledProfile.self).loadNibNamed("FilledProfile", owner: self, options: nil)
         content.frame = self.bounds
         content.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        genderLabel.text = "Renata"
-        percentageLabel.text = "Perempuan"
-        percentageLabel.text = "24%"
+        namelabel.text = "Renata"
+        genderLabel.text = "Perempuan"
+        progressView.progress = 0.5
         addSubview(content)
     }
 

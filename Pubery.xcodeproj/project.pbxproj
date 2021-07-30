@@ -40,6 +40,7 @@
 		B85EA8C126B283F400DA803D /* EmptyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8C026B283F400DA803D /* EmptyProfile.swift */; };
 		B85EA8C426B2B5D500DA803D /* FilledProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = B85EA8C326B2B5D500DA803D /* FilledProfile.xib */; };
 		B85EA8C626B2B5E900DA803D /* FilledProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8C526B2B5E900DA803D /* FilledProfile.swift */; };
+		B85EA8C826B387BC00DA803D /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */; };
 		EA7EFBA726B00CBF00B684BA /* Children+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFBA326B00CBF00B684BA /* Children+CoreDataClass.swift */; };
 		EA7EFBA826B00CBF00B684BA /* Children+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFBA426B00CBF00B684BA /* Children+CoreDataProperties.swift */; };
 		EA7EFBA926B00CBF00B684BA /* Progress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7EFBA526B00CBF00B684BA /* Progress+CoreDataClass.swift */; };
@@ -88,6 +89,7 @@
 		B85EA8C026B283F400DA803D /* EmptyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyProfile.swift; sourceTree = "<group>"; };
 		B85EA8C326B2B5D500DA803D /* FilledProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilledProfile.xib; sourceTree = "<group>"; };
 		B85EA8C526B2B5E900DA803D /* FilledProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledProfile.swift; sourceTree = "<group>"; };
+		B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		EA7EFBA326B00CBF00B684BA /* Children+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Children+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EA7EFBA426B00CBF00B684BA /* Children+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Children+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EA7EFBA526B00CBF00B684BA /* Progress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 			children = (
 				B85EA8C326B2B5D500DA803D /* FilledProfile.xib */,
 				B85EA8C526B2B5E900DA803D /* FilledProfile.swift */,
+				B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */,
 			);
 			path = FilledProfile;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				EA7EFBBF26B0FB4900B684BA /* ListDataViewCell.swift in Sources */,
 				EA7EFBB926B0F8EC00B684BA /* AddChildViewCell.swift in Sources */,
 				B82142D526B05B03007E73B6 /* Course.swift in Sources */,
+				B85EA8C826B387BC00DA803D /* CircularProgressBar.swift in Sources */,
 				B85EA8B726B2534900DA803D /* CustomAlert.swift in Sources */,
 				EA7EFBA926B00CBF00B684BA /* Progress+CoreDataClass.swift in Sources */,
 				0A69C26226B12DEB002439E9 /* BrushingViewController.swift in Sources */,

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dDB-3F-Rjq">
-                                <rect key="frame" x="0.0" y="288" width="414" height="525"/>
+                                <rect key="frame" x="0.0" y="248" width="414" height="565"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -25,7 +25,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dDB-3F-Rjq" secondAttribute="trailing" id="WE8-2t-HrZ"/>
-                            <constraint firstItem="dDB-3F-Rjq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="200" id="dSS-L9-XgW"/>
+                            <constraint firstItem="dDB-3F-Rjq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="160" id="dSS-L9-XgW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dDB-3F-Rjq" secondAttribute="bottom" id="lv9-Ow-2ew"/>
                             <constraint firstItem="dDB-3F-Rjq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yBe-Ch-cGe"/>
                         </constraints>

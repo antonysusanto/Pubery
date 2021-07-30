@@ -11,6 +11,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     var changesModel: ChangeModel = HomeData.changesModel
+    var data = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +23,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.register(CollectionViewTableViewCell.nib(), forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
+        showHeader()
+    }
+    
+    func showHeader(){
+        if data == 0 {
+            showEmptyView()
+        } else if data > 0 {
+            showFilledView()
+        }
     }
     
     func showEmptyView(){
-        let emptyView = EmptyProfile(frame: CGRect(x: 0, y: 40, width: 414, height: 180))
+        let emptyView = EmptyProfile(frame: CGRect(x: 0, y: 35, width: self.view.frame.width, height: 180))
         self.view.addSubview(emptyView)
     }
     
     func showFilledView(){
-        let filledView = FilledProfile(frame: CGRect(x: 0, y: 40, width: 414, height: 180))
+        let filledView = FilledProfile(frame: CGRect(x: 0, y: 30, width: self.view.frame.height, height: 160))
         self.view.addSubview(filledView)
     }
     
