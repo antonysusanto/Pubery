@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoryStyle2" customModule="Pubery" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="FQ1-Sj-51J" id="Age-26-KCp"/>
+                <outlet property="label" destination="h5c-Vf-6a4" id="ZsI-sm-bWp"/>
+                <outlet property="label2" destination="Bm0-jf-3Nn" id="1i0-xm-XCM"/>
+                <outlet property="view" destination="FuU-jH-ZTE" id="AEy-Ac-GGu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="FuU-jH-ZTE">
+            <rect key="frame" x="0.0" y="0.0" width="303" height="687"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page3" translatesAutoresizingMaskIntoConstraints="NO" id="FQ1-Sj-51J">
+                    <rect key="frame" x="11.5" y="100" width="280" height="343.5"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-Vf-6a4">
+                    <rect key="frame" x="13.5" y="443.5" width="276" height="81.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bm0-jf-3Nn">
+                    <rect key="frame" x="13.5" y="533" width="276" height="81.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <constraints>
+                <constraint firstItem="FQ1-Sj-51J" firstAttribute="centerX" secondItem="FuU-jH-ZTE" secondAttribute="centerX" id="Ac1-7f-UMx"/>
+                <constraint firstItem="FQ1-Sj-51J" firstAttribute="height" secondItem="FuU-jH-ZTE" secondAttribute="height" multiplier="0.5" id="BQh-20-Ncx"/>
+                <constraint firstItem="FQ1-Sj-51J" firstAttribute="top" secondItem="FuU-jH-ZTE" secondAttribute="top" constant="100" id="Dsi-gE-h7x"/>
+                <constraint firstItem="h5c-Vf-6a4" firstAttribute="top" secondItem="FQ1-Sj-51J" secondAttribute="bottom" id="G1u-ST-siZ"/>
+                <constraint firstItem="Bm0-jf-3Nn" firstAttribute="top" secondItem="h5c-Vf-6a4" secondAttribute="bottom" constant="8" symbolic="YES" id="HKi-Md-HzC"/>
+                <constraint firstItem="Bm0-jf-3Nn" firstAttribute="width" secondItem="FuU-jH-ZTE" secondAttribute="width" multiplier="0.910891" id="Nl7-PO-zp0"/>
+                <constraint firstItem="h5c-Vf-6a4" firstAttribute="width" secondItem="FuU-jH-ZTE" secondAttribute="width" multiplier="0.90991" id="hkX-hd-OUH"/>
+                <constraint firstItem="Bm0-jf-3Nn" firstAttribute="centerX" secondItem="FuU-jH-ZTE" secondAttribute="centerX" id="jB6-C9-8PC"/>
+                <constraint firstItem="h5c-Vf-6a4" firstAttribute="centerX" secondItem="FuU-jH-ZTE" secondAttribute="centerX" id="nbm-LH-U3e"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="51.449275362318843" y="54.575892857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="page3" width="280" height="190"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

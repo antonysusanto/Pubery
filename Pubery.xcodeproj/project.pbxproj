@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A1F5FE426B33D0A003A8EB0 /* ImageStatic.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A1F5FE326B33D0A003A8EB0 /* ImageStatic.xib */; };
-		0A1F5FE626B33D1E003A8EB0 /* ImageStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F5FE526B33D1E003A8EB0 /* ImageStatic.swift */; };
+		0A1F5FE426B33D0A003A8EB0 /* StoryStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A1F5FE326B33D0A003A8EB0 /* StoryStyle1.xib */; };
+		0A1F5FE626B33D1E003A8EB0 /* StoryStyle1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F5FE526B33D1E003A8EB0 /* StoryStyle1.swift */; };
 		0A69C26026B12DDD002439E9 /* Brushing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C25F26B12DDD002439E9 /* Brushing.storyboard */; };
 		0A69C26226B12DEB002439E9 /* BrushingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C26126B12DEB002439E9 /* BrushingViewController.swift */; };
 		0A69C26726B12E0B002439E9 /* Pads.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C26626B12E0B002439E9 /* Pads.storyboard */; };
 		0A69C26926B12E16002439E9 /* PadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C26826B12E16002439E9 /* PadsViewController.swift */; };
+		0AE7329B26B3ACFA00A80006 /* StoryStyle2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7329A26B3ACFA00A80006 /* StoryStyle2.swift */; };
+		0AE7329D26B3AD0300A80006 /* StoryStyle2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7329C26B3AD0300A80006 /* StoryStyle2.xib */; };
 		0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */; };
 		0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */; };
 		0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFBA226AF478D0023A4DF /* Pubery.xcdatamodeld */; };
@@ -44,12 +46,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A1F5FE326B33D0A003A8EB0 /* ImageStatic.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageStatic.xib; sourceTree = "<group>"; };
-		0A1F5FE526B33D1E003A8EB0 /* ImageStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStatic.swift; sourceTree = "<group>"; };
+		0A1F5FE326B33D0A003A8EB0 /* StoryStyle1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryStyle1.xib; sourceTree = "<group>"; };
+		0A1F5FE526B33D1E003A8EB0 /* StoryStyle1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryStyle1.swift; sourceTree = "<group>"; };
 		0A69C25F26B12DDD002439E9 /* Brushing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Brushing.storyboard; sourceTree = "<group>"; };
 		0A69C26126B12DEB002439E9 /* BrushingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushingViewController.swift; sourceTree = "<group>"; };
 		0A69C26626B12E0B002439E9 /* Pads.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pads.storyboard; sourceTree = "<group>"; };
 		0A69C26826B12E16002439E9 /* PadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadsViewController.swift; sourceTree = "<group>"; };
+		0AE7329A26B3ACFA00A80006 /* StoryStyle2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryStyle2.swift; sourceTree = "<group>"; };
+		0AE7329C26B3AD0300A80006 /* StoryStyle2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryStyle2.xib; sourceTree = "<group>"; };
 		0AFBFB9626AF478D0023A4DF /* Pubery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pubery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -326,8 +330,10 @@
 			isa = PBXGroup;
 			children = (
 				0AFBFBCF26AF4B3D0023A4DF /* CourseStory.storyboard */,
-				0A1F5FE326B33D0A003A8EB0 /* ImageStatic.xib */,
-				0A1F5FE526B33D1E003A8EB0 /* ImageStatic.swift */,
+				0A1F5FE526B33D1E003A8EB0 /* StoryStyle1.swift */,
+				0A1F5FE326B33D0A003A8EB0 /* StoryStyle1.xib */,
+				0AE7329A26B3ACFA00A80006 /* StoryStyle2.swift */,
+				0AE7329C26B3AD0300A80006 /* StoryStyle2.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -489,11 +495,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFBFBCA26AF4B0C0023A4DF /* Onboarding.storyboard in Resources */,
-				0A1F5FE426B33D0A003A8EB0 /* ImageStatic.xib in Resources */,
+				0A1F5FE426B33D0A003A8EB0 /* StoryStyle1.xib in Resources */,
 				B82142CB26B05ABC007E73B6 /* CollectionViewTableViewCell.xib in Resources */,
 				0AFBFBD226AF4B470023A4DF /* CourseEnd.storyboard in Resources */,
 				0AFBFBD526AF4B630023A4DF /* Profile.storyboard in Resources */,
 				0A69C26026B12DDD002439E9 /* Brushing.storyboard in Resources */,
+				0AE7329D26B3AD0300A80006 /* StoryStyle2.xib in Resources */,
 				0AFBFBA926AF478E0023A4DF /* LaunchScreen.storyboard in Resources */,
 				0AFBFBCE26AF4B320023A4DF /* CourseCover.storyboard in Resources */,
 				0AFBFBD026AF4B3D0023A4DF /* CourseStory.storyboard in Resources */,
@@ -519,6 +526,7 @@
 				B82142D526B05B03007E73B6 /* Course.swift in Sources */,
 				EA7EFBA926B00CBF00B684BA /* Progress+CoreDataClass.swift in Sources */,
 				0A69C26226B12DEB002439E9 /* BrushingViewController.swift in Sources */,
+				0AE7329B26B3ACFA00A80006 /* StoryStyle2.swift in Sources */,
 				0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */,
 				B82142D726B05B0D007E73B6 /* GradientView.swift in Sources */,
 				0A69C26926B12E16002439E9 /* PadsViewController.swift in Sources */,
@@ -526,7 +534,7 @@
 				0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */,
 				EA7EFBA726B00CBF00B684BA /* Children+CoreDataClass.swift in Sources */,
 				EA7EFBAA26B00CBF00B684BA /* Progress+CoreDataProperties.swift in Sources */,
-				0A1F5FE626B33D1E003A8EB0 /* ImageStatic.swift in Sources */,
+				0A1F5FE626B33D1E003A8EB0 /* StoryStyle1.swift in Sources */,
 				B82142CA26B05ABC007E73B6 /* CollectionViewTableViewCell.swift in Sources */,
 				B82142D426B05B03007E73B6 /* HomeData.swift in Sources */,
 				0AFBFBE126AF4BAA0023A4DF /* ProfileViewController.swift in Sources */,
