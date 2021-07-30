@@ -36,6 +36,9 @@
 		B85EA8B226B2526200DA803D /* PadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8B126B2526200DA803D /* PadsViewController.swift */; };
 		B85EA8B426B2529000DA803D /* Pads.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85EA8B326B2529000DA803D /* Pads.storyboard */; };
 		B85EA8B726B2534900DA803D /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8B626B2534900DA803D /* CustomAlert.swift */; };
+		EA680C4126B2E9E300C8C405 /* ProfileAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA680C4026B2E9E300C8C405 /* ProfileAdd.storyboard */; };
+		EA680C4326B2E9FB00C8C405 /* ProfileAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA680C4226B2E9FB00C8C405 /* ProfileAddController.swift */; };
+		EA680C4526B3194400C8C405 /* ProfileAddFinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA680C4426B3194400C8C405 /* ProfileAddFinishController.swift */; };
 		B85EA8BF26B283CA00DA803D /* EmptyProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = B85EA8BE26B283CA00DA803D /* EmptyProfile.xib */; };
 		B85EA8C126B283F400DA803D /* EmptyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8C026B283F400DA803D /* EmptyProfile.swift */; };
 		B85EA8C426B2B5D500DA803D /* FilledProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = B85EA8C326B2B5D500DA803D /* FilledProfile.xib */; };
@@ -85,6 +88,9 @@
 		B85EA8B126B2526200DA803D /* PadsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PadsViewController.swift; sourceTree = "<group>"; };
 		B85EA8B326B2529000DA803D /* Pads.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pads.storyboard; sourceTree = "<group>"; };
 		B85EA8B626B2534900DA803D /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		EA680C4026B2E9E300C8C405 /* ProfileAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileAdd.storyboard; sourceTree = "<group>"; };
+		EA680C4226B2E9FB00C8C405 /* ProfileAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAddController.swift; sourceTree = "<group>"; };
+		EA680C4426B3194400C8C405 /* ProfileAddFinishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAddFinishController.swift; sourceTree = "<group>"; };
 		B85EA8BE26B283CA00DA803D /* EmptyProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyProfile.xib; sourceTree = "<group>"; };
 		B85EA8C026B283F400DA803D /* EmptyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyProfile.swift; sourceTree = "<group>"; };
 		B85EA8C326B2B5D500DA803D /* FilledProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilledProfile.xib; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 		0AFBFBB326AF49D50023A4DF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				EA680C3C26B2E97600C8C405 /* Page */,
 				0AFBFBBF26AF4A2A0023A4DF /* View */,
 				0AFBFBB826AF4A030023A4DF /* Controller */,
 			);
@@ -449,6 +456,40 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EA680C3C26B2E97600C8C405 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				EA680C3D26B2E9AB00C8C405 /* ProfileAdd */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		EA680C3D26B2E9AB00C8C405 /* ProfileAdd */ = {
+			isa = PBXGroup;
+			children = (
+				EA680C3F26B2E9CF00C8C405 /* View */,
+				EA680C3E26B2E9BF00C8C405 /* Controller */,
+			);
+			path = ProfileAdd;
+			sourceTree = "<group>";
+		};
+		EA680C3E26B2E9BF00C8C405 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA680C4226B2E9FB00C8C405 /* ProfileAddController.swift */,
+				EA680C4426B3194400C8C405 /* ProfileAddFinishController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EA680C3F26B2E9CF00C8C405 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA680C4026B2E9E300C8C405 /* ProfileAdd.storyboard */,
+			);
+			path = View;
+      sourceTree = "<group>";
+		};
 		B85EA8B926B2821C00DA803D /* HomeProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +606,7 @@
 				0AFBFBD526AF4B630023A4DF /* Profile.storyboard in Resources */,
 				0A69C26026B12DDD002439E9 /* Brushing.storyboard in Resources */,
 				0AFBFBA926AF478E0023A4DF /* LaunchScreen.storyboard in Resources */,
+				EA680C4126B2E9E300C8C405 /* ProfileAdd.storyboard in Resources */,
 				0AFBFBCE26AF4B320023A4DF /* CourseCover.storyboard in Resources */,
 				EA7EFBC026B0FB4900B684BA /* ListDataViewCell.xib in Resources */,
 				B85EA8C426B2B5D500DA803D /* FilledProfile.xib in Resources */,
@@ -586,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFBFBD926AF4B800023A4DF /* HomeViewController.swift in Sources */,
+				EA680C4326B2E9FB00C8C405 /* ProfileAddController.swift in Sources */,
 				0AFBFBDD26AF4B970023A4DF /* CourseStoryViewController.swift in Sources */,
 				0AFBFBDB26AF4B8C0023A4DF /* CourseCoverViewController.swift in Sources */,
 				B85EA8C126B283F400DA803D /* EmptyProfile.swift in Sources */,
@@ -594,6 +637,7 @@
 				EA7EFBB326B0F5D500B684BA /* EmptyViewCell.swift in Sources */,
 				0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */,
 				EA7EFBBF26B0FB4900B684BA /* ListDataViewCell.swift in Sources */,
+				EA680C4526B3194400C8C405 /* ProfileAddFinishController.swift in Sources */,
 				EA7EFBB926B0F8EC00B684BA /* AddChildViewCell.swift in Sources */,
 				B82142D526B05B03007E73B6 /* Course.swift in Sources */,
 				B85EA8C826B387BC00DA803D /* CircularProgressBar.swift in Sources */,

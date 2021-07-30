@@ -35,6 +35,9 @@
                                 <state key="normal" title="Tambah Anak">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="toAddProfile:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="v9a-Jj-hvk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
