@@ -13,7 +13,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet weak var pageControl: UIPageControl!
 	@IBOutlet weak var nextButton: UIButton!
 	
-	let images = ["avatar-user-persona-face","avatar-user-persona-face","avatar-user-persona-face"]
+	let images = ["onboarding1","onboarding2","onboarding3"]
 	let titles = ["Education through storytelling","Interactive and Fun","Personalized Material"]
 	let subtitles = ["Sekarang ayah dan ibu tidak perlu cemas bagaimana mengajarkan edukasi seks kepada anak","Memberikan pengalaman berbeda dalam mengajarkan seks edukasi dan cara belajar yang menyenangkan","Materi yang dipelajari akan disesuaikan dengan si kecil"]
 	
