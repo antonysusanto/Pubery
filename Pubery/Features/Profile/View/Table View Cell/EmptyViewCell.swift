@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol EmptyViewCellDelegate: class {
+    func goToNextPage()
+}
+
 class EmptyViewCell: UITableViewCell {
 
+    weak var delegate: EmptyViewCellDelegate?
+    
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var emptyLabel: UILabel!
     @IBOutlet weak var emptyButton: UIButton!
@@ -23,6 +29,9 @@ class EmptyViewCell: UITableViewCell {
         
     }
     
+    @IBAction func toAddProfile(_ sender: Any) {
+        delegate?.goToNextPage()
+    }
     
     
 }
