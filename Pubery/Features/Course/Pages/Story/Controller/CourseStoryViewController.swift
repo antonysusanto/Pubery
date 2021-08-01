@@ -7,6 +7,9 @@
 
 import UIKit
 
+
+
+
 class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 
 	@IBOutlet weak var scrollView: UIScrollView!
@@ -14,78 +17,8 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet weak var nextButton: UIButton!
 	@IBOutlet weak var pageNumber: UILabel!
 	
-	let pages:[[Any]] =
-		[
-//			[
-//				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10), size: .zero),
-////				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10), size: .zero),
-//				StoryLabelRegular(text: "Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-////				StoryLabelRegular(text: "asdasd.", padding: UIEdgeInsets(top: 0, left: 20, bottom: 90, right: 20), size: .zero)
-//			],
-//			[
-//				StoryImage(imageName: "page2a", padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10), size: .zero),
-////				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10), size: .zero),
-//				StoryLabelRegular(text: "Putri merasakan perutnya seperti ditekan-tekan. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-//				StoryLabelRegular(text: "Hmm, sepertinya Putri tahu apa yang terjadi pada dirinya, namun dia bingung apa yang harus dilakukan untuk pertama kali!", padding: UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 20), size: .zero)
-//			],
-//			[
-//				StoryLabelRegular(text: "Putri merasakan perutnya seperti ditekan-tekan. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 150, left: 20, bottom: 0, right: 20), size: .zero),
-//				StoryImage(imageName: "page3", padding:  UIEdgeInsets(top: 10, left: 10, bottom: 200, right: 10), size: .zero),
-//				StoryLabelRegular(text: "Hmm, sepertinya Putri tahu apa yang terjadi pada dirinya, namun dia bingung apa yang harus dilakukan untuk pertama kali!", padding: UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 20), size: .zero)
-//			],
-//			[
-//				StoryLabelRegular(text: "Putri merasakan perutnya seperti ditekan-tekan. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-//			],
-//			[
-//				StoryLabelRegular(text: "Putri merasakan perutnya seperti ditekan-tekan. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-//			],
-//			[
-//				StoryLabelRegular(text: "Putri merasakan perutnya seperti ditekan-tekan. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-//			],
-//			[
-//				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10), size: .zero),
-////				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10), size: .zero),
-//				StoryLabelRegular(text: "Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-////				StoryLabelRegular(text: "asdasd.", padding: UIEdgeInsets(top: 0, left: 20, bottom: 90, right: 20), size: .zero)
-//			],
-//			[
-//				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10), size: .zero),
-////				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10), size: .zero),
-//				StoryLabelRegular(text: "Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-////				StoryLabelRegular(text: "asdasd.", padding: UIEdgeInsets(top: 0, left: 20, bottom: 90, right: 20), size: .zero)
-//			],
-//			[
-//				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10), size: .zero),
-////				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10), size: .zero),
-//				StoryLabelRegular(text: "Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-////				StoryLabelRegular(text: "asdasd.", padding: UIEdgeInsets(top: 0, left: 20, bottom: 90, right: 20), size: .zero)
-//			],
-//			[
-//				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10), size: .zero),
-//				StoryLabelRegular(text: "Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-//			],
-			[
-				
-				StoryLabelRegular(text: "Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 40, left: 20, bottom: 0, right: 20), size: .zero),
-				StoryLabelRegular(text: "Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-				StoryLabelRegular(text: "Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-				StoryImage(imageName: "page1", padding:  UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10), size: CGSize(width: 0, height: 220)),
-				StoryLabelRegular(text: "Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang.", padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20), size: .zero),
-			],
-//			[StoryStyle1(), "page1", "Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang."],
-//			[StoryStyle1(), "page2a", "Putri merasakan perutnya seperti ditekan-tekan."],
-//			[ImageStatic(), "page2b", "Hmm, sepertinya Putri tahu apa yang terjadi pada dirinya, namun dia bingung apa yang harus dilakukan untuk pertama kali!"],
-//			[StoryStyle2(), "page3", "Ketika Putri membuka celana dalamnya di kamar mandi, Putri kaget karena menemukan bercak-bercak merah.","Hmm, sepertinya Putri tahu apa yang terjadi pada dirinya, namun dia bingung apa yang harus dilakukan untuk pertama kali!"],
-//			[ImageStatic.instantiate(imageName: "page1", label: "Halo")]
-//			[ImageStatic(), "ada haptic", UIImage(named: "page1")!],
-//			[UIImage(named: "page1")!,"Suatu pagi Putri merasakan sakit perut. Namun, tidak seperti biasanya, sakit perut Putri kali ini tidak kunjung menghilang."],
-//			[UIImage(named: "page2a")!,"Putri merasakan perutnya seperti ditekan-tekan "],
-//			[UIImage(named: "page3")!, "Ketika Putri membuka celana dalamnya di kamar mandi, Putri kaget karena menemukan bercak-bercak merah.", "Hmm, sepertinya Putri tahu apa yang terjadi pada dirinya, namun dia bingung apa yang harus dilakukan untuk pertama kali!"],
-//			["Bisakah kamu menebak apa yang sedang terjadi pada Putri?"],
-//			[UIImage(named: "page5")!, "Akhirnya, walau dengan perasaan sedikit malu, Putri memanggil ibunya.", "”Anak ibu sudah besar ya. Sudah dapat menstruasi pertama. Sekarang bersihkan dulu celananya lalu ambil celana yang bersih dan pakaikan pembalut,” ujar Ibu."],
-//			["“Anak ibu pintar sekali! Sekarang yuk ambil celana dalam yang baru, kemudian pasangkan pembalut.”", UIImage(named: "page6")!],
-//			["Setelah itu, Putri diminta untuk istirahat selagi Ibu menyiapkan air putih hangat.", UIImage(named: "page7")!, "Walaupun perutnya masih sedikit sakit, Putri justru merasa gembira. “Sekarang aku sudah besar. Aku sudah paham apa yang harus dilakukan ketika menstruasi!”"],
-		]
+	var selectedCourse: Courses! = .C1_Men
+	var pages:[[Any]] = []
 		
 	var contentWidth: CGFloat = 0.0
 	var contentHeight: CGFloat = 0.0
@@ -94,6 +27,7 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		pages = selectedCourse.getCourse()
 	}
 	
 	override func viewDidLayoutSubviews() {
@@ -191,12 +125,47 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 					}
 					
 					elements.append(label)
-				}
-				contentView.addSubview(elementsContainer)
-			}
+				} else if (pages[pageIndex][elementIndex] is StoryButton) {
+					
+					let storyButton = pages[pageIndex][elementIndex] as! StoryButton
+					
+					let button = CustomStoryButton()
+					button.setTitle(storyButton.title, for: .normal)
+					button.backgroundColor = .blue
+					button.layer.cornerRadius = 14
+					button.destination = storyButton.destination
+					button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+					
+					
+					elementsContainer.addSubview(button)
+					button.translatesAutoresizingMaskIntoConstraints = false
+					
+					if (elementIndex == 0 && lastElementIndex == 0) {
+						button.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: elementsContainer.trailingAnchor, padding: storyButton.padding, size: storyButton.size)
+					} else if (elementIndex == 0) {
+						button.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: storyButton.padding, size: storyButton.size)
+					} else {
+						let previousElement = elements[elementIndex-1]
+						button.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: storyButton.padding, size: storyButton.size)
+					}
+					
+					elements.append(button)
+				} //end of identifying elements
+			} // end of looping elements
+			contentView.addSubview(elementsContainer)
 			elementsContainer.translatesAutoresizingMaskIntoConstraints = false
 			elementsContainer.setConstraint(top: contentView.topAnchor, leading: contentView.leadingAnchor, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor, padding: UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0))
 			scrollView.addSubview(contentView)
+		} //end of looping pages
+	}
+	
+	@objc func buttonAction(sender: CustomStoryButton) {
+		
+		if (sender.destination == "Pads") {
+			let storyBoard: UIStoryboard = UIStoryboard(name: "Pads", bundle: nil)
+			let padsVC = storyBoard.instantiateViewController(withIdentifier: "Pads") as! PadsViewController
+			self.present(padsVC, animated: true, completion: nil)
+			//self.navigationController?.pushViewController(vc!, animated: true)
 		}
 	}
 	
@@ -313,4 +282,19 @@ class StoryLabelRegular: CustomConstraint {
 		self.text = text
 		super.init(padding: padding, size: size)
 	}
+}
+
+class StoryButton: CustomConstraint {
+	var title: String
+	var destination: String
+	
+	init(title: String, destination: String, padding: UIEdgeInsets, size: CGSize) {
+		self.title = title
+		self.destination = destination
+		super.init(padding: padding, size: size)
+	}
+}
+
+class CustomStoryButton: UIButton {
+	var destination: String?
 }
