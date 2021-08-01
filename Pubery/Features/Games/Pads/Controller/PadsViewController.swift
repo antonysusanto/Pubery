@@ -36,9 +36,11 @@ class PadsViewController: UIViewController {
     }
     
     @IBAction func closeAction(_ sender: Any) {
+		self.navigationController?.popViewController(animated: false)
     }
     
     @IBAction func endAction(_ sender: Any) {
+		self.navigationController?.popViewController(animated: false)
     }
     
     func addPanGesture(view: UIView){

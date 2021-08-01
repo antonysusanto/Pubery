@@ -11,7 +11,7 @@
         <!--Course Story View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="CourseStory" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CourseStoryViewController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CourseStory" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CourseStoryViewController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TP-Br-T3c">
+                                <rect key="frame" x="364" y="54" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="hqf-JZ-nOP"/>
+                                    <constraint firstAttribute="height" constant="40" id="u2q-Zz-ptw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8dm-b7-IzC"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INI-WJ-L8H">
                                 <rect key="frame" x="34" y="812" width="30" height="30"/>
                                 <state key="normal" title="&lt;"/>
@@ -54,8 +66,10 @@
                             <constraint firstItem="INI-WJ-L8H" firstAttribute="centerY" secondItem="aDv-5d-cHd" secondAttribute="centerY" id="Dfy-Pe-WQb"/>
                             <constraint firstItem="7Zs-vi-QPr" firstAttribute="top" secondItem="aDv-5d-cHd" secondAttribute="bottom" id="EBa-69-vra"/>
                             <constraint firstItem="aDv-5d-cHd" firstAttribute="top" secondItem="H9m-R2-EVA" secondAttribute="bottom" constant="10" id="NHL-6t-deo"/>
+                            <constraint firstItem="9TP-Br-T3c" firstAttribute="top" secondItem="H9m-R2-EVA" secondAttribute="top" constant="10" id="Uc1-rt-gQF"/>
                             <constraint firstItem="pCW-hx-yNX" firstAttribute="centerY" secondItem="aDv-5d-cHd" secondAttribute="centerY" id="Y7z-LU-Xh1"/>
                             <constraint firstItem="H9m-R2-EVA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Z8D-jN-TwC"/>
+                            <constraint firstItem="9TP-Br-T3c" firstAttribute="trailing" secondItem="H9m-R2-EVA" secondAttribute="trailing" constant="-10" id="bDJ-vh-MVN"/>
                             <constraint firstItem="7Zs-vi-QPr" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="jzI-R0-6NC"/>
                             <constraint firstItem="H9m-R2-EVA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="lxH-te-c1u"/>
                             <constraint firstItem="aDv-5d-cHd" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="tmq-Ur-eVN"/>
@@ -75,6 +89,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

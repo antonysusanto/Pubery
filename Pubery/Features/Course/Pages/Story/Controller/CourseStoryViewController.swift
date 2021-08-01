@@ -84,7 +84,6 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 					let storyImage = pages[pageIndex][elementIndex] as! StoryImage
 					
 					let imageView = UIImageView()
-					imageView.backgroundColor = .red
 					imageView.image = UIImage(named: storyImage.imageName)
 					imageView.contentMode = .scaleAspectFit
 					
@@ -163,9 +162,9 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 		
 		if (sender.destination == "Pads") {
 			let storyBoard: UIStoryboard = UIStoryboard(name: "Pads", bundle: nil)
-			let padsVC = storyBoard.instantiateViewController(withIdentifier: "Pads") as! PadsViewController
-			self.present(padsVC, animated: true, completion: nil)
-			//self.navigationController?.pushViewController(vc!, animated: true)
+			let vc = storyBoard.instantiateViewController(withIdentifier: "Pads") as! PadsViewController
+//			self.present(vc, animated: true, completion: nil)
+			self.navigationController?.pushViewController(vc, animated: false)
 		}
 	}
 	
@@ -198,6 +197,10 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 		nextButton.layer.cornerRadius = 14
 	}
 
+	@IBAction func dismiss(_ sender: Any) {
+		self.navigationController?.popViewController(animated: true)
+	}
+	
 	@IBAction func nextPage(_ sender: Any) {
 		let currentPage = getCurrentPage()
 		if (currentPage != pages.count-1) {
