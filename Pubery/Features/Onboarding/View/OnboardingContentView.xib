@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingContentView" customModule="Pubery" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="Z4a-dU-mD2" id="wYN-CI-7K1"/>
+                <outlet property="subtitle" destination="0Vf-W5-2RE" id="X6a-hU-8Ag"/>
+                <outlet property="title" destination="3bO-GI-Mpe" id="CHi-VQ-pzQ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="3tI-pF-bde"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="377"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bO-GI-Mpe">
+                    <rect key="frame" x="137.5" y="147" width="103.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the subtitlea sdas kdoqwk eqwqwe ko" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vf-W5-2RE">
+                    <rect key="frame" x="69" y="186" width="240" height="96"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="Uup-hP-L0h"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-user-persona-face" translatesAutoresizingMaskIntoConstraints="NO" id="Z4a-dU-mD2">
+                    <rect key="frame" x="69" y="9" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="be5-gA-y5S"/>
+                        <constraint firstAttribute="width" constant="240" id="ci1-4q-WVa"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="0Vf-W5-2RE" firstAttribute="top" secondItem="3bO-GI-Mpe" secondAttribute="bottom" constant="15" id="1xg-pI-f4P"/>
+                <constraint firstItem="3bO-GI-Mpe" firstAttribute="top" secondItem="Z4a-dU-mD2" secondAttribute="bottom" constant="10" id="2Nq-Lg-ZBI"/>
+                <constraint firstItem="0Vf-W5-2RE" firstAttribute="centerX" secondItem="3bO-GI-Mpe" secondAttribute="centerX" id="9A2-oo-1Y1"/>
+                <constraint firstItem="0Vf-W5-2RE" firstAttribute="height" secondItem="3bO-GI-Mpe" secondAttribute="height" multiplier="4" id="GpA-YF-fL5"/>
+                <constraint firstItem="3bO-GI-Mpe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hMQ-t0-ylB"/>
+                <constraint firstItem="Z4a-dU-mD2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yut-WG-iiN"/>
+                <constraint firstItem="Z4a-dU-mD2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="z5D-9m-w5G"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="5.7971014492753632" y="-61.941964285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="avatar-user-persona-face" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dDB-3F-Rjq">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="248" width="414" height="565"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -25,19 +25,30 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dDB-3F-Rjq" secondAttribute="trailing" id="WE8-2t-HrZ"/>
-                            <constraint firstItem="dDB-3F-Rjq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="dSS-L9-XgW"/>
+                            <constraint firstItem="dDB-3F-Rjq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="160" id="dSS-L9-XgW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dDB-3F-Rjq" secondAttribute="bottom" id="lv9-Ow-2ew"/>
                             <constraint firstItem="dDB-3F-Rjq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yBe-Ch-cGe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="N7Y-C9-pvj"/>
+                    <navigationItem key="navigationItem" title="Title" leftItemsSupplementBackButton="YES" id="N7Y-C9-pvj"/>
                     <connections>
                         <outlet property="tableView" destination="dDB-3F-Rjq" id="VpV-2r-hVF"/>
+                        <segue destination="i5I-iH-hwr" kind="show" identifier="goToCover" id="AEi-dO-6EN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1926.0869565217392" y="88.392857142857139"/>
+        </scene>
+        <!--CourseCover-->
+        <scene sceneID="9F4-Cq-Umt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CourseCover" id="i5I-iH-hwr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="URv-jL-RIW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDs-TM-9wj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2538" y="62"/>
         </scene>
         <!--Belajar-->
         <scene sceneID="QcD-gP-8pn">

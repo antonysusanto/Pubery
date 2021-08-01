@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol CustomCellDelegator {
+    func cellWasPressed(withData: String)
+}
+
 class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var delegate: CustomCellDelegator?
+//    weak var delegate: SegueSelectionDelegate?
     static let identifier = "CollectionViewTableViewCell"
     @IBOutlet weak var changesLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -33,6 +39,10 @@ class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         // Configure the view for the selected state
     }
     
+//    @IBAction func goToCover(_ sender: Any) {
+//        cellTapped?()
+//    }
+    
     static func nib() -> UINib {
         return UINib(nibName: "CollectionViewTableViewCell", bundle: nil)
     }
@@ -45,19 +55,20 @@ class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CourseCollectionViewCell.identifier, for: indexPath) as! CourseCollectionViewCell
         cell.courseLabel.text = changes?.materialChanges[indexPath.row].courseName
         cell.courseImage.image = changes?.materialChanges[indexPath.row].image ?? UIImage()
+//        cell.tapActionGoToCourse = {
+//
+//        }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let selectedData = changes?.materialChanges[indexPath.row].courseName
+        let selectedData = changes?.materialChanges[indexPath.item]
+//        let selectedData = Change[indexPath.item]
+        self.delegate?.cellWasPressed(withData: selectedData!.courseName)
+//        self.delegate?.cellWasPressed(withData: selectedData!.courseName)
         
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let bounds = UIScreen.main.bounds
-//        let width = bounds.size.width
-//        let height = bounds.size.height
-////        return CGSize(width: 150, height: 300)
-//        return CGSize(width: width, height: height)
-//    }
     
 }
