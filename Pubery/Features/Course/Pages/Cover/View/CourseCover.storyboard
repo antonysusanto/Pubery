@@ -11,17 +11,110 @@
         <!--Course Cover View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="CourseCoverViewController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goToCover" id="Y6W-OH-hqX" customClass="CourseCoverViewController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3N-hJ-Cw0">
+                                <rect key="frame" x="30" y="84" width="354" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menstruasi Pertama" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaE-Ph-ibj">
+                                <rect key="frame" x="30" y="118" width="354" height="174"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dju-tR-sZ7">
+                                <rect key="frame" x="20" y="780" width="225" height="52"/>
+                                <color key="backgroundColor" red="1" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="HxS-mF-Pcm"/>
+                                    <constraint firstAttribute="width" constant="225" id="cIi-ez-HGF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Petunjuk Orang Tua">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="petunjukAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tt7-aN-faf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wc0-6g-AaS">
+                                <rect key="frame" x="259" y="780" width="135" height="52"/>
+                                <color key="backgroundColor" red="1" green="0.90980392156862744" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="DJ8-X1-cAN"/>
+                                    <constraint firstAttribute="width" constant="135" id="Jpe-WR-Rv0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Mulai">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startStoryAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T6D-z6-jEA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDA-nM-SAa">
+                                <rect key="frame" x="30" y="295" width="354" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.87058823529411766" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="DXC-N2-wOA">
+                                <rect key="frame" x="120" y="323.5" width="264" height="410.5"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wc0-6g-AaS" firstAttribute="top" secondItem="DXC-N2-wOA" secondAttribute="bottom" constant="46" id="6Gh-Po-HU2"/>
+                            <constraint firstItem="DXC-N2-wOA" firstAttribute="firstBaseline" secondItem="RDA-nM-SAa" secondAttribute="baseline" constant="12.5" symbolType="layoutAnchor" id="FO6-VK-ug8"/>
+                            <constraint firstItem="S3N-hJ-Cw0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Ftl-2m-jVA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XaE-Ph-ibj" secondAttribute="bottom" constant="570" id="JLV-Jm-1zd"/>
+                            <constraint firstItem="S3N-hJ-Cw0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="KtA-Z4-MoM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Dju-tR-sZ7" secondAttribute="bottom" constant="30" id="RHR-wu-zlm"/>
+                            <constraint firstItem="XaE-Ph-ibj" firstAttribute="top" secondItem="S3N-hJ-Cw0" secondAttribute="bottom" constant="5" id="XlW-xF-5xZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XaE-Ph-ibj" secondAttribute="trailing" constant="30" id="ejO-4z-4rD"/>
+                            <constraint firstItem="wc0-6g-AaS" firstAttribute="leading" secondItem="Dju-tR-sZ7" secondAttribute="trailing" constant="14" id="grg-ZY-kVe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DXC-N2-wOA" secondAttribute="trailing" constant="30" id="hDo-Qp-dFG"/>
+                            <constraint firstItem="DXC-N2-wOA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="120" id="jcI-KD-PMH"/>
+                            <constraint firstItem="RDA-nM-SAa" firstAttribute="firstBaseline" secondItem="XaE-Ph-ibj" secondAttribute="baseline" constant="30" id="jlN-2y-c3i"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RDA-nM-SAa" secondAttribute="trailing" constant="30" id="mEI-2L-u8E"/>
+                            <constraint firstItem="XaE-Ph-ibj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="muU-W2-Z4B"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wc0-6g-AaS" secondAttribute="trailing" constant="20" id="nto-U2-cqO"/>
+                            <constraint firstItem="RDA-nM-SAa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="q2Y-OO-zr9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wc0-6g-AaS" secondAttribute="bottom" constant="30" id="rpt-jN-6Lf"/>
+                            <constraint firstItem="Dju-tR-sZ7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="uTc-Az-JwZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="S3N-hJ-Cw0" secondAttribute="trailing" constant="30" id="v9n-wH-RUp"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="kJi-tU-ht1"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="RDA-nM-SAa" id="oXH-dp-G2p"/>
+                        <outlet property="changeTypeLabel" destination="S3N-hJ-Cw0" id="xld-60-lAO"/>
+                        <outlet property="childrenImage" destination="DXC-N2-wOA" id="efL-kJ-rsH"/>
+                        <outlet property="materialLabel" destination="XaE-Ph-ibj" id="Xzn-64-vij"/>
+                        <outlet property="mulaiButton" destination="wc0-6g-AaS" id="8IN-02-Hdx"/>
+                        <outlet property="petunjukButton" destination="Dju-tR-sZ7" id="nLN-km-XmT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107" y="89"/>
+            <point key="canvasLocation" x="2502.898550724638" y="135.9375"/>
         </scene>
     </scenes>
     <resources>

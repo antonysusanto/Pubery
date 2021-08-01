@@ -30,18 +30,30 @@
                             <constraint firstItem="dDB-3F-Rjq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yBe-Ch-cGe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="N7Y-C9-pvj"/>
+                    <navigationItem key="navigationItem" title="Title" leftItemsSupplementBackButton="YES" id="N7Y-C9-pvj"/>
                     <connections>
                         <outlet property="tableView" destination="dDB-3F-Rjq" id="VpV-2r-hVF"/>
+                        <segue destination="i5I-iH-hwr" kind="show" identifier="goToCover" id="AEi-dO-6EN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1926.0869565217392" y="88.392857142857139"/>
         </scene>
+        <!--CourseCover-->
+        <scene sceneID="9F4-Cq-Umt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CourseCover" id="i5I-iH-hwr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="URv-jL-RIW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDs-TM-9wj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2422" y="-11"/>
+        </scene>
         <!--Belajar-->
         <scene sceneID="QcD-gP-8pn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5eJ-pO-aZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kmg-c0-wwi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Belajar" image="book.fill" catalog="system" id="0eU-q0-Teq"/>
                     <toolbarItems/>
@@ -54,7 +66,6 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="9J4-vI-Kwg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5eJ-pO-aZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1015.9420289855074" y="88.392857142857139"/>
         </scene>

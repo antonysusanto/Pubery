@@ -7,7 +7,21 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegator {
+    
+    func cellWasPressed(withData: Change) {
+        performSegue(withIdentifier: "goToCover", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToCover" {
+            guard let vc = segue.destination as? CourseCoverViewController else {
+                return
+            }
+            vc.hidesBottomBarWhenPushed = true
+        }
+    }
+    
 
     @IBOutlet weak var tableView: UITableView!
     var changesModel: ChangeModel = HomeData.changesModel
@@ -18,7 +32,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.setNavigationBarHidden(true, animated: false)
-//        navigationController!.navigationBar.sizeToFit()
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         tableView.register(CollectionViewTableViewCell.nib(), forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         tableView.delegate = self
@@ -44,6 +58,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.view.addSubview(filledView)
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        if section == 0 {
 //            return 1
@@ -60,6 +75,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as! CollectionViewTableViewCell
             cell.changes = changesModel.responses[indexPath.row]
+            cell.delegate = self
             return cell
         default:
             return UITableViewCell()
