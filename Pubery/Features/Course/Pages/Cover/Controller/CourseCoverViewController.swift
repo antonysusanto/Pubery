@@ -16,12 +16,12 @@ class CourseCoverViewController: UIViewController {
     @IBOutlet weak var petunjukButton: UIButton!
     @IBOutlet weak var mulaiButton: UIButton!
     
-    var selectedData: String?
+    var selectedData: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.changeTypeLabel.text = "\(String(describing: selectedData))"
+        materialLabel.text = "\(selectedData!)"
 //        navigationController?.setNavigationBarHidden(true, animated: false)
 //        navigationItem.title = .none
 //        navigationController?.setNavigationBarHidden(true, animated: false)
@@ -35,14 +35,14 @@ class CourseCoverViewController: UIViewController {
     @IBAction func petunjukAction(_ sender: Any) {
 //        belum ada folder bagian briefieng nya
         let storyBoard : UIStoryboard = UIStoryboard(name: "CourseStory", bundle:nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "CourseStroyId") as! CourseStoryViewController
+        let vc = storyBoard.instantiateViewController(withIdentifier: "CourseStory") as! CourseStoryViewController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated:true, completion:nil)
     }
     
     @IBAction func startStoryAction(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "CourseStory", bundle:nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "CourseStroyId") as! CourseStoryViewController
+        let vc = storyBoard.instantiateViewController(withIdentifier: "CourseStory") as! CourseStoryViewController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated:true, completion:nil)
     }
@@ -53,5 +53,3 @@ class CourseCoverViewController: UIViewController {
     }
     
 }
-
-// https://stackoverflow.com/questions/48243234/show-back-button-without-navigation-view-controller/48243301

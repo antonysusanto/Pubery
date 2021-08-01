@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CustomCellDelegator {
-    func cellWasPressed(withData: Change)
+    func cellWasPressed(withData: String)
 }
 
 class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -66,10 +66,9 @@ class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
 //        let selectedData = changes?.materialChanges[indexPath.row].courseName
         let selectedData = changes?.materialChanges[indexPath.item]
 //        let selectedData = Change[indexPath.item]
-//        self.delegate?.cellWasPressed(withData: changes!.materialChanges[indexPath.row].courseName)
-        self.delegate?.cellWasPressed(withData: changes!)
+        self.delegate?.cellWasPressed(withData: selectedData!.courseName)
 //        self.delegate?.cellWasPressed(withData: selectedData!.courseName)
-        print(changes)
+        
     }
     
 }

@@ -9,18 +9,22 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegator {
     
-    func cellWasPressed(withData: Change) {
-        performSegue(withIdentifier: "goToCover", sender: self)
+    func cellWasPressed(withData: String) {
+        let storyboard = UIStoryboard(name: "CourseCover", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "goToCover") as! CourseCoverViewController
+        vc.selectedData = withData
+        self.navigationController?.pushViewController(vc, animated: true)
+//        performSegue(withIdentifier: "goToCover", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToCover" {
-            guard let vc = segue.destination as? CourseCoverViewController else {
-                return
-            }
-            vc.hidesBottomBarWhenPushed = true
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToCover" {
+//            guard let vc = segue.destination as? CourseCoverViewController else {
+//                return
+//            }
+//            vc.hidesBottomBarWhenPushed = true
+//        }
+//    }
     
 
     @IBOutlet weak var tableView: UITableView!
