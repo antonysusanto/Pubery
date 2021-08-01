@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="Home" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,9 @@
                             <constraint firstItem="dDB-3F-Rjq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yBe-Ch-cGe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" leftItemsSupplementBackButton="YES" id="N7Y-C9-pvj"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="N7Y-C9-pvj">
+                        <barButtonItem key="backBarButtonItem" title=" " id="XUx-MT-4b4"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="dDB-3F-Rjq" id="VpV-2r-hVF"/>
                         <segue destination="i5I-iH-hwr" kind="show" identifier="goToCover" id="AEi-dO-6EN"/>
