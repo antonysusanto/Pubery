@@ -22,6 +22,7 @@ class PadsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         endButton.isHidden = true
         addPanGesture(view: movedImage)
         movedViewOrigin = movedImage.frame.origin
