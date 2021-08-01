@@ -25,6 +25,9 @@ class CourseCoverViewController: UIViewController {
 		
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         navigationItem.title = .none
+        navigationController?.navigationBar.prefersLargeTitles = false
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
 //        navigationController?.setNavigationBarHidden(true, animated: false)
 //        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back", style: .plain, target: self, action: #selector(backAction))
         
