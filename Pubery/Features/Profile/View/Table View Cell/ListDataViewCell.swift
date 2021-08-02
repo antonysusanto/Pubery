@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol ListDataViewCellDelegate: class {
+    func changeProfile()
+}
+
 class ListDataViewCell: UITableViewCell {
 
+    weak var delegate: ListDataViewCellDelegate?
+    
     @IBOutlet weak var dataView: UIView!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var changeButton: UIButton!
@@ -23,5 +29,10 @@ class ListDataViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
     }
+    
+    @IBAction func change(_ sender: Any) {
+        delegate?.changeProfile()
+    }
+    
     
 }

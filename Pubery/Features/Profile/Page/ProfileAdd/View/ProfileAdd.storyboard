@@ -97,7 +97,10 @@
                                     <constraint firstAttribute="height" constant="145" id="3ne-h7-MZR"/>
                                     <constraint firstAttribute="width" constant="145" id="vkq-mZ-SV4"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="avatar-user-persona-face"/>
+                                <state key="normal" backgroundImage="Putra"/>
+                                <connections>
+                                    <action selector="male:" destination="yOd-1N-1jE" eventType="touchUpInside" id="qGA-aM-FXu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSu-Vb-I5E">
                                 <rect key="frame" x="230" y="204" width="145" height="145"/>
@@ -105,7 +108,10 @@
                                     <constraint firstAttribute="height" constant="145" id="ATf-jz-J5d"/>
                                     <constraint firstAttribute="width" constant="145" id="NpN-ap-KK5"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="avatar-user-persona-face"/>
+                                <state key="normal" backgroundImage="Putri"/>
+                                <connections>
+                                    <action selector="female:" destination="yOd-1N-1jE" eventType="touchUpInside" id="BO4-aA-Z7f"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laki - Laki" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCh-go-BKJ">
                                 <rect key="frame" x="59" y="357" width="106" height="29"/>
@@ -127,6 +133,9 @@
                                 <state key="normal" title="SImpan">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="toProfilePage:" destination="yOd-1N-1jE" eventType="touchUpInside" id="e6g-Iv-ODm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perempuan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApY-Nc-svr">
                                 <rect key="frame" x="243" y="357" width="118" height="29"/>
@@ -175,7 +184,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avatar-user-persona-face" width="32" height="32"/>
+        <image name="Putra" width="145" height="145"/>
+        <image name="Putri" width="145" height="145"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
