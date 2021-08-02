@@ -48,11 +48,9 @@ class CourseCoverViewController: UIViewController {
 //	}
     
     @IBAction func petunjukAction(_ sender: Any) {
-//        belum ada folder bagian briefieng nya
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "CourseStory", bundle:nil)
-//        let vc = storyBoard.instantiateViewController(withIdentifier: "CourseStory") as! CourseStoryViewController
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated:true, completion:nil)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Briefing", bundle:nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "BriefingId") as! BriefingViewController
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func startStoryAction(_ sender: Any) {

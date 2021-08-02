@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		0A69C26026B12DDD002439E9 /* Brushing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C25F26B12DDD002439E9 /* Brushing.storyboard */; };
 		0A69C26226B12DEB002439E9 /* BrushingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C26126B12DEB002439E9 /* BrushingViewController.swift */; };
-		0ABF51D626B6C68D009A934F /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D526B6C68D009A934F /* Courses.swift */; };
-		0ABF51D826B6C880009A934F /* C1_Men.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D726B6C880009A934F /* C1_Men.swift */; };
 		0A69C27026B19581002439E9 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C26F26B19581002439E9 /* OnboardingContentView.swift */; };
 		0A69C27226B19593002439E9 /* OnboardingContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C27126B19593002439E9 /* OnboardingContentView.xib */; };
+		0ABF51D626B6C68D009A934F /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D526B6C68D009A934F /* Courses.swift */; };
+		0ABF51D826B6C880009A934F /* C1_Men.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D726B6C880009A934F /* C1_Men.swift */; };
 		0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */; };
 		0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */; };
 		0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFBA226AF478D0023A4DF /* Pubery.xcdatamodeld */; };
@@ -45,6 +45,8 @@
 		B85EA8C426B2B5D500DA803D /* FilledProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = B85EA8C326B2B5D500DA803D /* FilledProfile.xib */; };
 		B85EA8C626B2B5E900DA803D /* FilledProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8C526B2B5E900DA803D /* FilledProfile.swift */; };
 		B85EA8C826B387BC00DA803D /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */; };
+		B8C6B5FA26B79D9F00EB460A /* Briefing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C6B5F926B79D9F00EB460A /* Briefing.storyboard */; };
+		B8C6B5FC26B79DB200EB460A /* BriefingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C6B5FB26B79DB200EB460A /* BriefingViewController.swift */; };
 		EA60E96326B677E600DF890B /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60E96226B677E600DF890B /* ProfileEditController.swift */; };
 		EA60E96526B6794200DF890B /* ProfileEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA60E96426B6794200DF890B /* ProfileEdit.storyboard */; };
 		EA680C4126B2E9E300C8C405 /* ProfileAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA680C4026B2E9E300C8C405 /* ProfileAdd.storyboard */; };
@@ -65,10 +67,10 @@
 /* Begin PBXFileReference section */
 		0A69C25F26B12DDD002439E9 /* Brushing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Brushing.storyboard; sourceTree = "<group>"; };
 		0A69C26126B12DEB002439E9 /* BrushingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushingViewController.swift; sourceTree = "<group>"; };
-		0ABF51D526B6C68D009A934F /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
-		0ABF51D726B6C880009A934F /* C1_Men.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C1_Men.swift; sourceTree = "<group>"; };
 		0A69C26F26B19581002439E9 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 		0A69C27126B19593002439E9 /* OnboardingContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingContentView.xib; sourceTree = "<group>"; };
+		0ABF51D526B6C68D009A934F /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
+		0ABF51D726B6C880009A934F /* C1_Men.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C1_Men.swift; sourceTree = "<group>"; };
 		0AFBFB9626AF478D0023A4DF /* Pubery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pubery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,8 @@
 		B85EA8C326B2B5D500DA803D /* FilledProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilledProfile.xib; sourceTree = "<group>"; };
 		B85EA8C526B2B5E900DA803D /* FilledProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledProfile.swift; sourceTree = "<group>"; };
 		B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
+		B8C6B5F926B79D9F00EB460A /* Briefing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Briefing.storyboard; sourceTree = "<group>"; };
+		B8C6B5FB26B79DB200EB460A /* BriefingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefingViewController.swift; sourceTree = "<group>"; };
 		EA60E96226B677E600DF890B /* ProfileEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditController.swift; sourceTree = "<group>"; };
 		EA60E96426B6794200DF890B /* ProfileEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileEdit.storyboard; sourceTree = "<group>"; };
 		EA680C4026B2E9E300C8C405 /* ProfileAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileAdd.storyboard; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				0AFBFBB926AF4A0C0023A4DF /* Cover */,
+				B8C6B5F626B79D1300EB460A /* Briefing */,
 				0AFBFBBB26AF4A170023A4DF /* Story */,
 				0AFBFBBA26AF4A130023A4DF /* End */,
 			);
@@ -500,6 +505,31 @@
 			path = FilledProfile;
 			sourceTree = "<group>";
 		};
+		B8C6B5F626B79D1300EB460A /* Briefing */ = {
+			isa = PBXGroup;
+			children = (
+				B8C6B5F826B79D3800EB460A /* View */,
+				B8C6B5F726B79D2700EB460A /* Controller */,
+			);
+			path = Briefing;
+			sourceTree = "<group>";
+		};
+		B8C6B5F726B79D2700EB460A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8C6B5FB26B79DB200EB460A /* BriefingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B8C6B5F826B79D3800EB460A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B8C6B5F926B79D9F00EB460A /* Briefing.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EA60E95D26B6777F00DF890B /* Profile Edit */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,6 +678,7 @@
 				0AFBFBD226AF4B470023A4DF /* CourseEnd.storyboard in Resources */,
 				0AFBFBD526AF4B630023A4DF /* Profile.storyboard in Resources */,
 				0A69C26026B12DDD002439E9 /* Brushing.storyboard in Resources */,
+				B8C6B5FA26B79D9F00EB460A /* Briefing.storyboard in Resources */,
 				0AFBFBA926AF478E0023A4DF /* LaunchScreen.storyboard in Resources */,
 				EA680C4126B2E9E300C8C405 /* ProfileAdd.storyboard in Resources */,
 				0AFBFBCE26AF4B320023A4DF /* CourseCover.storyboard in Resources */,
@@ -683,6 +714,7 @@
 				0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */,
 				EA7EFBBF26B0FB4900B684BA /* ListDataViewCell.swift in Sources */,
 				EA680C4526B3194400C8C405 /* ProfileAddFinishController.swift in Sources */,
+				B8C6B5FC26B79DB200EB460A /* BriefingViewController.swift in Sources */,
 				EA7EFBB926B0F8EC00B684BA /* AddChildViewCell.swift in Sources */,
 				B82142D526B05B03007E73B6 /* Course.swift in Sources */,
 				B85EA8C826B387BC00DA803D /* CircularProgressBar.swift in Sources */,
