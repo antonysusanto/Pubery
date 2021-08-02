@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol NotEmptyViewCellDelegate: class {
+    func goToPage()
+}
+
 class AddChildViewCell: UITableViewCell {
 
+    weak var delegate: NotEmptyViewCellDelegate?
+    
     @IBOutlet weak var addView: UIView!
     @IBOutlet weak var addLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
@@ -22,6 +28,10 @@ class AddChildViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func toAddProfile(_ sender: Any) {
+        delegate?.goToPage()
     }
     
 }

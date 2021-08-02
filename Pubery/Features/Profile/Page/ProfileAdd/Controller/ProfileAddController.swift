@@ -20,7 +20,7 @@ class ProfileAddController: UIViewController {
         buttonNext.layer.cornerRadius = 14
         navigationItem.title = .none
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.tabBarController?.tabBar.isHidden = true
+//        self.tabBarController?.tabBar.isHidden = true
         underLine.layer.cornerRadius = 3
     }
     
@@ -34,8 +34,10 @@ class ProfileAddController: UIViewController {
 
     @IBAction func toNextPage(_ sender: Any) {
         let storyboard = UIStoryboard(name: "ProfileAdd", bundle: nil)
-        let VC = storyboard.instantiateViewController(identifier: "finishID") as! ProfileAddFinishController
-        self.navigationController?.pushViewController(VC, animated: true)
+        let vc = storyboard.instantiateViewController(identifier: "finishID") as! ProfileAddFinishController
+        vc.name = inputName.text
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     
 }
