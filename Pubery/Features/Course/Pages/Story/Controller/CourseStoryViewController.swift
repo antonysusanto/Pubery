@@ -159,13 +159,9 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 	}
 	
 	@objc func buttonAction(sender: CustomStoryButton) {
-		
-		if (sender.destination == "Pads") {
-			let storyBoard: UIStoryboard = UIStoryboard(name: "Pads", bundle: nil)
-			let vc = storyBoard.instantiateViewController(withIdentifier: "Pads") as! PadsViewController
-//			self.present(vc, animated: true, completion: nil)
-			self.navigationController?.pushViewController(vc, animated: false)
-		}
+		let storyBoard: UIStoryboard = UIStoryboard(name: sender.destination!, bundle: nil)
+		let vc = storyBoard.instantiateViewController(withIdentifier: sender.destination!)
+		self.navigationController?.pushViewController(vc, animated: false)
 	}
 	
 	func setupPageControl() {
