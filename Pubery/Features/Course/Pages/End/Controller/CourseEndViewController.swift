@@ -9,9 +9,18 @@ import UIKit
 
 class CourseEndViewController: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet weak var backButton: UIButton!
+	@IBOutlet weak var imageView: UIImageView!
+	var imageName:String?
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		backButton.layer.cornerRadius = 14
+		imageView.image = UIImage(named: imageName ?? "congrats")
     }
+	
+	@IBAction func backToMenu(_ sender: Any) {
+		self.navigationController?.popToRootViewController(animated: true)
+	}
+	
 }

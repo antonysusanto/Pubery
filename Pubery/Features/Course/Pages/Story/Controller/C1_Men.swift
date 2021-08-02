@@ -123,7 +123,7 @@ struct C1_Men_Pages {
 				size: .zero
 			),
 			StoryButton(
-				title: "Paham", destination: "Pads",
+				title: "Paham", destination: "CourseEnd",
 				padding: UIEdgeInsets(top: 40, left: 120, bottom: 0, right: 120),
 				size: CGSize(width: 0, height: 40)
 			),
