@@ -48,7 +48,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func showFilledView(){
-        let filledView = FilledProfile(frame: CGRect(x: 0, y: 25, width: self.view.frame.height, height: 150))
+        let filledView = FilledProfile(frame: CGRect(x: 0, y: 30, width: self.view.frame.height, height: 150))
         self.view.addSubview(filledView)
     }
     
