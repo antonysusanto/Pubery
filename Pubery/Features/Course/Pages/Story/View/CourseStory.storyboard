@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9m-R2-EVA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="759"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="744"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aDv-5d-cHd">
                                 <rect key="frame" x="146" y="813" width="122" height="28"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-hx-yNX">
-                                <rect key="frame" x="351" y="812" width="30" height="30"/>
-                                <state key="normal" title="&gt;"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-hx-yNX">
+                                <rect key="frame" x="303" y="793.5" width="78" height="67"/>
+                                <state key="normal" title="&gt;" image="Next Button"/>
                                 <connections>
                                     <action selector="nextPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SdB-dF-1OQ"/>
                                 </connections>
@@ -37,21 +37,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TP-Br-T3c">
-                                <rect key="frame" x="364" y="54" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TP-Br-T3c">
+                                <rect key="frame" x="369" y="54" width="35" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="hqf-JZ-nOP"/>
-                                    <constraint firstAttribute="height" constant="40" id="u2q-Zz-ptw"/>
+                                    <constraint firstAttribute="width" constant="35" id="hqf-JZ-nOP"/>
+                                    <constraint firstAttribute="height" constant="35" id="u2q-Zz-ptw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" image="xmark" catalog="system"/>
+                                <color key="tintColor" red="0.78431372549019607" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                </state>
                                 <connections>
                                     <action selector="dismiss:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8dm-b7-IzC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INI-WJ-L8H">
-                                <rect key="frame" x="34" y="812" width="30" height="30"/>
-                                <state key="normal" title="&lt;"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INI-WJ-L8H">
+                                <rect key="frame" x="34" y="793.5" width="67" height="67"/>
+                                <state key="normal" image="Back Button"/>
                                 <connections>
                                     <action selector="previousPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qXw-5D-UZ6"/>
                                 </connections>
@@ -65,7 +68,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pCW-hx-yNX" secondAttribute="trailing" constant="33" id="CTa-Jd-boH"/>
                             <constraint firstItem="INI-WJ-L8H" firstAttribute="centerY" secondItem="aDv-5d-cHd" secondAttribute="centerY" id="Dfy-Pe-WQb"/>
                             <constraint firstItem="7Zs-vi-QPr" firstAttribute="top" secondItem="aDv-5d-cHd" secondAttribute="bottom" id="EBa-69-vra"/>
-                            <constraint firstItem="aDv-5d-cHd" firstAttribute="top" secondItem="H9m-R2-EVA" secondAttribute="bottom" constant="10" id="NHL-6t-deo"/>
+                            <constraint firstItem="aDv-5d-cHd" firstAttribute="top" secondItem="H9m-R2-EVA" secondAttribute="bottom" constant="25" id="NHL-6t-deo"/>
                             <constraint firstItem="9TP-Br-T3c" firstAttribute="top" secondItem="H9m-R2-EVA" secondAttribute="top" constant="10" id="Uc1-rt-gQF"/>
                             <constraint firstItem="pCW-hx-yNX" firstAttribute="centerY" secondItem="aDv-5d-cHd" secondAttribute="centerY" id="Y7z-LU-Xh1"/>
                             <constraint firstItem="H9m-R2-EVA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Z8D-jN-TwC"/>
@@ -89,6 +92,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back Button" width="67" height="67"/>
+        <image name="Next Button" width="67" height="67"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

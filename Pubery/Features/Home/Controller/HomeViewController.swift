@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegator {
     
-    func cellWasPressed(withData: String) {
+    func cellWasPressed(withData: Courses) {
         let storyboard = UIStoryboard(name: "CourseCover", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "goToCover") as! CourseCoverViewController
         vc.selectedData = withData
