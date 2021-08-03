@@ -7,22 +7,18 @@
 
 import UIKit
 
-protocol ListDataViewCellDelegate: class {
-    func changeProfile()
-}
-
 class ListDataViewCell: UITableViewCell {
 
-    weak var delegate: ListDataViewCellDelegate?
+    var editOrDelete : (() -> ())?
     
     @IBOutlet weak var dataView: UIView!
     @IBOutlet weak var editButton: UIButton!
-    @IBOutlet weak var changeButton: UIButton!
     @IBOutlet weak var dataLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         dataView.layer.cornerRadius = 22
+        self.editButton?.addTarget(self, action: #selector(buttonEditOrDelete(_:)), for: .touchUpInside)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,8 +26,8 @@ class ListDataViewCell: UITableViewCell {
         
     }
     
-    @IBAction func change(_ sender: Any) {
-        delegate?.changeProfile()
+    @IBAction func buttonEditOrDelete(_ sender: Any) {
+        editOrDelete?()
     }
     
     

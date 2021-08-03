@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EmptyViewCellDelegate, NotEmptyViewCellDelegate, ListDataViewCellDelegate {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EmptyViewCellDelegate, NotEmptyViewCellDelegate {
 
     @IBOutlet weak var tableProfile: UITableView!
     
     var userData = CoreDataManager()
-    var check = 0
+    var checkIndex = 0
     var profileChildren: [Children] = []
     
     override func viewDidLoad() {
@@ -26,25 +26,19 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func goToNextPage() {
         let storyboard = UIStoryboard(name: "ProfileAdd", bundle: nil)
-        let VC = storyboard.instantiateViewController(identifier: "ProfileAddID")
-        self.navigationController?.pushViewController(VC, animated: true)
+        let vc = storyboard.instantiateViewController(identifier: "ProfileAddID") as! ProfileAddController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func goToPage() {
         let storyboard = UIStoryboard(name: "ProfileAdd", bundle: nil)
-        let VC = storyboard.instantiateViewController(identifier: "ProfileAddID")
-        self.navigationController?.pushViewController(VC, animated: true)
-    }
-    
-    func changeProfile() {
-        let storyboard = UIStoryboard(name: "ProfileAdd", bundle: nil)
-        let VC = storyboard.instantiateViewController(identifier: "ProfileAddID")
-        self.navigationController?.pushViewController(VC, animated: true)
+        let vc = storyboard.instantiateViewController(identifier: "ProfileAddID") as! ProfileAddController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func navBar() {
         if profileChildren.count == 0 {
-            navigationItem.title = .none
+            navigationController?.setNavigationBarHidden(true, animated: false)
         } else {
             navigationController?.setNavigationBarHidden(false, animated: false)
         }
@@ -58,6 +52,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        checkIndex = indexPath.row
+        print(checkIndex)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,7 +83,34 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             let thisCell: Children!
             thisCell = profileChildren[indexPath.row-1]
             cell.dataLabel.text = thisCell.name
-            cell.delegate = self
+            
+            // Alert for edit or delete
+            cell.editOrDelete = {[unowned self] in
+                let data = profileChildren[indexPath.row-1]
+                let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+                let editAction:UIAlertAction = UIAlertAction(title: "Edit", style: .default) { action -> Void in
+                    print("edit pressed")
+                    let storyboard = UIStoryboard(name: "ProfileEdit", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "ProfileEditID") as! ProfileEditController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+                let deleteAction:UIAlertAction = UIAlertAction(title: "Delete", style: .destructive) { action -> Void in
+                    print("delete pressed")
+                    print(self.checkIndex)
+                    self.userData.deleteChildren(data: data)
+                    print(indexPath.row-1)
+                    profileChildren = userData.fetchChildren()
+                    tableProfile.reloadData()
+                }
+                let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in }
+        
+                actionSheetController.addAction(editAction)
+                actionSheetController.addAction(deleteAction)
+                actionSheetController.addAction(cancelAction)
+        
+                present(actionSheetController, animated: true, completion: nil)
+                
+            }
             return cell
         }
         
