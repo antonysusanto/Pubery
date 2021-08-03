@@ -2,7 +2,7 @@
 //  Children+CoreDataProperties.swift
 //  Pubery
 //
-//  Created by Carlos Gamaliel Manurung on 27/07/21.
+//  Created by Carlos Gamaliel Manurung on 02/08/21.
 //
 //
 
@@ -16,9 +16,8 @@ extension Children {
         return NSFetchRequest<Children>(entityName: "Children")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var gender: String?
-    @NSManaged public var age: Int64
+    @NSManaged public var name: String?
     @NSManaged public var progress: NSSet?
 
 }

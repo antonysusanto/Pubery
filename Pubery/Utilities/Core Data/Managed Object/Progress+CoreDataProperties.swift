@@ -2,7 +2,7 @@
 //  Progress+CoreDataProperties.swift
 //  Pubery
 //
-//  Created by Carlos Gamaliel Manurung on 27/07/21.
+//  Created by Carlos Gamaliel Manurung on 02/08/21.
 //
 //
 

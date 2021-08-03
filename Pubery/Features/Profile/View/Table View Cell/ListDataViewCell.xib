@@ -18,11 +18,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D04-Ni-V1t">
-                        <rect key="frame" x="15" y="17" width="350" height="106"/>
+                        <rect key="frame" x="15" y="14" width="350" height="109"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDo-c1-mpd">
-                                <rect key="frame" x="32" y="38" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDo-c1-mpd">
+                                <rect key="frame" x="22" y="39" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zff-tE-RDM"/>
+                                    <constraint firstAttribute="width" constant="150" id="d8m-lb-rlT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,13 +40,19 @@
                                 <state key="normal" image="ellipsis.circle" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35d-jP-bZQ">
-                                <rect key="frame" x="8" y="0.0" width="271" height="106"/>
+                                <rect key="frame" x="8" y="0.0" width="271" height="109"/>
+                                <connections>
+                                    <action selector="change:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="avp-sL-ncW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392156862744" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Agv-u8-ZS4" firstAttribute="top" secondItem="D04-Ni-V1t" secondAttribute="top" constant="8" id="0Rz-p9-XNF"/>
                             <constraint firstAttribute="bottom" secondItem="35d-jP-bZQ" secondAttribute="bottom" id="3LD-ov-emY"/>
+                            <constraint firstAttribute="height" constant="109" id="5pi-cr-DCC"/>
+                            <constraint firstItem="oDo-c1-mpd" firstAttribute="leading" secondItem="D04-Ni-V1t" secondAttribute="leading" constant="22" id="N3Q-TS-99v"/>
+                            <constraint firstItem="oDo-c1-mpd" firstAttribute="top" secondItem="D04-Ni-V1t" secondAttribute="top" constant="39" id="RTM-5z-7WK"/>
                             <constraint firstAttribute="trailing" secondItem="Agv-u8-ZS4" secondAttribute="trailing" constant="10" id="VxE-nH-wwq"/>
                             <constraint firstItem="Agv-u8-ZS4" firstAttribute="leading" secondItem="35d-jP-bZQ" secondAttribute="trailing" constant="38" id="YPQ-ua-BcT"/>
                             <constraint firstItem="35d-jP-bZQ" firstAttribute="leading" secondItem="D04-Ni-V1t" secondAttribute="leading" constant="8" id="gZA-8Y-pFC"/>
@@ -54,8 +63,7 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="D04-Ni-V1t" secondAttribute="trailing" constant="15" id="K3C-wd-nT0"/>
                     <constraint firstItem="D04-Ni-V1t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="WZ1-TH-l4L"/>
-                    <constraint firstAttribute="bottom" secondItem="D04-Ni-V1t" secondAttribute="bottom" constant="17" id="jcf-1g-bvd"/>
-                    <constraint firstItem="D04-Ni-V1t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="jy8-El-lHl"/>
+                    <constraint firstItem="D04-Ni-V1t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="jy8-El-lHl"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -17,16 +17,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiY-R6-Eoj">
-                        <rect key="frame" x="15" y="17" width="350" height="106"/>
+                        <rect key="frame" x="15" y="17" width="350" height="123"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Tambah data anak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlv-CP-VYY">
-                                <rect key="frame" x="22" y="41" width="177" height="24"/>
+                                <rect key="frame" x="22" y="41" width="177" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.49019607843137253" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaV-Dx-Oby">
-                                <rect key="frame" x="0.0" y="0.0" width="350" height="106"/>
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="123"/>
+                                <connections>
+                                    <action selector="toAddProfile:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rgC-ym-XpN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294117647056" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,7 +45,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="xiY-R6-Eoj" secondAttribute="bottom" constant="17" id="0L2-VH-e9p"/>
+                    <constraint firstAttribute="bottom" secondItem="xiY-R6-Eoj" secondAttribute="bottom" id="0L2-VH-e9p"/>
                     <constraint firstItem="xiY-R6-Eoj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="0Qy-ml-YZ0"/>
                     <constraint firstAttribute="trailing" secondItem="xiY-R6-Eoj" secondAttribute="trailing" constant="15" id="MpH-ky-5pJ"/>
                     <constraint firstItem="xiY-R6-Eoj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="rbZ-Cv-vr2"/>
