@@ -13,11 +13,7 @@ class FilledProfile: UIView {
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var content: UIView!
     @IBOutlet weak var progressView: CircularProgressBar!
-    
-    var changes: Change?
-    var changesModel: ChangeModel = HomeData.changesModel
-    var course: Course?
-
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -33,8 +29,12 @@ class FilledProfile: UIView {
         content.frame = self.bounds
         content.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         namelabel.text = "Renata"
-        genderLabel.text = "Perempuan"
-        progressView.progress = 0.5
+//        genderLabel.text = "Perempuan"
+//        progressView.progress = CGFloat(Int(Courses.getMentalCourses().count + Courses.getPhysicalCourses().count))
+        let totalCount: Float = (Float(Courses.getPhysicalCourses().count + Courses.getMentalCourses().count))
+        let progressValue: Float = 1 / totalCount
+        progressView.progress = CGFloat(progressValue)
+        print(progressValue)
         addSubview(content)
     }
 

@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilledProfile" customModule="Pubery" customModuleProvider="target">
             <connections>
                 <outlet property="content" destination="pmF-Wk-QQW" id="aVl-7z-m4I"/>
-                <outlet property="genderLabel" destination="Mlz-WZ-enG" id="7j5-P3-Nlk"/>
                 <outlet property="namelabel" destination="LGE-cJ-lwR" id="dhh-0j-tSP"/>
                 <outlet property="progressView" destination="Cd8-lT-1ZK" id="HTf-xL-p90"/>
             </connections>
@@ -25,39 +24,30 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGE-cJ-lwR">
-                            <rect key="frame" x="20" y="40" width="215" height="54"/>
+                            <rect key="frame" x="20" y="50" width="225" height="80"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
                             <color key="textColor" red="0.87058823529411766" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlz-WZ-enG">
-                            <rect key="frame" x="20" y="104" width="215" height="26"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                            <color key="textColor" red="0.20000000000000001" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-lT-1ZK" customClass="CircularProgressBar" customModule="Pubery" customModuleProvider="target">
-                            <rect key="frame" x="240" y="31" width="118" height="118"/>
+                            <rect key="frame" x="250" y="31" width="118" height="118"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="118" id="5ed-de-keK"/>
-                                <constraint firstAttribute="height" constant="118" id="9Ew-Um-Ntw"/>
+                                <constraint firstAttribute="height" constant="118" id="3Xq-Wa-kp3"/>
+                                <constraint firstAttribute="width" constant="118" id="ce7-uh-sVq"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="Cd8-lT-1ZK" firstAttribute="leading" secondItem="LGE-cJ-lwR" secondAttribute="trailing" constant="5" id="0Rz-hc-WEw"/>
-                        <constraint firstItem="Mlz-WZ-enG" firstAttribute="leading" secondItem="pmF-Wk-QQW" secondAttribute="leading" constant="20" id="8G2-Dc-IKF"/>
                         <constraint firstItem="LGE-cJ-lwR" firstAttribute="leading" secondItem="pmF-Wk-QQW" secondAttribute="leading" constant="20" id="9y6-lS-JJr"/>
                         <constraint firstAttribute="bottom" secondItem="Cd8-lT-1ZK" secondAttribute="bottom" constant="31" id="BBL-sv-Rmp"/>
-                        <constraint firstItem="Mlz-WZ-enG" firstAttribute="top" secondItem="LGE-cJ-lwR" secondAttribute="bottom" constant="10" id="E0D-XX-uX4"/>
-                        <constraint firstItem="LGE-cJ-lwR" firstAttribute="top" secondItem="pmF-Wk-QQW" secondAttribute="top" constant="40" id="JhH-bv-YN2"/>
+                        <constraint firstItem="LGE-cJ-lwR" firstAttribute="top" secondItem="pmF-Wk-QQW" secondAttribute="top" constant="50" id="JhH-bv-YN2"/>
                         <constraint firstItem="Cd8-lT-1ZK" firstAttribute="top" secondItem="pmF-Wk-QQW" secondAttribute="top" constant="31" id="aPo-qp-jmG"/>
-                        <constraint firstAttribute="trailing" secondItem="Cd8-lT-1ZK" secondAttribute="trailing" constant="56" id="aaW-4c-fjL"/>
-                        <constraint firstAttribute="bottom" secondItem="Mlz-WZ-enG" secondAttribute="bottom" constant="50" id="asX-aw-Tzi"/>
-                        <constraint firstItem="Cd8-lT-1ZK" firstAttribute="leading" secondItem="pmF-Wk-QQW" secondAttribute="leading" constant="240" id="bK3-YC-TqK"/>
-                        <constraint firstItem="Cd8-lT-1ZK" firstAttribute="leading" secondItem="Mlz-WZ-enG" secondAttribute="trailing" constant="5" id="uwj-4p-aq0"/>
+                        <constraint firstAttribute="bottom" secondItem="LGE-cJ-lwR" secondAttribute="bottom" constant="50" id="iq4-Hd-wbo"/>
+                        <constraint firstItem="Cd8-lT-1ZK" firstAttribute="leading" secondItem="pmF-Wk-QQW" secondAttribute="leading" constant="250" id="pPD-5F-QUh"/>
+                        <constraint firstAttribute="trailing" secondItem="Cd8-lT-1ZK" secondAttribute="trailing" constant="46" id="zpv-9R-abY"/>
                     </constraints>
                 </view>
             </subviews>

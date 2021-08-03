@@ -16,16 +16,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.pushViewController(vc, animated: true)
 //        performSegue(withIdentifier: "goToCover", sender: self)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToCover" {
-//            guard let vc = segue.destination as? CourseCoverViewController else {
-//                return
-//            }
-//            vc.hidesBottomBarWhenPushed = true
-//        }
-//    }
-    
 
     @IBOutlet weak var tableView: UITableView!
     var changesModel: ChangeModel = HomeData.changesModel
@@ -53,12 +43,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func showEmptyView(){
-        let emptyView = EmptyProfile(frame: CGRect(x: 0, y: 35, width: self.view.frame.width, height: 180))
+        let emptyView = EmptyProfile(frame: CGRect(x: 0, y: 20, width: self.view.frame.width, height: 150))
         self.view.addSubview(emptyView)
     }
     
     func showFilledView(){
-        let filledView = FilledProfile(frame: CGRect(x: 0, y: 30, width: self.view.frame.height, height: 160))
+        let filledView = FilledProfile(frame: CGRect(x: 0, y: 25, width: self.view.frame.height, height: 150))
         self.view.addSubview(filledView)
     }
     
@@ -90,9 +80,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section{
         case 0:
-            return 300
+            return 280
         default:
-            return 300
+            return 280
         }
     }
 }

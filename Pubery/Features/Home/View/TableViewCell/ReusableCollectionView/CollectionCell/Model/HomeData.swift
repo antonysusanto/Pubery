@@ -13,8 +13,8 @@ struct HomeData {
         get{
             return
                 ChangeModel(responses: [
-					Change(typeOfChanges: "Physical Changes", materialChanges: Courses.getPhysicalCourses()),
-                    Change(typeOfChanges: "Emotion Changes", materialChanges: Courses.getMentalCourses())
+					Change(typeOfChanges: "Fisik dan Reproduksi", materialChanges: Courses.getPhysicalCourses()),
+                    Change(typeOfChanges: "Sosial dan Emosi", materialChanges: Courses.getMentalCourses())
                 ])
             
         }
