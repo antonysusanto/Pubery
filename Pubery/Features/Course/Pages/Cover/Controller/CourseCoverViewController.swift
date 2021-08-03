@@ -16,11 +16,11 @@ class CourseCoverViewController: UIViewController {
     @IBOutlet weak var petunjukButton: UIButton!
     @IBOutlet weak var mulaiButton: UIButton!
     
-    var selectedData: Courses!
+    var selectedCourse: Courses!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		let data = selectedData.getCourseDetail()
+		let data = selectedCourse.getCourseDetail()
 		changeTypeLabel.text = data.category
 		materialLabel.text = data.title
 		ageLabel.text = data.age
@@ -54,13 +54,14 @@ class CourseCoverViewController: UIViewController {
     @IBAction func petunjukAction(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Briefing", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "BriefingId") as! BriefingViewController
+		vc.selectedCourse = selectedCourse
         self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func startStoryAction(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "CourseStory", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "CourseStory") as! CourseStoryViewController
-		vc.selectedCourse = .C1_Men
+		vc.selectedCourse = selectedCourse
 //        vc.modalPresentationStyle = .fullScreen
 //        self.present(vc, animated:true, completion:nil)
 		self.navigationController?.pushViewController(vc, animated: true)
