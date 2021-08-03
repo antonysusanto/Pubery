@@ -12,7 +12,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func cellWasPressed(withData: Courses) {
         let storyboard = UIStoryboard(name: "CourseCover", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "goToCover") as! CourseCoverViewController
-        vc.selectedData = withData
+        vc.selectedCourse = withData
         self.navigationController?.pushViewController(vc, animated: true)
 //        performSegue(withIdentifier: "goToCover", sender: self)
     }

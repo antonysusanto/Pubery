@@ -18,16 +18,19 @@ class BriefingViewController: UIViewController, UIViewControllerTransitioningDel
     
     @IBOutlet weak var perhatianLabel: UILabel!
     @IBOutlet weak var perhatianDetailLabel: UILabel!
+	
+	var selectedCourse: Courses!
+	var introductionData: CourseIntroduction!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+		introductionData = selectedCourse.getCourseIntroduction()
         addBullet()
         introductionLabel.text = "Pada pembelajaran ini anak akan belajar tentang:"
         saranLabel.text = "Saran untuk orang tua:"
-        saranDetailLabel.text = "Orang tua diharapkan aktif dalam mengajak anak berdialog selama cerita berlangsung"
+		saranDetailLabel.text = introductionData.advice
         perhatianLabel.text = "Perhatian!"
-        perhatianDetailLabel.text = "Materi ini mengandung ilustrasi organ reproduksi di dalam tubuh. Disarankan untuk anak usia 11 tahun ke atas."
+		perhatianDetailLabel.text = introductionData.attention
     }
     
     override func updateViewConstraints() {
@@ -38,14 +41,10 @@ class BriefingViewController: UIViewController, UIViewControllerTransitioningDel
     }
     
     func addBullet(){
-        let bullet1 = "Penjelasan tentang menstruasi"
-        let bullet2 = "Proses terjadinya menstruasi"
-        let bullet3 = "Penjelasan organ - organ reproduksi perempuan"
-                 
-        bullets = [bullet1, bullet2, bullet3]
+		bullets = introductionData.introduction
                  
         let attributesDictionary = [NSAttributedString.Key.font : introductionDetailLabel.font]
-        let fullAttributedString = NSMutableAttributedString(string: "", attributes: attributesDictionary)
+		let fullAttributedString = NSMutableAttributedString(string: "", attributes: attributesDictionary as [NSAttributedString.Key : Any])
                  
         for string: String in bullets {
             let bulletPoint: String = "\u{2022}"

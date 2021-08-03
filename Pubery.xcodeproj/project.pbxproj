@@ -11,12 +11,24 @@
 		0A5212AC26B9003F00292FA2 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212AB26B9003F00292FA2 /* CourseDetail.swift */; };
 		0A5212AE26B9005300292FA2 /* CourseIntroduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212AD26B9005300292FA2 /* CourseIntroduction.swift */; };
 		0A5212B026B9005E00292FA2 /* CourseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212AF26B9005E00292FA2 /* CourseContent.swift */; };
+		0A5212B426B916CA00292FA2 /* C1_MenstruasiPertama_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212B326B916CA00292FA2 /* C1_MenstruasiPertama_Data.swift */; };
+		0A5212B626B9174600292FA2 /* C2_TentangMenstruasi_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212B526B9174600292FA2 /* C2_TentangMenstruasi_Data.swift */; };
+		0A5212BC26B9176C00292FA2 /* C3_Jerawat_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212BB26B9176C00292FA2 /* C3_Jerawat_Data.swift */; };
+		0A5212BE26B9177900292FA2 /* C4_JakunDanFungsinya_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212BD26B9177900292FA2 /* C4_JakunDanFungsinya_Data.swift */; };
+		0A5212C026B9182900292FA2 /* C5_PerubahanSuara_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212BF26B9182900292FA2 /* C5_PerubahanSuara_Data.swift */; };
+		0A5212C226B9183400292FA2 /* C6_PerubahanSuasanaHati_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212C126B9183400292FA2 /* C6_PerubahanSuasanaHati_Data.swift */; };
+		0A5212C526B91B5300292FA2 /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212C426B91B5300292FA2 /* LabelStyle.swift */; };
+		0A5212C726B91BAC00292FA2 /* LabelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212C626B91BAC00292FA2 /* LabelType.swift */; };
+		0A5212C926B91BCC00292FA2 /* StoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212C826B91BCC00292FA2 /* StoryLabel.swift */; };
+		0A5212CB26B91BFC00292FA2 /* StoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212CA26B91BFC00292FA2 /* StoryButton.swift */; };
+		0A5212CD26B91C2900292FA2 /* StoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212CC26B91C2900292FA2 /* StoryImage.swift */; };
+		0A5212CF26B91C4500292FA2 /* CustomConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212CE26B91C4500292FA2 /* CustomConstraint.swift */; };
+		0A5212D126B91C7500292FA2 /* ViewConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212D026B91C7500292FA2 /* ViewConstraint.swift */; };
 		0A69C26026B12DDD002439E9 /* Brushing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C25F26B12DDD002439E9 /* Brushing.storyboard */; };
 		0A69C26226B12DEB002439E9 /* BrushingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C26126B12DEB002439E9 /* BrushingViewController.swift */; };
 		0A69C27026B19581002439E9 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C26F26B19581002439E9 /* OnboardingContentView.swift */; };
 		0A69C27226B19593002439E9 /* OnboardingContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C27126B19593002439E9 /* OnboardingContentView.xib */; };
 		0ABF51D626B6C68D009A934F /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D526B6C68D009A934F /* Courses.swift */; };
-		0ABF51D826B6C880009A934F /* C1_Men.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D726B6C880009A934F /* C1_Men.swift */; };
 		0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */; };
 		0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */; };
 		0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFBA226AF478D0023A4DF /* Pubery.xcdatamodeld */; };
@@ -74,12 +86,24 @@
 		0A5212AB26B9003F00292FA2 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		0A5212AD26B9005300292FA2 /* CourseIntroduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseIntroduction.swift; sourceTree = "<group>"; };
 		0A5212AF26B9005E00292FA2 /* CourseContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContent.swift; sourceTree = "<group>"; };
+		0A5212B326B916CA00292FA2 /* C1_MenstruasiPertama_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C1_MenstruasiPertama_Data.swift; sourceTree = "<group>"; };
+		0A5212B526B9174600292FA2 /* C2_TentangMenstruasi_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C2_TentangMenstruasi_Data.swift; sourceTree = "<group>"; };
+		0A5212BB26B9176C00292FA2 /* C3_Jerawat_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C3_Jerawat_Data.swift; sourceTree = "<group>"; };
+		0A5212BD26B9177900292FA2 /* C4_JakunDanFungsinya_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4_JakunDanFungsinya_Data.swift; sourceTree = "<group>"; };
+		0A5212BF26B9182900292FA2 /* C5_PerubahanSuara_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C5_PerubahanSuara_Data.swift; sourceTree = "<group>"; };
+		0A5212C126B9183400292FA2 /* C6_PerubahanSuasanaHati_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C6_PerubahanSuasanaHati_Data.swift; sourceTree = "<group>"; };
+		0A5212C426B91B5300292FA2 /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
+		0A5212C626B91BAC00292FA2 /* LabelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelType.swift; sourceTree = "<group>"; };
+		0A5212C826B91BCC00292FA2 /* StoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryLabel.swift; sourceTree = "<group>"; };
+		0A5212CA26B91BFC00292FA2 /* StoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryButton.swift; sourceTree = "<group>"; };
+		0A5212CC26B91C2900292FA2 /* StoryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryImage.swift; sourceTree = "<group>"; };
+		0A5212CE26B91C4500292FA2 /* CustomConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConstraint.swift; sourceTree = "<group>"; };
+		0A5212D026B91C7500292FA2 /* ViewConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstraint.swift; sourceTree = "<group>"; };
 		0A69C25F26B12DDD002439E9 /* Brushing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Brushing.storyboard; sourceTree = "<group>"; };
 		0A69C26126B12DEB002439E9 /* BrushingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushingViewController.swift; sourceTree = "<group>"; };
 		0A69C26F26B19581002439E9 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 		0A69C27126B19593002439E9 /* OnboardingContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingContentView.xib; sourceTree = "<group>"; };
 		0ABF51D526B6C68D009A934F /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
-		0ABF51D726B6C880009A934F /* C1_Men.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C1_Men.swift; sourceTree = "<group>"; };
 		0AFBFB9626AF478D0023A4DF /* Pubery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pubery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,10 +172,38 @@
 		0A5212A826B8FFFA00292FA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0ABF51D526B6C68D009A934F /* Courses.swift */,
 				0A5212A926B9001200292FA2 /* CourseHome.swift */,
 				0A5212AD26B9005300292FA2 /* CourseIntroduction.swift */,
 				0A5212AB26B9003F00292FA2 /* CourseDetail.swift */,
 				0A5212AF26B9005E00292FA2 /* CourseContent.swift */,
+				0A5212B326B916CA00292FA2 /* C1_MenstruasiPertama_Data.swift */,
+				0A5212B526B9174600292FA2 /* C2_TentangMenstruasi_Data.swift */,
+				0A5212BB26B9176C00292FA2 /* C3_Jerawat_Data.swift */,
+				0A5212BD26B9177900292FA2 /* C4_JakunDanFungsinya_Data.swift */,
+				0A5212BF26B9182900292FA2 /* C5_PerubahanSuara_Data.swift */,
+				0A5212C126B9183400292FA2 /* C6_PerubahanSuasanaHati_Data.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A5212C326B91B3200292FA2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A5212C426B91B5300292FA2 /* LabelStyle.swift */,
+				0A5212D026B91C7500292FA2 /* ViewConstraint.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0A5212D226B91CB800292FA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A5212CE26B91C4500292FA2 /* CustomConstraint.swift */,
+				0A5212CA26B91BFC00292FA2 /* StoryButton.swift */,
+				0A5212CC26B91C2900292FA2 /* StoryImage.swift */,
+				0A5212C626B91BAC00292FA2 /* LabelType.swift */,
+				0A5212C826B91BCC00292FA2 /* StoryLabel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +395,7 @@
 		0AFBFBBB26AF4A170023A4DF /* Story */ = {
 			isa = PBXGroup;
 			children = (
+				0A5212D226B91CB800292FA2 /* Model */,
 				0AFBFBC126AF4A390023A4DF /* View */,
 				0AFBFBBD26AF4A210023A4DF /* Controller */,
 			);
@@ -361,8 +414,6 @@
 			isa = PBXGroup;
 			children = (
 				0AFBFBDC26AF4B970023A4DF /* CourseStoryViewController.swift */,
-				0ABF51D526B6C68D009A934F /* Courses.swift */,
-				0ABF51D726B6C880009A934F /* C1_Men.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -439,6 +490,7 @@
 		0AFBFBC726AF4AB60023A4DF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0A5212C326B91B3200292FA2 /* Extensions */,
 				0AFBFBC826AF4ABE0023A4DF /* Core Data */,
 			);
 			path = Utilities;
@@ -726,13 +778,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFBFBD926AF4B800023A4DF /* HomeViewController.swift in Sources */,
+				0A5212BE26B9177900292FA2 /* C4_JakunDanFungsinya_Data.swift in Sources */,
+				0A5212CB26B91BFC00292FA2 /* StoryButton.swift in Sources */,
 				EA680C4326B2E9FB00C8C405 /* ProfileAddController.swift in Sources */,
 				0AFBFBDD26AF4B970023A4DF /* CourseStoryViewController.swift in Sources */,
+				0A5212C526B91B5300292FA2 /* LabelStyle.swift in Sources */,
 				0ABF51D626B6C68D009A934F /* Courses.swift in Sources */,
 				EA60E96D26B7FBF200DF890B /* Children+CoreDataClass.swift in Sources */,
+				0A5212B626B9174600292FA2 /* C2_TentangMenstruasi_Data.swift in Sources */,
+				0A5212B426B916CA00292FA2 /* C1_MenstruasiPertama_Data.swift in Sources */,
 				0AFBFBDB26AF4B8C0023A4DF /* CourseCoverViewController.swift in Sources */,
 				B85EA8C126B283F400DA803D /* EmptyProfile.swift in Sources */,
 				B82142CF26B05AE0007E73B6 /* CourseCollectionViewCell.swift in Sources */,
+				0A5212C926B91BCC00292FA2 /* StoryLabel.swift in Sources */,
 				EA60E96F26B7FBF200DF890B /* Progress+CoreDataClass.swift in Sources */,
 				0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */,
 				EA7EFBB326B0F5D500B684BA /* EmptyViewCell.swift in Sources */,
@@ -742,27 +800,33 @@
 				EA680C4526B3194400C8C405 /* ProfileAddFinishController.swift in Sources */,
 				B8C6B5FC26B79DB200EB460A /* BriefingViewController.swift in Sources */,
 				EA7EFBB926B0F8EC00B684BA /* AddChildViewCell.swift in Sources */,
+				0A5212D126B91C7500292FA2 /* ViewConstraint.swift in Sources */,
+				0A5212BC26B9176C00292FA2 /* C3_Jerawat_Data.swift in Sources */,
 				B82142D526B05B03007E73B6 /* Course.swift in Sources */,
 				EA60E97026B7FBF200DF890B /* Progress+CoreDataProperties.swift in Sources */,
 				B85EA8C826B387BC00DA803D /* CircularProgressBar.swift in Sources */,
+				0A5212C726B91BAC00292FA2 /* LabelType.swift in Sources */,
 				0A5212AA26B9001200292FA2 /* CourseHome.swift in Sources */,
+				0A5212C026B9182900292FA2 /* C5_PerubahanSuara_Data.swift in Sources */,
 				EA60E96E26B7FBF200DF890B /* Children+CoreDataProperties.swift in Sources */,
 				B85EA8B726B2534900DA803D /* CustomAlert.swift in Sources */,
 				0A69C26226B12DEB002439E9 /* BrushingViewController.swift in Sources */,
+				0A5212CD26B91C2900292FA2 /* StoryImage.swift in Sources */,
 				EA60E96326B677E600DF890B /* ProfileEditController.swift in Sources */,
 				0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */,
 				B82142D726B05B0D007E73B6 /* GradientView.swift in Sources */,
 				0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */,
-				0ABF51D826B6C880009A934F /* C1_Men.swift in Sources */,
 				0A5212B026B9005E00292FA2 /* CourseContent.swift in Sources */,
 				B82142CA26B05ABC007E73B6 /* CollectionViewTableViewCell.swift in Sources */,
 				B82142D426B05B03007E73B6 /* HomeData.swift in Sources */,
 				0A69C27026B19581002439E9 /* OnboardingContentView.swift in Sources */,
 				0AFBFBE126AF4BAA0023A4DF /* ProfileViewController.swift in Sources */,
+				0A5212CF26B91C4500292FA2 /* CustomConstraint.swift in Sources */,
 				B85EA8B226B2526200DA803D /* PadsViewController.swift in Sources */,
 				0AFBFBD726AF4B750023A4DF /* OnboardingViewController.swift in Sources */,
 				B85EA8C626B2B5E900DA803D /* FilledProfile.swift in Sources */,
 				0A5212AE26B9005300292FA2 /* CourseIntroduction.swift in Sources */,
+				0A5212C226B9183400292FA2 /* C6_PerubahanSuasanaHati_Data.swift in Sources */,
 				EA60E96826B795D200DF890B /* CoreDataManager.swift in Sources */,
 				0AFBFBDF26AF4BA00023A4DF /* CourseEndViewController.swift in Sources */,
 			);
