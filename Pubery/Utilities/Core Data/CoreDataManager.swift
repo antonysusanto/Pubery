@@ -34,7 +34,7 @@ class CoreDataManager {
     }
     
     //This function use to create the Children
-    func createChildren(name: String, gender:String){
+    func createChildren(name: String, gender:String) {
         let newChildren = Children(context: self.context)
         newChildren.name = name
         newChildren.gender = gender
@@ -47,4 +47,13 @@ class CoreDataManager {
         
     }
     
+    //This function use to delete the Children profile
+    func deleteChildren(data:Children) {
+        self.context.delete(data)
+        do {
+            try self.context.save()
+        } catch {
+            print("Delete Children error \(error)")
+        }
+    }
 }

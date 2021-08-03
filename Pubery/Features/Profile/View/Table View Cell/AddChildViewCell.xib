@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiY-R6-Eoj">
-                        <rect key="frame" x="15" y="17" width="350" height="123"/>
+                        <rect key="frame" x="15" y="10" width="350" height="123"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Tambah data anak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlv-CP-VYY">
                                 <rect key="frame" x="22" y="41" width="177" height="41"/>
@@ -45,8 +45,8 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="xiY-R6-Eoj" secondAttribute="bottom" id="0L2-VH-e9p"/>
-                    <constraint firstItem="xiY-R6-Eoj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="0Qy-ml-YZ0"/>
+                    <constraint firstAttribute="bottom" secondItem="xiY-R6-Eoj" secondAttribute="bottom" constant="7" id="0L2-VH-e9p"/>
+                    <constraint firstItem="xiY-R6-Eoj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="0Qy-ml-YZ0"/>
                     <constraint firstAttribute="trailing" secondItem="xiY-R6-Eoj" secondAttribute="trailing" constant="15" id="MpH-ky-5pJ"/>
                     <constraint firstItem="xiY-R6-Eoj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="rbZ-Cv-vr2"/>
                 </constraints>
