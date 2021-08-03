@@ -36,6 +36,12 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 		// so set an if statement to prevent repeated triggers as workaround
 		if (set) { return }
 		set = true
+		// workaround for safearea color
+		let safeAreaColor = UIView()
+		safeAreaColor.backgroundColor = UIColor(red: 255/255, green: 228/255, blue: 163/255, alpha: 1)
+		view.addSubview(safeAreaColor)
+		safeAreaColor.translatesAutoresizingMaskIntoConstraints = false
+		safeAreaColor.setConstraint(top: view.topAnchor, leading: view.leadingAnchor, bottom: scrollView.topAnchor, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
 		setupScrollView()
 		setupContent()
 		setupPageControl()
@@ -50,6 +56,7 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 		scrollView.isPagingEnabled = true
 		scrollView.bounces = false
 		scrollView.showsHorizontalScrollIndicator = false
+		scrollView.translatesAutoresizingMaskIntoConstraints = false
 	}
 	
 	func setupContent() {
@@ -107,6 +114,38 @@ class CourseStoryViewController: UIViewController, UIScrollViewDelegate {
 					let label = UILabel()
 					label.text = storyLabel.text
 					label.textAlignment = .justified
+					label.numberOfLines = 0
+					label.lineBreakMode = .byWordWrapping
+					label.sizeToFit()
+					
+					elementsContainer.addSubview(label)
+					label.translatesAutoresizingMaskIntoConstraints = false
+					
+					if (elementIndex == 0 && lastElementIndex == 0) {
+						label.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: elementsContainer.trailingAnchor, padding: storyLabel.padding, size: storyLabel.size)
+					} else if (elementIndex == 0) {
+						label.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: storyLabel.padding, size: storyLabel.size)
+					} else {
+						let previousElement = elements[elementIndex-1]
+						label.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: storyLabel.padding, size: storyLabel.size)
+					}
+					
+					elements.append(label)
+				} else if (pages[pageIndex][elementIndex] is StoryLabel) {
+					
+					let storyLabel = pages[pageIndex][elementIndex] as! StoryLabel
+					
+					let label = UILabel()
+//					label.text = storyLabel.text
+					if (storyLabel.type == .bold) {
+						label.boldString(text: storyLabel.text, boldText: storyLabel.targetText)
+					} else if (storyLabel.type == .highlight) {
+						label.colorString(text: storyLabel.text, coloredText: storyLabel.targetText, color: .red)
+					} else if (storyLabel.type == .regular) {
+						label.text = storyLabel.text
+					}
+					
+					label.textAlignment = storyLabel.alignment
 					label.numberOfLines = 0
 					label.lineBreakMode = .byWordWrapping
 					label.sizeToFit()
@@ -296,4 +335,48 @@ class StoryButton: CustomConstraint {
 
 class CustomStoryButton: UIButton {
 	var destination: String?
+}
+
+class StoryLabel : CustomConstraint {
+	var text: String
+	var type: LabelType
+	var targetText: [String]
+	var alignment: NSTextAlignment
+	
+	init(text: String, type:LabelType, targetText:[String], alignment:NSTextAlignment, padding: UIEdgeInsets, size: CGSize) {
+		self.text = text
+		self.type = type
+		self.targetText = targetText
+		self.alignment = alignment
+		super.init(padding: padding, size: size)
+	}
+}
+
+enum LabelType {
+	case regular, bold, highlight
+}
+
+extension UILabel {
+	func colorString(text: String, coloredText: [String], color: UIColor) {
+		let attributedString = NSMutableAttributedString(string: text)
+//		let range = (text as NSString).range(of: coloredText)
+//		attributedString.setAttributes([NSAttributedString.Key.foregroundColor: color, NSAttributedString.Key.strokeWidth: 7], range: range)
+		coloredText.forEach { coloredText in
+			let range = (text as NSString).range(of: coloredText)
+			attributedString.setAttributes([.foregroundColor: color], range: range)
+		}
+		self.attributedText = attributedString
+	}
+
+	func boldString(text: String, boldText: [String]) {
+		let attributedString = NSMutableAttributedString(string: text)
+//		let range = (text as NSString).range(of: boldText)
+//		attributedString.setAttributes([NSAttributedString.Key.strokeWidth: 7], range: range)
+		boldText.forEach { boldText in
+			let range = (text as NSString).range(of: boldText)
+			attributedString.setAttributes([.font: UIFont.systemFont(ofSize: 17, weight: .bold)], range: range)
+		}
+//		attributedString.setAttributes([.font: UIFont.systemFont(ofSize: 17, weight: .bold)], range: range)
+		self.attributedText = attributedString
+	}
 }

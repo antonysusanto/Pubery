@@ -16,12 +16,16 @@ class CourseCoverViewController: UIViewController {
     @IBOutlet weak var petunjukButton: UIButton!
     @IBOutlet weak var mulaiButton: UIButton!
     
-    var selectedData: String!
+    var selectedData: Courses!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        materialLabel.text = "\(selectedData!)"
+		let data = selectedData.getCourseDetail()
+		changeTypeLabel.text = data.category
+		materialLabel.text = data.title
+		ageLabel.text = data.age
+		childrenImage.image = UIImage(named: data.imageName)
+		
 		
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         navigationItem.title = .none

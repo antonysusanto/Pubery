@@ -93,7 +93,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
 			let vc = story.instantiateViewController(withIdentifier: "TabBar")
 			UIApplication.shared.windows.first?.rootViewController = vc
 			UIApplication.shared.windows.first?.makeKeyAndVisible()
-//			UserDefaults.standard.set(true, forKey: "onboardingShown")
+			UserDefaults.standard.set(true, forKey: "onboardingShown")
 		}
 
 	}

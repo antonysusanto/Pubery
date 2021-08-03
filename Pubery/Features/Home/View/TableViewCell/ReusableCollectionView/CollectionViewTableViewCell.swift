@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CustomCellDelegator {
-    func cellWasPressed(withData: String)
+    func cellWasPressed(withData: Courses)
 }
 
 class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -53,8 +53,10 @@ class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CourseCollectionViewCell.identifier, for: indexPath) as! CourseCollectionViewCell
-        cell.courseLabel.text = changes?.materialChanges[indexPath.row].courseName
-        cell.courseImage.image = changes?.materialChanges[indexPath.row].image ?? UIImage()
+        cell.courseLabel.text = changes?.materialChanges[indexPath.row].title
+		cell.courseImage.image = UIImage(named: changes?.materialChanges[indexPath.row].imageName ?? "page1")
+		
+//		cell.courseImage.image = (changes?.materialChanges[indexPath.row].checklist ?? false) ? UIImage(named: "checkmark.circle.fill") : UIImage()
 //        cell.tapActionGoToCourse = {
 //
 //        }
@@ -66,7 +68,7 @@ class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
 //        let selectedData = changes?.materialChanges[indexPath.row].courseName
         let selectedData = changes?.materialChanges[indexPath.item]
 //        let selectedData = Change[indexPath.item]
-        self.delegate?.cellWasPressed(withData: selectedData!.courseName)
+        self.delegate?.cellWasPressed(withData: selectedData!.id)
 //        self.delegate?.cellWasPressed(withData: selectedData!.courseName)
         
     }

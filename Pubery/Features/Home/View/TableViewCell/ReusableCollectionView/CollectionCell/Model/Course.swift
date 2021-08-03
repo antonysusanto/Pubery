@@ -16,7 +16,7 @@ struct Course {
 
 struct Change {
     let typeOfChanges: String
-    let materialChanges: [Course]
+    let materialChanges: [CourseHome]
 }
 
 struct ChangeModel {
