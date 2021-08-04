@@ -1,24 +1,33 @@
 //
-//  StoryImage.swift
+//  StoryAnimatedImages.swift
 //  Pubery
 //
-//  Created by Antony Susanto on 03/08/21.
+//  Created by Antony Susanto on 04/08/21.
 //
 
 import UIKit
 
-class StoryImage: CustomConstraint {
-	var imageName: String
+class StoryAnimatedImages: CustomConstraint {
+	var imageNames: [String]
+	var interval: CGFloat
 	
-	init(imageName: String, padding: UIEdgeInsets, size: CGSize) {
-		self.imageName = imageName
+	init(imageNames: [String], interval:CGFloat, padding: UIEdgeInsets, size: CGSize) {
+		self.imageNames = imageNames
+		self.interval = interval
 		super.init(padding: padding, size: size)
 	}
 	
 	func create(elementsContainer:UIView, elementIndex:Int, elements:[UIView], lastElementIndex:Int) -> UIImageView{
 		let imageView = UIImageView()
-		imageView.image = UIImage(named: imageName)
 		imageView.contentMode = .scaleAspectFit
+		
+		var images: [UIImage] = []
+		for i in 0..<imageNames.count {
+			images.append(UIImage(named: imageNames[i])!)
+		}
+		imageView.animationImages = images
+		imageView.animationDuration = 0.5
+		imageView.startAnimating()
 		
 		elementsContainer.addSubview(imageView)
 		
