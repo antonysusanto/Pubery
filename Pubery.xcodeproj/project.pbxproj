@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0F47BD26BA4BE800BE660A /* StoryAnimatedImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0F47BC26BA4BE800BE660A /* StoryAnimatedImages.swift */; };
 		0A5212AA26B9001200292FA2 /* CourseHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212A926B9001200292FA2 /* CourseHome.swift */; };
 		0A5212AC26B9003F00292FA2 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212AB26B9003F00292FA2 /* CourseDetail.swift */; };
 		0A5212AE26B9005300292FA2 /* CourseIntroduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212AD26B9005300292FA2 /* CourseIntroduction.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0F47BC26BA4BE800BE660A /* StoryAnimatedImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryAnimatedImages.swift; sourceTree = "<group>"; };
 		0A5212A926B9001200292FA2 /* CourseHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseHome.swift; sourceTree = "<group>"; };
 		0A5212AB26B9003F00292FA2 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		0A5212AD26B9005300292FA2 /* CourseIntroduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseIntroduction.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				0A5212CE26B91C4500292FA2 /* CustomConstraint.swift */,
 				0A5212CA26B91BFC00292FA2 /* StoryButton.swift */,
 				0A5212CC26B91C2900292FA2 /* StoryImage.swift */,
+				0A0F47BC26BA4BE800BE660A /* StoryAnimatedImages.swift */,
 				0A5212C626B91BAC00292FA2 /* LabelType.swift */,
 				0A5212C826B91BCC00292FA2 /* StoryLabel.swift */,
 			);
@@ -825,6 +828,7 @@
 				B85EA8B226B2526200DA803D /* PadsViewController.swift in Sources */,
 				0AFBFBD726AF4B750023A4DF /* OnboardingViewController.swift in Sources */,
 				B85EA8C626B2B5E900DA803D /* FilledProfile.swift in Sources */,
+				0A0F47BD26BA4BE800BE660A /* StoryAnimatedImages.swift in Sources */,
 				0A5212AE26B9005300292FA2 /* CourseIntroduction.swift in Sources */,
 				0A5212C226B9183400292FA2 /* C6_PerubahanSuasanaHati_Data.swift in Sources */,
 				EA60E96826B795D200DF890B /* CoreDataManager.swift in Sources */,

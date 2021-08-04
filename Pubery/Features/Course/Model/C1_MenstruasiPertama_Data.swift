@@ -55,11 +55,12 @@ struct C1_MenstruasiPertama_Data {
 			],
 			
 			[ //page2
-				 StoryImage(
-					 imageName: "page2a",
-					 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
-					 size: .zero
-				 ),
+				StoryAnimatedImages(
+					imageNames: ["page2a","page2b"],
+					interval: 1,
+					padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
+					size: .zero
+				),
 				 StoryLabel(
 					 text: "Putri merasakan perutnya seperti ditekan-tekan.",
 					 padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20),

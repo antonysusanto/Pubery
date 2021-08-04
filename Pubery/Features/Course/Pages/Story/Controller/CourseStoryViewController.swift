@@ -87,6 +87,12 @@ class CourseStoryViewController: UIViewController {
 					
 					elements.append(imageView)
 					
+				} else if (pages[pageIndex][elementIndex] is StoryAnimatedImages) {
+					
+					let imageView = (pages[pageIndex][elementIndex] as! StoryAnimatedImages).create(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex)
+					
+					elements.append(imageView)
+					
 				} else if (pages[pageIndex][elementIndex] is StoryLabel) {
 					
 					let label = createLabel(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex, storyLabel: pages[pageIndex][elementIndex] as! StoryLabel)
