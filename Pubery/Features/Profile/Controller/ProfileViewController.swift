@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EmptyViewCellDelegate, NotEmptyViewCellDelegate {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EmptyViewCellDelegate, NotEmptyViewCellDelegate, getUpdateDataDelegate {
 
     @IBOutlet weak var tableProfile: UITableView!
     
@@ -22,6 +22,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tabBarController?.tabBar.isHidden = false
         profileChildren = userData.fetchChildren()
         navBar()
+    }
+    
+    func updateData() {
+        profileChildren = userData.fetchChildren()
+        print(profileChildren)
+        tableProfile.reloadData()
     }
     
     func goToNextPage() {
@@ -80,7 +86,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             let cell = (tableView.dequeueReusableCell(withIdentifier: "listID", for: indexPath)) as! ListDataViewCell
         
-            let thisCell: Children!
+            let thisCell: Children
             thisCell = profileChildren[indexPath.row-1]
             cell.dataLabel.text = thisCell.name
             
@@ -92,6 +98,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     print("edit pressed")
                     let storyboard = UIStoryboard(name: "ProfileEdit", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "ProfileEditID") as! ProfileEditController
+                    vc.name = thisCell.name
+                    vc.gender = thisCell.gender
+                    vc.indexData = profileChildren[indexPath.row-1]
+                    vc.delegate = self
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 let deleteAction:UIAlertAction = UIAlertAction(title: "Delete", style: .destructive) { action -> Void in
@@ -102,12 +112,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     profileChildren = userData.fetchChildren()
                     tableProfile.reloadData()
                 }
-                let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in }
-        
+                let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+                    
+                }
                 actionSheetController.addAction(editAction)
                 actionSheetController.addAction(deleteAction)
                 actionSheetController.addAction(cancelAction)
-        
                 present(actionSheetController, animated: true, completion: nil)
                 
             }
