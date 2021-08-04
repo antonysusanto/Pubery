@@ -83,6 +83,7 @@ class ProfileEditController: UIViewController {
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "ProfileID") as! ProfileViewController
         name = nameField.text
+        vc.navigationItem.hidesBackButton = true
         userData.updateChildren(newName: name, newGender: gender, replaceData: indexData)
         delegate?.updateData()
         self.navigationController?.pushViewController(vc, animated: true)
