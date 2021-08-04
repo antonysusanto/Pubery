@@ -83,7 +83,7 @@ class CourseStoryViewController: UIViewController {
 				
 				if (pages[pageIndex][elementIndex] is StoryImage) {
 					
-					let imageView = createImage(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex, storyImage: pages[pageIndex][elementIndex] as! StoryImage)
+					let imageView = (pages[pageIndex][elementIndex] as! StoryImage).create(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex)
 					
 					elements.append(imageView)
 					
@@ -95,13 +95,13 @@ class CourseStoryViewController: UIViewController {
 					
 				} else if (pages[pageIndex][elementIndex] is StoryLabel) {
 					
-					let label = createLabel(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex, storyLabel: pages[pageIndex][elementIndex] as! StoryLabel)
+					let label = (pages[pageIndex][elementIndex] as! StoryLabel).create(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex)
 					
 					elements.append(label)
 					
 				} else if (pages[pageIndex][elementIndex] is StoryButton) {
 					
-					let button = createButton(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex, storyButton: pages[pageIndex][elementIndex] as! StoryButton)
+					let button = (pages[pageIndex][elementIndex] as! StoryButton).create(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex, navigator: self.navigationController)
 					
 					elements.append(button)
 					
@@ -113,13 +113,7 @@ class CourseStoryViewController: UIViewController {
 			scrollView.addSubview(contentView)
 		} //end of looping pages
 	}
-	
-	@objc func buttonAction(sender: CustomStoryButton) {
-		let storyBoard: UIStoryboard = UIStoryboard(name: sender.destination!, bundle: nil)
-		let vc = storyBoard.instantiateViewController(withIdentifier: sender.destination!)
-		self.navigationController?.pushViewController(vc, animated: false)
-	}
-	
+
 	func setupPageControl() {
 		pageControl.numberOfPages = pages.count
 		pageControl.currentPage = 0
@@ -147,10 +141,7 @@ class CourseStoryViewController: UIViewController {
 		let currentPage = getCurrentPage()
 		if (currentPage != pages.count-1) {
 			scrollView.scrollRectToVisible(CGRect(x: contentWidth * CGFloat(currentPage+1), y: 0, width: contentWidth, height: 1), animated: true)
-		} else {
-
 		}
-
 	}
 
 	@IBAction func previousPage(_ sender: Any) {
@@ -158,80 +149,6 @@ class CourseStoryViewController: UIViewController {
 		if (currentPage != 0) {
 			scrollView.scrollRectToVisible(CGRect(x: contentWidth * CGFloat(currentPage-1), y: 0, width: contentWidth, height: 1), animated: true)
 		}
-	}
-	
-	func createImage(elementsContainer:UIView, elementIndex:Int, elements:[UIView], lastElementIndex:Int, storyImage:StoryImage) -> UIImageView{
-		let imageView = UIImageView()
-		imageView.image = UIImage(named: storyImage.imageName)
-		imageView.contentMode = .scaleAspectFit
-		
-		elementsContainer.addSubview(imageView)
-		
-		imageView.translatesAutoresizingMaskIntoConstraints = false
-		
-		if (elementIndex == 0) {
-			imageView.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: elementsContainer.trailingAnchor, padding: storyImage.padding, size: storyImage.size)
-		} else {
-			let previousElement = elements[elementIndex-1]
-			imageView.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: elementIndex == lastElementIndex ? elementsContainer.bottomAnchor : nil, trailing: elementsContainer.trailingAnchor, padding: storyImage.padding, size: storyImage.size)
-		}
-		
-		return imageView
-	}
-	
-	func createLabel(elementsContainer:UIView, elementIndex:Int, elements:[UIView], lastElementIndex:Int, storyLabel:StoryLabel) -> UILabel{
-		let label = UILabel()
-
-		if (storyLabel.type == .bold) {
-			label.boldText(text: storyLabel.text, boldText: storyLabel.targetText)
-		} else if (storyLabel.type == .highlight) {
-			label.highlightText(text: storyLabel.text, coloredText: storyLabel.targetText, color: .red)
-		} else if (storyLabel.type == .regular) {
-			label.text = storyLabel.text
-		}
-		
-		label.textAlignment = storyLabel.alignment
-		label.font = label.font.withSize(storyLabel.fontSize)
-		label.numberOfLines = 0
-		label.lineBreakMode = .byWordWrapping
-		label.sizeToFit()
-		
-		elementsContainer.addSubview(label)
-		label.translatesAutoresizingMaskIntoConstraints = false
-		
-		if (elementIndex == 0 && lastElementIndex == 0) {
-			label.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: elementsContainer.trailingAnchor, padding: storyLabel.padding, size: storyLabel.size)
-		} else if (elementIndex == 0) {
-			label.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: storyLabel.padding, size: storyLabel.size)
-		} else {
-			let previousElement = elements[elementIndex-1]
-			label.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: storyLabel.padding, size: storyLabel.size)
-		}
-		
-		return label
-	}
-	
-	func createButton(elementsContainer:UIView, elementIndex:Int, elements:[UIView], lastElementIndex:Int, storyButton:StoryButton) -> CustomStoryButton{
-		let button = CustomStoryButton()
-		button.setTitle(storyButton.title, for: .normal)
-		button.backgroundColor = UIColor(red: 202/255, green: 82/255, blue: 82/255, alpha: 1)
-		button.layer.cornerRadius = 14
-		button.destination = storyButton.destination
-		button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-		
-		elementsContainer.addSubview(button)
-		button.translatesAutoresizingMaskIntoConstraints = false
-		
-		if (elementIndex == 0 && lastElementIndex == 0) {
-			button.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: elementsContainer.trailingAnchor, padding: storyButton.padding, size: storyButton.size)
-		} else if (elementIndex == 0) {
-			button.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: storyButton.padding, size: storyButton.size)
-		} else {
-			let previousElement = elements[elementIndex-1]
-			button.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: storyButton.padding, size: storyButton.size)
-		}
-		
-		return button
 	}
 }
 

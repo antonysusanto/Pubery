@@ -1,5 +1,5 @@
 //
-//  StoryLabel.swift
+//  swift
 //  Pubery
 //
 //  Created by Antony Susanto on 03/08/21.
@@ -21,5 +21,37 @@ class StoryLabel : CustomConstraint {
 		self.alignment = alignment
 		self.fontSize = fontsize
 		super.init(padding: padding, size: size)
+	}
+	
+	func create(elementsContainer:UIView, elementIndex:Int, elements:[UIView], lastElementIndex:Int) -> UILabel{
+		let label = UILabel()
+
+		if (type == .bold) {
+			label.boldText(text: text, boldText: targetText)
+		} else if (type == .highlight) {
+			label.highlightText(text: text, coloredText: targetText, color: .red)
+		} else if (type == .regular) {
+			label.text = text
+		}
+		
+		label.textAlignment = alignment
+		label.font = label.font.withSize(fontSize)
+		label.numberOfLines = 0
+		label.lineBreakMode = .byWordWrapping
+		label.sizeToFit()
+		
+		elementsContainer.addSubview(label)
+		label.translatesAutoresizingMaskIntoConstraints = false
+		
+		if (elementIndex == 0 && lastElementIndex == 0) {
+			label.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
+		} else if (elementIndex == 0) {
+			label.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
+		} else {
+			let previousElement = elements[elementIndex-1]
+			label.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
+		}
+		
+		return label
 	}
 }
