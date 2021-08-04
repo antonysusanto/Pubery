@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UA8-dg-wf4">
-                                <rect key="frame" x="20" y="46.5" width="368" height="246.5"/>
+                                <rect key="frame" x="20" y="46.5" width="388" height="246.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="6kV-yw-fNf">
                                     <size key="itemSize" width="143" height="220"/>
@@ -45,7 +45,7 @@
                             <constraint firstAttribute="trailing" secondItem="Ggm-BB-mc0" secondAttribute="trailing" constant="30" id="BNS-Eh-WbI"/>
                             <constraint firstItem="UA8-dg-wf4" firstAttribute="leading" secondItem="gar-RY-yw6" secondAttribute="leading" constant="20" id="G7t-o8-6Gq"/>
                             <constraint firstAttribute="bottom" secondItem="UA8-dg-wf4" secondAttribute="bottom" constant="10" id="U7X-WI-BbC"/>
-                            <constraint firstAttribute="trailing" secondItem="UA8-dg-wf4" secondAttribute="trailing" constant="20" id="Ube-JM-W3B"/>
+                            <constraint firstAttribute="trailing" secondItem="UA8-dg-wf4" secondAttribute="trailing" id="Ube-JM-W3B"/>
                         </constraints>
                     </view>
                 </subviews>

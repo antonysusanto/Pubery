@@ -13,6 +13,8 @@ class CircularProgressBar: UIView {
     private var progressLayer: CAShapeLayer!
     private var textLayer: CATextLayer!
     
+    let totalCount = Courses.getPhysicalCourses().count + Courses.getMentalCourses().count
+    
     public var progress: CGFloat = 0 {
         didSet{
 //            didProgressUpdated()
@@ -75,6 +77,7 @@ class CircularProgressBar: UIView {
         shapeLayer.lineWidth = lineWidth
         shapeLayer.lineCap = .round
         
+        
         if strokeColor != UIColor.white.cgColor{
             shapeLayer.strokeEnd = progress
         }
@@ -88,7 +91,9 @@ class CircularProgressBar: UIView {
         let fontSize = min(width, height) / 6
         let offSet = min(width, height) * 0.1
         let layer = CATextLayer()
-        layer.string = "\(Int(progress * 100))%"
+//        layer.string = "1/\(Courses.getPhysicalCourses().count + Courses.getMentalCourses().count)"
+//        layer.string = "\(Int(progress * 100))%"
+        layer.string = "1/\(totalCount)"
         layer.backgroundColor = UIColor.clear.cgColor
         layer.foregroundColor = textColor
         layer.fontSize = fontSize
@@ -102,9 +107,7 @@ class CircularProgressBar: UIView {
     }
     
     private func didProgressUpdated(){
-        textLayer?.string = "\(Int(progress * 100))%"
-        progressLayer?.strokeEnd = progress
-        print(progress)
+//        textLayer?.string = "1/\(Courses.getPhysicalCourses().count + Courses.getMentalCourses().count)"
+//        progressLayer?.strokeEnd = progress
     }
-
 }
