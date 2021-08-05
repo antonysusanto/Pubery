@@ -56,10 +56,20 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableProfile.register(UINib(nibName: "ListDataViewCell", bundle: nil), forCellReuseIdentifier: "listID")
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         checkIndex = indexPath.row
         print(checkIndex)
+        let thisCell = profileChildren[indexPath.row-1]
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "AlertID") as! AlertViewController
+        vc.getName = thisCell.name
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.providesPresentationContextTransitionStyle = true
+        vc.definesPresentationContext = true
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,9 +95,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
         } else {
             let cell = (tableView.dequeueReusableCell(withIdentifier: "listID", for: indexPath)) as! ListDataViewCell
-        
-            let thisCell: Children
-            thisCell = profileChildren[indexPath.row-1]
+            let thisCell = profileChildren[indexPath.row-1]
             cell.dataLabel.text = thisCell.name
             
             // Alert for edit or delete
@@ -119,6 +127,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 actionSheetController.addAction(deleteAction)
                 actionSheetController.addAction(cancelAction)
                 present(actionSheetController, animated: true, completion: nil)
+                
+                
                 
             }
             return cell
