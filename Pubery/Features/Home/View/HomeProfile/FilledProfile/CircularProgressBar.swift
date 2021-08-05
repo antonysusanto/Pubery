@@ -15,6 +15,8 @@ class CircularProgressBar: UIView {
     
     let totalCount = Courses.getPhysicalCourses().count + Courses.getMentalCourses().count
     
+	var childProgress: Int = 0
+	
     public var progress: CGFloat = 0 {
         didSet{
 //            didProgressUpdated()
@@ -93,7 +95,7 @@ class CircularProgressBar: UIView {
         let layer = CATextLayer()
 //        layer.string = "1/\(Courses.getPhysicalCourses().count + Courses.getMentalCourses().count)"
 //        layer.string = "\(Int(progress * 100))%"
-        layer.string = "1/\(totalCount)"
+        layer.string = "\(childProgress)/\(totalCount)"
         layer.backgroundColor = UIColor.clear.cgColor
         layer.foregroundColor = textColor
         layer.fontSize = fontSize
