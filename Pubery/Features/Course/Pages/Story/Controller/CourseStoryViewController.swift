@@ -10,8 +10,9 @@ import UIKit
 class CourseStoryViewController: UIViewController {
 
 	@IBOutlet weak var scrollView: UIScrollView!
-	@IBOutlet weak var pageControl: UIPageControl!
 	@IBOutlet weak var nextButton: UIButton!
+	@IBOutlet weak var previousButton: UIButton!
+	@IBOutlet weak var progressBar: UIProgressView!
 	@IBOutlet weak var pageNumber: UILabel!
 	
 	var selectedCourse: Courses!
@@ -41,7 +42,6 @@ class CourseStoryViewController: UIViewController {
 		safeAreaColor.setConstraint(top: view.topAnchor, leading: view.leadingAnchor, bottom: scrollView.topAnchor, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
 		setupScrollView()
 		setupContent()
-		setupPageControl()
 		updatePageControl()
 		setupButton()
 	}
@@ -114,19 +114,23 @@ class CourseStoryViewController: UIViewController {
 		} //end of looping pages
 	}
 
-	func setupPageControl() {
-		pageControl.numberOfPages = pages.count
-		pageControl.currentPage = 0
-	}
-	
-	func getCurrentPage() -> Int {
+	func getCurrentIndex() -> Int {
 		return Int(scrollView.contentOffset.x / contentWidth)
 	}
 	
 	func updatePageControl()  {
-		self.pageControl.currentPage = self.getCurrentPage()
-		pageNumber.text = "\(self.getCurrentPage()+1) dari \(self.pages.count)"
+		self.progressBar.setProgress(Float(self.getCurrentIndex()+1)/Float(self.pages.count), animated: true)
+		
+		pageNumber.text = "\(self.getCurrentIndex()+1) dari \(self.pages.count)"
 		pageNumber.sizeToFit()
+		if (self.getCurrentIndex() == 0) {
+			self.previousButton.isHidden = true
+		} else if (self.getCurrentIndex() == pages.count-1) {
+			self.nextButton.isHidden = true
+		} else {
+			self.previousButton.isHidden = false
+			self.nextButton.isHidden = false
+		}
 	}
 	
 	func setupButton() {
@@ -138,14 +142,14 @@ class CourseStoryViewController: UIViewController {
 	}
 	
 	@IBAction func nextPage(_ sender: Any) {
-		let currentPage = getCurrentPage()
+		let currentPage = getCurrentIndex()
 		if (currentPage != pages.count-1) {
 			scrollView.scrollRectToVisible(CGRect(x: contentWidth * CGFloat(currentPage+1), y: 0, width: contentWidth, height: 1), animated: true)
 		}
 	}
 
 	@IBAction func previousPage(_ sender: Any) {
-		let currentPage = getCurrentPage()
+		let currentPage = getCurrentIndex()
 		if (currentPage != 0) {
 			scrollView.scrollRectToVisible(CGRect(x: contentWidth * CGFloat(currentPage-1), y: 0, width: contentWidth, height: 1), animated: true)
 		}
