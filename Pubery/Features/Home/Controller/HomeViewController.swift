@@ -7,26 +7,21 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegator {
+class HomeViewController: UIViewController {
     
-    func cellWasPressed(withData: Courses) {
-        let storyboard = UIStoryboard(name: "CourseCover", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "goToCover") as! CourseCoverViewController
-        vc.selectedCourse = withData
-        self.navigationController?.pushViewController(vc, animated: true)
-//        performSegue(withIdentifier: "goToCover", sender: self)
-    }
-
     @IBOutlet weak var tableView: UITableView!
-    var changesModel: ChangeModel = HomeData.changesModel
-    var data = 1
+    var changesModel: ChangeModel!
+	var selectedChild: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.setNavigationBarHidden(true, animated: false)
-//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+		
+		changesModel = HomeData.changesModel
+		
+		selectedChild = UserDefaults.standard.string(forKey: "selectedChild") ?? ""
         
         tableView.register(CollectionViewTableViewCell.nib(), forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         tableView.delegate = self
@@ -35,9 +30,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func showHeader(){
-        if data == 0 {
+        if selectedChild == "" {
             showEmptyView()
-        } else if data > 0 {
+        } else {
             showFilledView()
         }
     }
@@ -48,41 +43,49 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func showFilledView(){
-        let filledView = FilledProfile(frame: CGRect(x: 0, y: 30, width: self.view.frame.height, height: 150))
+        let filledView = FilledProfile(frame: CGRect(x: 0, y: 30, width: self.view.frame.height, height: 150), selectedChild: selectedChild)
         self.view.addSubview(filledView)
     }
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if section == 0 {
-//            return 1
-//        }
-        return changesModel.responses.count
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as! CollectionViewTableViewCell
-            cell.changes = changesModel.responses[indexPath.row]
-            cell.delegate = self
-            return cell
-        default:
-            return UITableViewCell()
-        }
-    }
-    
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section{
-        case 0:
-            return 280
-        default:
-            return 280
-        }
-    }
+}
+
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return changesModel.responses.count
+	}
+	
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return 1
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		switch indexPath.section {
+		case 0:
+			let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as! CollectionViewTableViewCell
+			cell.changes = changesModel.responses[indexPath.row]
+			cell.delegate = self
+			return cell
+		default:
+			return UITableViewCell()
+		}
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		switch indexPath.section{
+		case 0:
+			return 280
+		default:
+			return 280
+		}
+	}
+}
+
+
+extension HomeViewController: CustomCellDelegator {
+	func cellWasPressed(withData: Courses) {
+		let storyboard = UIStoryboard(name: "CourseCover", bundle: nil)
+		let vc = storyboard.instantiateViewController(identifier: "goToCover") as! CourseCoverViewController
+		vc.selectedCourse = withData
+		self.navigationController?.pushViewController(vc, animated: true)
+	}
 }
