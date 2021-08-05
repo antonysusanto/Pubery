@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -35,10 +36,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dju-tR-sZ7">
-                                <rect key="frame" x="30" y="787" width="165" height="55"/>
+                                <rect key="frame" x="30" y="787" width="160" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="165" id="88j-Va-cEJ"/>
+                                    <constraint firstAttribute="width" constant="160" id="88j-Va-cEJ"/>
                                     <constraint firstAttribute="height" constant="55" id="HxS-mF-Pcm"/>
                                 </constraints>
                                 <state key="normal">
@@ -62,11 +63,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wc0-6g-AaS">
-                                <rect key="frame" x="219" y="787" width="165" height="55"/>
+                                <rect key="frame" x="224" y="787" width="160" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.83921568627450982" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="DJ8-X1-cAN"/>
-                                    <constraint firstAttribute="width" constant="165" id="Jpe-WR-Rv0"/>
+                                    <constraint firstAttribute="width" constant="160" id="Jpe-WR-Rv0"/>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -105,7 +106,6 @@
                             <constraint firstItem="S3N-hJ-Cw0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="BVd-9a-oZm"/>
                             <constraint firstItem="RDA-nM-SAa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="COe-WO-U0Z"/>
                             <constraint firstItem="RDA-nM-SAa" firstAttribute="top" secondItem="XaE-Ph-ibj" secondAttribute="bottom" constant="5" id="D6d-Wn-9W1"/>
-                            <constraint firstItem="wc0-6g-AaS" firstAttribute="leading" secondItem="Dju-tR-sZ7" secondAttribute="trailing" constant="24" id="FlA-fq-4Tv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DXC-N2-wOA" secondAttribute="trailing" constant="10" id="HuJ-Qd-95e"/>
                             <constraint firstItem="XaE-Ph-ibj" firstAttribute="top" secondItem="S3N-hJ-Cw0" secondAttribute="bottom" constant="5" id="M12-uC-tgq"/>
                             <constraint firstItem="DXC-N2-wOA" firstAttribute="top" secondItem="RDA-nM-SAa" secondAttribute="bottom" constant="30" id="Olo-3z-Jza"/>
