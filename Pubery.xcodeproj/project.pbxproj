@@ -64,6 +64,7 @@
 		B85EA8C826B387BC00DA803D /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */; };
 		B8C6B5FA26B79D9F00EB460A /* Briefing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C6B5F926B79D9F00EB460A /* Briefing.storyboard */; };
 		B8C6B5FC26B79DB200EB460A /* BriefingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C6B5FB26B79DB200EB460A /* BriefingViewController.swift */; };
+		EA02CAF626BC225D00F3713C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02CAF526BC225D00F3713C /* AlertViewController.swift */; };
 		EA60E96326B677E600DF890B /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60E96226B677E600DF890B /* ProfileEditController.swift */; };
 		EA60E96526B6794200DF890B /* ProfileEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA60E96426B6794200DF890B /* ProfileEdit.storyboard */; };
 		EA60E96826B795D200DF890B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60E96726B795D200DF890B /* CoreDataManager.swift */; };
@@ -142,6 +143,7 @@
 		B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		B8C6B5F926B79D9F00EB460A /* Briefing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Briefing.storyboard; sourceTree = "<group>"; };
 		B8C6B5FB26B79DB200EB460A /* BriefingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefingViewController.swift; sourceTree = "<group>"; };
+		EA02CAF526BC225D00F3713C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		EA60E96226B677E600DF890B /* ProfileEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditController.swift; sourceTree = "<group>"; };
 		EA60E96426B6794200DF890B /* ProfileEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileEdit.storyboard; sourceTree = "<group>"; };
 		EA60E96726B795D200DF890B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				0AFBFBE026AF4BAA0023A4DF /* ProfileViewController.swift */,
+				EA02CAF526BC225D00F3713C /* AlertViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -798,6 +801,7 @@
 				0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */,
 				EA7EFBB326B0F5D500B684BA /* EmptyViewCell.swift in Sources */,
 				0A5212AC26B9003F00292FA2 /* CourseDetail.swift in Sources */,
+				EA02CAF626BC225D00F3713C /* AlertViewController.swift in Sources */,
 				0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */,
 				EA7EFBBF26B0FB4900B684BA /* ListDataViewCell.swift in Sources */,
 				EA680C4526B3194400C8C405 /* ProfileAddFinishController.swift in Sources */,
