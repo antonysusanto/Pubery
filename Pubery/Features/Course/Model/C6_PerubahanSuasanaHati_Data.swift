@@ -11,20 +11,24 @@ struct C6_PerubahanSuasanaHati_Data {
 	static let home = CourseHome(
 		id: .C6_PerubahanSuasanaHati,
 		title: "Perubahan Suasana Hati",
-		imageName: "c6"
+		imageName: "c6_icon"
 	)
 	
 	static let detail = CourseDetail(
 		category: "Sosial dan Emosi",
 		title: "Perubahan Suasana Hati",
 		age: "Disarankan untuk anak usia 8 tahun ke atas",
-		imageName: "C6_cover"
+		imageName: "c6_cover"
 	)
 	
 	static let introduction = CourseIntroduction(
 		introduction: ["Penjelasan apa itu perubahan suasana hati atau mood swings","Bagaimana mengontrol perubahan suasana hati"],
 		advice: "Orang tua diharapkan aktif dalam mengajak anak berdialog selama cerita berlangsung",
 		attention: "Materi ini berisi tentang pengetahuan psikologis yang mungkin lebih mudah dipahami untuk anak usia 8 tahun ke atas"
+	)
+	
+	static let finish = CourseFinish(
+		imageName: "c6_finish"
 	)
 	
 	static let content = CourseContent(
@@ -175,7 +179,8 @@ struct C6_PerubahanSuasanaHati_Data {
                  size: CGSize(width: 0, height: 200)
                 ),
                  StoryButton(
-                     title: "Atur Napas", destination: "",
+                     title: "Atur Napas",
+					 destination: "Pads",
                      padding: UIEdgeInsets(top: 100, left: 120, bottom: 0, right: 120),
                      size: CGSize(width: 0, height: 40)
                  )
@@ -210,7 +215,8 @@ struct C6_PerubahanSuasanaHati_Data {
                     size: .zero
                 ),
                 StoryButton(
-                    title: "Paham", destination: "",
+                    title: "Paham",
+					destination: "CourseEnd",
                     padding: UIEdgeInsets(top: 20, left: 120, bottom: 0, right: 120),
                     size: CGSize(width: 0, height: 40)
                 )

@@ -101,7 +101,7 @@ class CourseStoryViewController: UIViewController {
 					
 				} else if (pages[pageIndex][elementIndex] is StoryButton) {
 					
-					let button = (pages[pageIndex][elementIndex] as! StoryButton).create(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex, navigator: self.navigationController)
+					let button = (pages[pageIndex][elementIndex] as! StoryButton).create(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex, navigator: self.navigationController, selectedCourse: selectedCourse)
 					
 					elements.append(button)
 					

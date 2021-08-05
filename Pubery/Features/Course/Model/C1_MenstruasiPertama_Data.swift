@@ -12,11 +12,11 @@ struct C1_MenstruasiPertama_Data {
 	static let home = CourseHome(
 		id: .C1_MenstruasiPertama,
 		title: "Awal Menstruasi",
-		imageName: "c1"
+		imageName: "c1_icon"
 	)
 	
 	static let detail = CourseDetail(
-		category: "Reproduksi",
+		category: "Fisik dan Reproduksi",
 		title: "Awal Menstruasi",
 		age: "Disarankan untuk anak usia 8 tahun ke atas",
 		imageName: "c1_cover"
@@ -28,11 +28,15 @@ struct C1_MenstruasiPertama_Data {
 		attention: "Materi ini mengandung ilustrasi ringan terkait darah, disarankan untuk anak usia 8 tahun ke atas"
 	)
 	
+	static let finish = CourseFinish(
+		imageName: "c1_finish"
+	)
+	
 	static let content = CourseContent(
 		content: [
 			[ //page1
 			 StoryImage(
-				 imageName: "page1",
+				 imageName: "c1_page1",
 				 padding:  UIEdgeInsets(top: 80, left: 10, bottom: 200, right: 10),
 				 size: .zero
 			 ),
@@ -48,7 +52,7 @@ struct C1_MenstruasiPertama_Data {
 			
 			[ //page2
 				StoryAnimatedImages(
-					imageNames: ["page2a","page2b"],
+					imageNames: ["c1_page2a","c1_page2b"],
 					interval: 1,
 					padding:  UIEdgeInsets(top: 70, left: 10, bottom: 200, right: 10),
 					size: .zero
@@ -66,7 +70,7 @@ struct C1_MenstruasiPertama_Data {
 			
 			[ //page3
 				 StoryImage(
-					 imageName: "page3",
+					 imageName: "c1_page3",
 					 padding:  UIEdgeInsets(top: 120, left: 50, bottom: 250, right: 50),
 					 size: .zero
 				 ),
@@ -100,7 +104,7 @@ struct C1_MenstruasiPertama_Data {
 			
 			[ //page5
 				 StoryImage(
-					 imageName: "page5",
+					 imageName: "c1_page5",
 					 padding:  UIEdgeInsets(top: 80, left: 10, bottom: 350, right: 10),
 					 size: .zero
 				 ),
@@ -131,7 +135,7 @@ struct C1_MenstruasiPertama_Data {
 					 size: .zero
 				 ),
 				 StoryImage(
-					 imageName: "page6",
+					 imageName: "c1_page6",
 					 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 0, right: 10),
 					 size: CGSize(width: 0, height: 200)
 				 ),
@@ -150,7 +154,7 @@ struct C1_MenstruasiPertama_Data {
 					 size: .zero
 				 ),
 				 StoryImage(
-					 imageName: "page7",
+					 imageName: "c1_page7",
 					 padding:  UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10),
 					 size: CGSize(width: 0, height: 200)
 				 ),

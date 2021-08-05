@@ -11,12 +11,12 @@ class CourseEndViewController: UIViewController {
 
 	@IBOutlet weak var backButton: UIButton!
 	@IBOutlet weak var imageView: UIImageView!
-	var imageName:String?
+	var selectedCourse: Courses?
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		backButton.layer.cornerRadius = 14
-		imageView.image = UIImage(named: imageName ?? "congrats")
+		imageView.image = UIImage(named: (selectedCourse?.getFinish().imageName)!)
     }
 	
 	@IBAction func backToMenu(_ sender: Any) {

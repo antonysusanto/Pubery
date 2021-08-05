@@ -11,20 +11,24 @@ struct C4_JakunDanFungsinya_Data {
 	static let home = CourseHome(
 		id: .C4_JakunDanFungsinya,
 		title: "Jakun dan Fungsinya",
-		imageName: "c4"
+		imageName: "c4_icon"
 	)
 	
 	static let detail = CourseDetail(
-		category: "Reproduksi",
+		category: "Fisik",
 		title: "Jakun dan Fungsinya",
 		age: "Disarankan untuk anak usia 8 tahun ke atas",
-		imageName: "c4_cover story"
+		imageName: "c4_cover"
 	)
 	
 	static let introduction = CourseIntroduction(
 		introduction: ["Pertama kali ada tonjolan di leher","Penjelasan fungsi - fungsi jakun","Perbedaan antara jakun laki - laki dan perempuan"],
 		advice: "Orang tua diharapkan aktif dalam mengajak anak berdialog selama cerita berlangsung",
 		attention: "Materi ini mengandung ilustrasi ringan terkait darah, disarankan untuk anak usia 8 tahun ke atas"
+	)
+	
+	static let finish = CourseFinish(
+		imageName: "c5_finish"
 	)
 	
 	static let content = CourseContent(
@@ -162,7 +166,7 @@ struct C4_JakunDanFungsinya_Data {
             [ //page6
                 
                 StoryImage(
-                    imageName: "c4_page6",
+                    imageName: "c4_page6_male",
                     padding:  UIEdgeInsets(top: 70, left: 10, bottom: 200, right: 10),
                     size: .zero
                 ),

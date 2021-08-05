@@ -17,13 +17,14 @@ class StoryButton: CustomConstraint {
 		super.init(padding: padding, size: size)
 	}
 	
-	func create(elementsContainer:UIView, elementIndex:Int, elements:[UIView], lastElementIndex:Int, navigator:UINavigationController?) -> CustomStoryButton{
+	func create(elementsContainer:UIView, elementIndex:Int, elements:[UIView], lastElementIndex:Int, navigator:UINavigationController?, selectedCourse: Courses?) -> CustomStoryButton{
 		let button = CustomStoryButton()
 		button.setTitle(title, for: .normal)
 		button.backgroundColor = UIColor(red: 202/255, green: 82/255, blue: 82/255, alpha: 1)
 		button.layer.cornerRadius = 14
 		button.destination = destination
 		button.navigator = navigator
+		button.selectedCourse = selectedCourse
 		button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 		
 		elementsContainer.addSubview(button)
@@ -42,13 +43,21 @@ class StoryButton: CustomConstraint {
 	}
 	
 	@objc func buttonAction(sender: CustomStoryButton) {
-		let storyBoard: UIStoryboard = UIStoryboard(name: sender.destination!, bundle: nil)
-		let vc = storyBoard.instantiateViewController(withIdentifier: sender.destination!)
-		sender.navigator?.pushViewController(vc, animated: false)
+		if (sender.destination == "CourseEnd") {
+			let storyBoard: UIStoryboard = UIStoryboard(name: sender.destination!, bundle: nil)
+			let vc = storyBoard.instantiateViewController(withIdentifier: sender.destination!) as! CourseEndViewController
+			vc.selectedCourse = sender.selectedCourse
+			sender.navigator?.pushViewController(vc, animated: false)
+		} else {
+			let storyBoard: UIStoryboard = UIStoryboard(name: sender.destination!, bundle: nil)
+			let vc = storyBoard.instantiateViewController(withIdentifier: sender.destination!)
+			sender.navigator?.pushViewController(vc, animated: false)
+		}
 	}
 }
 
 class CustomStoryButton: UIButton {
 	var destination: String?
 	var navigator: UINavigationController?
+	var selectedCourse: Courses?
 }

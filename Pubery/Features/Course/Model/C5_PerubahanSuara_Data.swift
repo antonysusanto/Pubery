@@ -11,14 +11,14 @@ struct C5_PerubahanSuara_Data {
 	static let home = CourseHome(
 		id: .C5_PerubahanSuara,
 		title: "Perubahan Suara",
-		imageName: "c5"
+		imageName: "c5_icon"
 	)
 	
 	static let detail = CourseDetail(
-		category: "Fisik dan Reproduksi",
+		category: "Fisik",
 		title: "Perubahan Suara",
 		age: "Disarankan untuk anak usia 8 tahun ke atas",
-		imageName: "c5_cover story"
+		imageName: "c5_cover"
 	)
 	
 	static let introduction = CourseIntroduction(
@@ -26,6 +26,10 @@ struct C5_PerubahanSuara_Data {
 		advice: "Orang tua diharapkan aktif dalam mengajak anak berdialog selama cerita berlangsung"
         ,
 		attention: " "
+	)
+	
+	static let finish = CourseFinish(
+		imageName: "c5_finish"
 	)
 	
 	static let content = CourseContent(
