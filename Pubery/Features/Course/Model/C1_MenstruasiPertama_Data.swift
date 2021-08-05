@@ -117,8 +117,8 @@ struct C1_MenstruasiPertama_Data {
 					 size: .zero
 				 ),
 				 StoryButton(
-					 title: "Bersihkan", destination: "Pads",
-					 padding: UIEdgeInsets(top: 40, left: 120, bottom: 0, right: 120),
+					 title: "Main", destination: "Brushing",
+					 padding: UIEdgeInsets(top: 20, left: 120, bottom: 0, right: 120),
 					 size: CGSize(width: 0, height: 40)
 				 ),
 			],
