@@ -56,4 +56,16 @@ class CoreDataManager {
             print("Delete Children error \(error)")
         }
     }
+    
+    //This function use to update the children profile
+    func updateChildren(newName: String, newGender: String, replaceData: Children) {
+        replaceData.name = newName
+        replaceData.gender = newGender
+        print(replaceData)
+        do {
+            try self.context.save()
+        } catch {
+            print("Update Children error \(error)")
+        }
+    }
 }

@@ -20,27 +20,27 @@ enum Courses {
 	static func getPhysicalCourses() -> [CourseHome] {
 		if let gender = UserDefaults.standard.value(forKey: "selectedGender") as? String {
 			if (gender == "male"){
-				return [C1_MenstruasiPertama_Data.home]
+				return [C1_MenstruasiPertama_Data.home, C2_TentangMenstruasi_Data.home, C3_Jerawat_Data.home, C4_JakunDanFungsinya_Data.home, C5_PerubahanSuara_Data.home]
 			}
 			else if (gender == "female"){
-				return [C1_MenstruasiPertama_Data.home]
+				return [C4_JakunDanFungsinya_Data.home, C5_PerubahanSuara_Data.home, C3_Jerawat_Data.home, C1_MenstruasiPertama_Data.home, C2_TentangMenstruasi_Data.home]
 			}
 		}
 		//general
-		return [C1_MenstruasiPertama_Data.home, C2_TentangMenstruasi_Data.home, C3_Jerawat_Data.home, C4_JakunDanFungsinya_Data.home, C5_PerubahanSuara_Data.home, C6_PerubahanSuasanaHati_Data.home]
+		return [C1_MenstruasiPertama_Data.home, C2_TentangMenstruasi_Data.home, C3_Jerawat_Data.home, C4_JakunDanFungsinya_Data.home, C5_PerubahanSuara_Data.home]
 	}
 	
 	static func getMentalCourses() -> [CourseHome] {
 		if let gender = UserDefaults.standard.value(forKey: "selectedGender") as? String {
 			if (gender == "male"){
-				return [C1_MenstruasiPertama_Data.home]
+				return [C6_PerubahanSuasanaHati_Data.home]
 			}
 			else if (gender == "female"){
-				return [C1_MenstruasiPertama_Data.home]
+				return [C6_PerubahanSuasanaHati_Data.home]
 			}
 		}
 		//general
-		return [C1_MenstruasiPertama_Data.home, C2_TentangMenstruasi_Data.home, C3_Jerawat_Data.home, C4_JakunDanFungsinya_Data.home, C5_PerubahanSuara_Data.home, C6_PerubahanSuasanaHati_Data.home]
+		return [C6_PerubahanSuasanaHati_Data.home]
 	}
 	
 	func getCourseDetail() -> CourseDetail {

@@ -42,7 +42,9 @@
                                     <constraint firstAttribute="height" constant="20" id="4Sv-sw-NTF"/>
                                     <constraint firstAttribute="width" constant="20" id="c6y-lh-v9q"/>
                                 </constraints>
-                                <state key="normal" image="avatar-user-persona-face"/>
+                                <connections>
+                                    <action selector="male:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4Na-oK-0Cm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laki - Laki" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7G-Vb-VJg">
                                 <rect key="frame" x="57" y="220" width="94" height="24"/>
@@ -60,7 +62,9 @@
                                     <constraint firstAttribute="width" constant="20" id="A69-h2-yo7"/>
                                     <constraint firstAttribute="height" constant="20" id="HIZ-i6-QHE"/>
                                 </constraints>
-                                <state key="normal" image="avatar-user-persona-face"/>
+                                <connections>
+                                    <action selector="female:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NvF-GU-Bna"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perempuan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-ux-K3Y">
                                 <rect key="frame" x="221" y="220" width="105" height="24"/>
@@ -82,6 +86,9 @@
                                 <state key="normal" title="Simpan">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="toProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MeP-jT-WBx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -120,7 +127,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avatar-user-persona-face" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
