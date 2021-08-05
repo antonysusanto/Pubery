@@ -70,7 +70,7 @@ struct C5_PerubahanSuara_Data {
                 )
             ],
             
-            [//page3 BELUM
+            [//page3 REVISI GAMBAR NAIKIN, PARAGRAF 2 NAIKIN
                 StoryLabel(
                  text: "Pak guru menganggukkan kepala seraya membalas pertanyaan Putra, “mungkin kamu sedang ada di fase pubertas Put, sehingga suara kamu berubah menjadi berat”",
                  type: .bold,
@@ -82,7 +82,7 @@ struct C5_PerubahanSuara_Data {
                 
                 StoryImage(
                  imageName: "c5_page3",
-                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
+                 padding:  UIEdgeInsets(top: 40, left: 10, bottom: 250, right: 10),
                  size: .zero
                 ),
              
@@ -91,7 +91,7 @@ struct C5_PerubahanSuara_Data {
                  type: .highlight,
                  targetText: [""],
                  alignment: .left,
-                 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+                 padding: UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
                  size: .zero
                 )
             ],
@@ -148,7 +148,7 @@ struct C5_PerubahanSuara_Data {
                 ),
                 StoryImage(
                  imageName: "c5_page6",
-                 padding:  UIEdgeInsets(top: 75, left: 10, bottom: 140, right: 10),
+                 padding:  UIEdgeInsets(top: 65, left: 10, bottom: 140, right: 10),
                  size: .zero
                 ),
                 StoryLabel( // ini kalo di ilangin image nya mengecil ????
@@ -161,7 +161,7 @@ struct C5_PerubahanSuara_Data {
                 )
             ],
             
-            [//page7
+            [//page7 REVISI GAMBAR NAIKIN, PARAGRAF 2 NAIKIN
                 StoryLabel(
                  text: "Untuk menghasilkan suara, paru-paru akan mengalirkan dan menekan udara sehingga pita suara bergetar. Pita suara adalah tulang rawan berbentuk pita ganda yang terletak di dalam kotak suara yang dinamakan laring.",
                  type: .bold,
@@ -172,7 +172,7 @@ struct C5_PerubahanSuara_Data {
                 ),
                 StoryImage(
                  imageName: "c5_page7",
-                 padding:  UIEdgeInsets(top: 60, left: 10, bottom: 250, right: 10),
+                 padding:  UIEdgeInsets(top: 30, left: 10, bottom: 250, right: 10),
                  size: .zero
                 ),
                 StoryLabel(
@@ -180,15 +180,15 @@ struct C5_PerubahanSuara_Data {
                  type: .highlight,
                  targetText: [""],
                  alignment: .left,
-                 padding: UIEdgeInsets(top: 60, left: 35, bottom: 0, right: 35),
+                 padding: UIEdgeInsets(top: 30, left: 35, bottom: 0, right: 35),
                  size: .zero
                 )
             ],
             
-            [//page8
+            [//page8 GAMBAR KECILIN
                 StoryImage(
                  imageName: "c5_page8",
-                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 270, right: 10),
+                 padding:  UIEdgeInsets(top: 30, left: 10, bottom: 270, right: 10),
                  size: .zero
                 ),
                 StoryLabel(
@@ -204,12 +204,12 @@ struct C5_PerubahanSuara_Data {
                  type: .bold,
                  targetText: ["timbre"],
                  alignment: .left,
-                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 padding: UIEdgeInsets(top: 15, left: 35, bottom: 0, right: 35),
                  size: .zero
                 )
             ],
             
-            [//page9
+            [//page9 BUTTON PAHAM NAIKIN
                 StoryImage(
                  imageName: "c5_page9",
                  padding:  UIEdgeInsets(top: 50, left: 10, bottom: 270, right: 10),
@@ -228,13 +228,13 @@ struct C5_PerubahanSuara_Data {
                  type: .bold,
                  targetText: ["Bagaimana denganmu?"],
                  alignment: .center,
-                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 padding: UIEdgeInsets(top: 15, left: 35, bottom: 0, right: 35),
                  size: .zero
                 ),
                 StoryButton(
                     title: "Paham",
                     destination: "CourseEnd",
-                    padding: UIEdgeInsets(top: 30, left: 120, bottom: 0, right: 120),
+                    padding: UIEdgeInsets(top: 20, left: 120, bottom: 0, right: 120),
                     size: CGSize(width: 0, height: 40)
                 ),
             ],
