@@ -11,11 +11,11 @@ struct C3_Jerawat_Data {
 	static let home = CourseHome(
 		id: .C3_Jerawat,
 		title: "Pengertian Jerawat",
-		imageName: "c3"
+		imageName: "c3_icon"
 	)
 	
 	static let detail = CourseDetail(
-		category: "Fisik dan Reproduksi",
+		category: "Fisik",
 		title: "Pengertian Jerawat",
         age: "",
         imageName: "c3_cover"
@@ -25,7 +25,10 @@ struct C3_Jerawat_Data {
 		introduction: ["Proses terjadinya jerawat dan pengertian mengapa itu terjadi ","Perawatan untuk jerawat dan menjaga kebersihan wajah"],
 		advice: "Orang tua diharapkan aktif dalam mengajak anak berdialog selama cerita berlangsung",
         attention: ""
-        
+	)
+	
+	static let finish = CourseFinish(
+		imageName: "c3_finish"
 	)
 	
 	static let content = CourseContent(

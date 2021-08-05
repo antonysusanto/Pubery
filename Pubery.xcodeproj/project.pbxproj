@@ -29,6 +29,7 @@
 		0A69C26226B12DEB002439E9 /* BrushingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C26126B12DEB002439E9 /* BrushingViewController.swift */; };
 		0A69C27026B19581002439E9 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C26F26B19581002439E9 /* OnboardingContentView.swift */; };
 		0A69C27226B19593002439E9 /* OnboardingContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C27126B19593002439E9 /* OnboardingContentView.xib */; };
+		0A71F4C026BC33E30020CB7C /* CourseFinish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */; };
 		0ABF51D626B6C68D009A934F /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D526B6C68D009A934F /* Courses.swift */; };
 		0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */; };
 		0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */; };
@@ -105,6 +106,7 @@
 		0A69C26126B12DEB002439E9 /* BrushingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushingViewController.swift; sourceTree = "<group>"; };
 		0A69C26F26B19581002439E9 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 		0A69C27126B19593002439E9 /* OnboardingContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingContentView.xib; sourceTree = "<group>"; };
+		0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseFinish.swift; sourceTree = "<group>"; };
 		0ABF51D526B6C68D009A934F /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
 		0AFBFB9626AF478D0023A4DF /* Pubery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pubery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				0A5212AD26B9005300292FA2 /* CourseIntroduction.swift */,
 				0A5212AB26B9003F00292FA2 /* CourseDetail.swift */,
 				0A5212AF26B9005E00292FA2 /* CourseContent.swift */,
+				0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */,
 				0A5212B326B916CA00292FA2 /* C1_MenstruasiPertama_Data.swift */,
 				0A5212B526B9174600292FA2 /* C2_TentangMenstruasi_Data.swift */,
 				0A5212BB26B9176C00292FA2 /* C3_Jerawat_Data.swift */,
@@ -829,6 +832,7 @@
 				0AFBFBD726AF4B750023A4DF /* OnboardingViewController.swift in Sources */,
 				B85EA8C626B2B5E900DA803D /* FilledProfile.swift in Sources */,
 				0A0F47BD26BA4BE800BE660A /* StoryAnimatedImages.swift in Sources */,
+				0A71F4C026BC33E30020CB7C /* CourseFinish.swift in Sources */,
 				0A5212AE26B9005300292FA2 /* CourseIntroduction.swift in Sources */,
 				0A5212C226B9183400292FA2 /* C6_PerubahanSuasanaHati_Data.swift in Sources */,
 				EA60E96826B795D200DF890B /* CoreDataManager.swift in Sources */,

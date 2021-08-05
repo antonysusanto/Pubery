@@ -12,7 +12,7 @@ struct C2_TentangMenstruasi_Data {
 	static let home = CourseHome(
 		id: .C2_TentangMenstruasi,
 		title: "Tentang Menstruasi",
-		imageName: "c2"
+		imageName: "c2_icon"
 	)
 	
 	static let detail = CourseDetail(
@@ -26,6 +26,10 @@ struct C2_TentangMenstruasi_Data {
 		introduction: ["Penjelasan tentang menstruasi", "Proses terjadinya menstruasi", "Penjelasan organ-organ reproduksi perempuan"],
 		advice: "Orang tua diharapkan aktif dalam mengajak anak berdialog selama cerita berlangsung",
 		attention: "Materi ini mengandung ilustrasi organ reproduksi di dalam tubuh, disarankan untuk anak usia 11 tahun ke atas"
+	)
+	
+	static let finish = CourseFinish(
+		imageName: "c2_finish"
 	)
 	
 	static let content = CourseContent(

@@ -93,6 +93,23 @@ enum Courses {
 			return C6_PerubahanSuasanaHati_Data.content
 		}
 	}
+	
+	func getFinish() -> CourseFinish {
+		switch (self) {
+		case .C1_MenstruasiPertama:
+			return C1_MenstruasiPertama_Data.finish
+		case .C2_TentangMenstruasi:
+			return C2_TentangMenstruasi_Data.finish
+		case .C3_Jerawat:
+			return C3_Jerawat_Data.finish
+		case .C4_JakunDanFungsinya:
+			return C4_JakunDanFungsinya_Data.finish
+		case .C5_PerubahanSuara:
+			return C5_PerubahanSuara_Data.finish
+		case .C6_PerubahanSuasanaHati:
+			return C6_PerubahanSuasanaHati_Data.finish
+		}
+	}
 
 
 }
