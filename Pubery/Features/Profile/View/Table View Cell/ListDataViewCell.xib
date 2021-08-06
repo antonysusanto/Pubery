@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -46,7 +47,6 @@
                         <color key="backgroundColor" red="1" green="0.90980392156862744" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Agv-u8-ZS4" firstAttribute="top" secondItem="D04-Ni-V1t" secondAttribute="top" constant="8" id="0Rz-p9-XNF"/>
-                            <constraint firstAttribute="height" constant="109" id="5pi-cr-DCC"/>
                             <constraint firstItem="oDo-c1-mpd" firstAttribute="leading" secondItem="D04-Ni-V1t" secondAttribute="leading" constant="22" id="N3Q-TS-99v"/>
                             <constraint firstItem="oDo-c1-mpd" firstAttribute="top" secondItem="D04-Ni-V1t" secondAttribute="top" constant="39" id="RTM-5z-7WK"/>
                             <constraint firstAttribute="trailing" secondItem="Agv-u8-ZS4" secondAttribute="trailing" constant="10" id="VxE-nH-wwq"/>

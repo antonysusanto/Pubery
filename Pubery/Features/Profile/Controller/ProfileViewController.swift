@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EmptyViewCellDelegate, NotEmptyViewCellDelegate, getUpdateDataDelegate {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EmptyViewCellDelegate, NotEmptyViewCellDelegate, getUpdateDataDelegate, reloadDataViewDelegate, listDataViewDelegate {
 
     @IBOutlet weak var tableProfile: UITableView!
     
@@ -19,14 +19,24 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         setupView()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.tabBarController?.tabBar.isHidden = false
+//        self.tabBarController?.tabBar.isHidden = false
         profileChildren = userData.fetchChildren()
         navBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navBar()
+        tableProfile.reloadData()
+        tabBarController?.tabBar.isHidden = false
     }
     
     func updateData() {
         profileChildren = userData.fetchChildren()
         print(profileChildren)
+        tableProfile.reloadData()
+    }
+    
+    func reloadData() {
         tableProfile.reloadData()
     }
     
@@ -58,19 +68,25 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        checkIndex = indexPath.row
-        print(checkIndex)
-        let thisCell = profileChildren[indexPath.row-1]
-        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "AlertID") as! AlertViewController
-        vc.getName = thisCell.name
-        vc.getGender = thisCell.gender
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.providesPresentationContextTransitionStyle = true
-        vc.definesPresentationContext = true
-        vc.modalTransitionStyle = .crossDissolve
-        self.present(vc, animated: true, completion: nil)
+        if indexPath.row == 0 {
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
+        else {
+            tableView.deselectRow(at: indexPath, animated: false)
+            checkIndex = indexPath.row
+            print(checkIndex)
+            let thisCell = profileChildren[indexPath.row-1]
+            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "AlertID") as! AlertViewController
+            vc.getName = thisCell.name
+            vc.getGender = thisCell.gender
+            vc.delegate = self
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.providesPresentationContextTransitionStyle = true
+            vc.definesPresentationContext = true
+            vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,7 +95,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if profileChildren.count == 0 {
-            return 400
+            return 450
         } else {
             return 120
         }
@@ -89,6 +105,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         if profileChildren.count == 0 {
             let cell = (tableView.dequeueReusableCell(withIdentifier: "emptyID", for: indexPath)) as! EmptyViewCell
             cell.delegate = self
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
             return cell
         } else if indexPath.row == 0 {
             let cell = (tableView.dequeueReusableCell(withIdentifier: "addID", for: indexPath)) as! AddChildViewCell
@@ -98,7 +115,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             let cell = (tableView.dequeueReusableCell(withIdentifier: "listID", for: indexPath)) as! ListDataViewCell
             let thisCell = profileChildren[indexPath.row-1]
             cell.dataLabel.text = thisCell.name
+            cell.delegate = self
             
+            if let selectedChild = UserDefaults.standard.string(forKey: "selectedChild"){
+                if selectedChild == thisCell.name {
+                    cell.dataView.alpha = 1
+                } else {
+                    cell.dataView.alpha = 0.5
+                }
+            }
             // Alert for edit or delete
             cell.editOrDelete = {[unowned self] in
                 let data = profileChildren[indexPath.row-1]
@@ -134,8 +159,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             return cell
         }
-        
-        return UITableViewCell()
     }
     
 }

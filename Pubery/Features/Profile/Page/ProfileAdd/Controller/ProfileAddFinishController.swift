@@ -20,17 +20,20 @@ class ProfileAddFinishController: UIViewController {
     var name:String!
     var check:String!
     var userData = CoreDataManager()
+    var temp = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonDone.layer.cornerRadius = 14
         print(name!)
+        buttonDone.isUserInteractionEnabled = true
+        buttonDone.alpha = 0.5
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -41,6 +44,7 @@ class ProfileAddFinishController: UIViewController {
         labelFemal.alpha = 0.5
         labelMale.alpha = 1
         check = "Male"
+        buttonDone.alpha = 1
     }
     
     @IBAction func female(_ sender: UIButton) {
@@ -49,13 +53,22 @@ class ProfileAddFinishController: UIViewController {
         labelMale.alpha = 0.5
         labelFemal.alpha = 1
         check = "Female"
+        buttonDone.alpha = 1
     }
     
     @IBAction func toProfilePage(_ sender: Any) {
+        buttonDone.isEnabled = false
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "ProfileID") as! ProfileViewController
         userData.createChildren(name: name, gender: check)
+        if let _ = UserDefaults.standard.value(forKey: "selectedChild") {
+            
+        } else {
+            UserDefaults.standard.setValue(name, forKey: "selectedChild")
+            UserDefaults.standard.setValue(check, forKey: "selectedGender")
+        }
         print(userData.fetchChildren())
+        vc.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

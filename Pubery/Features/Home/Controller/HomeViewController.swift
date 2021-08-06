@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var changesModel: ChangeModel!
-	var selectedChild: String!
+	var selectedChild: String = ""
     let data = UserDefaults.standard.value(forKey: "selectedChild")
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        selectedChild = UserDefaults.standard.string(forKey: "selectedChild")
+        selectedChild = UserDefaults.standard.string(forKey: "selectedChild") ?? ""
         showHeader()
         tableView.reloadData()
     }

@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol reloadDataViewDelegate: class {
-    func updateData()
+protocol reloadDataViewDelegate: AnyObject {
+    func reloadData()
 }
 
 class AlertViewController: UIViewController {
@@ -54,7 +54,7 @@ class AlertViewController: UIViewController {
         dismiss(animated: true, completion: nil)
         UserDefaults.standard.setValue(getName, forKey: "selectedChild")
         UserDefaults.standard.setValue(getGender, forKey: "selectedGender")
-        delegate?.updateData()
+        delegate?.reloadData()
     }
     
 }
