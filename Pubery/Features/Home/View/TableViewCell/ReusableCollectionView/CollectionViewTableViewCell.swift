@@ -59,10 +59,11 @@ class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
 		if let selectedChild = UserDefaults.standard.string(forKey: "selectedChild") {
 			let progress = UserDefaults.standard.stringArray(forKey: "progress_" + selectedChild) ?? []
 			if (!progress.contains((changes?.materialChanges[indexPath.row].title)!)) {
+                print("title \(changes?.materialChanges[indexPath.row].title) is not found, then no checlist")
 				cell.checkListImage.isHidden = true
-			}
-		} else {
-			cell.checkListImage.isHidden = false
+			} else {
+                cell.checkListImage.isHidden = false
+            }
 		}
 		
 		

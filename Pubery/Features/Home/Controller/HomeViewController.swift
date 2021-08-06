@@ -8,7 +8,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+//    func sendDataBack(value: String) {
+//        print(value)
+//    }
+
     @IBOutlet weak var tableView: UITableView!
     var changesModel: ChangeModel!
 	var selectedChild: String!
@@ -26,8 +29,21 @@ class HomeViewController: UIViewController {
         tableView.register(CollectionViewTableViewCell.nib(), forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
-        showHeader()
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showHeader()
+        tableView.reloadData()
+    }
+    
+//    func showHeader(){
+//        if UserDefaults.standard.string(forKey: "selectedChild") == nil {
+//            showEmptyView()
+//        } else {
+//            showFilledView()
+//        }
+//    }
     
     func showHeader(){
         if selectedChild == "" {
