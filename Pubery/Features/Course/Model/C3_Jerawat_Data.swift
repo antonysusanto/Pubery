@@ -126,6 +126,24 @@ struct C3_Jerawat_Data {
             ],
             [//page6
                 StoryImage(
+                imageName: "c3_page6-1",
+                padding: UIEdgeInsets(top: 90, left: 70, bottom: 250, right: 70),
+                size: .zero),
+                
+                StoryLabel(
+                text: "Waktunya membersihkan diri dan cuci muka dengan sabun wajah. Pastikan tangan dalam keadaan bersih juga ya!",
+                alignment: .center,
+                padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                size: .zero),
+                
+                StoryButton(
+                    title: "Bersihkan", destination: "Acne",
+                    padding: UIEdgeInsets(top: 40, left: 120, bottom: 0, right: 120),
+                    size: CGSize(width: 0, height: 40)
+                ),
+            ],
+            [//page7
+                StoryImage(
                 imageName: "c3_page6",
                 padding: UIEdgeInsets(top: 90, left: 60, bottom: 300, right: 60),
                 size: .zero),

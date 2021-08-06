@@ -66,6 +66,8 @@
 		B85EA8C826B387BC00DA803D /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */; };
 		B8C6B5FA26B79D9F00EB460A /* Briefing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C6B5F926B79D9F00EB460A /* Briefing.storyboard */; };
 		B8C6B5FC26B79DB200EB460A /* BriefingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C6B5FB26B79DB200EB460A /* BriefingViewController.swift */; };
+		B8FC94D426BD911C009628A6 /* Acne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FC94D326BD911C009628A6 /* Acne.storyboard */; };
+		B8FC94D626BD9129009628A6 /* AcneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC94D526BD9129009628A6 /* AcneViewController.swift */; };
 		EA02CAF626BC225D00F3713C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02CAF526BC225D00F3713C /* AlertViewController.swift */; };
 		EA60E96326B677E600DF890B /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60E96226B677E600DF890B /* ProfileEditController.swift */; };
 		EA60E96526B6794200DF890B /* ProfileEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA60E96426B6794200DF890B /* ProfileEdit.storyboard */; };
@@ -147,6 +149,8 @@
 		B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		B8C6B5F926B79D9F00EB460A /* Briefing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Briefing.storyboard; sourceTree = "<group>"; };
 		B8C6B5FB26B79DB200EB460A /* BriefingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefingViewController.swift; sourceTree = "<group>"; };
+		B8FC94D326BD911C009628A6 /* Acne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Acne.storyboard; sourceTree = "<group>"; };
+		B8FC94D526BD9129009628A6 /* AcneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcneViewController.swift; sourceTree = "<group>"; };
 		EA02CAF526BC225D00F3713C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		EA60E96226B677E600DF890B /* ProfileEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditController.swift; sourceTree = "<group>"; };
 		EA60E96426B6794200DF890B /* ProfileEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileEdit.storyboard; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 		0A69C25A26B12DA5002439E9 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				B8FC94D026BD90FE009628A6 /* Acne */,
 				0A69C25B26B12DAA002439E9 /* Brushing */,
 				0A69C26326B12DF2002439E9 /* Pads */,
 			);
@@ -617,6 +622,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B8FC94D026BD90FE009628A6 /* Acne */ = {
+			isa = PBXGroup;
+			children = (
+				B8FC94D226BD910B009628A6 /* View */,
+				B8FC94D126BD9105009628A6 /* Controller */,
+			);
+			path = Acne;
+			sourceTree = "<group>";
+		};
+		B8FC94D126BD9105009628A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8FC94D526BD9129009628A6 /* AcneViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B8FC94D226BD910B009628A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B8FC94D326BD911C009628A6 /* Acne.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EA60E95D26B6777F00DF890B /* Profile Edit */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,6 +801,7 @@
 				0AFBFBCE26AF4B320023A4DF /* CourseCover.storyboard in Resources */,
 				EA7EFBC026B0FB4900B684BA /* ListDataViewCell.xib in Resources */,
 				B85EA8C426B2B5D500DA803D /* FilledProfile.xib in Resources */,
+				B8FC94D426BD911C009628A6 /* Acne.storyboard in Resources */,
 				EA7EFBB426B0F5D500B684BA /* EmptyViewCell.xib in Resources */,
 				0AFBFBD026AF4B3D0023A4DF /* CourseStory.storyboard in Resources */,
 				0AFBFBA626AF478E0023A4DF /* Assets.xcassets in Resources */,
@@ -839,6 +870,7 @@
 				B85EA8B226B2526200DA803D /* PadsViewController.swift in Sources */,
 				0AFBFBD726AF4B750023A4DF /* OnboardingViewController.swift in Sources */,
 				B85EA8C626B2B5E900DA803D /* FilledProfile.swift in Sources */,
+				B8FC94D626BD9129009628A6 /* AcneViewController.swift in Sources */,
 				0A0F47BD26BA4BE800BE660A /* StoryAnimatedImages.swift in Sources */,
 				0A71F4C026BC33E30020CB7C /* CourseFinish.swift in Sources */,
 				0A5212AE26B9005300292FA2 /* CourseIntroduction.swift in Sources */,
