@@ -25,7 +25,6 @@ class ProfileAddFinishController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonDone.layer.cornerRadius = 14
-        print(name!)
         buttonDone.isUserInteractionEnabled = true
         buttonDone.alpha = 0.5
     }
@@ -67,7 +66,7 @@ class ProfileAddFinishController: UIViewController {
             UserDefaults.standard.setValue(name, forKey: "selectedChild")
             UserDefaults.standard.setValue(check, forKey: "selectedGender")
         }
-        print(userData.fetchChildren())
+        
         vc.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(vc, animated: true)
     }

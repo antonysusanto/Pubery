@@ -32,19 +32,20 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         selectedChild = UserDefaults.standard.string(forKey: "selectedChild") ?? ""
+		changesModel = HomeData.changesModel
         showHeader()
         tableView.reloadData()
     }
    
     func showHeader(){
+		for view in view.subviews {
+			if (view is FilledProfile || view is EmptyProfile) {
+			   view.removeFromSuperview()
+			}
+		}
         if selectedChild == "" {
             showEmptyView()
         } else {
-            for view in view.subviews {
-                if view is FilledProfile {
-                   view.removeFromSuperview()
-               }
-            }
             showFilledView()
         }
     }

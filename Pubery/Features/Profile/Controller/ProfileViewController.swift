@@ -32,7 +32,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func updateData() {
         profileChildren = userData.fetchChildren()
-        print(profileChildren)
         tableProfile.reloadData()
     }
     
@@ -74,7 +73,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         else {
             tableView.deselectRow(at: indexPath, animated: false)
             checkIndex = indexPath.row
-            print(checkIndex)
             let thisCell = profileChildren[indexPath.row-1]
             let storyboard = UIStoryboard(name: "Profile", bundle: nil)
             let vc = storyboard.instantiateViewController(identifier: "AlertID") as! AlertViewController
@@ -129,7 +127,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let data = profileChildren[indexPath.row-1]
                 let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
                 let editAction:UIAlertAction = UIAlertAction(title: "Edit", style: .default) { action -> Void in
-                    print("edit pressed")
                     let storyboard = UIStoryboard(name: "ProfileEdit", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "ProfileEditID") as! ProfileEditController
                     vc.name = thisCell.name
@@ -139,10 +136,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 let deleteAction:UIAlertAction = UIAlertAction(title: "Delete", style: .destructive) { action -> Void in
-                    print("delete pressed")
-                    print(self.checkIndex)
+					if let selectedChild = UserDefaults.standard.string(forKey: "selectedChild") {
+						if (selectedChild == thisCell.name) {
+							UserDefaults.standard.removeObject(forKey: "selectedChild")
+							UserDefaults.standard.removeObject(forKey: "selectedGender")
+						}
+					}
+					UserDefaults.standard.removeObject(forKey: "progress_" + thisCell.name!)
+					
                     self.userData.deleteChildren(data: data)
-                    print(indexPath.row-1)
                     profileChildren = userData.fetchChildren()
                     tableProfile.reloadData()
                 }
