@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EmptyViewCellDelegate, NotEmptyViewCellDelegate, getUpdateDataDelegate, reloadDataViewDelegate, listDataViewDelegate {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EmptyViewCellDelegate, NotEmptyViewCellDelegate, getUpdateDataDelegate, reloadDataViewDelegate {
 
     @IBOutlet weak var tableProfile: UITableView!
     
@@ -113,7 +113,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             let cell = (tableView.dequeueReusableCell(withIdentifier: "listID", for: indexPath)) as! ListDataViewCell
             let thisCell = profileChildren[indexPath.row-1]
             cell.dataLabel.text = thisCell.name
-            cell.delegate = self
             
             if let selectedChild = UserDefaults.standard.string(forKey: "selectedChild"){
                 if selectedChild == thisCell.name {

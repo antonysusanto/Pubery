@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol NotEmptyViewCellDelegate: class {
+protocol NotEmptyViewCellDelegate: AnyObject {
     func goToPage()
 }
 
