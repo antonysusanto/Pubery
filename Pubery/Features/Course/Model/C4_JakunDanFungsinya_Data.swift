@@ -166,7 +166,7 @@ struct C4_JakunDanFungsinya_Data {
             [ //page6
                 
                 StoryImage(
-                    imageName: "c4_page6_male",
+                    imageName: "c4_page6",
                     padding:  UIEdgeInsets(top: 70, left: 10, bottom: 200, right: 10),
                     size: .zero
                 ),
