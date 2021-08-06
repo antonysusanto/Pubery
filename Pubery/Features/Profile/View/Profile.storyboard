@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eOR-6e-8a5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -55,8 +56,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atW-NP-IWU">
                                 <rect key="frame" x="43" y="363" width="328" height="170"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKv-gQ-t9j">
-                                        <rect key="frame" x="64" y="30" width="200" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKv-gQ-t9j">
+                                        <rect key="frame" x="64" y="40" width="200" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="J9I-zU-gYC"/>
                                         </constraints>
@@ -100,7 +101,7 @@
                                     <constraint firstAttribute="bottom" secondItem="w3v-1R-NSE" secondAttribute="bottom" constant="25" id="7Jy-Jd-oWB"/>
                                     <constraint firstAttribute="width" constant="328" id="7ua-W6-Fbi"/>
                                     <constraint firstItem="w3v-1R-NSE" firstAttribute="leading" secondItem="atW-NP-IWU" secondAttribute="leading" constant="20" id="OPK-wt-cEK"/>
-                                    <constraint firstItem="SKv-gQ-t9j" firstAttribute="top" secondItem="atW-NP-IWU" secondAttribute="top" constant="30" id="VB5-Os-cDt"/>
+                                    <constraint firstItem="SKv-gQ-t9j" firstAttribute="top" secondItem="atW-NP-IWU" secondAttribute="top" constant="40" id="VB5-Os-cDt"/>
                                     <constraint firstAttribute="trailing" secondItem="SKv-gQ-t9j" secondAttribute="trailing" constant="64" id="gCf-fT-PTq"/>
                                     <constraint firstAttribute="height" constant="170" id="ibR-zG-vYa"/>
                                     <constraint firstAttribute="trailing" secondItem="bGA-U6-GFt" secondAttribute="trailing" constant="20" id="mxY-hq-B4U"/>
