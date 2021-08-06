@@ -92,6 +92,8 @@ class ProfileEditController: UIViewController {
     
         userData.updateChildren(newName: nameField.text!, newGender: gender, replaceData: indexData)
         delegate?.updateData()
+		
+		toProfile()
     }
     
     func toProfile(){
