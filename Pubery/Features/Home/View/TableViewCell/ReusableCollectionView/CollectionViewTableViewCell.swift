@@ -55,23 +55,13 @@ class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CourseCollectionViewCell.identifier, for: indexPath) as! CourseCollectionViewCell
         cell.courseLabel.text = changes?.materialChanges[indexPath.row].title
 		cell.courseImage.image = UIImage(named: changes?.materialChanges[indexPath.row].imageName ?? "page1")
-		
+		cell.checkListImage.isHidden = true
 		if let selectedChild = UserDefaults.standard.string(forKey: "selectedChild") {
 			let progress = UserDefaults.standard.stringArray(forKey: "progress_" + selectedChild) ?? []
-			if (!progress.contains((changes?.materialChanges[indexPath.row].title)!)) {
-                print("title \(changes?.materialChanges[indexPath.row].title) is not found, then no checlist")
-				cell.checkListImage.isHidden = true
-			} else {
+			if (progress.contains((changes?.materialChanges[indexPath.row].title)!)) {
                 cell.checkListImage.isHidden = false
             }
 		}
-		
-		
-//		cell.courseImage.image = (changes?.materialChanges[indexPath.row].checklist ?? false) ? UIImage(named: "checkmark.circle.fill") : UIImage()
-//        cell.tapActionGoToCourse = {
-//
-//        }
-        
         return cell
     }
     

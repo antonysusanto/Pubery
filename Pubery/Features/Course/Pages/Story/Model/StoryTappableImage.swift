@@ -37,7 +37,7 @@ class StoryTappableImage: CustomConstraint {
 		label.setConstraint(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10), size: CGSize(width: 0, height: 150))
 		
 		let imageButton = ImageButton()
-		imageButton.setImage(UIImage(named: "c1_cover"), for: .normal)
+		imageButton.setImage(UIImage(named: imageNames[0]), for: .normal)
 		imageButton.label = label
 		imageButton.tag = 0
 		imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)

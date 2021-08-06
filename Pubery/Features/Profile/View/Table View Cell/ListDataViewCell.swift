@@ -7,15 +7,9 @@
 
 import UIKit
 
-protocol listDataViewDelegate: AnyObject {
-    
-}
-
 class ListDataViewCell: UITableViewCell {
 
     var editOrDelete : (() -> ())?
-    
-    weak var delegate:listDataViewDelegate!
     
     @IBOutlet weak var dataView: UIView!
     @IBOutlet weak var editButton: UIButton!
