@@ -132,7 +132,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     print("edit pressed")
                     let storyboard = UIStoryboard(name: "ProfileEdit", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "ProfileEditID") as! ProfileEditController
-                    vc.name = thisCell.name
+                    vc.oldName = thisCell.name
                     vc.gender = thisCell.gender
                     vc.indexData = profileChildren[indexPath.row-1]
                     vc.delegate = self

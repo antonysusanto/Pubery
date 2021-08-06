@@ -25,14 +25,14 @@ class ProfileEditController: UIViewController {
     
     var userData = CoreDataManager()
     var gender: String!
-    var name: String!
+    var oldName: String!
     var indexData: Children!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Edit Data"
         setUpView()
-        nameField.text = name
+        nameField.text = oldName
         checkGender()
     }
     
@@ -54,38 +54,50 @@ class ProfileEditController: UIViewController {
     }
     
     @IBAction func male(_ sender: UIButton) {
-        buttonFemale.backgroundColor = UIColor.green
-        buttonFemale.backgroundColor = UIColor.black
-        buttonMale.backgroundColor = UIColor.black
-        buttonMale.backgroundColor = UIColor.green
+        buttonFemale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
+        buttonFemale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+        buttonMale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+        buttonMale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
         gender = "Male"
     }
     
     @IBAction func female(_ sender: UIButton) {
-        buttonMale.backgroundColor = UIColor.green
-        buttonMale.backgroundColor = UIColor.black
-        buttonFemale.backgroundColor = UIColor.black
-        buttonFemale.backgroundColor = UIColor.green
+        buttonMale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
+        buttonMale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+        buttonFemale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+        buttonFemale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
         gender = "Female"
     }
     
     func checkGender() {
         if gender == "Male"{
-            buttonMale.backgroundColor = UIColor.green
-            buttonFemale.backgroundColor = UIColor.black
+            buttonMale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
+            buttonFemale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
         } else {
-            buttonFemale.backgroundColor = UIColor.green
-            buttonMale.backgroundColor = UIColor.black
+            buttonFemale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
+            buttonMale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
         }
     }
     
-    @IBAction func toProfile(_ sender: Any) {
+    @IBAction func editProfile(_ sender: Any) {
+
+        if oldName == UserDefaults.standard.string(forKey: "selectedChild") {
+            UserDefaults.standard.setValue(nameField.text!, forKey: "selectedChild")
+            UserDefaults.standard.setValue(gender, forKey: "selectedGender")
+        }
+        if let progress = UserDefaults.standard.stringArray(forKey: "progress_" + oldName!) {
+            UserDefaults.standard.setValue(progress, forKey: "progress_" + nameField.text!)
+        }
+        UserDefaults.standard.removeObject(forKey: "progress_" + oldName!)
+    
+        userData.updateChildren(newName: nameField.text!, newGender: gender, replaceData: indexData)
+        delegate?.updateData()
+    }
+    
+    func toProfile(){
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "ProfileID") as! ProfileViewController
-        name = nameField.text
         vc.navigationItem.hidesBackButton = true
-        userData.updateChildren(newName: name, newGender: gender, replaceData: indexData)
-        delegate?.updateData()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
