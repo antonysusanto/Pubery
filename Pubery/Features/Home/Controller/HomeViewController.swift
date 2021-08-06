@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, reloadDataViewDelegate {
-    
+class HomeViewController: UIViewController {
+
     @IBOutlet weak var tableView: UITableView!
     var changesModel: ChangeModel!
 	var selectedChild: String!
@@ -27,19 +27,15 @@ class HomeViewController: UIViewController, reloadDataViewDelegate {
         tableView.register(CollectionViewTableViewCell.nib(), forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
-        showHeader()
-    }
-    
-    func updateData() {
-        print(data!)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(UserDefaults.standard.value(forKey: "selectedChild"))
         selectedChild = UserDefaults.standard.string(forKey: "selectedChild")
         showHeader()
+        tableView.reloadData()
     }
-    
+   
     func showHeader(){
         if selectedChild == "" {
             showEmptyView()

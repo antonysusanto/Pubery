@@ -9,9 +9,9 @@ import UIKit
 
 enum Courses: String {
 	//nama file = nama enum = nama class
-	case C1_MenstruasiPertama = "Menstruasi Pertama",
+	case C1_MenstruasiPertama = "Awal Menstruasi",
 		 C2_TentangMenstruasi = "Tentang Menstruasi",
-		 C3_Jerawat = "Jerawat",
+		 C3_Jerawat = "Pengertian Jerawat",
 		 C4_JakunDanFungsinya = "Jakun dan Fungsinya",
 		 C5_PerubahanSuara = "Perubahan Suara",
 		 C6_PerubahanSuasanaHati = "Perubahan Suasana Hati"
