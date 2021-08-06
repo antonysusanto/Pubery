@@ -34,6 +34,7 @@ class BrushingViewController: UIViewController {
         view.bringSubviewToFront(movedImage)
 //        targetImage.backgroundColor = .yellow
         bubleImage.isHidden = true
+		bubleImage.alpha = 0.8
         endButton.isHidden = true
         
         customAlert.showAlert(with: "Tekan dan tahan sikat, lalu arahkan ke  noda sampai bersih.", on: self)
@@ -50,7 +51,7 @@ class BrushingViewController: UIViewController {
     
     func startAnimation(){
         bubleImage.animationImages =  images
-        bubleImage.animationDuration = 2
+        bubleImage.animationDuration = 1
         bubleImage.animationRepeatCount = 10
         bubleImage.startAnimating()
     }
@@ -74,52 +75,65 @@ class BrushingViewController: UIViewController {
         let movedView = sender.view!
 //        movedView.backgroundColor = .yellow
         switch sender.state {
-        case .began:
-            moveViewWithPan(view: movedView, sender: sender)
+//        case .began:
+//            moveViewWithPan(view: movedView, sender: sender)
+		
         case .changed:
             moveViewWithPan(view: movedView, sender: sender)
             if movedView.frame.intersects(targetImage.frame) {
                 counterIntersect += 1
                 bubleImage.isHidden = false
-            }
-            else if movedView.frame.intersects(backgroundImage.frame){
+
+            } else if movedView.frame.intersects(backgroundImage.frame){
                 bubleImage.isHidden = true
+//				stopAnimation()
             }
+			
+			targetImage.alpha = CGFloat(Float(150-counterIntersect)/150)
+			if counterIntersect > 150 {
+				endView(view: movedView)
+			}
+			/*
 //            print(counterIntersect)
-            if counterIntersect < 50 {
+            if counterIntersect < 40 {
                 targetImage.alpha = 0.9
 //                startAnimation()
 //                bubleImage.isHidden = false
 //                bubleImage.image = bubble_1
-                bubleImage.alpha = 0.9
+                bubleImage.alpha = 0.8
             }
-            else if counterIntersect < 100 {
+            else if counterIntersect < 80 {
                 targetImage.alpha = 0.5
 //                startAnimation()
 //                bubleImage.isHidden = false
 //                bubleImage.image = bubble_2
-                bubleImage.alpha = 0.5
+                bubleImage.alpha = 0.8
             }
-            else if counterIntersect < 150 {
+            else if counterIntersect < 120 {
                 targetImage.alpha = 0.3
 //                startAnimation()
 //                bubleImage.isHidden = false
 //                bubleImage.image = bubble_3
-                bubleImage.alpha = 0.3
+                bubleImage.alpha = 0.8
             }
-            else if counterIntersect < 200 {
+            else if counterIntersect < 160 {
                 targetImage.alpha = 0.1
 //                startAnimation()
-                bubleImage.isHidden = true
+				bubleImage.alpha = 0.8
             }
-        case .ended:
-            if movedView.frame.intersects(targetImage.frame) {
-                counterIntersect += 1
-                if counterIntersect > 200 {
-                    endView(view: movedView)
-                }
+			if counterIntersect > 160 {
+				endView(view: movedView)
+			}
+			*/
+
+//        case .ended:
+//            if movedView.frame.intersects(targetImage.frame) {
+//                counterIntersect += 1
+//                if counterIntersect > 200 {
+//                    endView(view: movedView)
+//                }
 //                stopAnimation()
-            }
+//            }
         default:
             break
         }
