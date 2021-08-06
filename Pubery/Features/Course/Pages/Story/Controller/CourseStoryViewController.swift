@@ -105,6 +105,12 @@ class CourseStoryViewController: UIViewController {
 					
 					elements.append(button)
 					
+				} else if (pages[pageIndex][elementIndex] is StoryTappableImage) {
+					
+					let view = (pages[pageIndex][elementIndex] as! StoryTappableImage).create(elementsContainer: elementsContainer, elementIndex: elementIndex, elements: elements, lastElementIndex: lastElementIndex)
+					
+					elements.append(view)
+					
 				} //end of identifying elements
 			} // end of looping elements
 			contentView.addSubview(elementsContainer)

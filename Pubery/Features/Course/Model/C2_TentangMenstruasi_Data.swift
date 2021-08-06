@@ -99,20 +99,19 @@ struct C2_TentangMenstruasi_Data {
               ],
             
                 
-            [//page4
-                StoryLabel(
-                text: "Yuk kita belajar tentang organ reproduksi perempuan ....",
-                type: .bold,
-                targetText: ["Yuk kita belajar tentang organ reproduksi perempuan ...."],
-                alignment: .center,
-                fontsize: 24,
-                padding: UIEdgeInsets(top: 50, left: 35, bottom: 35, right: 35), size: .zero),
-                    
-                StoryImage(
-                imageName: "c2_page4",
-                padding: UIEdgeInsets(top: 30, left: 50, bottom: 40, right: 50),
-                size: CGSize(width: 0, height: 350))
-                ], 
+			[ //page4
+				StoryTappableImage(
+					texts: ["Yuk kita belajar tentang organ reproduksi perempuan...\n\nTap gambar di bawah ini",
+							"Ovarium\nOrgan yang memproduksi sel telur",
+							"Sel telur\n\nDilepas melalui saluran menuju dinding rahim",
+							"Dinding Rahim\n\nAkan menebal jika ada sel telur",
+							"Darah akan keluar melalui vagina / kemaluan"
+					],
+					imageNames: ["c1_cover","c2_cover","c3_cover","c4_cover","c5_cover"],
+					padding: UIEdgeInsets(top: 70, left: 30, bottom: 0, right: 30),
+					size: .zero
+				)
+			],
             
             [//page5
                 StoryImage(
