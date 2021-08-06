@@ -19,11 +19,6 @@ class BrushingViewController: UIViewController {
     
     let customAlert = CustomAlert()
     var movedViewOrigin: CGPoint!
-    var bubble_1: UIImage!
-    var bubble_2: UIImage!
-    var bubble_3: UIImage!
-    var images: [UIImage]!
-    var animatedImage: UIImage!
     var counterIntersect = 0
     
     override func viewDidLoad() {
@@ -32,33 +27,15 @@ class BrushingViewController: UIViewController {
         addPanGesture(view: movedImage)
         movedViewOrigin = movedImage.frame.origin
         view.bringSubviewToFront(movedImage)
-//        targetImage.backgroundColor = .yellow
         bubleImage.isHidden = true
 		bubleImage.alpha = 0.8
         endButton.isHidden = true
         
         customAlert.showAlert(with: "Tekan dan tahan sikat, lalu arahkan ke  noda sampai bersih.", on: self)
-        
-        bubble_1 = UIImage(named: "bubble1")
-        bubble_2 = UIImage(named: "bubble2")
-        bubble_3 = UIImage(named: "bubble3")
-        images = [bubble_1, bubble_2, bubble_3]
     }
     func addPanGesture(view: UIView){
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePan(sender:)))
         view.addGestureRecognizer(pan)
-    }
-    
-    func startAnimation(){
-        bubleImage.animationImages =  images
-        bubleImage.animationDuration = 1
-        bubleImage.animationRepeatCount = 10
-        bubleImage.startAnimating()
-    }
-    
-    func stopAnimation(){
-        bubleImage.stopAnimating()
-        bubleImage.isHidden = true
     }
     
     @IBAction func closeAction(_ sender: Any) {
@@ -73,11 +50,7 @@ class BrushingViewController: UIViewController {
     // refactor
     @objc func handlePan(sender: UIPanGestureRecognizer) {
         let movedView = sender.view!
-//        movedView.backgroundColor = .yellow
         switch sender.state {
-//        case .began:
-//            moveViewWithPan(view: movedView, sender: sender)
-		
         case .changed:
             moveViewWithPan(view: movedView, sender: sender)
             if movedView.frame.intersects(targetImage.frame) {
@@ -86,54 +59,12 @@ class BrushingViewController: UIViewController {
 
             } else if movedView.frame.intersects(backgroundImage.frame){
                 bubleImage.isHidden = true
-//				stopAnimation()
             }
 			
 			targetImage.alpha = CGFloat(Float(150-counterIntersect)/150)
 			if counterIntersect > 150 {
 				endView(view: movedView)
 			}
-			/*
-//            print(counterIntersect)
-            if counterIntersect < 40 {
-                targetImage.alpha = 0.9
-//                startAnimation()
-//                bubleImage.isHidden = false
-//                bubleImage.image = bubble_1
-                bubleImage.alpha = 0.8
-            }
-            else if counterIntersect < 80 {
-                targetImage.alpha = 0.5
-//                startAnimation()
-//                bubleImage.isHidden = false
-//                bubleImage.image = bubble_2
-                bubleImage.alpha = 0.8
-            }
-            else if counterIntersect < 120 {
-                targetImage.alpha = 0.3
-//                startAnimation()
-//                bubleImage.isHidden = false
-//                bubleImage.image = bubble_3
-                bubleImage.alpha = 0.8
-            }
-            else if counterIntersect < 160 {
-                targetImage.alpha = 0.1
-//                startAnimation()
-				bubleImage.alpha = 0.8
-            }
-			if counterIntersect > 160 {
-				endView(view: movedView)
-			}
-			*/
-
-//        case .ended:
-//            if movedView.frame.intersects(targetImage.frame) {
-//                counterIntersect += 1
-//                if counterIntersect > 200 {
-//                    endView(view: movedView)
-//                }
-//                stopAnimation()
-//            }
         default:
             break
         }
@@ -146,9 +77,6 @@ class BrushingViewController: UIViewController {
     }
     
     func endView(view: UIView) {
-//        UIView.animate(withDuration: 0.6, animations: {view.alpha = 1
-//        })
-//        stopAnimation()
         bubleImage.isHidden = true
         targetImage.isHidden = true
         closeButton.isHidden = true
