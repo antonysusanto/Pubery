@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol reloadDataViewDelegate: class {
+    func updateData()
+}
+
 class AlertViewController: UIViewController {
 
     @IBOutlet weak var alertView: UIView!
@@ -14,7 +18,10 @@ class AlertViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var allowButton: UIButton!
     
+    weak var delegate:reloadDataViewDelegate?
+    
     var getName: String!
+    var getGender: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +53,8 @@ class AlertViewController: UIViewController {
     @IBAction func allowTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
         UserDefaults.standard.setValue(getName, forKey: "selectedChild")
+        UserDefaults.standard.setValue(getGender, forKey: "selectedGender")
+        delegate?.updateData()
     }
     
 }

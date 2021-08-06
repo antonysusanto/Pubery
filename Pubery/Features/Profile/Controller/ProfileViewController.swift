@@ -65,6 +65,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "AlertID") as! AlertViewController
         vc.getName = thisCell.name
+        vc.getGender = thisCell.gender
         vc.modalPresentationStyle = .overCurrentContext
         vc.providesPresentationContextTransitionStyle = true
         vc.definesPresentationContext = true

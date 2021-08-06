@@ -8,13 +8,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-//    func sendDataBack(value: String) {
-//        print(value)
-//    }
 
     @IBOutlet weak var tableView: UITableView!
     var changesModel: ChangeModel!
 	var selectedChild: String!
+    let data = UserDefaults.standard.value(forKey: "selectedChild")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,22 +31,20 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        selectedChild = UserDefaults.standard.string(forKey: "selectedChild")
         showHeader()
         tableView.reloadData()
     }
-    
-//    func showHeader(){
-//        if UserDefaults.standard.string(forKey: "selectedChild") == nil {
-//            showEmptyView()
-//        } else {
-//            showFilledView()
-//        }
-//    }
-    
+   
     func showHeader(){
         if selectedChild == "" {
             showEmptyView()
         } else {
+            for view in view.subviews {
+                if view is FilledProfile {
+                   view.removeFromSuperview()
+               }
+            }
             showFilledView()
         }
     }
