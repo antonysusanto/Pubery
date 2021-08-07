@@ -22,10 +22,9 @@
                         <rect key="frame" x="15" y="7" width="350" height="109"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDo-c1-mpd">
-                                <rect key="frame" x="22" y="39" width="150" height="30"/>
+                                <rect key="frame" x="22" y="39" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Zff-tE-RDM"/>
-                                    <constraint firstAttribute="width" constant="150" id="d8m-lb-rlT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -47,6 +46,7 @@
                         <color key="backgroundColor" red="1" green="0.90980392156862744" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Agv-u8-ZS4" firstAttribute="top" secondItem="D04-Ni-V1t" secondAttribute="top" constant="8" id="0Rz-p9-XNF"/>
+                            <constraint firstItem="oDo-c1-mpd" firstAttribute="trailing" secondItem="Agv-u8-ZS4" secondAttribute="leading" id="Adg-m2-5hI"/>
                             <constraint firstItem="oDo-c1-mpd" firstAttribute="leading" secondItem="D04-Ni-V1t" secondAttribute="leading" constant="22" id="N3Q-TS-99v"/>
                             <constraint firstItem="oDo-c1-mpd" firstAttribute="top" secondItem="D04-Ni-V1t" secondAttribute="top" constant="39" id="RTM-5z-7WK"/>
                             <constraint firstAttribute="trailing" secondItem="Agv-u8-ZS4" secondAttribute="trailing" constant="10" id="VxE-nH-wwq"/>

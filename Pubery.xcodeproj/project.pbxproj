@@ -32,6 +32,8 @@
 		0A69C27226B19593002439E9 /* OnboardingContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C27126B19593002439E9 /* OnboardingContentView.xib */; };
 		0A71F4C026BC33E30020CB7C /* CourseFinish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */; };
 		0ABF51D626B6C68D009A934F /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D526B6C68D009A934F /* Courses.swift */; };
+		0AF9110126BE86EA003A1C0A /* Breathing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9110026BE86EA003A1C0A /* Breathing.storyboard */; };
+		0AF9110326BE86FB003A1C0A /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9110226BE86FB003A1C0A /* BreathingViewController.swift */; };
 		0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */; };
 		0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */; };
 		0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFBA226AF478D0023A4DF /* Pubery.xcdatamodeld */; };
@@ -113,6 +115,8 @@
 		0A69C27126B19593002439E9 /* OnboardingContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingContentView.xib; sourceTree = "<group>"; };
 		0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseFinish.swift; sourceTree = "<group>"; };
 		0ABF51D526B6C68D009A934F /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
+		0AF9110026BE86EA003A1C0A /* Breathing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Breathing.storyboard; sourceTree = "<group>"; };
+		0AF9110226BE86FB003A1C0A /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
 		0AFBFB9626AF478D0023A4DF /* Pubery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pubery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 		0A69C25A26B12DA5002439E9 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				B85EA8B526B2533600DA803D /* Model */,
+				0AF910FD26BE86BA003A1C0A /* Breathing */,
 				B8FC94D026BD90FE009628A6 /* Acne */,
 				0A69C25B26B12DAA002439E9 /* Brushing */,
 				0A69C26326B12DF2002439E9 /* Pads */,
@@ -278,8 +284,32 @@
 		0A69C26526B12DFB002439E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B85EA8B526B2533600DA803D /* Model */,
 				B85EA8B326B2529000DA803D /* Pads.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AF910FD26BE86BA003A1C0A /* Breathing */ = {
+			isa = PBXGroup;
+			children = (
+				0AF910FF26BE86CB003A1C0A /* View */,
+				0AF910FE26BE86C4003A1C0A /* Controller */,
+			);
+			path = Breathing;
+			sourceTree = "<group>";
+		};
+		0AF910FE26BE86C4003A1C0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AF9110226BE86FB003A1C0A /* BreathingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0AF910FF26BE86CB003A1C0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AF9110026BE86EA003A1C0A /* Breathing.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -789,6 +819,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA60E96526B6794200DF890B /* ProfileEdit.storyboard in Resources */,
+				0AF9110126BE86EA003A1C0A /* Breathing.storyboard in Resources */,
 				0AFBFBCA26AF4B0C0023A4DF /* Onboarding.storyboard in Resources */,
 				B85EA8BF26B283CA00DA803D /* EmptyProfile.xib in Resources */,
 				B82142CB26B05ABC007E73B6 /* CollectionViewTableViewCell.xib in Resources */,
@@ -827,6 +858,7 @@
 				0AFBFBDD26AF4B970023A4DF /* CourseStoryViewController.swift in Sources */,
 				0A5212C526B91B5300292FA2 /* LabelStyle.swift in Sources */,
 				0ABF51D626B6C68D009A934F /* Courses.swift in Sources */,
+				0AF9110326BE86FB003A1C0A /* BreathingViewController.swift in Sources */,
 				EA60E96D26B7FBF200DF890B /* Children+CoreDataClass.swift in Sources */,
 				0A5AE94A26BD88A4006A9C80 /* StoryTappableImage.swift in Sources */,
 				0A5212B626B9174600292FA2 /* C2_TentangMenstruasi_Data.swift in Sources */,

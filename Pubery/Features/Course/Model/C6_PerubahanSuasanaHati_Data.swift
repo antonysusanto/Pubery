@@ -180,7 +180,7 @@ struct C6_PerubahanSuasanaHati_Data {
                 ),
                  StoryButton(
                      title: "Atur Napas",
-					 destination: "Pads",
+					 destination: "Breathing",
                      padding: UIEdgeInsets(top: 100, left: 120, bottom: 0, right: 120),
                      size: CGSize(width: 0, height: 40)
                  )
