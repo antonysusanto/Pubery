@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,8 +24,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmF-Wk-QQW">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGE-cJ-lwR">
-                            <rect key="frame" x="20" y="50" width="225" height="80"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="LGE-cJ-lwR">
+                            <rect key="frame" x="20" y="30" width="225" height="120"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
                             <color key="textColor" red="0.87058823529411766" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -43,9 +44,9 @@
                         <constraint firstItem="Cd8-lT-1ZK" firstAttribute="leading" secondItem="LGE-cJ-lwR" secondAttribute="trailing" constant="5" id="0Rz-hc-WEw"/>
                         <constraint firstItem="LGE-cJ-lwR" firstAttribute="leading" secondItem="pmF-Wk-QQW" secondAttribute="leading" constant="20" id="9y6-lS-JJr"/>
                         <constraint firstAttribute="bottom" secondItem="Cd8-lT-1ZK" secondAttribute="bottom" constant="31" id="BBL-sv-Rmp"/>
-                        <constraint firstItem="LGE-cJ-lwR" firstAttribute="top" secondItem="pmF-Wk-QQW" secondAttribute="top" constant="50" id="JhH-bv-YN2"/>
+                        <constraint firstItem="LGE-cJ-lwR" firstAttribute="top" secondItem="pmF-Wk-QQW" secondAttribute="top" constant="30" id="JhH-bv-YN2"/>
                         <constraint firstItem="Cd8-lT-1ZK" firstAttribute="top" secondItem="pmF-Wk-QQW" secondAttribute="top" constant="31" id="aPo-qp-jmG"/>
-                        <constraint firstAttribute="bottom" secondItem="LGE-cJ-lwR" secondAttribute="bottom" constant="50" id="iq4-Hd-wbo"/>
+                        <constraint firstAttribute="bottom" secondItem="LGE-cJ-lwR" secondAttribute="bottom" constant="30" id="iq4-Hd-wbo"/>
                         <constraint firstItem="Cd8-lT-1ZK" firstAttribute="leading" secondItem="pmF-Wk-QQW" secondAttribute="leading" constant="250" id="pPD-5F-QUh"/>
                         <constraint firstAttribute="trailing" secondItem="Cd8-lT-1ZK" secondAttribute="trailing" constant="46" id="zpv-9R-abY"/>
                     </constraints>
