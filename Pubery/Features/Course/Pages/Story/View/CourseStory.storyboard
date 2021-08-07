@@ -21,8 +21,8 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="744"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-hx-yNX">
-                                <rect key="frame" x="303" y="793" width="78" height="67"/>
-                                <state key="normal" title="&gt;" image="Next Button"/>
+                                <rect key="frame" x="314" y="793" width="67" height="67"/>
+                                <state key="normal" image="Next Button"/>
                                 <connections>
                                     <action selector="nextPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SdB-dF-1OQ"/>
                                 </connections>

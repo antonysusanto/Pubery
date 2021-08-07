@@ -16,27 +16,30 @@ class ProfileAddController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customTextField()
         buttonNext.layer.cornerRadius = 14
         navigationItem.title = .none
+        underLine.layer.cornerRadius = 5
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.tabBarController?.tabBar.isHidden = true
-        underLine.layer.cornerRadius = 3
         inputName?.delegate = self
         buttonNext?.isUserInteractionEnabled = false
         buttonNext?.alpha = 0.5
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        self.inputName.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    func customTextField() {
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0, y: inputName.frame.height, width: inputName.frame.width, height: 2)
-        bottomLine.backgroundColor = UIColor.init(red: 200, green: 97, blue: 97, alpha: 1).cgColor
-        inputName.borderStyle = .none
-        inputName.layer.addSublayer(bottomLine)
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
