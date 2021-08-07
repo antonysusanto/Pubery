@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CqT-kM-yqe">
+                                <rect key="frame" x="50" y="196" width="314" height="366"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="k5Q-Kk-XA2">
+                                <rect key="frame" x="146" y="570" width="122" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="r4A-oL-xCj"/>
+                                    <constraint firstAttribute="width" constant="122" id="wt1-gS-a65"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZs-q8-w8S">
+                                <rect key="frame" x="123.5" y="624" width="167" height="41"/>
+                                <color key="backgroundColor" red="1" green="0.90980392156862744" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="hOG-Va-FT2"/>
+                                    <constraint firstAttribute="width" constant="167" id="xjY-fz-wU0"/>
+                                </constraints>
+                                <state key="normal" title="Lanjut">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="skip:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ISf-hM-QkV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CqT-kM-yqe" secondAttribute="trailing" constant="50" id="42a-gZ-cOk"/>
+                            <constraint firstItem="CqT-kM-yqe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="152" id="CYW-SK-Dgh"/>
+                            <constraint firstItem="k5Q-Kk-XA2" firstAttribute="centerX" secondItem="CqT-kM-yqe" secondAttribute="centerX" id="D3I-zx-uyE"/>
+                            <constraint firstItem="CqT-kM-yqe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="LuJ-eT-Xl0"/>
+                            <constraint firstItem="qZs-q8-w8S" firstAttribute="centerX" secondItem="k5Q-Kk-XA2" secondAttribute="centerX" id="cDa-cc-EhN"/>
+                            <constraint firstItem="qZs-q8-w8S" firstAttribute="top" secondItem="k5Q-Kk-XA2" secondAttribute="bottom" constant="26" id="mnb-C3-Vra"/>
+                            <constraint firstItem="k5Q-Kk-XA2" firstAttribute="top" secondItem="CqT-kM-yqe" secondAttribute="bottom" constant="8" symbolic="YES" id="r8l-gz-FnN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CqT-kM-yqe" secondAttribute="bottom" constant="300" id="tfr-vs-CAY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="qZs-q8-w8S" id="YXs-EL-MlW"/>
+                        <outlet property="pageControl" destination="k5Q-Kk-XA2" id="U2t-hZ-X82"/>
+                        <outlet property="scrollView" destination="CqT-kM-yqe" id="iKD-KT-GP0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

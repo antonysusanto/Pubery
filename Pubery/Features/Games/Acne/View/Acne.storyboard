@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Acne View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Acne" id="Y6W-OH-hqX" customClass="AcneViewController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="1PL-f6-O7s">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="806"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqh-Tq-QAd">
+                                <rect key="frame" x="340" y="74" width="54" height="22"/>
+                                <color key="tintColor" red="0.78431372549019607" green="0.38039215686274508" blue="0.38039215686274508" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="I6K-72-8Q0"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ekspresi" translatesAutoresizingMaskIntoConstraints="NO" id="825-HN-Jb5">
+                                <rect key="frame" x="75" y="244" width="264" height="321"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6k-tP-ZmX">
+                                <rect key="frame" x="141" y="700" width="132" height="42"/>
+                                <color key="backgroundColor" red="0.792156862745098" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="fed-hJ-yj5"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Selesai"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="endAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6GM-rT-fjw"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acne" translatesAutoresizingMaskIntoConstraints="NO" id="vcO-Xg-br5">
+                                <rect key="frame" x="124" y="445" width="166" height="34"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="Cuc-KP-eAd">
+                                <rect key="frame" x="95" y="564" width="224" height="127"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble_c3" translatesAutoresizingMaskIntoConstraints="NO" id="ub2-Ps-hvC">
+                                <rect key="frame" x="48" y="337" width="318" height="209"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="1" green="0.97647058823529409" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vcO-Xg-br5" secondAttribute="trailing" constant="124" id="03t-aG-8oQ"/>
+                            <constraint firstItem="K6k-tP-ZmX" firstAttribute="top" secondItem="825-HN-Jb5" secondAttribute="bottom" constant="135" id="0Mc-jF-SIS"/>
+                            <constraint firstItem="vcO-Xg-br5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="124" id="26b-we-3ls"/>
+                            <constraint firstItem="ub2-Ps-hvC" firstAttribute="top" secondItem="825-HN-Jb5" secondAttribute="bottom" constant="-228" id="3uV-a5-jnB"/>
+                            <constraint firstItem="Hqh-Tq-QAd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="340" id="6GW-gj-fgB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="K6k-tP-ZmX" secondAttribute="bottom" constant="120" id="BMQ-dv-tGt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ub2-Ps-hvC" secondAttribute="trailing" constant="48" id="KbO-Wk-Nc5"/>
+                            <constraint firstItem="K6k-tP-ZmX" firstAttribute="top" secondItem="Cuc-KP-eAd" secondAttribute="bottom" constant="9" id="L7V-CG-o4X"/>
+                            <constraint firstItem="1PL-f6-O7s" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="PFx-zp-ZX8"/>
+                            <constraint firstItem="825-HN-Jb5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="200" id="RZL-8h-TjZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Cuc-KP-eAd" secondAttribute="trailing" constant="95" id="Rvy-Br-C9J"/>
+                            <constraint firstItem="Cuc-KP-eAd" firstAttribute="top" secondItem="825-HN-Jb5" secondAttribute="bottom" constant="-1" id="U3x-uz-TXT"/>
+                            <constraint firstItem="Hqh-Tq-QAd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="WO7-cW-9vh"/>
+                            <constraint firstItem="vcO-Xg-br5" firstAttribute="top" secondItem="825-HN-Jb5" secondAttribute="bottom" constant="-120" id="YvE-AM-9OB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K6k-tP-ZmX" secondAttribute="trailing" constant="141" id="Zfe-5w-Tkr"/>
+                            <constraint firstItem="vcO-Xg-br5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cFK-XC-aKt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="825-HN-Jb5" secondAttribute="trailing" constant="75" id="g1c-VX-ChW"/>
+                            <constraint firstItem="K6k-tP-ZmX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="141" id="gS5-aT-2Eo"/>
+                            <constraint firstItem="1PL-f6-O7s" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="jlE-OH-5VF"/>
+                            <constraint firstItem="K6k-tP-ZmX" firstAttribute="top" secondItem="ub2-Ps-hvC" secondAttribute="bottom" constant="154" id="jmC-ts-qe0"/>
+                            <constraint firstAttribute="trailing" secondItem="1PL-f6-O7s" secondAttribute="trailing" id="oT8-Wy-Fwi"/>
+                            <constraint firstItem="Cuc-KP-eAd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="95" id="vT9-VL-ryC"/>
+                            <constraint firstAttribute="bottom" secondItem="1PL-f6-O7s" secondAttribute="bottom" constant="90" id="wSF-qN-EhP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hqh-Tq-QAd" secondAttribute="trailing" constant="20" id="wq0-vg-APC"/>
+                            <constraint firstItem="825-HN-Jb5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="75" id="yGO-GO-iKq"/>
+                            <constraint firstItem="ub2-Ps-hvC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="48" id="ywc-om-pfa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="1PL-f6-O7s" id="kWX-Vc-1Hb"/>
+                        <outlet property="bubbleImage" destination="ub2-Ps-hvC" id="Uu0-hN-O1q"/>
+                        <outlet property="closeButton" destination="Hqh-Tq-QAd" id="gGY-ti-6Um"/>
+                        <outlet property="endButton" destination="K6k-tP-ZmX" id="Ywm-bR-v3V"/>
+                        <outlet property="faceImage" destination="825-HN-Jb5" id="npP-iS-ddt"/>
+                        <outlet property="movedImage" destination="Cuc-KP-eAd" id="7FT-Lu-qyQ"/>
+                        <outlet property="targetImage" destination="vcO-Xg-br5" id="sQG-uu-qMO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108.69565217391305" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ekspresi" width="265" height="303"/>
+        <image name="acne" width="166" height="34"/>
+        <image name="background" width="414" height="780"/>
+        <image name="bubble_c3" width="348" height="209"/>
+        <image name="hand" width="292" height="127"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
