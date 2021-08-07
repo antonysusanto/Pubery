@@ -11,7 +11,7 @@ protocol getUpdateDataDelegate: AnyObject {
     func updateData()
 }
 
-class ProfileEditController: UIViewController {
+class ProfileEditController: UIViewController, UITextFieldDelegate {
 
     weak var delegate:getUpdateDataDelegate!
     
@@ -34,6 +34,18 @@ class ProfileEditController: UIViewController {
         setUpView()
         nameField.text = oldName
         checkGender()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        self.nameField.delegate = self
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
     }
     
     override func viewWillAppear(_ animated: Bool) {
