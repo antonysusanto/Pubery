@@ -10,7 +10,7 @@ import UIKit
 class FilledProfile: UIView {
     
     @IBOutlet weak var namelabel: UILabel!
-    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var content: UIView!
     @IBOutlet weak var progressView: CircularProgressBar!
 	var selectedChild: String!
@@ -37,12 +37,18 @@ class FilledProfile: UIView {
         content.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         namelabel.text = selectedChild
 		let childProgress = (UserDefaults.standard.stringArray(forKey: "progress_\(selectedChild ?? "")"))?.count ?? 0
-//        genderLabel.text = "Perempuan"
-//        progressView.progress = CGFloat(Int(Courses.getMentalCourses().count + Courses.getPhysicalCourses().count))
-        let totalCount: Float = (Float(Courses.getPhysicalCourses().count + Courses.getMentalCourses().count))
-        let progressValue: Float = Float(childProgress) / totalCount
+        let totalCount = (Courses.getPhysicalCourses().count + Courses.getMentalCourses().count)
+        let progressValue: Float = Float(childProgress) / Float(totalCount)
+        progressLabel.text = "\(childProgress)/\(totalCount)"
+        progressLabel.isAccessibilityElement = true
+        if childProgress == 0 {
+            progressLabel.accessibilityLabel = "belum ada materi yang sudah dibaca"
+        } else {
+            progressLabel.accessibilityLabel = "\(childProgress) dari \(totalCount) materi sudah dibaca"
+        }
 		progressView.childProgress = childProgress
         progressView.progress = CGFloat(progressValue)
+        namelabel.isAccessibilityElement = true
         addSubview(content)
     }
 
