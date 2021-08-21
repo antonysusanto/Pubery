@@ -31,13 +31,23 @@ class BriefingViewController: UIViewController, UIViewControllerTransitioningDel
 		saranDetailLabel.text = introductionData.advice
         perhatianLabel.text = "Perhatian!"
 		perhatianDetailLabel.text = introductionData.attention
+        setAccessibility()
+    }
+    
+    func setAccessibility(){
+        introductionLabel.isAccessibilityElement = true
+        introductionDetailLabel.isAccessibilityElement = true
+        saranLabel.isAccessibilityElement = true
+        saranDetailLabel.isAccessibilityElement = true
+        perhatianLabel.isAccessibilityElement = true
+        perhatianLabel.isAccessibilityElement = true
     }
     
     override func updateViewConstraints() {
-           self.view.frame.size.height = UIScreen.main.bounds.height - 100
-           self.view.frame.origin.y =  100
-           self.view.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
-           super.updateViewConstraints()
+        self.view.frame.size.height = UIScreen.main.bounds.height - 100
+        self.view.frame.origin.y =  100
+        self.view.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
+        super.updateViewConstraints()
     }
     
     func addBullet(){
