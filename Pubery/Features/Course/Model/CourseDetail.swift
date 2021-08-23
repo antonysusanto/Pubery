@@ -9,14 +9,14 @@ class CourseDetail {
 	var category:String
 	var title:String
 	var age:String
-	var imageName:String
+	var imageDetails:[String]
 	
 	
-	init(category:String, title:String, age:String, imageName:String) {
+	init(category:String, title:String, age:String, imageDetails:[String]) {
 		self.category = category
 		self.title = title
 		self.age = age
-		self.imageName = imageName
+		self.imageDetails = imageDetails
 		
 	}
 }

@@ -8,13 +8,13 @@
 class CourseHome {
 	var id:Courses
 	var title:String
-	var imageName:String
+	var imageDetails: [String]
 	var checklist:Bool
 	
-	init(id:Courses, title:String, imageName:String) {
+	init(id:Courses, title:String, imageDetails:[String]) {
 		self.id = id
 		self.title = title
-		self.imageName = imageName
+		self.imageDetails = imageDetails
 		self.checklist = true //todo check ke userdefault
 	}
 }

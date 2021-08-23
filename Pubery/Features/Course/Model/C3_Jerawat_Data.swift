@@ -11,14 +11,14 @@ struct C3_Jerawat_Data {
 	static let home = CourseHome(
 		id: .C3_Jerawat,
 		title: "Pengertian Jerawat",
-		imageName: "c3_icon"
+		imageDetails: ["c3_icon", "Pengertian Jerawat"]
 	)
 	
 	static let detail = CourseDetail(
 		category: "Fisik",
 		title: "Pengertian Jerawat",
         age: "",
-        imageName: "c3_cover"
+        imageDetails: ["c3_cover", "Dua anak menyapa dengan mengangkat tangan"]
 	)
 	
 	static let introduction = CourseIntroduction(
@@ -28,14 +28,14 @@ struct C3_Jerawat_Data {
 	)
 	
 	static let finish = CourseFinish(
-		imageName: "c3_finish"
+		imageDetails: ["c3_finish", "Dua anak sedang kebingungan"]
 	)
 	
 	static let content = CourseContent(
 		content: [
 			[//page1
 				StoryImage(
-                imageName: "c3_page1",
+                imageDetails: ["c3_page1", "Dua anak sedan kebingungan"],
                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
                 size: .zero
 				),
@@ -66,7 +66,7 @@ struct C3_Jerawat_Data {
                 size: .zero),
             
                 StoryImage(
-                imageName: "c3_page2",
+                imageDetails: ["c3_page2", "Anak laki - laki berteriak"],
                 padding: UIEdgeInsets(top: 70, left: 45, bottom: 60, right: 15),
                 size: .zero)
                 
@@ -87,14 +87,14 @@ struct C3_Jerawat_Data {
                 size: .zero),
             
                 StoryImage(
-                imageName: "c3_page3",
+                imageDetails: ["c3_page3", "Anak perempuan melihat ke cermin"],
                 padding: UIEdgeInsets(top: 70, left: 45, bottom: 60, right: 15),
                 size: .zero)
             ],
             
             [//page4
                 StoryImage(
-                imageName: "c3_page4",
+                imageDetails: ["c3_page4", "Jerawat pada lapisan kulit"],
                 padding: UIEdgeInsets(top: 90, left: 70, bottom: 250, right: 70),
                 size: .zero),
                 
@@ -113,7 +113,7 @@ struct C3_Jerawat_Data {
             ],
             [//page5
                 StoryImage(
-                imageName: "c3_page5",
+                imageDetails: ["c3_page5", "Ibu memberi pengertian kepada anak-anaknya"],
                 padding: UIEdgeInsets(top: 90, left: 70, bottom: 250, right: 70),
                 size: .zero),
                 
@@ -126,7 +126,7 @@ struct C3_Jerawat_Data {
             ],
             [//page6
                 StoryImage(
-                imageName: "c3_page6-1",
+                imageDetails: ["c3_page6-1", "Wajah anak bersih setelah mencuci muka"],
                 padding: UIEdgeInsets(top: 90, left: 70, bottom: 250, right: 70),
                 size: .zero),
                 
@@ -144,7 +144,7 @@ struct C3_Jerawat_Data {
             ],
             [//page7
                 StoryImage(
-                imageName: "c3_page6",
+                imageDetails: ["c3_page6", "Anak-anak menunjukkan sabun cuci muka"],
                 padding: UIEdgeInsets(top: 90, left: 60, bottom: 300, right: 60),
                 size: .zero),
                 

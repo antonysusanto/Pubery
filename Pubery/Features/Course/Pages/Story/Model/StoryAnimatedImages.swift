@@ -9,10 +9,12 @@ import UIKit
 
 class StoryAnimatedImages: CustomConstraint {
 	var imageNames: [String]
+	var imageDescription: String
 	var interval: CGFloat
 	
-	init(imageNames: [String], interval:CGFloat, padding: UIEdgeInsets, size: CGSize) {
+	init(imageNames: [String], imageDescription: String, interval:CGFloat, padding: UIEdgeInsets, size: CGSize) {
 		self.imageNames = imageNames
+		self.imageDescription = imageDescription
 		self.interval = interval
 		super.init(padding: padding, size: size)
 	}
@@ -20,6 +22,8 @@ class StoryAnimatedImages: CustomConstraint {
 	func create(elementsContainer:UIView, elementIndex:Int, elements:[UIView], lastElementIndex:Int) -> UIImageView{
 		let imageView = UIImageView()
 		imageView.contentMode = .scaleAspectFit
+		imageView.isAccessibilityElement = true
+		imageView.accessibilityLabel = imageDescription
 		
 		var images: [UIImage] = []
 		for i in 0..<imageNames.count {
