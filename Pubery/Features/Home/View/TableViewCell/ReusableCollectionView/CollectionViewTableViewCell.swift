@@ -62,9 +62,9 @@ class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
 			let progress = UserDefaults.standard.stringArray(forKey: "progress_" + selectedChild) ?? []
 			if (progress.contains((changes?.materialChanges[indexPath.row].title)!)) {
                 cell.checkListImage.isHidden = false
-                cell.checkListImage.isAccessibilityElement = true
-                cell.checkListImage.accessibilityTraits = .none
-                cell.checkListImage.accessibilityLabel = "Materi tentang \(changes?.materialChanges[indexPath.row].title ?? String()) sudah dibaca"
+//                cell.checkListImage.isAccessibilityElement = true
+//                cell.checkListImage.accessibilityTraits = .none
+				cell.accessibilityLabel = (changes?.materialChanges[indexPath.row].title)! + ". Sudah dibaca"
             }
 		}
         return cell

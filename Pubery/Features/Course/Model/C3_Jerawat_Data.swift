@@ -66,7 +66,7 @@ struct C3_Jerawat_Data {
                 size: .zero),
             
                 StoryImage(
-                imageDetails: ["c3_page2", "Anak laki - laki berteriak"],
+                imageDetails: ["c3_page2", "Anak laki-laki berteriak"],
                 padding: UIEdgeInsets(top: 70, left: 45, bottom: 60, right: 15),
                 size: .zero)
                 

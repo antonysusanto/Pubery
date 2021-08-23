@@ -29,7 +29,7 @@ struct C5_PerubahanSuara_Data {
 	)
 	
 	static let finish = CourseFinish(
-		imageDetails: ["c5_finish", "Anak laki - laki mengangkat dua jempol"]
+		imageDetails: ["c5_finish", "Anak laki-laki mengangkat dua jempol"]
 	)
 	
 	static let content = CourseContent(
@@ -41,7 +41,7 @@ struct C5_PerubahanSuara_Data {
 				 size: .zero
 				),
 				StoryLabel(
-				 text: "Putra merupakan anak yang gemar bermain gitar dan juga bernyanyi. Pada suatu hari Putra mengikuti penilaian kelas seni di sekolahnya. Ia membawakan lagu favoritnya untuk tampil di depan teman - teman dan juga gurunya.",
+				 text: "Putra merupakan anak yang gemar bermain gitar dan juga bernyanyi. Pada suatu hari Putra mengikuti penilaian kelas seni di sekolahnya. Ia membawakan lagu favoritnya untuk tampil di depan teman-teman dan juga gurunya.",
 				 type: .bold,
 				 targetText: [""],
 				 alignment: .left,
@@ -151,7 +151,7 @@ struct C5_PerubahanSuara_Data {
                  size: .zero
                 ),
                 StoryImage(
-                 imageDetails: ["c5_page6", "Anak laki - laki memegang kedua leher dengan ekspresi panik"],
+                 imageDetails: ["c5_page6", "Anak laki-laki memegang kedua leher dengan ekspresi panik"],
                  padding:  UIEdgeInsets(top: 65, left: 10, bottom: 140, right: 10),
                  size: .zero
                 ),
@@ -191,7 +191,7 @@ struct C5_PerubahanSuara_Data {
             
             [//page8 GAMBAR KECILIN
                 StoryImage(
-                 imageDetails: ["c5_page8", "Ilustrasi hormon yang mempengaruhi Perubahan Suara pada anak laki - laki"],
+                 imageDetails: ["c5_page8", "Ilustrasi hormon yang mempengaruhi Perubahan Suara pada anak laki-laki"],
                  padding:  UIEdgeInsets(top: 30, left: 10, bottom: 270, right: 10),
                  size: .zero
                 ),
@@ -215,7 +215,7 @@ struct C5_PerubahanSuara_Data {
             
             [//page9 BUTTON PAHAM NAIKIN
                 StoryImage(
-                 imageDetails: ["c5_page9", "Pak guru dan anak laki - laki mengangkat jempol dan tersenyum"],
+                 imageDetails: ["c5_page9", "Pak guru dan anak laki-laki mengangkat jempol dan tersenyum"],
                  padding:  UIEdgeInsets(top: 50, left: 10, bottom: 270, right: 10),
                  size: .zero
                 ),

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileEditID" id="Y6W-OH-hqX" customClass="ProfileEditController" customModule="Pubery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYa-Zb-6Be">
-                                <rect key="frame" x="27" y="45" width="54" height="24"/>
+                                <rect key="frame" x="27" y="89" width="54" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="9sN-EL-uKA"/>
                                     <constraint firstAttribute="height" constant="24" id="og6-wF-3jR"/>
@@ -26,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Renata" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2J-Nx-a6I">
-                                <rect key="frame" x="27" y="81" width="354" height="50"/>
+                                <rect key="frame" x="27" y="125" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="R6W-SP-4dT"/>
                                     <constraint firstAttribute="width" constant="354" id="qD1-b3-f6D"/>
@@ -36,7 +38,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwO-rk-tTc">
-                                <rect key="frame" x="27" y="179" width="20" height="20"/>
+                                <rect key="frame" x="27" y="223" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="4Sv-sw-NTF"/>
                                     <constraint firstAttribute="width" constant="20" id="c6y-lh-v9q"/>
@@ -45,8 +47,8 @@
                                     <action selector="male:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4Na-oK-0Cm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laki - Laki" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7G-Vb-VJg">
-                                <rect key="frame" x="57" y="176" width="94" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laki-Laki" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7G-Vb-VJg">
+                                <rect key="frame" x="57" y="220" width="94" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="2Hf-Mo-E1a"/>
                                     <constraint firstAttribute="width" constant="94" id="wLK-vR-Mhy"/>
@@ -56,7 +58,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSl-hg-fQV">
-                                <rect key="frame" x="191" y="176" width="20" height="20"/>
+                                <rect key="frame" x="191" y="220" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="A69-h2-yo7"/>
                                     <constraint firstAttribute="height" constant="20" id="HIZ-i6-QHE"/>
@@ -66,7 +68,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perempuan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-ux-K3Y">
-                                <rect key="frame" x="221" y="176" width="105" height="24"/>
+                                <rect key="frame" x="221" y="220" width="105" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="RcB-Id-jRh"/>
                                     <constraint firstAttribute="height" constant="24" id="mtA-2j-YEe"/>
@@ -76,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we2-pR-BBX">
-                                <rect key="frame" x="30" y="258" width="540" height="52"/>
+                                <rect key="frame" x="30" y="302" width="354" height="52"/>
                                 <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="SxT-Yc-uGW"/>

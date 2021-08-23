@@ -114,7 +114,7 @@
                                     <action selector="female:" destination="yOd-1N-1jE" eventType="touchUpInside" id="BO4-aA-Z7f"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laki - Laki" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCh-go-BKJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laki-Laki" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCh-go-BKJ">
                                 <rect key="frame" x="59" y="357" width="106" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="BjC-ap-ecI"/>
