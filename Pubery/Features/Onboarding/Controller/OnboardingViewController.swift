@@ -14,7 +14,8 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet weak var nextButton: UIButton!
 	
 	let images = ["onboarding1","onboarding2","onboarding3"]
-	let titles = ["Education through storytelling","Interactive and Fun","Personalized Material"]
+	let imageDescriptions = ["Buku cerita bergambar", "Ibu dan anak bermain dengan smartphone", "Dua anak tersenyum menunjukkan jempol"]
+	let titles = ["Edukasi Melalui Cerita","Interaktif dan Menyenangkan","Materi yang Personal"]
 	let subtitles = ["Sekarang ayah dan ibu tidak perlu cemas bagaimana mengajarkan edukasi seks kepada anak","Memberikan pengalaman berbeda dalam mengajarkan seks edukasi dan cara belajar yang menyenangkan","Materi yang dipelajari akan disesuaikan dengan si kecil"]
 	
 	var contentWidth: CGFloat = 0.0
@@ -50,6 +51,8 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
 			
 			let page = OnboardingContentView(frame: contentFrame)
 			page.imageView.image = UIImage(named: images[index])
+			page.imageView.isAccessibilityElement = true
+			page.imageView.accessibilityLabel = imageDescriptions[index]
 			page.title.text = titles[index]
 			page.subtitle.text = subtitles[index]
 			
@@ -83,18 +86,29 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
 	func setupButton(){
 		nextButton.layer.cornerRadius = 14
 	}
+	
+	func nextPage(index:Int) {
+		scrollView.scrollRectToVisible(CGRect(x: contentWidth * CGFloat(index), y: 0, width: contentWidth, height: 1), animated: true)
+	}
+	
+	func navigateToHome() {
+		let story = UIStoryboard(name: "Home", bundle:nil)
+		let vc = story.instantiateViewController(withIdentifier: "TabBar")
+		UIApplication.shared.windows.first?.rootViewController = vc
+		UIApplication.shared.windows.first?.makeKeyAndVisible()
+		UserDefaults.standard.set(true, forKey: "onboardingShown")
+	}
 
-	@IBAction func skip(_ sender: Any) {
+	@IBAction func nextButton(_ sender: Any) {
 		let currentPage = getCurrentPage()
 		if (currentPage != titles.count-1){
-			scrollView.scrollRectToVisible(CGRect(x: contentWidth * CGFloat(currentPage+1), y: 0, width: contentWidth, height: 1), animated: true)
+			nextPage(index: currentPage+1)
 		} else {
-			let story = UIStoryboard(name: "Home", bundle:nil)
-			let vc = story.instantiateViewController(withIdentifier: "TabBar")
-			UIApplication.shared.windows.first?.rootViewController = vc
-			UIApplication.shared.windows.first?.makeKeyAndVisible()
-			UserDefaults.standard.set(true, forKey: "onboardingShown")
+			navigateToHome()
 		}
-
+	}
+	
+	@IBAction func skipButton(_ sender: Any) {
+		navigateToHome()
 	}
 }
