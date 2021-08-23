@@ -45,11 +45,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func goToPage() {
-        let storyboard = UIStoryboard(name: "ProfileAdd", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "ProfileAddID") as! ProfileAddController
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+//    func goToPage() {
+//        let storyboard = UIStoryboard(name: "ProfileAdd", bundle: nil)
+//        let vc = storyboard.instantiateViewController(identifier: "ProfileAddID") as! ProfileAddController
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
     
     func navBar() {
         if profileChildren.count == 0 {
@@ -68,7 +68,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            tableView.deselectRow(at: indexPath, animated: false)
+            let storyboard = UIStoryboard(name: "ProfileAdd", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "ProfileAddID") as! ProfileAddController
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         else {
             tableView.deselectRow(at: indexPath, animated: false)
@@ -103,16 +105,26 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         if profileChildren.count == 0 {
             let cell = (tableView.dequeueReusableCell(withIdentifier: "emptyID", for: indexPath)) as! EmptyViewCell
             cell.delegate = self
+            cell.emptyLabel.isAccessibilityElement = true
+            cell.emptyButton.isAccessibilityElement = true
+            cell.emptyButton.accessibilityTraits = .button
             self.navigationController?.setNavigationBarHidden(true, animated: false)
             return cell
         } else if indexPath.row == 0 {
             let cell = (tableView.dequeueReusableCell(withIdentifier: "addID", for: indexPath)) as! AddChildViewCell
             cell.delegate = self
+            cell.addLabel.isAccessibilityElement = true
             return cell
         } else {
             let cell = (tableView.dequeueReusableCell(withIdentifier: "listID", for: indexPath)) as! ListDataViewCell
             let thisCell = profileChildren[indexPath.row-1]
             cell.dataLabel.text = thisCell.name
+            cell.dataLabel.isAccessibilityElement = true
+            cell.dataLabel.accessibilityTraits = .none
+            cell.dataLabel.accessibilityLabel = "Nama \(thisCell.name ?? String())"
+            cell.editButton.isAccessibilityElement = true
+            cell.editButton.accessibilityTraits = .none
+            cell.editButton.accessibilityLabel = "Tombol Edit"
             
             if let selectedChild = UserDefaults.standard.string(forKey: "selectedChild"){
                 if selectedChild == thisCell.name {
@@ -150,13 +162,19 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
                     
                 }
+                editAction.isAccessibilityElement = true
+                editAction.accessibilityTraits = .button
+                editAction.accessibilityLabel = "Edit data"
+                deleteAction.isAccessibilityElement = true
+                deleteAction.accessibilityTraits = .button
+                deleteAction.accessibilityLabel = "Hapus data"
+                cancelAction.isAccessibilityElement = true
+                cancelAction.accessibilityTraits = .button
+                cancelAction.accessibilityLabel = "Batal"
                 actionSheetController.addAction(editAction)
                 actionSheetController.addAction(deleteAction)
                 actionSheetController.addAction(cancelAction)
                 present(actionSheetController, animated: true, completion: nil)
-                
-                
-                
             }
             return cell
         }

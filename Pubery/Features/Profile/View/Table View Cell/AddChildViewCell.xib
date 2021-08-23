@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,22 +26,12 @@
                                 <color key="textColor" red="0.49019607843137253" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaV-Dx-Oby">
-                                <rect key="frame" x="0.0" y="0.0" width="350" height="123"/>
-                                <connections>
-                                    <action selector="toAddProfile:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rgC-ym-XpN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294117647056" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xaV-Dx-Oby" firstAttribute="leading" secondItem="xiY-R6-Eoj" secondAttribute="leading" id="7hA-cc-fqo"/>
                             <constraint firstItem="Xlv-CP-VYY" firstAttribute="top" secondItem="xiY-R6-Eoj" secondAttribute="top" constant="41" id="LoJ-Gy-cgp"/>
-                            <constraint firstItem="xaV-Dx-Oby" firstAttribute="top" secondItem="xiY-R6-Eoj" secondAttribute="top" id="P28-p1-iD7"/>
                             <constraint firstItem="Xlv-CP-VYY" firstAttribute="leading" secondItem="xiY-R6-Eoj" secondAttribute="leading" constant="22" id="c14-oG-Y4P"/>
                             <constraint firstAttribute="bottom" secondItem="Xlv-CP-VYY" secondAttribute="bottom" constant="41" id="eHU-bm-2Yz"/>
-                            <constraint firstAttribute="bottom" secondItem="xaV-Dx-Oby" secondAttribute="bottom" id="xju-2Q-s4d"/>
-                            <constraint firstAttribute="trailing" secondItem="xaV-Dx-Oby" secondAttribute="trailing" id="zJ8-jT-9B4"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -53,7 +44,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="addButton" destination="xaV-Dx-Oby" id="X1A-us-qwy"/>
                 <outlet property="addLabel" destination="Xlv-CP-VYY" id="qJy-az-10U"/>
                 <outlet property="addView" destination="xiY-R6-Eoj" id="lbL-2X-Ejj"/>
             </connections>

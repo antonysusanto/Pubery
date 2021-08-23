@@ -27,6 +27,7 @@ class ProfileAddController: UIViewController, UITextFieldDelegate{
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         self.inputName.delegate = self
+        setUpAccessibility()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,7 +55,16 @@ class ProfileAddController: UIViewController, UITextFieldDelegate{
                 buttonNext?.alpha = 0.5
             }
             return true
-        }
+    }
+    
+    func setUpAccessibility() {
+        titleFirstPage.isAccessibilityElement = true
+        inputName.isAccessibilityElement = true
+        inputName.accessibilityTraits = .none
+        inputName.accessibilityLabel = "Isi nama anak anda"
+        buttonNext.isAccessibilityElement = true
+        buttonNext.accessibilityTraits = .button
+    }
 
     @IBAction func toNextPage(_ sender: AnyObject) {
         let storyboard = UIStoryboard(name: "ProfileAdd", bundle: nil)

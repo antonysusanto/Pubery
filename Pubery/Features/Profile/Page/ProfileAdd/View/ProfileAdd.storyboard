@@ -131,7 +131,7 @@
                                     <constraint firstAttribute="height" constant="52" id="K10-lX-vMD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <state key="normal" title="SImpan">
+                                <state key="normal" title="Simpan">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>

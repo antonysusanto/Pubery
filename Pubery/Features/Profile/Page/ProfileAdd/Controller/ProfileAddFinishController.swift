@@ -27,6 +27,7 @@ class ProfileAddFinishController: UIViewController {
         buttonDone.layer.cornerRadius = 14
         buttonDone.isUserInteractionEnabled = true
         buttonDone.alpha = 0.5
+        setUpAccessibility()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +54,16 @@ class ProfileAddFinishController: UIViewController {
         labelFemal.alpha = 1
         check = "Female"
         buttonDone.alpha = 1
+    }
+    
+    func setUpAccessibility() {
+        titleLabel.isAccessibilityElement = true
+        buttonImageMale.isAccessibilityElement = true
+        buttonImageMale.accessibilityTraits = .button
+        labelMale.isAccessibilityElement = true
+        buttonImageFemale.isAccessibilityElement = true
+        buttonImageFemale.accessibilityTraits = .button
+        labelFemal.isAccessibilityElement = true
     }
     
     @IBAction func toProfilePage(_ sender: Any) {
