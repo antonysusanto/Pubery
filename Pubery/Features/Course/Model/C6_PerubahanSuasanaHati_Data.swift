@@ -11,14 +11,14 @@ struct C6_PerubahanSuasanaHati_Data {
 	static let home = CourseHome(
 		id: .C6_PerubahanSuasanaHati,
 		title: "Perubahan Suasana Hati",
-		imageName: "c6_icon"
+		imageDetails: ["c6_icon", "Perubahan Suasana Hati"]
 	)
 	
 	static let detail = CourseDetail(
 		category: "Sosial dan Emosi",
 		title: "Perubahan Suasana Hati",
 		age: "Disarankan untuk anak usia 8 tahun ke atas",
-		imageName: "c6_cover"
+		imageDetails: ["c6_cover", "Dua anak menyapa dengan mengangkat tangan"]
 	)
 	
 	static let introduction = CourseIntroduction(
@@ -28,14 +28,14 @@ struct C6_PerubahanSuasanaHati_Data {
 	)
 	
 	static let finish = CourseFinish(
-		imageName: "c6_finish"
+		imageDetails: ["c6_finish", "Dua anak tersenyum"]
 	)
 	
 	static let content = CourseContent(
 		content: [
 			[//page1
 				StoryImage(
-				 imageName: "c6_page1",
+				 imageDetails: ["c6_page1", "Anak perempuan sedang makan"],
 				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 250, right: 35),
 				 size: .zero
 				),
@@ -61,7 +61,7 @@ struct C6_PerubahanSuasanaHati_Data {
             
             [//page2
                 StoryImage(
-                 imageName: "c6_page2",
+                 imageDetails: ["c6_page2", "Anak perempuan menangis di samping ibu"],
                  padding:  UIEdgeInsets(top: 50, left: 35, bottom: 250, right: 35),
                  size: .zero
                 ),
@@ -81,7 +81,7 @@ struct C6_PerubahanSuasanaHati_Data {
             
             [//page3
                 StoryImage(
-                 imageName: "c6_page3",
+                 imageDetails: ["c6_page3", "Perbedaan anak perempuan saat tersenyum senang dan sedih"],
                  padding:  UIEdgeInsets(top: 50, left: 35, bottom: 250, right: 35),
                  size: .zero
                 ),
@@ -107,7 +107,7 @@ struct C6_PerubahanSuasanaHati_Data {
                  size: .zero
                 ),
                 StoryImage(
-                 imageName: "c6_page4",
+                 imageDetails: ["c6_page4", "Perbedaan anak laki-lakisaat tersenyum senang dan sedih"],
                  padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
                  size: CGSize(width: 0, height: 300)
                 ),
@@ -121,7 +121,7 @@ struct C6_PerubahanSuasanaHati_Data {
             
             [//page5
                 StoryImage(
-                 imageName: "c6_page5",
+                 imageDetails: ["c6_page5", "Penggambaran molekul hormon-hormon pada tubuh"],
                  padding: UIEdgeInsets(top: 150, left: 35, bottom: 300, right: 35),
                     size: .zero
                 ),
@@ -146,7 +146,7 @@ struct C6_PerubahanSuasanaHati_Data {
                  size: .zero
                 ),
                 StoryImage(
-                 imageName: "c6_page6",
+                 imageDetails: ["c6_page6", "Penggambaran molekul hormon-hormon pada tubuh"],
                  padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
                  size: CGSize(width: 0, height: 300)
                 ),
@@ -174,7 +174,7 @@ struct C6_PerubahanSuasanaHati_Data {
                  size: .zero
                 ),
                 StoryImage(
-                 imageName: "c6_page7",
+                 imageDetails: ["c6_page7", ""],
                  padding:  UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
                  size: CGSize(width: 0, height: 200)
                 ),
@@ -196,7 +196,7 @@ struct C6_PerubahanSuasanaHati_Data {
                  size: .zero
                 ),
                 StoryImage(
-                 imageName: "c6_page8",
+                 imageDetails: ["c6_page8", "Keluarga makan bersama di ruang makan"],
                  padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
                  size: CGSize(width: 0, height: 200)
                 ),

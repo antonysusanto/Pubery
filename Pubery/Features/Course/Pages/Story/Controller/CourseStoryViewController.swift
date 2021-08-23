@@ -14,6 +14,7 @@ class CourseStoryViewController: UIViewController {
 	@IBOutlet weak var previousButton: UIButton!
 	@IBOutlet weak var progressBar: UIProgressView!
 	@IBOutlet weak var pageNumber: UILabel!
+	@IBOutlet weak var closeButton: UIButton!
 	
 	var selectedCourse: Courses!
 	var pages:[[Any]] = []
@@ -26,9 +27,11 @@ class CourseStoryViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		pages = selectedCourse.getContent().content
+		self.view.accessibilityElements = [pageNumber!, scrollView!, previousButton!, nextButton!, closeButton!]
 	}
 	
 	override func viewDidLayoutSubviews() {
+		UIAccessibility.post(notification: .layoutChanged, argument: pageNumber)
 		// storyboard autolayout need to be updated first from here
 		// this function will trigger everytime the page is changed
 		// so set an if statement to prevent repeated triggers as workaround
@@ -44,6 +47,7 @@ class CourseStoryViewController: UIViewController {
 		setupContent()
 		updatePageControl()
 		setupButton()
+		
 	}
 	
 	func setupScrollView() {
@@ -125,9 +129,11 @@ class CourseStoryViewController: UIViewController {
 	}
 	
 	func updatePageControl()  {
+		
 		self.progressBar.setProgress(Float(self.getCurrentIndex()+1)/Float(self.pages.count), animated: true)
 		
 		pageNumber.text = "\(self.getCurrentIndex()+1) dari \(self.pages.count)"
+		pageNumber.accessibilityLabel = "Halaman " + pageNumber.text!
 		pageNumber.sizeToFit()
 		if (self.getCurrentIndex() == 0) {
 			self.previousButton.isHidden = true
@@ -137,6 +143,7 @@ class CourseStoryViewController: UIViewController {
 			self.previousButton.isHidden = false
 			self.nextButton.isHidden = false
 		}
+		
 	}
 	
 	func setupButton() {

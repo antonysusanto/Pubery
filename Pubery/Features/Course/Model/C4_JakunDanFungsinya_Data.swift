@@ -11,14 +11,14 @@ struct C4_JakunDanFungsinya_Data {
 	static let home = CourseHome(
 		id: .C4_JakunDanFungsinya,
 		title: "Jakun dan Fungsinya",
-		imageName: "c4_icon"
+		imageDetails: ["c4_icon", "Jakun dan Fungsinya"]
 	)
 	
 	static let detail = CourseDetail(
 		category: "Fisik",
 		title: "Jakun dan Fungsinya",
 		age: "Disarankan untuk anak usia 8 tahun ke atas",
-		imageName: "c4_cover"
+		imageDetails: ["c4_cover", "Anak laki - laki menunjuk ke judul materi"]
 	)
 	
 	static let introduction = CourseIntroduction(
@@ -28,14 +28,14 @@ struct C4_JakunDanFungsinya_Data {
 	)
 	
 	static let finish = CourseFinish(
-		imageName: "c5_finish"
+		imageDetails: ["c4_finish", "Anak laki - laki mengangkat dua jempol"]
 	)
 	
 	static let content = CourseContent(
 		content: [
 			[//page1
 				StoryImage(
-				 imageName: "c4_page1",
+				 imageDetails: ["c4_page1", "Anak laki - laki terlihat bingung sambil memegang lehernya"],
 				 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 300, right: 10),
 				 size: .zero
 				),
@@ -63,7 +63,7 @@ struct C4_JakunDanFungsinya_Data {
             
             [//page2
                 StoryImage(
-                 imageName: "c4_page2",
+                 imageDetails: ["c4_page2", "Ibu berbicara ke anak laki - laki yang sedang kebingungan"],
                  padding:  UIEdgeInsets(top: 50, left: 35, bottom: 300, right: 35),
                  size: .zero
                 ),
@@ -91,7 +91,7 @@ struct C4_JakunDanFungsinya_Data {
             
             [ //page3
                  StoryImage(
-                     imageName: "c4_page3",
+                     imageDetails: ["c4_page3", "Tanda tanya"],
                      padding:  UIEdgeInsets(top: 150, left: 35, bottom: 300, right: 35),
                      size: .zero
                  ),
@@ -116,7 +116,7 @@ struct C4_JakunDanFungsinya_Data {
                      size: .zero
                  ),
                  StoryImage(
-                     imageName: "c4_page4",
+                     imageDetails: ["c4_page4", "Bentuk jakun pada leher laki - laki"],
                      padding:  UIEdgeInsets(top: 20, left: 10, bottom: 100, right: 10),
                      size: CGSize(width: 0, height: 300)
                  ),
@@ -125,7 +125,7 @@ struct C4_JakunDanFungsinya_Data {
             
             [ //page5
                  StoryImage(
-                     imageName: "c4_page5",
+                     imageDetails: ["c4_page5", "Ilustrasi bagian - bagian pada jakun yang melindungi pita suara"],
                      padding:  UIEdgeInsets(top: 20, left: 35, bottom: 350, right: 35),
                      size: .zero
                  ),
@@ -166,7 +166,7 @@ struct C4_JakunDanFungsinya_Data {
             [ //page6
                 
                 StoryImage(
-                    imageName: "c4_page6",
+                    imageDetails: ["c4_page6", "Perbedaan jakun perempuan yang tidak terlihat dan jakun laki - laki yang menonjol dan terlihat"],
                     padding:  UIEdgeInsets(top: 70, left: 10, bottom: 200, right: 10),
                     size: .zero
                 ),
@@ -183,7 +183,7 @@ struct C4_JakunDanFungsinya_Data {
             
             [//page7
                 StoryImage(
-                 imageName: "c4_page7",
+                 imageDetails: ["c4_page7", "Anak laki - laki mengangkat jempol"],
                  padding:  UIEdgeInsets(top: 50, left: 10, bottom: 350, right: 10),
                  size: .zero
                 ),

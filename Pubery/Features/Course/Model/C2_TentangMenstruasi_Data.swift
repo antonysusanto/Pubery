@@ -12,14 +12,14 @@ struct C2_TentangMenstruasi_Data {
 	static let home = CourseHome(
 		id: .C2_TentangMenstruasi,
 		title: "Tentang Menstruasi",
-		imageName: "c2_icon"
+		imageDetails: ["c2_icon", "Tentang Menstruasi"]
 	)
 	
 	static let detail = CourseDetail(
 		category: "Fisik dan Reproduksi",
 		title: "Tentang Menstruasi",
 		age: "Disarankan untuk anak usia 8 tahun ke atas",
-		imageName: "c2_cover"
+		imageDetails: ["c2_cover", "Anak perempuan menunjuk keatas dengan dua jari"]
 	)
 	
 	static let introduction = CourseIntroduction(
@@ -29,7 +29,7 @@ struct C2_TentangMenstruasi_Data {
 	)
 	
 	static let finish = CourseFinish(
-		imageName: "c2_finish"
+		imageDetails: ["c2_finish", "Anak perempuan mengangkat dua jempol"]
 	)
 	
 	static let content = CourseContent(
@@ -45,22 +45,22 @@ struct C2_TentangMenstruasi_Data {
                 size: .zero),
                 
                 StoryImage(
-                imageName: "c2_page1",
+                imageDetails: ["c2_page1", "Ibu dan anak perempuan sedang berbicara"],
                 padding:  UIEdgeInsets(top: 55, left: 10, bottom: 35, right: 10),
                 size: .zero)
             ],
             
             [//page2
                 StoryLabel(
-                text: "Menstruasi itu ....",
+                text: "Menstruasi itu...",
                 type: .bold,
-                targetText: ["Menstruasi itu ...."],
+                targetText: ["Menstruasi itu..."],
                 alignment: .left, fontsize: 24,
                 padding: UIEdgeInsets(top: 80, left: 35, bottom: 0, right: 35),
                 size: .zero),
                 
                 StoryImage(
-                imageName: "c2_page2",
+                imageDetails: ["c2_page2", "Anak perempuan"],
                 padding: UIEdgeInsets(top: 30, left: 50, bottom: 0, right: 50),
                 size: CGSize(width: 0, height: 340)),
                 
@@ -88,7 +88,7 @@ struct C2_TentangMenstruasi_Data {
                 size: .zero),
                 
                 StoryImage(
-                imageName: "c2_page3",
+                imageDetails: ["c2_page3", "Ibu memegang gambar ovarium"],
                 padding: UIEdgeInsets(top: 40, left: 50, bottom: 0, right: 50),
                 size: CGSize(width: 0, height: 280)),
                 
@@ -115,7 +115,7 @@ struct C2_TentangMenstruasi_Data {
             
             [//page5
                 StoryImage(
-                imageName: "c2_page5",
+                imageDetails: ["c2_page5", "Kalendar dengan satu tanggal warna merah"],
                 padding: UIEdgeInsets(top: 60, left: 120, bottom: 350, right: 120),
                 size: .zero),
                 
@@ -136,7 +136,7 @@ struct C2_TentangMenstruasi_Data {
                 
             [//page6]
                 StoryImage(
-                imageName: "c2_page6",
+                imageDetails: ["c2_page6", "Anak perempuan tersenyum"],
                 padding: UIEdgeInsets(top: 60, left: 120, bottom: 360, right: 120),
                 size: .zero),
                 

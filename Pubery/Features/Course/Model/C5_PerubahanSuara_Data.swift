@@ -11,14 +11,14 @@ struct C5_PerubahanSuara_Data {
 	static let home = CourseHome(
 		id: .C5_PerubahanSuara,
 		title: "Perubahan Suara",
-		imageName: "c5_icon"
+		imageDetails: ["c5_icon", "Perubahan Suara"]
 	)
 	
 	static let detail = CourseDetail(
 		category: "Fisik",
 		title: "Perubahan Suara",
 		age: "Disarankan untuk anak usia 8 tahun ke atas",
-		imageName: "c5_cover"
+		imageDetails: ["c5_cover", "Karakter Pubery putra menunjuk ke judul materi"]
 	)
 	
 	static let introduction = CourseIntroduction(
@@ -29,14 +29,14 @@ struct C5_PerubahanSuara_Data {
 	)
 	
 	static let finish = CourseFinish(
-		imageName: "c5_finish"
+		imageDetails: ["c5_finish", "Anak laki - laki mengangkat dua jempol"]
 	)
 	
 	static let content = CourseContent(
 		content: [
 			[//page1
 				StoryImage(
-				 imageName: "c5_page1",
+				 imageDetails: ["c5_page1", "Anak laki-laki bernyanyi sambil memainkan gitar"],
 				 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
 				 size: .zero
 				),
@@ -52,7 +52,7 @@ struct C5_PerubahanSuara_Data {
             
             [//page2
                 StoryImage(
-                 imageName: "c5_page2",
+                 imageDetails: ["c5_page2", "Anak laki-laki heran akan perubahan suara yang dialaminya"],
                  padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
                  size: .zero
                 ),
@@ -85,7 +85,7 @@ struct C5_PerubahanSuara_Data {
                 ),
                 
                 StoryImage(
-                 imageName: "c5_page3",
+                 imageDetails: ["c5_page3", "Pak guru bertanya pada anak laki-laki"],
                  padding:  UIEdgeInsets(top: 40, left: 10, bottom: 250, right: 10),
                  size: .zero
                 ),
@@ -102,7 +102,7 @@ struct C5_PerubahanSuara_Data {
             
             [//page4
                 StoryImage(
-                 imageName: "c5_page4",
+                 imageDetails: ["c5_page4", "Pak guru menjelaskan lebih detail terkait perubahan yang dialami anak laki-laki"],
                  padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
                  size: .zero
                 ),
@@ -126,7 +126,7 @@ struct C5_PerubahanSuara_Data {
             
             [//page5
                 StoryImage(
-                 imageName: "c5_page5",
+                 imageDetails: ["c5_page5", "Tanda tanya"],
                  padding:  UIEdgeInsets(top: 150, left: 35, bottom: 300, right: 10),
                  size: .zero
                 ),
@@ -151,7 +151,7 @@ struct C5_PerubahanSuara_Data {
                  size: .zero
                 ),
                 StoryImage(
-                 imageName: "c5_page6",
+                 imageDetails: ["c5_page6", "Anak laki - laki memegang kedua leher dengan ekspresi panik"],
                  padding:  UIEdgeInsets(top: 65, left: 10, bottom: 140, right: 10),
                  size: .zero
                 ),
@@ -175,7 +175,7 @@ struct C5_PerubahanSuara_Data {
                  size: .zero
                 ),
                 StoryImage(
-                 imageName: "c5_page7",
+                 imageDetails: ["c5_page7", "Ilustrasi anatomi tubuh dan pergerakan udara penyebab terbentuknya suara"],
                  padding:  UIEdgeInsets(top: 30, left: 10, bottom: 250, right: 10),
                  size: .zero
                 ),
@@ -191,7 +191,7 @@ struct C5_PerubahanSuara_Data {
             
             [//page8 GAMBAR KECILIN
                 StoryImage(
-                 imageName: "c5_page8",
+                 imageDetails: ["c5_page8", "Ilustrasi hormon yang mempengaruhi Perubahan Suara pada anak laki - laki"],
                  padding:  UIEdgeInsets(top: 30, left: 10, bottom: 270, right: 10),
                  size: .zero
                 ),
@@ -215,7 +215,7 @@ struct C5_PerubahanSuara_Data {
             
             [//page9 BUTTON PAHAM NAIKIN
                 StoryImage(
-                 imageName: "c5_page9",
+                 imageDetails: ["c5_page9", "Pak guru dan anak laki - laki mengangkat jempol dan tersenyum"],
                  padding:  UIEdgeInsets(top: 50, left: 10, bottom: 270, right: 10),
                  size: .zero
                 ),

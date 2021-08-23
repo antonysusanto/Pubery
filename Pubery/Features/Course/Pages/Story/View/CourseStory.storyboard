@@ -22,7 +22,10 @@
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-hx-yNX">
                                 <rect key="frame" x="314" y="793" width="67" height="67"/>
-                                <state key="normal" image="Next Button"/>
+                                <accessibility key="accessibilityConfiguration" label="Halaman selanjutnya">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <state key="normal" backgroundImage="Next Button"/>
                                 <connections>
                                     <action selector="nextPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SdB-dF-1OQ"/>
                                 </connections>
@@ -35,6 +38,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TP-Br-T3c">
                                 <rect key="frame" x="369" y="54" width="35" height="35"/>
+                                <accessibility key="accessibilityConfiguration" label="Tutup materi"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="hqf-JZ-nOP"/>
                                     <constraint firstAttribute="height" constant="35" id="u2q-Zz-ptw"/>
@@ -50,7 +54,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INI-WJ-L8H">
                                 <rect key="frame" x="34" y="793" width="67" height="67"/>
-                                <state key="normal" image="Back Button"/>
+                                <accessibility key="accessibilityConfiguration" label="Halaman sebelumnya"/>
+                                <state key="normal" image="Back Button" backgroundImage="Back Button"/>
                                 <connections>
                                     <action selector="previousPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qXw-5D-UZ6"/>
                                 </connections>
@@ -83,6 +88,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="9TP-Br-T3c" id="eU1-ON-iTk"/>
                         <outlet property="nextButton" destination="pCW-hx-yNX" id="4w9-UR-DVL"/>
                         <outlet property="pageNumber" destination="7Zs-vi-QPr" id="LOM-M2-fgu"/>
                         <outlet property="previousButton" destination="INI-WJ-L8H" id="DTj-s6-65A"/>

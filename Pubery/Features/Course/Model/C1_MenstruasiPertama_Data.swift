@@ -12,14 +12,14 @@ struct C1_MenstruasiPertama_Data {
 	static let home = CourseHome(
 		id: .C1_MenstruasiPertama,
 		title: "Awal Menstruasi",
-		imageName: "c1_icon"
+		imageDetails: ["c1_icon", "Awal Menstruasi"]
 	)
 	
 	static let detail = CourseDetail(
 		category: "Fisik dan Reproduksi",
 		title: "Awal Menstruasi",
 		age: "Disarankan untuk anak usia 8 tahun ke atas",
-		imageName: "c1_cover"
+		imageDetails: ["c1_cover", "Anak perempuan menunjuk keatas dengan satu jari"]
 	)
 	
 	static let introduction = CourseIntroduction(
@@ -29,14 +29,14 @@ struct C1_MenstruasiPertama_Data {
 	)
 	
 	static let finish = CourseFinish(
-		imageName: "c1_finish"
+		imageDetails: ["c1_finish", "Anak perempuan tersenyum"]
 	)
 	
 	static let content = CourseContent(
 		content: [
 			[ //page1
 			 StoryImage(
-				 imageName: "c1_page1",
+				 imageDetails: ["c1_page1", "Anak perempuan memegang perutnya yang sakit"],
 				 padding:  UIEdgeInsets(top: 80, left: 10, bottom: 200, right: 10),
 				 size: .zero
 			 ),
@@ -53,6 +53,7 @@ struct C1_MenstruasiPertama_Data {
 			[ //page2
 				StoryAnimatedImages(
 					imageNames: ["c1_page2a","c1_page2b"],
+					imageDescription: "Anak perempuan memegang perutnya yang sakit",
 					interval: 1,
 					padding:  UIEdgeInsets(top: 70, left: 10, bottom: 200, right: 10),
 					size: .zero
@@ -70,7 +71,7 @@ struct C1_MenstruasiPertama_Data {
 			
 			[ //page3
 				 StoryImage(
-					 imageName: "c1_page3",
+					 imageDetails: ["c1_page3", "Celana dengan noda darah merah"],
 					 padding:  UIEdgeInsets(top: 120, left: 50, bottom: 250, right: 50),
 					 size: .zero
 				 ),
@@ -104,7 +105,7 @@ struct C1_MenstruasiPertama_Data {
 			
 			[ //page5
 				 StoryImage(
-					 imageName: "c1_page5",
+					 imageDetails: ["c1_page5","Tangan memegang celana yang kotor"],
 					 padding:  UIEdgeInsets(top: 80, left: 10, bottom: 350, right: 10),
 					 size: .zero
 				 ),
@@ -135,7 +136,7 @@ struct C1_MenstruasiPertama_Data {
 					 size: .zero
 				 ),
 				 StoryImage(
-					 imageName: "c1_page6",
+					 imageDetails: ["c1_page6","Celana dan pembalut"],
 					 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 0, right: 10),
 					 size: CGSize(width: 0, height: 200)
 				 ),
@@ -154,7 +155,7 @@ struct C1_MenstruasiPertama_Data {
 					 size: .zero
 				 ),
 				 StoryImage(
-					 imageName: "c1_page7",
+					 imageDetails: ["c1_page7","Putri tidur di kasur"],
 					 padding:  UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10),
 					 size: CGSize(width: 0, height: 200)
 				 ),
