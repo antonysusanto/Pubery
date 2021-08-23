@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="content" destination="pmF-Wk-QQW" id="aVl-7z-m4I"/>
                 <outlet property="namelabel" destination="LGE-cJ-lwR" id="dhh-0j-tSP"/>
+                <outlet property="progressLabel" destination="QGC-QD-6Ni" id="CfK-tI-pzK"/>
                 <outlet property="progressView" destination="Cd8-lT-1ZK" id="HTf-xL-p90"/>
             </connections>
         </placeholder>
@@ -32,10 +33,22 @@
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-lT-1ZK" customClass="CircularProgressBar" customModule="Pubery" customModuleProvider="target">
                             <rect key="frame" x="250" y="31" width="118" height="118"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGC-QD-6Ni">
+                                    <rect key="frame" x="20" y="40" width="78" height="38"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="118" id="3Xq-Wa-kp3"/>
+                                <constraint firstItem="QGC-QD-6Ni" firstAttribute="top" secondItem="Cd8-lT-1ZK" secondAttribute="top" constant="40" id="BDQ-lX-5p3"/>
+                                <constraint firstItem="QGC-QD-6Ni" firstAttribute="leading" secondItem="Cd8-lT-1ZK" secondAttribute="leading" constant="20" id="boJ-iJ-2dV"/>
                                 <constraint firstAttribute="width" constant="118" id="ce7-uh-sVq"/>
+                                <constraint firstAttribute="bottom" secondItem="QGC-QD-6Ni" secondAttribute="bottom" constant="40" id="hVG-uy-3ib"/>
+                                <constraint firstAttribute="trailing" secondItem="QGC-QD-6Ni" secondAttribute="trailing" constant="20" id="s1A-ia-JjL"/>
                             </constraints>
                         </view>
                     </subviews>

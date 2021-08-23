@@ -31,6 +31,7 @@ class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         collectionView.register(CourseCollectionViewCell.nib(), forCellWithReuseIdentifier: CourseCollectionViewCell.identifier)
         collectionView.dataSource = self
         collectionView.delegate = self
+        changesLabel.isAccessibilityElement = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -54,12 +55,19 @@ class CollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CourseCollectionViewCell.identifier, for: indexPath) as! CourseCollectionViewCell
         cell.courseLabel.text = changes?.materialChanges[indexPath.row].title
+        cell.courseLabel.isAccessibilityElement = true
+        cell.courseImage.isAccessibilityElement = true
+        cell.courseImage.accessibilityTraits = .image
+        cell.courseImage.accessibilityLabel = changes?.materialChanges[indexPath.row].imageName
 		cell.courseImage.image = UIImage(named: changes?.materialChanges[indexPath.row].imageName ?? "page1")
 		cell.checkListImage.isHidden = true
 		if let selectedChild = UserDefaults.standard.string(forKey: "selectedChild") {
 			let progress = UserDefaults.standard.stringArray(forKey: "progress_" + selectedChild) ?? []
 			if (progress.contains((changes?.materialChanges[indexPath.row].title)!)) {
                 cell.checkListImage.isHidden = false
+                cell.checkListImage.isAccessibilityElement = true
+                cell.checkListImage.accessibilityTraits = .none
+                cell.checkListImage.accessibilityLabel = "Materi tentang \(changes?.materialChanges[indexPath.row].title ?? String()) sudah dibaca"
             }
 		}
         return cell
