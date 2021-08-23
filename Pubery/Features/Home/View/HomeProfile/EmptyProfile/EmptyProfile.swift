@@ -29,6 +29,8 @@ class EmptyProfile: UIView {
         content.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         line1Label.text = "Hai!"
         line2Label.text = "Siap belajar?"
+        line1Label.isAccessibilityElement = true
+        line2Label.isAccessibilityElement = true
         addSubview(content)
     }
 

@@ -25,11 +25,24 @@ class CourseCoverViewController: UIViewController {
 		materialLabel.text = data.title
 		ageLabel.text = data.age
 		childrenImage.image = UIImage(named: data.imageName)
-		
+		setAccessibility()
         navigationItem.title = .none
         navigationController?.navigationBar.prefersLargeTitles = false
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
+    }
+    
+    func setAccessibility(){
+        let data = selectedCourse.getCourseDetail()
+        changeTypeLabel.isAccessibilityElement = true
+        materialLabel.isAccessibilityElement = true
+        ageLabel.isAccessibilityElement = true
+        childrenImage.isAccessibilityElement = true
+        childrenImage.accessibilityTraits = .image
+        childrenImage.accessibilityLabel = data.imageName
+        petunjukButton.isAccessibilityElement = true
+        petunjukButton.accessibilityTraits = .button
+        mulaiButton.accessibilityTraits = .button
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
