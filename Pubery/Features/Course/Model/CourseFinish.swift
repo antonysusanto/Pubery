@@ -6,9 +6,9 @@
 //
 
 class CourseFinish {
-	var imageName:String
+	var imageDetails:[String]
 	
-	init(imageName:String) {
-		self.imageName = imageName
+	init(imageDetails:[String]) {
+		self.imageDetails = imageDetails
 	}
 }
