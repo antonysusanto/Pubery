@@ -69,7 +69,9 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="KPe-F3-6t1" id="yx9-qg-1LZ"/>
+                        <outlet property="descEnd" destination="4VA-rc-XAk" id="r3W-6S-Cf5"/>
                         <outlet property="imageView" destination="RyC-a4-uiU" id="2x2-jr-JqM"/>
+                        <outlet property="titleEnd" destination="mRC-HB-sse" id="zPJ-nd-Stf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

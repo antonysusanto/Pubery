@@ -11,7 +11,9 @@ class CourseEndViewController: UIViewController {
 
 	@IBOutlet weak var backButton: UIButton!
 	@IBOutlet weak var imageView: UIImageView!
-	var selectedCourse: Courses!
+    @IBOutlet weak var titleEnd: UILabel!
+    @IBOutlet weak var descEnd: UILabel!
+    var selectedCourse: Courses!
     
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,7 @@ class CourseEndViewController: UIViewController {
 		imageView.image = UIImage(named: selectedCourse.getFinish().imageName)
 		
 		saveProgress()
+        setUpAccessibility()
     }
 	
 	func saveProgress(){
@@ -31,6 +34,16 @@ class CourseEndViewController: UIViewController {
 		}
 	}
 	
+    func setUpAccessibility() {
+        imageView.isAccessibilityElement = true
+        imageView.accessibilityTraits = .image
+        imageView.accessibilityLabel = selectedCourse.getFinish().imageName
+        titleEnd.isAccessibilityElement = true
+        descEnd.isAccessibilityElement = true
+        backButton.isAccessibilityElement = true
+        backButton.accessibilityTraits = .button
+    }
+    
 	@IBAction func backToMenu(_ sender: Any) {
 		self.navigationController?.popToRootViewController(animated: true)
 	}
