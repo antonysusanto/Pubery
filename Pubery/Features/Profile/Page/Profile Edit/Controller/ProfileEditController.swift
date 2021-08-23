@@ -37,6 +37,7 @@ class ProfileEditController: UIViewController, UITextFieldDelegate {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         self.nameField.delegate = self
+        setUpAccessibility()
     }
     
     @objc func dismissKeyboard() {
@@ -89,6 +90,22 @@ class ProfileEditController: UIViewController, UITextFieldDelegate {
             buttonFemale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
             buttonMale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
         }
+    }
+    
+    func setUpAccessibility() {
+        titleName.isAccessibilityElement = true
+        labelMale.isAccessibilityElement = true
+        labelFemale.isAccessibilityElement = true
+        buttonMale.isAccessibilityElement = true
+        buttonFemale.isAccessibilityElement = true
+        buttonSave.isAccessibilityElement = true
+        nameField.isAccessibilityElement = true
+        nameField.accessibilityLabel = oldName
+        buttonMale.accessibilityTraits = .button
+        buttonMale.accessibilityLabel = "Tombol pilih kelamin laki - laki"
+        buttonFemale.accessibilityTraits = .button
+        buttonFemale.accessibilityLabel = "Tombol pilih kelamin perempuan"
+        buttonSave.accessibilityTraits = .button
     }
     
     @IBAction func editProfile(_ sender: Any) {
