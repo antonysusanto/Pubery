@@ -77,6 +77,9 @@ class BriefingViewController: UIViewController, UIViewControllerTransitioningDel
         return paragraphStyle
     }
     
+	@IBAction func close(_ sender: Any) {
+		self.dismiss(animated: true, completion: nil)
+	}
 }
 
 extension UIView {
