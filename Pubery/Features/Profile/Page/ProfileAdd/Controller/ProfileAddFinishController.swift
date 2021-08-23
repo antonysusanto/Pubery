@@ -45,6 +45,8 @@ class ProfileAddFinishController: UIViewController {
         labelMale.alpha = 1
         check = "Male"
         buttonDone.alpha = 1
+		buttonImageMale.accessibilityTraits = .selected
+		buttonImageFemale.accessibilityTraits = .button
     }
     
     @IBAction func female(_ sender: UIButton) {
@@ -54,16 +56,15 @@ class ProfileAddFinishController: UIViewController {
         labelFemal.alpha = 1
         check = "Female"
         buttonDone.alpha = 1
+		buttonImageMale.accessibilityTraits = .button
+		buttonImageFemale.accessibilityTraits = .selected
     }
     
     func setUpAccessibility() {
-        titleLabel.isAccessibilityElement = true
-        buttonImageMale.isAccessibilityElement = true
-        buttonImageMale.accessibilityTraits = .button
-        labelMale.isAccessibilityElement = true
-        buttonImageFemale.isAccessibilityElement = true
-        buttonImageFemale.accessibilityTraits = .button
-        labelFemal.isAccessibilityElement = true
+		buttonImageMale.accessibilityLabel = "Jenis kelamin laki-laki"
+		buttonImageFemale.accessibilityLabel = "Jenis kelamin perempuan"
+        labelMale.isAccessibilityElement = false
+        labelFemal.isAccessibilityElement = false
     }
     
     @IBAction func toProfilePage(_ sender: Any) {
