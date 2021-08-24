@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbm-rb-AoK">
-                                <rect key="frame" x="20" y="84" width="374" height="24"/>
+                                <rect key="frame" x="20" y="94" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCE-5b-Byp">
-                                <rect key="frame" x="20" y="118" width="374" height="140"/>
+                                <rect key="frame" x="20" y="128" width="374" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="4VE-3F-Llh"/>
                                 </constraints>
@@ -33,13 +33,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFk-sn-qwF">
-                                <rect key="frame" x="20" y="432" width="374" height="24"/>
+                                <rect key="frame" x="20" y="442" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HD1-SO-Ay6">
-                                <rect key="frame" x="20" y="322" width="374" height="80"/>
+                                <rect key="frame" x="20" y="332" width="374" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="jtI-I9-3Ly"/>
                                 </constraints>
@@ -48,30 +48,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nm3-Ei-1YS">
-                                <rect key="frame" x="20" y="288" width="374" height="24"/>
+                                <rect key="frame" x="20" y="298" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1j-uh-pv7">
-                                <rect key="frame" x="20" y="466" width="374" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="BJ3-bC-Ebx"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="476" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdy-RB-zUH">
-                                <rect key="frame" x="369" y="54" width="35" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdy-RB-zUH">
+                                <rect key="frame" x="324" y="54" width="70" height="35"/>
                                 <accessibility key="accessibilityConfiguration" label="Tutup petunjuk"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="LHA-ZS-chl"/>
+                                    <constraint firstAttribute="width" constant="70" id="LHA-ZS-chl"/>
                                     <constraint firstAttribute="height" constant="35" id="LwE-dj-7R5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" red="0.7843137255" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <state key="normal" image="xmark" catalog="system">
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" systemColor="linkColor"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                                 </state>
                                 <connections>
@@ -89,7 +87,7 @@
                             <constraint firstItem="gFk-sn-qwF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="AGS-cI-erA"/>
                             <constraint firstItem="vCE-5b-Byp" firstAttribute="top" secondItem="gbm-rb-AoK" secondAttribute="bottom" constant="10" id="F9k-X0-8mv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HD1-SO-Ay6" secondAttribute="trailing" constant="20" id="Iey-mW-Lta"/>
-                            <constraint firstItem="gbm-rb-AoK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="JLP-aj-QAe"/>
+                            <constraint firstItem="gbm-rb-AoK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="JLP-aj-QAe"/>
                             <constraint firstItem="vCE-5b-Byp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="MQ0-ng-FDe"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="U1j-uh-pv7" secondAttribute="trailing" constant="20" id="MSb-Qs-C9q"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vCE-5b-Byp" secondAttribute="trailing" constant="20" id="Q8v-A3-2Jz"/>
@@ -101,7 +99,7 @@
                             <constraint firstItem="gbm-rb-AoK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="js1-3n-5WU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gbm-rb-AoK" secondAttribute="trailing" constant="20" id="mce-LM-yKC"/>
                             <constraint firstItem="Nm3-Ei-1YS" firstAttribute="top" secondItem="vCE-5b-Byp" secondAttribute="bottom" constant="30" id="sQx-TN-BsL"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vdy-RB-zUH" secondAttribute="trailing" constant="10" id="ykk-NC-1uy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vdy-RB-zUH" secondAttribute="trailing" constant="20" id="ykk-NC-1uy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -119,7 +117,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

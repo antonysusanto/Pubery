@@ -36,7 +36,7 @@ struct C6_PerubahanSuasanaHati_Data {
 			[//page1
 				StoryImage(
 				 imageDetails: ["c6_page1", "Anak perempuan sedang makan"],
-				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 250, right: 35),
+				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 300, right: 35),
 				 size: .zero
 				),
 				StoryLabel(
@@ -62,7 +62,7 @@ struct C6_PerubahanSuasanaHati_Data {
             [//page2
                 StoryImage(
                  imageDetails: ["c6_page2", "Anak perempuan menangis di samping ibu"],
-                 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 250, right: 35),
+                 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 260, right: 35),
                  size: .zero
                 ),
                 StoryLabel(
@@ -82,13 +82,13 @@ struct C6_PerubahanSuasanaHati_Data {
             [//page3
                 StoryImage(
                  imageDetails: ["c6_page3", "Perbedaan anak perempuan saat tersenyum senang dan sedih"],
-                 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 250, right: 35),
+                 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 300, right: 35),
                  size: .zero
                 ),
                 StoryLabel(
                  text: "Dan ketika akhirnya Putri selesai menangis, Putra kembali terkejut karena Putri langsung meminta maaf.",
                  alignment: .left,
-                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 padding: UIEdgeInsets(top: 10, left: 35, bottom: 0, right: 35),
                  size: .zero
                 ),
                 StoryLabel(
@@ -148,7 +148,7 @@ struct C6_PerubahanSuasanaHati_Data {
                 StoryImage(
                  imageDetails: ["c6_page6", "Penggambaran molekul hormon-hormon pada tubuh"],
                  padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-                 size: CGSize(width: 0, height: 300)
+                 size: CGSize(width: 0, height: 240)
                 ),
                 StoryLabel(
                  text: "Ketika manusia akan beranjak dewasa, tubuh mulai memproduksi beberapa hormon baru. Hormon-hormon baru ini sering kali menyebabkan perubahan emosi yang sulit dikontrol.",
@@ -181,7 +181,7 @@ struct C6_PerubahanSuasanaHati_Data {
                  StoryButton(
                      title: "Atur Napas",
 					 destination: "Breathing",
-                     padding: UIEdgeInsets(top: 100, left: 120, bottom: 0, right: 120),
+                     padding: UIEdgeInsets(top: 70, left: 120, bottom: 0, right: 120),
                      size: CGSize(width: 0, height: 40)
                  )
             ],
@@ -211,7 +211,7 @@ struct C6_PerubahanSuasanaHati_Data {
                     type: .bold,
                     targetText: ["Bagaimana denganmu?"],
                  alignment: .center,
-                 padding: UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
+                 padding: UIEdgeInsets(top: 30, left: 35, bottom: 0, right: 35),
                     size: .zero
                 ),
                 StoryButton(

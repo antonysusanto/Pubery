@@ -184,7 +184,7 @@ struct C4_JakunDanFungsinya_Data {
             [//page7
                 StoryImage(
                  imageDetails: ["c4_page7", "Anak laki-laki mengangkat jempol"],
-                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 350, right: 10),
+                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 370, right: 10),
                  size: .zero
                 ),
                 StoryLabel(
@@ -205,13 +205,13 @@ struct C4_JakunDanFungsinya_Data {
                     type: .bold,
                     targetText: ["Bagaimana denganmu?"],
                     alignment: .center,
-                     padding: UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
+                     padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
                      size: .zero
                  ),
                  StoryButton(
                      title: "Paham",
                      destination: "CourseEnd",
-                     padding: UIEdgeInsets(top: 40, left: 120, bottom: 0, right: 120),
+                     padding: UIEdgeInsets(top: 20, left: 120, bottom: 0, right: 120),
                      size: CGSize(width: 0, height: 40)
                  ),
             ],

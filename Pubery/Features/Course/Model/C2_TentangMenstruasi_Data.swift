@@ -46,7 +46,7 @@ struct C2_TentangMenstruasi_Data {
                 
                 StoryImage(
                 imageDetails: ["c2_page1", "Ibu dan anak perempuan sedang berbicara"],
-                padding:  UIEdgeInsets(top: 55, left: 10, bottom: 35, right: 10),
+                padding:  UIEdgeInsets(top: 55, left: 10, bottom: 50, right: 10),
                 size: .zero)
             ],
             
@@ -62,7 +62,7 @@ struct C2_TentangMenstruasi_Data {
                 StoryImage(
                 imageDetails: ["c2_page2", "Anak perempuan"],
                 padding: UIEdgeInsets(top: 30, left: 50, bottom: 0, right: 50),
-                size: CGSize(width: 0, height: 340)),
+                size: CGSize(width: 0, height: 320)),
                 
                 StoryLabel(
                 text: "Proses keluarnya darah dari Vagina yang terjadi setiap bulan.",
@@ -90,7 +90,7 @@ struct C2_TentangMenstruasi_Data {
                 StoryImage(
                 imageDetails: ["c2_page3", "Ibu memegang gambar ovarium"],
                 padding: UIEdgeInsets(top: 40, left: 50, bottom: 0, right: 50),
-                size: CGSize(width: 0, height: 280)),
+                size: CGSize(width: 0, height: 225)),
                 
                 StoryLabel(
                 text: "Perempuan itu punya organ reproduksi yang tiap bulannya memasuki masa subur yaitu untuk mempersiapkan seorang ibu untuk masa kehamilan. Ada beberapa bagian yang harus kamu tahu nih!",
@@ -152,13 +152,13 @@ struct C2_TentangMenstruasi_Data {
                 targetText: ["Bagaimana denganmu?"],
                 alignment: .center,
                 fontsize: 20,
-                padding: UIEdgeInsets(top: 70, left: 50, bottom: 0, right: 50),
+                padding: UIEdgeInsets(top: 50, left: 50, bottom: 0, right: 50),
                 size: .zero),
                 
                 StoryButton(
                 title: "Paham",
                 destination: "CourseEnd",
-                padding: UIEdgeInsets(top: 40, left: 120, bottom: 0, right: 120),
+                padding: UIEdgeInsets(top: 25, left: 120, bottom: 0, right: 120),
                 size: CGSize(width: 0, height: 40)),
                 ],
             ]

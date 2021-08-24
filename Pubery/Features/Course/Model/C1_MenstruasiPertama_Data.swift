@@ -157,7 +157,7 @@ struct C1_MenstruasiPertama_Data {
 				 StoryImage(
 					 imageDetails: ["c1_page7","Putri tidur di kasur"],
 					 padding:  UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10),
-					 size: CGSize(width: 0, height: 200)
+					 size: CGSize(width: 0, height: 180)
 				 ),
 				StoryLabel(
 					 text: "Walaupun perutnya masih sedikit sakit, Putri justru merasa gembira.",
@@ -176,13 +176,13 @@ struct C1_MenstruasiPertama_Data {
                     type: .bold,
                     targetText: ["Bagaimana denganmu?"],
                     alignment: .center,
-					 padding: UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
+					 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
 					 size: .zero
 				 ),
 				 StoryButton(
 					 title: "Paham",
 					 destination: "CourseEnd",
-					 padding: UIEdgeInsets(top: 40, left: 120, bottom: 0, right: 120),
+					 padding: UIEdgeInsets(top: 20, left: 120, bottom: 0, right: 120),
 					 size: CGSize(width: 0, height: 40)
 				 ),
 			],
