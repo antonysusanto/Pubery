@@ -8,16 +8,18 @@
 import UIKit
 
 class StoryImage: CustomConstraint {
-	var imageName: String
+	var imageDetails: [String]
 	
-	init(imageName: String, padding: UIEdgeInsets, size: CGSize) {
-		self.imageName = imageName
+	init(imageDetails: [String], padding: UIEdgeInsets, size: CGSize) {
+		self.imageDetails = imageDetails
 		super.init(padding: padding, size: size)
 	}
 	
 	func create(elementsContainer:UIView, elementIndex:Int, elements:[UIView], lastElementIndex:Int) -> UIImageView{
 		let imageView = UIImageView()
-		imageView.image = UIImage(named: imageName)
+		imageView.image = UIImage(named: imageDetails[0])
+		imageView.isAccessibilityElement = true
+		imageView.accessibilityLabel = imageDetails[1]
 		imageView.contentMode = .scaleAspectFit
 		
 		elementsContainer.addSubview(imageView)

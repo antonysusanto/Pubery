@@ -37,6 +37,7 @@ class ProfileEditController: UIViewController, UITextFieldDelegate {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         self.nameField.delegate = self
+        setUpAccessibility()
     }
     
     @objc func dismissKeyboard() {
@@ -61,7 +62,7 @@ class ProfileEditController: UIViewController, UITextFieldDelegate {
         buttonSave.layer.cornerRadius = 14
         buttonFemale.layer.cornerRadius = 10
         buttonMale.layer.cornerRadius = 10
-        labelMale.text = "Laki - Laki"
+        labelMale.text = "Laki-Laki"
         labelFemale.text = "Perempuan"
     }
     
@@ -71,6 +72,8 @@ class ProfileEditController: UIViewController, UITextFieldDelegate {
         buttonMale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
         buttonMale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
         gender = "Male"
+		buttonMale.accessibilityTraits = .selected
+		buttonFemale.accessibilityTraits = .button
     }
     
     @IBAction func female(_ sender: UIButton) {
@@ -79,31 +82,49 @@ class ProfileEditController: UIViewController, UITextFieldDelegate {
         buttonFemale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
         buttonFemale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
         gender = "Female"
+		buttonMale.accessibilityTraits = .button
+		buttonFemale.accessibilityTraits = .selected
     }
     
     func checkGender() {
         if gender == "Male"{
             buttonMale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
             buttonFemale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+			buttonMale.accessibilityTraits = .selected
         } else {
             buttonFemale.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.6, alpha: 1)
             buttonMale.backgroundColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+			buttonFemale.accessibilityTraits = .selected
         }
+    }
+    
+    func setUpAccessibility() {
+        labelMale.isAccessibilityElement = false
+        labelFemale.isAccessibilityElement = false
+		buttonMale.accessibilityTraits = .button
+		buttonFemale.accessibilityTraits = .button
+        buttonMale.accessibilityLabel = "Jenis kelamin laki-laki"
+        buttonFemale.accessibilityLabel = "Jenis kelamin perempuan"
     }
     
     @IBAction func editProfile(_ sender: Any) {
 
-        if oldName == UserDefaults.standard.string(forKey: "selectedChild") {
-            UserDefaults.standard.setValue(nameField.text!, forKey: "selectedChild")
-            UserDefaults.standard.setValue(gender, forKey: "selectedGender")
-        }
-        if let progress = UserDefaults.standard.stringArray(forKey: "progress_" + oldName!) {
-            UserDefaults.standard.setValue(progress, forKey: "progress_" + nameField.text!)
-        }
-        UserDefaults.standard.removeObject(forKey: "progress_" + oldName!)
-    
-        userData.updateChildren(newName: nameField.text!, newGender: gender, replaceData: indexData)
-        delegate?.updateData()
+		if oldName != nameField.text {
+			if oldName == UserDefaults.standard.string(forKey: "selectedChild") {
+				UserDefaults.standard.setValue(nameField.text!, forKey: "selectedChild")
+			}
+			if let progress = UserDefaults.standard.stringArray(forKey: "progress_" + oldName!) {
+				UserDefaults.standard.setValue(progress, forKey: "progress_" + nameField.text!)
+			}
+			UserDefaults.standard.removeObject(forKey: "progress_" + oldName!)
+		}
+		
+		if oldName == UserDefaults.standard.string(forKey: "selectedChild") {
+			UserDefaults.standard.setValue(gender, forKey: "selectedGender")
+		}
+		
+		userData.updateChildren(newName: nameField.text!, newGender: gender, replaceData: indexData)
+		delegate?.updateData()
 		
 		toProfile()
     }

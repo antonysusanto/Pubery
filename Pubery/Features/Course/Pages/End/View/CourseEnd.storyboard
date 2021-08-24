@@ -19,6 +19,9 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c1_finish" translatesAutoresizingMaskIntoConstraints="NO" id="RyC-a4-uiU">
                                 <rect key="frame" x="75" y="94" width="264" height="285"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="285" id="dcw-RY-gsM"/>
                                 </constraints>

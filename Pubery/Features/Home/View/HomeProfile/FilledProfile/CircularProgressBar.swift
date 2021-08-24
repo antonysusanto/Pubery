@@ -40,9 +40,13 @@ class CircularProgressBar: UIView {
                                               fillCollor: UIColor.white.cgColor,
                                               lineWidth: lineWidth)
         textLayer = createTextLayer(rect: rect, textColor: UIColor.black.cgColor)
-        layer.addSublayer(backgroundLayer)
-        layer.addSublayer(progressLayer)
-        layer.addSublayer(textLayer)
+        textLayer.isAccessibilityElement = true
+        textLayer.accessibilityLabel = "\(childProgress)/\(totalCount)"
+        layer.insertSublayer(backgroundLayer, at: 0)
+        layer.insertSublayer(progressLayer, above: backgroundLayer)
+//        layer.addSublayer(backgroundLayer)
+//        layer.addSublayer(progressLayer)
+//        layer.addSublayer(textLayer)
     }
     
     private func shadowDrop(scale: Bool = true) {
@@ -104,7 +108,8 @@ class CircularProgressBar: UIView {
                              width: width,
                              height: fontSize + offSet)
         layer.alignmentMode = .center
-        
+//        layer.isAccessibilityElement = true
+//        layer.accessibilityLabel = "\(childProgress)/\(totalCount)"
         return layer
     }
     

@@ -24,8 +24,8 @@ class CourseCoverViewController: UIViewController {
 		changeTypeLabel.text = data.category
 		materialLabel.text = data.title
 		ageLabel.text = data.age
-		childrenImage.image = UIImage(named: data.imageName)
-		
+		childrenImage.image = UIImage(named: data.imageDetails[0])
+		childrenImage.accessibilityLabel = data.imageDetails[1]
         navigationItem.title = .none
         navigationController?.navigationBar.prefersLargeTitles = false
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)

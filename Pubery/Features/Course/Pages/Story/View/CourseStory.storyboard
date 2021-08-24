@@ -22,7 +22,10 @@
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-hx-yNX">
                                 <rect key="frame" x="314" y="793" width="67" height="67"/>
-                                <state key="normal" image="Next Button"/>
+                                <accessibility key="accessibilityConfiguration" label="Halaman selanjutnya">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <state key="normal" backgroundImage="Next Button"/>
                                 <connections>
                                     <action selector="nextPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SdB-dF-1OQ"/>
                                 </connections>
@@ -33,24 +36,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TP-Br-T3c">
-                                <rect key="frame" x="369" y="54" width="35" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="hqf-JZ-nOP"/>
-                                    <constraint firstAttribute="height" constant="35" id="u2q-Zz-ptw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="tintColor" red="0.78431372549019607" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apZ-fy-Qj8">
+                                <rect key="frame" x="373" y="64" width="21" height="22"/>
+                                <color key="tintColor" red="0.7843137255" green="0.3803921569" blue="0.3803921569" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="xmark" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismiss:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8dm-b7-IzC"/>
+                                    <action selector="dismiss:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5LB-tN-UyO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INI-WJ-L8H">
                                 <rect key="frame" x="34" y="793" width="67" height="67"/>
-                                <state key="normal" image="Back Button"/>
+                                <accessibility key="accessibilityConfiguration" label="Halaman sebelumnya"/>
+                                <state key="normal" image="Back Button" backgroundImage="Back Button"/>
                                 <connections>
                                     <action selector="previousPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qXw-5D-UZ6"/>
                                 </connections>
@@ -69,12 +68,12 @@
                             <constraint firstItem="INI-WJ-L8H" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="34" id="7QS-GK-J55"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pCW-hx-yNX" secondAttribute="trailing" constant="33" id="CTa-Jd-boH"/>
                             <constraint firstItem="KCK-2j-fWz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="130" id="DJO-ju-Hpf"/>
-                            <constraint firstItem="9TP-Br-T3c" firstAttribute="top" secondItem="H9m-R2-EVA" secondAttribute="top" constant="10" id="Uc1-rt-gQF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="apZ-fy-Qj8" secondAttribute="trailing" constant="20" id="GPI-h1-zVj"/>
                             <constraint firstItem="H9m-R2-EVA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Z8D-jN-TwC"/>
                             <constraint firstItem="INI-WJ-L8H" firstAttribute="centerY" secondItem="KCK-2j-fWz" secondAttribute="centerY" id="aT4-yg-LXq"/>
                             <constraint firstItem="KCK-2j-fWz" firstAttribute="top" secondItem="H9m-R2-EVA" secondAttribute="bottom" constant="37.5" id="b19-gh-p1r"/>
-                            <constraint firstItem="9TP-Br-T3c" firstAttribute="trailing" secondItem="H9m-R2-EVA" secondAttribute="trailing" constant="-10" id="bDJ-vh-MVN"/>
                             <constraint firstItem="pCW-hx-yNX" firstAttribute="centerY" secondItem="KCK-2j-fWz" secondAttribute="centerY" id="hpe-b5-LoT"/>
+                            <constraint firstItem="apZ-fy-Qj8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="jkC-tu-Mr3"/>
                             <constraint firstItem="7Zs-vi-QPr" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="jzI-R0-6NC"/>
                             <constraint firstItem="H9m-R2-EVA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="lxH-te-c1u"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KCK-2j-fWz" secondAttribute="trailing" constant="130" id="s5C-zd-gEc"/>
@@ -83,6 +82,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="apZ-fy-Qj8" id="yAs-dn-22e"/>
                         <outlet property="nextButton" destination="pCW-hx-yNX" id="4w9-UR-DVL"/>
                         <outlet property="pageNumber" destination="7Zs-vi-QPr" id="LOM-M2-fgu"/>
                         <outlet property="previousButton" destination="INI-WJ-L8H" id="DTj-s6-65A"/>

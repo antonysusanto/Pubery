@@ -16,8 +16,9 @@ class CourseEndViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		backButton.layer.cornerRadius = 14
-		imageView.image = UIImage(named: selectedCourse.getFinish().imageName)
-		
+		let imageDetails = selectedCourse.getFinish().imageDetails
+		imageView.image = UIImage(named: imageDetails[0])
+		imageView.accessibilityLabel = imageDetails[1]
 		saveProgress()
     }
 	

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol NotEmptyViewCellDelegate: AnyObject {
-    func goToPage()
+    
 }
 
 class AddChildViewCell: UITableViewCell {
@@ -17,7 +17,6 @@ class AddChildViewCell: UITableViewCell {
     
     @IBOutlet weak var addView: UIView!
     @IBOutlet weak var addLabel: UILabel!
-    @IBOutlet weak var addButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,8 +29,5 @@ class AddChildViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func toAddProfile(_ sender: Any) {
-        delegate?.goToPage()
-    }
     
 }
