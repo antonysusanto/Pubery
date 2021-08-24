@@ -120,11 +120,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             let thisCell = profileChildren[indexPath.row-1]
             cell.dataLabel.text = thisCell.name
             cell.dataLabel.isAccessibilityElement = true
-            cell.dataLabel.accessibilityTraits = .none
-            cell.dataLabel.accessibilityLabel = "Nama \(thisCell.name ?? String())"
+            cell.dataLabel.accessibilityTraits = .button
+            cell.dataLabel.accessibilityLabel = "Pilih \(thisCell.name ?? String())"
             cell.editButton.isAccessibilityElement = true
-            cell.editButton.accessibilityTraits = .none
-            cell.editButton.accessibilityLabel = "Tombol Edit"
+            cell.editButton.accessibilityTraits = .button
+            cell.editButton.accessibilityLabel = "Menu edit data "  + thisCell.name!
             
             if let selectedChild = UserDefaults.standard.string(forKey: "selectedChild"){
                 if selectedChild == thisCell.name {
@@ -164,10 +164,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
                 editAction.isAccessibilityElement = true
                 editAction.accessibilityTraits = .button
-                editAction.accessibilityLabel = "Edit data"
+				editAction.accessibilityLabel = "Edit data " + thisCell.name!
                 deleteAction.isAccessibilityElement = true
                 deleteAction.accessibilityTraits = .button
-                deleteAction.accessibilityLabel = "Hapus data"
+                deleteAction.accessibilityLabel = "Hapus data " + thisCell.name!
                 cancelAction.isAccessibilityElement = true
                 cancelAction.accessibilityTraits = .button
                 cancelAction.accessibilityLabel = "Batal"
