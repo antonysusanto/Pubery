@@ -95,7 +95,7 @@ struct C3_Jerawat_Data {
             [//page4
                 StoryImage(
                 imageDetails: ["c3_page4", "Jerawat pada lapisan kulit"],
-                padding: UIEdgeInsets(top: 90, left: 70, bottom: 250, right: 70),
+                padding: UIEdgeInsets(top: 90, left: 70, bottom: 260, right: 70),
                 size: .zero),
                 
                 StoryLabel(
@@ -145,7 +145,7 @@ struct C3_Jerawat_Data {
             [//page7
                 StoryImage(
                 imageDetails: ["c3_page6", "Anak-anak menunjukkan sabun cuci muka"],
-                padding: UIEdgeInsets(top: 90, left: 60, bottom: 300, right: 60),
+                padding: UIEdgeInsets(top: 90, left: 60, bottom: 310, right: 60),
                 size: .zero),
                 
                 StoryLabel(
@@ -160,13 +160,13 @@ struct C3_Jerawat_Data {
                 targetText: ["Bagaimana denganmu?"],
                 alignment: .center,
                 fontsize: 20,
-                padding: UIEdgeInsets(top: 50, left: 50, bottom: 0, right: 50),
+                padding: UIEdgeInsets(top: 40, left: 50, bottom: 0, right: 50),
                 size: .zero),
                 
                 StoryButton(
                 title: "Paham",
                 destination: "CourseEnd",
-                padding: UIEdgeInsets(top: 40, left: 120, bottom: 0, right: 120),
+                padding: UIEdgeInsets(top: 25, left: 120, bottom: 0, right: 120),
                 size: CGSize(width: 0, height: 40)),
                 
                ],

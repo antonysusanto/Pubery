@@ -37,7 +37,7 @@ struct C5_PerubahanSuara_Data {
 			[//page1
 				StoryImage(
 				 imageDetails: ["c5_page1", "Anak laki-laki bernyanyi sambil memainkan gitar"],
-				 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
+				 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 300, right: 10),
 				 size: .zero
 				),
 				StoryLabel(
@@ -53,7 +53,7 @@ struct C5_PerubahanSuara_Data {
             [//page2
                 StoryImage(
                  imageDetails: ["c5_page2", "Anak laki-laki heran akan perubahan suara yang dialaminya"],
-                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
+                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 300, right: 10),
                  size: .zero
                 ),
                 StoryLabel(
@@ -86,8 +86,8 @@ struct C5_PerubahanSuara_Data {
                 
                 StoryImage(
                  imageDetails: ["c5_page3", "Pak guru bertanya pada anak laki-laki"],
-                 padding:  UIEdgeInsets(top: 40, left: 10, bottom: 250, right: 10),
-                 size: .zero
+                 padding:  UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10),
+                 size: CGSize(width: 0, height: 200)
                 ),
              
                 StoryLabel(
@@ -103,7 +103,7 @@ struct C5_PerubahanSuara_Data {
             [//page4
                 StoryImage(
                  imageDetails: ["c5_page4", "Pak guru menjelaskan lebih detail terkait perubahan yang dialami anak laki-laki"],
-                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
+                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 300, right: 10),
                  size: .zero
                 ),
                 StoryLabel(
@@ -155,14 +155,6 @@ struct C5_PerubahanSuara_Data {
                  padding:  UIEdgeInsets(top: 65, left: 10, bottom: 140, right: 10),
                  size: .zero
                 ),
-                StoryLabel( // ini kalo di ilangin image nya mengecil ????
-                 text: " ",
-                 type: .highlight,
-                 targetText: [""],
-                 alignment: .justified,
-                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-                 size: .zero
-                )
             ],
             
             [//page7 REVISI GAMBAR NAIKIN, PARAGRAF 2 NAIKIN
@@ -176,8 +168,8 @@ struct C5_PerubahanSuara_Data {
                 ),
                 StoryImage(
                  imageDetails: ["c5_page7", "Ilustrasi anatomi tubuh dan pergerakan udara penyebab terbentuknya suara"],
-                 padding:  UIEdgeInsets(top: 30, left: 10, bottom: 250, right: 10),
-                 size: .zero
+                 padding:  UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                 size: CGSize(width: 0, height: 150)
                 ),
                 StoryLabel(
                  text: "Perannya sangat penting karena getaran yang dihasilkan akan menentukan tone/bentuk suara yang dihasilkan.",
@@ -192,7 +184,7 @@ struct C5_PerubahanSuara_Data {
             [//page8 GAMBAR KECILIN
                 StoryImage(
                  imageDetails: ["c5_page8", "Ilustrasi hormon yang mempengaruhi Perubahan Suara pada anak laki-laki"],
-                 padding:  UIEdgeInsets(top: 30, left: 10, bottom: 270, right: 10),
+                 padding:  UIEdgeInsets(top: 30, left: 10, bottom: 350, right: 10),
                  size: .zero
                 ),
                 StoryLabel(
@@ -216,7 +208,7 @@ struct C5_PerubahanSuara_Data {
             [//page9 BUTTON PAHAM NAIKIN
                 StoryImage(
                  imageDetails: ["c5_page9", "Pak guru dan anak laki-laki mengangkat jempol dan tersenyum"],
-                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 270, right: 10),
+                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 350, right: 10),
                  size: .zero
                 ),
                 StoryLabel(
@@ -224,7 +216,7 @@ struct C5_PerubahanSuara_Data {
                  type: .bold,
                  targetText: [""],
                  alignment: .left,
-                 padding: UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 35),
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
                  size: .zero
                 ),
                 StoryLabel(
