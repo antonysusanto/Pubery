@@ -32,6 +32,7 @@
 		0A69C27226B19593002439E9 /* OnboardingContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C27126B19593002439E9 /* OnboardingContentView.xib */; };
 		0A71F4C026BC33E30020CB7C /* CourseFinish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */; };
 		0ABF51D626B6C68D009A934F /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D526B6C68D009A934F /* Courses.swift */; };
+		0ACF2C8D26D68F41009884D7 /* PlaySoundAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF2C8C26D68F41009884D7 /* PlaySoundAsset.swift */; };
 		0AF9110126BE86EA003A1C0A /* Breathing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9110026BE86EA003A1C0A /* Breathing.storyboard */; };
 		0AF9110326BE86FB003A1C0A /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9110226BE86FB003A1C0A /* BreathingViewController.swift */; };
 		0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */; };
@@ -115,6 +116,7 @@
 		0A69C27126B19593002439E9 /* OnboardingContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingContentView.xib; sourceTree = "<group>"; };
 		0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseFinish.swift; sourceTree = "<group>"; };
 		0ABF51D526B6C68D009A934F /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
+		0ACF2C8C26D68F41009884D7 /* PlaySoundAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundAsset.swift; sourceTree = "<group>"; };
 		0AF9110026BE86EA003A1C0A /* Breathing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Breathing.storyboard; sourceTree = "<group>"; };
 		0AF9110226BE86FB003A1C0A /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
 		0AFBFB9626AF478D0023A4DF /* Pubery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pubery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +291,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0ACF2C8B26D68F22009884D7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0ACF2C8C26D68F41009884D7 /* PlaySoundAsset.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		0AF910FD26BE86BA003A1C0A /* Breathing */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				0AFBFBB026AF49A80023A4DF /* Features */,
+				0ACF2C8B26D68F22009884D7 /* Helper */,
 				0AFBFBC726AF4AB60023A4DF /* Utilities */,
 				0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */,
 				0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */,
@@ -895,6 +906,7 @@
 				0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */,
 				0A5212B026B9005E00292FA2 /* CourseContent.swift in Sources */,
 				B82142CA26B05ABC007E73B6 /* CollectionViewTableViewCell.swift in Sources */,
+				0ACF2C8D26D68F41009884D7 /* PlaySoundAsset.swift in Sources */,
 				B82142D426B05B03007E73B6 /* HomeData.swift in Sources */,
 				0A69C27026B19581002439E9 /* OnboardingContentView.swift in Sources */,
 				0AFBFBE126AF4BAA0023A4DF /* ProfileViewController.swift in Sources */,
