@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="806"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqh-Tq-QAd">
-                                <rect key="frame" x="340" y="74" width="54" height="22"/>
+                                <rect key="frame" x="373" y="64" width="21" height="22"/>
                                 <color key="tintColor" red="0.78431372549019607" green="0.38039215686274508" blue="0.38039215686274508" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="xmark" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
@@ -66,7 +66,6 @@
                             <constraint firstItem="K6k-tP-ZmX" firstAttribute="top" secondItem="825-HN-Jb5" secondAttribute="bottom" constant="135" id="0Mc-jF-SIS"/>
                             <constraint firstItem="vcO-Xg-br5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="124" id="26b-we-3ls"/>
                             <constraint firstItem="ub2-Ps-hvC" firstAttribute="top" secondItem="825-HN-Jb5" secondAttribute="bottom" constant="-228" id="3uV-a5-jnB"/>
-                            <constraint firstItem="Hqh-Tq-QAd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="340" id="6GW-gj-fgB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="K6k-tP-ZmX" secondAttribute="bottom" constant="120" id="BMQ-dv-tGt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ub2-Ps-hvC" secondAttribute="trailing" constant="48" id="KbO-Wk-Nc5"/>
                             <constraint firstItem="K6k-tP-ZmX" firstAttribute="top" secondItem="Cuc-KP-eAd" secondAttribute="bottom" constant="9" id="L7V-CG-o4X"/>
@@ -74,7 +73,7 @@
                             <constraint firstItem="825-HN-Jb5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="200" id="RZL-8h-TjZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Cuc-KP-eAd" secondAttribute="trailing" constant="95" id="Rvy-Br-C9J"/>
                             <constraint firstItem="Cuc-KP-eAd" firstAttribute="top" secondItem="825-HN-Jb5" secondAttribute="bottom" constant="-1" id="U3x-uz-TXT"/>
-                            <constraint firstItem="Hqh-Tq-QAd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="WO7-cW-9vh"/>
+                            <constraint firstItem="Hqh-Tq-QAd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="WO7-cW-9vh"/>
                             <constraint firstItem="vcO-Xg-br5" firstAttribute="top" secondItem="825-HN-Jb5" secondAttribute="bottom" constant="-120" id="YvE-AM-9OB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K6k-tP-ZmX" secondAttribute="trailing" constant="141" id="Zfe-5w-Tkr"/>
                             <constraint firstItem="vcO-Xg-br5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cFK-XC-aKt"/>
