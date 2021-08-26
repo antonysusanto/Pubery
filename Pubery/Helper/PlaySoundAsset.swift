@@ -15,10 +15,11 @@ class PlaySoundAsset {
 		guard let audioData = NSDataAsset(name: assetName)?.data else { return }
 
 		do {
-		  player = try AVAudioPlayer(data: audioData)
-		  player?.play()
+			player = try AVAudioPlayer(data: audioData)
+			player?.volume = 0.2
+		 	player?.play()
 		} catch {
-		  print(error.localizedDescription)
+			print(error.localizedDescription)
 	  }
   }
 }
