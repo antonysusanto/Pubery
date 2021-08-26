@@ -33,6 +33,9 @@
 		0A71F4C026BC33E30020CB7C /* CourseFinish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */; };
 		0ABF51D626B6C68D009A934F /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D526B6C68D009A934F /* Courses.swift */; };
 		0ACF2C8D26D68F41009884D7 /* PlaySoundAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF2C8C26D68F41009884D7 /* PlaySoundAsset.swift */; };
+		0ACF2C9226D6A6F6009884D7 /* PMS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACF2C9126D6A6F6009884D7 /* PMS.storyboard */; };
+		0ACF2C9426D6A704009884D7 /* PMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF2C9326D6A704009884D7 /* PMSViewController.swift */; };
+		0ACF2C9626D6C84E009884D7 /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF2C9526D6C84E009884D7 /* ShakeAnimation.swift */; };
 		0AF9110126BE86EA003A1C0A /* Breathing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9110026BE86EA003A1C0A /* Breathing.storyboard */; };
 		0AF9110326BE86FB003A1C0A /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9110226BE86FB003A1C0A /* BreathingViewController.swift */; };
 		0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */; };
@@ -117,6 +120,9 @@
 		0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseFinish.swift; sourceTree = "<group>"; };
 		0ABF51D526B6C68D009A934F /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
 		0ACF2C8C26D68F41009884D7 /* PlaySoundAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundAsset.swift; sourceTree = "<group>"; };
+		0ACF2C9126D6A6F6009884D7 /* PMS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PMS.storyboard; sourceTree = "<group>"; };
+		0ACF2C9326D6A704009884D7 /* PMSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMSViewController.swift; sourceTree = "<group>"; };
+		0ACF2C9526D6C84E009884D7 /* ShakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
 		0AF9110026BE86EA003A1C0A /* Breathing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Breathing.storyboard; sourceTree = "<group>"; };
 		0AF9110226BE86FB003A1C0A /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
 		0AFBFB9626AF478D0023A4DF /* Pubery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pubery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +217,7 @@
 			children = (
 				0A5212C426B91B5300292FA2 /* LabelStyle.swift */,
 				0A5212D026B91C7500292FA2 /* ViewConstraint.swift */,
+				0ACF2C9526D6C84E009884D7 /* ShakeAnimation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +239,7 @@
 		0A69C25A26B12DA5002439E9 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				0ACF2C8E26D6A620009884D7 /* PMS */,
 				B85EA8B526B2533600DA803D /* Model */,
 				0AF910FD26BE86BA003A1C0A /* Breathing */,
 				B8FC94D026BD90FE009628A6 /* Acne */,
@@ -297,6 +305,31 @@
 				0ACF2C8C26D68F41009884D7 /* PlaySoundAsset.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		0ACF2C8E26D6A620009884D7 /* PMS */ = {
+			isa = PBXGroup;
+			children = (
+				0ACF2C9026D6A6E9009884D7 /* View */,
+				0ACF2C8F26D6A6E3009884D7 /* Controller */,
+			);
+			path = PMS;
+			sourceTree = "<group>";
+		};
+		0ACF2C8F26D6A6E3009884D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0ACF2C9326D6A704009884D7 /* PMSViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0ACF2C9026D6A6E9009884D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0ACF2C9126D6A6F6009884D7 /* PMS.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0AF910FD26BE86BA003A1C0A /* Breathing */ = {
@@ -842,6 +875,7 @@
 				EA680C4126B2E9E300C8C405 /* ProfileAdd.storyboard in Resources */,
 				0AFBFBCE26AF4B320023A4DF /* CourseCover.storyboard in Resources */,
 				EA7EFBC026B0FB4900B684BA /* ListDataViewCell.xib in Resources */,
+				0ACF2C9226D6A6F6009884D7 /* PMS.storyboard in Resources */,
 				B85EA8C426B2B5D500DA803D /* FilledProfile.xib in Resources */,
 				B8FC94D426BD911C009628A6 /* Acne.storyboard in Resources */,
 				EA7EFBB426B0F5D500B684BA /* EmptyViewCell.xib in Resources */,
@@ -887,7 +921,9 @@
 				EA7EFBBF26B0FB4900B684BA /* ListDataViewCell.swift in Sources */,
 				EA680C4526B3194400C8C405 /* ProfileAddFinishController.swift in Sources */,
 				B8C6B5FC26B79DB200EB460A /* BriefingViewController.swift in Sources */,
+				0ACF2C9426D6A704009884D7 /* PMSViewController.swift in Sources */,
 				EA7EFBB926B0F8EC00B684BA /* AddChildViewCell.swift in Sources */,
+				0ACF2C9626D6C84E009884D7 /* ShakeAnimation.swift in Sources */,
 				0A5212D126B91C7500292FA2 /* ViewConstraint.swift in Sources */,
 				0A5212BC26B9176C00292FA2 /* C3_Jerawat_Data.swift in Sources */,
 				B82142D526B05B03007E73B6 /* Course.swift in Sources */,
