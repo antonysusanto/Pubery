@@ -68,6 +68,8 @@
 		B85EA8C826B387BC00DA803D /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */; };
 		B8C6B5FA26B79D9F00EB460A /* Briefing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C6B5F926B79D9F00EB460A /* Briefing.storyboard */; };
 		B8C6B5FC26B79DB200EB460A /* BriefingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C6B5FB26B79DB200EB460A /* BriefingViewController.swift */; };
+		B8E868D126D7480E00562D69 /* Shaving.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E868D026D7480E00562D69 /* Shaving.storyboard */; };
+		B8E868D326D7482500562D69 /* ShavingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E868D226D7482500562D69 /* ShavingViewController.swift */; };
 		B8FC94D426BD911C009628A6 /* Acne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FC94D326BD911C009628A6 /* Acne.storyboard */; };
 		B8FC94D626BD9129009628A6 /* AcneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC94D526BD9129009628A6 /* AcneViewController.swift */; };
 		EA02CAF626BC225D00F3713C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02CAF526BC225D00F3713C /* AlertViewController.swift */; };
@@ -153,6 +155,8 @@
 		B85EA8C726B387BC00DA803D /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		B8C6B5F926B79D9F00EB460A /* Briefing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Briefing.storyboard; sourceTree = "<group>"; };
 		B8C6B5FB26B79DB200EB460A /* BriefingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefingViewController.swift; sourceTree = "<group>"; };
+		B8E868D026D7480E00562D69 /* Shaving.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shaving.storyboard; sourceTree = "<group>"; };
+		B8E868D226D7482500562D69 /* ShavingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShavingViewController.swift; sourceTree = "<group>"; };
 		B8FC94D326BD911C009628A6 /* Acne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Acne.storyboard; sourceTree = "<group>"; };
 		B8FC94D526BD9129009628A6 /* AcneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcneViewController.swift; sourceTree = "<group>"; };
 		EA02CAF526BC225D00F3713C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 		0A69C25A26B12DA5002439E9 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				B8E868CD26D747D400562D69 /* Shaving */,
 				B85EA8B526B2533600DA803D /* Model */,
 				0AF910FD26BE86BA003A1C0A /* Breathing */,
 				B8FC94D026BD90FE009628A6 /* Acne */,
@@ -652,6 +657,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B8E868CD26D747D400562D69 /* Shaving */ = {
+			isa = PBXGroup;
+			children = (
+				B8E868CF26D747E800562D69 /* View */,
+				B8E868CE26D747E000562D69 /* Controller */,
+			);
+			path = Shaving;
+			sourceTree = "<group>";
+		};
+		B8E868CE26D747E000562D69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8E868D226D7482500562D69 /* ShavingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B8E868CF26D747E800562D69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B8E868D026D7480E00562D69 /* Shaving.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B8FC94D026BD90FE009628A6 /* Acne */ = {
 			isa = PBXGroup;
 			children = (
@@ -827,6 +857,7 @@
 				0AFBFBD526AF4B630023A4DF /* Profile.storyboard in Resources */,
 				0A69C26026B12DDD002439E9 /* Brushing.storyboard in Resources */,
 				B8C6B5FA26B79D9F00EB460A /* Briefing.storyboard in Resources */,
+				B8E868D126D7480E00562D69 /* Shaving.storyboard in Resources */,
 				0AFBFBA926AF478E0023A4DF /* LaunchScreen.storyboard in Resources */,
 				EA680C4126B2E9E300C8C405 /* ProfileAdd.storyboard in Resources */,
 				0AFBFBCE26AF4B320023A4DF /* CourseCover.storyboard in Resources */,
@@ -870,6 +901,7 @@
 				EA60E96F26B7FBF200DF890B /* Progress+CoreDataClass.swift in Sources */,
 				0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */,
 				EA7EFBB326B0F5D500B684BA /* EmptyViewCell.swift in Sources */,
+				B8E868D326D7482500562D69 /* ShavingViewController.swift in Sources */,
 				0A5212AC26B9003F00292FA2 /* CourseDetail.swift in Sources */,
 				EA02CAF626BC225D00F3713C /* AlertViewController.swift in Sources */,
 				0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */,
