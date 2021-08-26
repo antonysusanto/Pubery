@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PadsViewController: UIViewController {
     
@@ -19,18 +20,32 @@ class PadsViewController: UIViewController {
     let customAlert = CustomAlert()
     
     var movedViewOrigin: CGPoint!
+	var count = 0
+	var player: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         endButton.isHidden = true
         addPanGesture(view: movedImage)
-        movedViewOrigin = movedImage.frame.origin
+        
         view.bringSubviewToFront(movedImage)
         navigationController?.setNavigationBarHidden(true, animated: false)
         customAlert.showAlert(with: "Pasangkan pembalut di tempat yang tepat", on: self)
+		
+		if (UIAccessibility.isVoiceOverRunning) {
+			pakaianImage.bottomAnchor.constraint(equalTo: movedImage.topAnchor, constant: -100).isActive = true
+			
+			movedImage.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+			pakaianImage.accessibilityLabel = "Celana. Posisi di tengah layar."
+			movedImage.accessibilityLabel = "Direct touch area. Pembalut. Posisi di tengah bawah layar. Seret dan lepas ke celana di tengah layar."
+		}
     }
-    
+	
+	override func viewDidLayoutSubviews() {
+		movedViewOrigin = movedImage.frame.origin
+	}
+
     @objc func dismissAlert(){
         customAlert.dismissAlert()
     }
@@ -54,17 +69,33 @@ class PadsViewController: UIViewController {
         switch sender.state {
         case .began, .changed:
             moveViewWithPan(view: movedView, sender: sender)
+			if (UIAccessibility.isVoiceOverRunning){
+				count += 1
+				if count % 10 == 0 {
+					if movedView.frame.intersects(targetImage.frame) {
+						let generator = UIImpactFeedbackGenerator(style: .heavy)
+						generator.impactOccurred()
+					} else {
+						let generator = UIImpactFeedbackGenerator(style: .soft)
+						generator.impactOccurred()
+					}
+				}
+			}
         case .ended:
             if movedView.frame.intersects(targetImage.frame) {
+				movedView.center = targetImage.center
+				PlaySoundAsset.play("ok")
+				
                 deleteView(view: movedView)
-            } else { // snapback
+            } else {
+				PlaySoundAsset.play("no")
                 returnViewToOrigin(view: movedView)
             }
         default:
             break
         }
     }
-    
+
     func moveViewWithPan(view: UIView, sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: view)
         view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)

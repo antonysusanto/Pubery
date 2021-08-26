@@ -63,6 +63,7 @@ class BrushingViewController: UIViewController {
 			
 			targetImage.alpha = CGFloat(Float(150-counterIntersect)/150)
 			if counterIntersect > 150 {
+				PlaySoundAsset.play("ok")
 				endView(view: movedView)
 			}
         default:

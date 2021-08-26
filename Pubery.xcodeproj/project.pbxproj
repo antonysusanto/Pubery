@@ -26,12 +26,21 @@
 		0A5212CF26B91C4500292FA2 /* CustomConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212CE26B91C4500292FA2 /* CustomConstraint.swift */; };
 		0A5212D126B91C7500292FA2 /* ViewConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5212D026B91C7500292FA2 /* ViewConstraint.swift */; };
 		0A5AE94A26BD88A4006A9C80 /* StoryTappableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5AE94926BD88A4006A9C80 /* StoryTappableImage.swift */; };
+		0A5E0CB026D831A4008E8B22 /* C7_PertumbuhanRambut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E0CAF26D831A4008E8B22 /* C7_PertumbuhanRambut.swift */; };
+		0A5E0CB226D831B4008E8B22 /* C8_PertumbuhanOtot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E0CB126D831B4008E8B22 /* C8_PertumbuhanOtot.swift */; };
+		0A5E0CB426D831C0008E8B22 /* C9_GejalaMenstruasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E0CB326D831C0008E8B22 /* C9_GejalaMenstruasi.swift */; };
+		0A5E0CB626D831E1008E8B22 /* C10_PersetujuanDanInteraksiFisik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E0CB526D831E1008E8B22 /* C10_PersetujuanDanInteraksiFisik.swift */; };
+		0A5E0CB826D831F1008E8B22 /* C11_MenghargaiSesama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E0CB726D831F1008E8B22 /* C11_MenghargaiSesama.swift */; };
 		0A69C26026B12DDD002439E9 /* Brushing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C25F26B12DDD002439E9 /* Brushing.storyboard */; };
 		0A69C26226B12DEB002439E9 /* BrushingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C26126B12DEB002439E9 /* BrushingViewController.swift */; };
 		0A69C27026B19581002439E9 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69C26F26B19581002439E9 /* OnboardingContentView.swift */; };
 		0A69C27226B19593002439E9 /* OnboardingContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A69C27126B19593002439E9 /* OnboardingContentView.xib */; };
 		0A71F4C026BC33E30020CB7C /* CourseFinish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */; };
 		0ABF51D626B6C68D009A934F /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF51D526B6C68D009A934F /* Courses.swift */; };
+		0ACF2C8D26D68F41009884D7 /* PlaySoundAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF2C8C26D68F41009884D7 /* PlaySoundAsset.swift */; };
+		0ACF2C9226D6A6F6009884D7 /* PMS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACF2C9126D6A6F6009884D7 /* PMS.storyboard */; };
+		0ACF2C9426D6A704009884D7 /* PMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF2C9326D6A704009884D7 /* PMSViewController.swift */; };
+		0ACF2C9626D6C84E009884D7 /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF2C9526D6C84E009884D7 /* ShakeAnimation.swift */; };
 		0AF9110126BE86EA003A1C0A /* Breathing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9110026BE86EA003A1C0A /* Breathing.storyboard */; };
 		0AF9110326BE86FB003A1C0A /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9110226BE86FB003A1C0A /* BreathingViewController.swift */; };
 		0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */; };
@@ -111,12 +120,21 @@
 		0A5212CE26B91C4500292FA2 /* CustomConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConstraint.swift; sourceTree = "<group>"; };
 		0A5212D026B91C7500292FA2 /* ViewConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstraint.swift; sourceTree = "<group>"; };
 		0A5AE94926BD88A4006A9C80 /* StoryTappableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTappableImage.swift; sourceTree = "<group>"; };
+		0A5E0CAF26D831A4008E8B22 /* C7_PertumbuhanRambut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C7_PertumbuhanRambut.swift; sourceTree = "<group>"; };
+		0A5E0CB126D831B4008E8B22 /* C8_PertumbuhanOtot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C8_PertumbuhanOtot.swift; sourceTree = "<group>"; };
+		0A5E0CB326D831C0008E8B22 /* C9_GejalaMenstruasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C9_GejalaMenstruasi.swift; sourceTree = "<group>"; };
+		0A5E0CB526D831E1008E8B22 /* C10_PersetujuanDanInteraksiFisik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C10_PersetujuanDanInteraksiFisik.swift; sourceTree = "<group>"; };
+		0A5E0CB726D831F1008E8B22 /* C11_MenghargaiSesama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C11_MenghargaiSesama.swift; sourceTree = "<group>"; };
 		0A69C25F26B12DDD002439E9 /* Brushing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Brushing.storyboard; sourceTree = "<group>"; };
 		0A69C26126B12DEB002439E9 /* BrushingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushingViewController.swift; sourceTree = "<group>"; };
 		0A69C26F26B19581002439E9 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 		0A69C27126B19593002439E9 /* OnboardingContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingContentView.xib; sourceTree = "<group>"; };
 		0A71F4BF26BC33E30020CB7C /* CourseFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseFinish.swift; sourceTree = "<group>"; };
 		0ABF51D526B6C68D009A934F /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
+		0ACF2C8C26D68F41009884D7 /* PlaySoundAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundAsset.swift; sourceTree = "<group>"; };
+		0ACF2C9126D6A6F6009884D7 /* PMS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PMS.storyboard; sourceTree = "<group>"; };
+		0ACF2C9326D6A704009884D7 /* PMSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMSViewController.swift; sourceTree = "<group>"; };
+		0ACF2C9526D6C84E009884D7 /* ShakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
 		0AF9110026BE86EA003A1C0A /* Breathing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Breathing.storyboard; sourceTree = "<group>"; };
 		0AF9110226BE86FB003A1C0A /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
 		0AFBFB9626AF478D0023A4DF /* Pubery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pubery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +222,11 @@
 				0A5212BD26B9177900292FA2 /* C4_JakunDanFungsinya_Data.swift */,
 				0A5212BF26B9182900292FA2 /* C5_PerubahanSuara_Data.swift */,
 				0A5212C126B9183400292FA2 /* C6_PerubahanSuasanaHati_Data.swift */,
+				0A5E0CAF26D831A4008E8B22 /* C7_PertumbuhanRambut.swift */,
+				0A5E0CB126D831B4008E8B22 /* C8_PertumbuhanOtot.swift */,
+				0A5E0CB326D831C0008E8B22 /* C9_GejalaMenstruasi.swift */,
+				0A5E0CB526D831E1008E8B22 /* C10_PersetujuanDanInteraksiFisik.swift */,
+				0A5E0CB726D831F1008E8B22 /* C11_MenghargaiSesama.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +236,7 @@
 			children = (
 				0A5212C426B91B5300292FA2 /* LabelStyle.swift */,
 				0A5212D026B91C7500292FA2 /* ViewConstraint.swift */,
+				0ACF2C9526D6C84E009884D7 /* ShakeAnimation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,6 +258,7 @@
 		0A69C25A26B12DA5002439E9 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				0ACF2C8E26D6A620009884D7 /* PMS */,
 				B8E868CD26D747D400562D69 /* Shaving */,
 				B85EA8B526B2533600DA803D /* Model */,
 				0AF910FD26BE86BA003A1C0A /* Breathing */,
@@ -294,6 +319,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0ACF2C8B26D68F22009884D7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0ACF2C8C26D68F41009884D7 /* PlaySoundAsset.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0ACF2C8E26D6A620009884D7 /* PMS */ = {
+			isa = PBXGroup;
+			children = (
+				0ACF2C9026D6A6E9009884D7 /* View */,
+				0ACF2C8F26D6A6E3009884D7 /* Controller */,
+			);
+			path = PMS;
+			sourceTree = "<group>";
+		};
+		0ACF2C8F26D6A6E3009884D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0ACF2C9326D6A704009884D7 /* PMSViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0ACF2C9026D6A6E9009884D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0ACF2C9126D6A6F6009884D7 /* PMS.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0AF910FD26BE86BA003A1C0A /* Breathing */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				0AFBFBB026AF49A80023A4DF /* Features */,
+				0ACF2C8B26D68F22009884D7 /* Helper */,
 				0AFBFBC726AF4AB60023A4DF /* Utilities */,
 				0AFBFB9926AF478D0023A4DF /* AppDelegate.swift */,
 				0AFBFB9B26AF478D0023A4DF /* SceneDelegate.swift */,
@@ -862,6 +921,7 @@
 				EA680C4126B2E9E300C8C405 /* ProfileAdd.storyboard in Resources */,
 				0AFBFBCE26AF4B320023A4DF /* CourseCover.storyboard in Resources */,
 				EA7EFBC026B0FB4900B684BA /* ListDataViewCell.xib in Resources */,
+				0ACF2C9226D6A6F6009884D7 /* PMS.storyboard in Resources */,
 				B85EA8C426B2B5D500DA803D /* FilledProfile.xib in Resources */,
 				B8FC94D426BD911C009628A6 /* Acne.storyboard in Resources */,
 				EA7EFBB426B0F5D500B684BA /* EmptyViewCell.xib in Resources */,
@@ -885,6 +945,7 @@
 				0AFBFBD926AF4B800023A4DF /* HomeViewController.swift in Sources */,
 				0A5212BE26B9177900292FA2 /* C4_JakunDanFungsinya_Data.swift in Sources */,
 				0A5212CB26B91BFC00292FA2 /* StoryButton.swift in Sources */,
+				0A5E0CB626D831E1008E8B22 /* C10_PersetujuanDanInteraksiFisik.swift in Sources */,
 				EA680C4326B2E9FB00C8C405 /* ProfileAddController.swift in Sources */,
 				0AFBFBDD26AF4B970023A4DF /* CourseStoryViewController.swift in Sources */,
 				0A5212C526B91B5300292FA2 /* LabelStyle.swift in Sources */,
@@ -899,6 +960,7 @@
 				B82142CF26B05AE0007E73B6 /* CourseCollectionViewCell.swift in Sources */,
 				0A5212C926B91BCC00292FA2 /* StoryLabel.swift in Sources */,
 				EA60E96F26B7FBF200DF890B /* Progress+CoreDataClass.swift in Sources */,
+				0A5E0CB826D831F1008E8B22 /* C11_MenghargaiSesama.swift in Sources */,
 				0AFBFB9A26AF478D0023A4DF /* AppDelegate.swift in Sources */,
 				EA7EFBB326B0F5D500B684BA /* EmptyViewCell.swift in Sources */,
 				B8E868D326D7482500562D69 /* ShavingViewController.swift in Sources */,
@@ -908,7 +970,10 @@
 				EA7EFBBF26B0FB4900B684BA /* ListDataViewCell.swift in Sources */,
 				EA680C4526B3194400C8C405 /* ProfileAddFinishController.swift in Sources */,
 				B8C6B5FC26B79DB200EB460A /* BriefingViewController.swift in Sources */,
+				0A5E0CB226D831B4008E8B22 /* C8_PertumbuhanOtot.swift in Sources */,
+				0ACF2C9426D6A704009884D7 /* PMSViewController.swift in Sources */,
 				EA7EFBB926B0F8EC00B684BA /* AddChildViewCell.swift in Sources */,
+				0ACF2C9626D6C84E009884D7 /* ShakeAnimation.swift in Sources */,
 				0A5212D126B91C7500292FA2 /* ViewConstraint.swift in Sources */,
 				0A5212BC26B9176C00292FA2 /* C3_Jerawat_Data.swift in Sources */,
 				B82142D526B05B03007E73B6 /* Course.swift in Sources */,
@@ -925,8 +990,10 @@
 				0AFBFBA426AF478D0023A4DF /* Pubery.xcdatamodeld in Sources */,
 				B82142D726B05B0D007E73B6 /* GradientView.swift in Sources */,
 				0AFBFB9C26AF478D0023A4DF /* SceneDelegate.swift in Sources */,
+				0A5E0CB026D831A4008E8B22 /* C7_PertumbuhanRambut.swift in Sources */,
 				0A5212B026B9005E00292FA2 /* CourseContent.swift in Sources */,
 				B82142CA26B05ABC007E73B6 /* CollectionViewTableViewCell.swift in Sources */,
+				0ACF2C8D26D68F41009884D7 /* PlaySoundAsset.swift in Sources */,
 				B82142D426B05B03007E73B6 /* HomeData.swift in Sources */,
 				0A69C27026B19581002439E9 /* OnboardingContentView.swift in Sources */,
 				0AFBFBE126AF4BAA0023A4DF /* ProfileViewController.swift in Sources */,
@@ -940,6 +1007,7 @@
 				0A5212AE26B9005300292FA2 /* CourseIntroduction.swift in Sources */,
 				0A5212C226B9183400292FA2 /* C6_PerubahanSuasanaHati_Data.swift in Sources */,
 				EA60E96826B795D200DF890B /* CoreDataManager.swift in Sources */,
+				0A5E0CB426D831C0008E8B22 /* C9_GejalaMenstruasi.swift in Sources */,
 				0AFBFBDF26AF4BA00023A4DF /* CourseEndViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
