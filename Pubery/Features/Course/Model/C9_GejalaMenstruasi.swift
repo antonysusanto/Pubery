@@ -5,7 +5,7 @@
 //  Created by Antony Susanto on 27/08/21.
 //
 
-import UIKit =
+import UIKit
 
 struct C9_GejalaMenstruasi_Data {
 	static let home = CourseHome(
