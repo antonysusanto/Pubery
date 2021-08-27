@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="CjH-Sn-rNw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="772"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="825"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQj-93-dwN">
                                 <rect key="frame" x="141" y="614" width="132" height="42"/>
@@ -116,7 +116,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TQj-93-dwN" secondAttribute="trailing" constant="141" id="mPt-J2-O2e"/>
                             <constraint firstItem="CjH-Sn-rNw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="t8N-7V-nm2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Iic-3o-ghj" secondAttribute="trailing" constant="20" id="tVF-8U-Ogy"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CjH-Sn-rNw" secondAttribute="bottom" constant="90" id="uc9-Vk-Sbh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CjH-Sn-rNw" secondAttribute="bottom" constant="37" id="uc9-Vk-Sbh"/>
                             <constraint firstItem="EuU-Nb-M8C" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xM2-GH-ZFq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HpY-mC-rkc" secondAttribute="trailing" constant="50" id="yXx-dO-53v"/>
                         </constraints>
