@@ -15,120 +15,110 @@ struct C7_PertumbuhanRambut_Data {
 	)
 	
 	static let detail = CourseDetail(
-		category: "Sosial dan Emosi",
-		title: "Perubahan Suasana Hati",
+		category: "Fisik",
+		title: "Pertumbuhan Rambut",
 		age: "Disarankan untuk anak usia 8 tahun ke atas",
-		imageDetails: ["c6_cover", "Dua anak menyapa dengan mengangkat tangan"]
+		imageDetails: ["c7_cover", "anak laki-laki menyapa dengan mengangkat tangan"]
 	)
 	
 	static let introduction = CourseIntroduction(
-		introduction: ["Penjelasan apa itu perubahan suasana hati atau mood swings","Bagaimana mengontrol perubahan suasana hati"],
+		introduction: ["Penjelasan tentang pertumbuhan rambut ketika pubertas","Mengapa pertumbuhan rambut dapat terjadi"],
 		advice: "Orang tua diharapkan aktif dalam mengajak anak berdialog selama cerita berlangsung",
-		attention: "Materi ini berisi tentang pengetahuan psikologis yang mungkin lebih mudah dipahami untuk anak usia 8 tahun ke atas"
+		attention: " "
 	)
 	
 	static let finish = CourseFinish(
-		imageDetails: ["c6_finish", "Dua anak tersenyum"]
+		imageDetails: ["c7_finish", "Anak laki-laki tersenyum"]
 	)
 	
 	static let content = CourseContent(
 		content: [
 			[//page1
 				StoryImage(
-				 imageDetails: ["c6_page1", "Anak perempuan sedang makan"],
-				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 300, right: 35),
+				 imageDetails: ["c7_page1", "tiga anak laki-laki sedang berjalan"],
+				 padding:  UIEdgeInsets(top: 120, left: 20, bottom: 200, right: 35),
 				 size: .zero
 				),
 				StoryLabel(
-				 text: "Suatu hari pada waktu makan malam,  Putra tidak sengaja menjatuhkan kue cokelat yang hendak dimakan Putri.",
+				 text: "Pada suatu hari, ketika Putra dan teman-temannya sedang dalam perjalanan pulang dari sekolah mereka melihat iklan pencukur rambut.",
 				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "“Ups maaf akan--,” belum sempat Putra selesai berbicara, hal yang mengejutkan terjadi.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Tiba-tiba saja Putri menangis! Padahal detik sebelumnya, Putri masih tertawa.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				)
 			],
 			
 			[//page2
+                StoryLabel(
+                 text: "“Eh, temen temen liat deh kalo kalian udah punya jenggot kalian akan beli ini nih!” celetuk Putra.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 80, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
 				StoryImage(
-				 imageDetails: ["c6_page2", "Anak perempuan menangis di samping ibu"],
-				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 260, right: 35),
+				 imageDetails: ["c7_page2", "anak laki-laki menunjuk papan iklan pencukur rambut"],
+				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 200, right: 35),
 				 size: .zero
 				),
 				StoryLabel(
-				 text: "Putra pun kebingungan dengan sikap saudarinya yang tiba-tiba saja menangis, dan Putra semakin heran karena ibu dan ayahnya justru terlihat tenang. ",
+				 text: " “Emang seumuran kita udah perlu beli ya?” timpal temannya.",
 				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Hanya mengusap-usap pundak Putri itu hingga saudarinya tenang.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				)
 			],
 			
 			[//page3
 				StoryImage(
-				 imageDetails: ["c6_page3", "Perbedaan anak perempuan saat tersenyum senang dan sedih"],
-				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 300, right: 35),
+				 imageDetails: ["c7_page3", "Ketiga anak laki-laki saling melihat dagu Mereka"],
+                    //padding:  UIEdgeInsets(top: 150, left: 20, bottom: 180, right: 35),
+				 padding:  UIEdgeInsets(top: 200, left: 20, bottom: 230, right: 35),
 				 size: .zero
 				),
 				StoryLabel(
-				 text: "Dan ketika akhirnya Putri selesai menangis, Putra kembali terkejut karena Putri langsung meminta maaf.",
+				 text: "“Hmm harusnya sih gitu”, balas temannya lagi. Mereka lantas saling mengamati dagu mereka dan menemukan adanya rambut yang keluar dari dagu Putra.",
 				 alignment: .left,
-				 padding: UIEdgeInsets(top: 10, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "“Ibu, ayah, akhir-akhir ini aku merasa aneh. Suatu saat aku merasa gembira, namun tiba-tiba saja aku merasa ingin menangis tanpa alasan jelas. Dan yang membuatku kesal, aku sering kesulitan mengontrolnya,” ujar Putri.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                    // padding: UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 35),
+				 padding: UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				)
 			],
 			
 			[//page4
 				StoryLabel(
-				 text: "Putra kemudian teringat dengan kejadian dua hari yang lalu. Dia juga pernah merasakan hal yang sama.",
+				 text: "“Kamu ada nih Put! wah, sudah berapa lama??” tanya temannya itu dengan penasaran. ",
 				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+				 padding: UIEdgeInsets(top: 80, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				),
+                StoryLabel(
+                 text: "“Baru baru ini sih, “ balas Putra.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 30, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
 				StoryImage(
-				 imageDetails: ["c6_page4", "Perbedaan anak laki-lakisaat tersenyum senang dan sedih"],
-				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 300)
+				 imageDetails: ["c7_page4", "anak laki-laki memiliki jenggot pada dagunya"],
+				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+				 size: CGSize(width: 0, height: 240)
 				),
-				StoryLabel(
-				 text: "Tiba-tiba saja dia merasa sangat marah ketika temannya menyenggol lengannya saat ia sedang mencatat. Padahal itu masalah yang sangat sepele.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				)
+                StoryButton(
+                    title: "Cukur",
+                    destination: "Shaving",
+                    padding: UIEdgeInsets(top: 50, left: 120, bottom: 0, right: 120),
+                    size: CGSize(width: 0, height: 40)
+                )
 			],
 			
 			[//page5
 				StoryImage(
-				 imageDetails: ["c6_page5", "Penggambaran molekul hormon-hormon pada tubuh"],
+				 imageDetails: ["c6_page5", "Tanda tanya"],
 				 padding: UIEdgeInsets(top: 150, left: 35, bottom: 300, right: 35),
 					size: .zero
 				),
 				StoryLabel(
-				 text: "Pernahkah kamu merasakan hal yang dirasakan Putri dan Putra?",
+				 text: "Kenapa fase pubertas menimbulkan pertumbuhan pada rambut, ya?",
 					type: .bold,
-					targetText: ["Pernahkah kamu merasakan hal yang dirasakan Putri dan Putra?"],
+					targetText: ["Kenapa fase pubertas menimbulkan pertumbuhan pada rambut, ya?"],
 				 alignment: .center,
 					fontsize: 25,
 				 padding: UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 35),
@@ -138,88 +128,78 @@ struct C7_PertumbuhanRambut_Data {
 			
 			[//page6
 				StoryLabel(
-				 text: "Hal itu disebut dengan perubahan suasana hati",
+				 text: "Memasuki usia remaja, anak laki-laki mulai mengalami gejala pubertas seperti rambut-rambut yang mulai tumbuh. ",
 					type: .highlight,
-					targetText: ["perubahan suasana hati"],
+					targetText: [" "],
 				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+				 padding: UIEdgeInsets(top: 80, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				),
 				StoryImage(
-				 imageDetails: ["c6_page6", "Penggambaran molekul hormon-hormon pada tubuh"],
-				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 240)
+				 imageDetails: ["c7_page6", "Letak centang pada bagian tumbuhnya rambut pada kedua ketiak, jenggot dan kemaluan"],
+				 padding:  UIEdgeInsets(top: 45, left: 35, bottom: 0, right: 35),
+                    size: CGSize(width: 0, height: 305)
+                   // size: .zero
 				),
 				StoryLabel(
-				 text: "Ketika manusia akan beranjak dewasa, tubuh mulai memproduksi beberapa hormon baru. Hormon-hormon baru ini sering kali menyebabkan perubahan emosi yang sulit dikontrol.",
+				 text: "biasanya pada bagian wajah, dada, ketiak, punggung, dan area kemaluan mereka.",
 				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Namun, seiring berjalannya waktu, kita akan belajar bagaimana cara mengontrol emosi dengan baik.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+				 padding: UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				)
 			],
 			
 			[ //page7
 				StoryLabel(
-				 text: "“Mulai sekarang, jika kalian merasakan perubahan emosi, tahan untuk tidak berbicara berbicara. Karena Itu berpotensi menyakiti orang lain. Coba untuk menarik napas terlebih dahulu lalu hembuskan sebanyak lima kali agar tenang,” ujar ibu.",
+				 text: "Hormon androgen saat pubertas akan meninggi akan merangsang tumbuhnya jenggot. Tinggi rendahnya hormon ini mempengaruhi kelebatan pada rambut.",
 					type: .highlight,
-					targetText: ["menarik napas"],
+					targetText: ["androgen"],
 				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+				 padding: UIEdgeInsets(top: 80, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				),
 				StoryImage(
-				 imageDetails: ["c6_page7", ""],
+				 imageDetails: ["c7_page7", "ilustrasi struktur kulit dan rambut"],
 				 padding:  UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 200)
+                    size: .zero
 				),
-				 StoryButton(
-					 title: "Atur Napas",
-					 destination: "Breathing",
-					 padding: UIEdgeInsets(top: 70, left: 120, bottom: 0, right: 120),
-					 size: CGSize(width: 0, height: 40)
-				 )
+                StoryLabel(
+                 text: "Selain itu, kondisi folikel pada kulit yang memproduksi rambut juga dapat mempengaruhi pertumbuhan rambut.",
+                    type: .highlight,
+                    targetText: [" "],
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 45, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                )
 			],
 			
-			[//page6
-				StoryLabel(
-				 text: "“Perubahan suasana hati bukan sesuatu yang aneh, kok. Ayah dan Ibu ketika sedang melewati masa pubertas juga mengalami hal yang sama. Yang penting adalah, kita mau belajar untuk mengontrolnya. Paham, nak?”",
-					type: .highlight,
-					targetText: ["bukan sesuatu yang aneh"],
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryImage(
-				 imageDetails: ["c6_page8", "Keluarga makan bersama di ruang makan"],
-				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 200)
-				),
-				StoryLabel(
-				 text: "Putra dan Putri menangguk serempak, “Paham!”",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Bagaimana denganmu?",
-					type: .bold,
-					targetText: ["Bagaimana denganmu?"],
-				 alignment: .center,
-				 padding: UIEdgeInsets(top: 30, left: 35, bottom: 0, right: 35),
-					size: .zero
-				),
-				StoryButton(
-					title: "Paham",
-					destination: "CourseEnd",
-					padding: UIEdgeInsets(top: 20, left: 120, bottom: 0, right: 120),
-					size: CGSize(width: 0, height: 40)
-				)
+			[//page8
+                StoryImage(
+                 imageDetails: ["c7_page8", "ketiga anak laki-laki berekspresi riang"],
+                 padding:  UIEdgeInsets(top: 100, left: 10, bottom: 360, right: 10),
+                 size: .zero
+                ),
+                StoryLabel(
+                 text: "Seiring berjalannya waktu, pertumbuhan rambut akan bertambah dan bagi laki-laki ini merupakan hal yang normal terjadi sehingga tidak perlu panik jika hal ini juga kamu alami, ya!",
+  
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 35, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryLabel(
+                 text: "Bagaimana denganmu?",
+                 type: .bold,
+                 targetText: ["Bagaimana denganmu?"],
+                 alignment: .center,
+                 padding: UIEdgeInsets(top: 35, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryButton(
+                    title: "Paham",
+                    destination: "CourseEnd",
+                    padding: UIEdgeInsets(top: 20, left: 120, bottom: 0, right: 120),
+                    size: CGSize(width: 0, height: 40)
+                ),
 			]
 		]
 	)
