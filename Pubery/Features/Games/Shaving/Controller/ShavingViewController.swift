@@ -17,6 +17,8 @@ class ShavingViewController: UIViewController {
     @IBOutlet weak var targetImage1: UIImageView!
     @IBOutlet weak var targetImage2: UIImageView!
     @IBOutlet weak var targetImage3: UIImageView!
+    @IBOutlet weak var targetImage4: UIImageView!
+    @IBOutlet weak var targetImgae5: UIImageView!
     
     @IBOutlet weak var movedImage: UIImageView!
     @IBOutlet var targets: [UIImageView]!
@@ -57,14 +59,14 @@ class ShavingViewController: UIViewController {
             moveViewWithPan(view: movedView, sender: sender)
             if movedView.frame.intersects(targetImage1.frame) {
                 counterIntersect += 1
-                targetImage1.alpha = CGFloat(Float(100-counterIntersect)/100)
-                if counterIntersect > 100 {
+                targetImage1.alpha = CGFloat(Float(50-counterIntersect)/50)
+                if counterIntersect > 40 {
                     targetImage1.isHidden = true
                 }
             } else if movedView.frame.intersects(targetImage2.frame) {
                 counterIntersect += 1
-                targetImage2.alpha = CGFloat(Float(100-counterIntersect)/100)
-                if counterIntersect > 100 {
+                targetImage2.alpha = CGFloat(Float(50-counterIntersect)/50)
+                if counterIntersect > 40 {
                     targetImage2.isHidden = true
                 }
             } else if movedView.frame.intersects(targetImage3.frame) {
@@ -73,8 +75,13 @@ class ShavingViewController: UIViewController {
                 if counterIntersect > 100 {
                     targetImage3.isHidden = true
                 }
+            } else if movedView.frame.intersects(targetImage4.frame){
+                targetImage4.isHidden = true
+            } else if movedView.frame.intersects(targetImgae5.frame){
+                targetImgae5.isHidden = true
             }
-            if targetImage1.isHidden == true, targetImage2.isHidden == true, targetImage3.isHidden == true {
+            if targetImage1.isHidden == true, targetImage2.isHidden == true, targetImage3.isHidden == true, targetImage4.isHidden == true, targetImgae5.isHidden == true {
+                PlaySoundAsset.play("ok")
                 endView(view: movedView)
             }
         default:
