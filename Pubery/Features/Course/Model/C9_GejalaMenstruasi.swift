@@ -15,211 +15,279 @@ struct C9_GejalaMenstruasi_Data {
 	)
 	
 	static let detail = CourseDetail(
-		category: "Sosial dan Emosi",
-		title: "Perubahan Suasana Hati",
-		age: "Disarankan untuk anak usia 8 tahun ke atas",
-		imageDetails: ["c6_cover", "Dua anak menyapa dengan mengangkat tangan"]
+		category: "Fisik dan Reproduksi",
+		title: "Gejala Menstruasi",
+		age: "",
+		imageDetails: ["c9_cover", "Anak perempuan menunjuk keatas dengan tiga jari"]
 	)
 	
 	static let introduction = CourseIntroduction(
-		introduction: ["Penjelasan apa itu perubahan suasana hati atau mood swings","Bagaimana mengontrol perubahan suasana hati"],
+		introduction: ["Penjelasan tentang macam-macam gejala menstruasi","Solusi meredakan gejala menstruasi"],
 		advice: "Orang tua diharapkan aktif dalam mengajak anak berdialog selama cerita berlangsung",
-		attention: "Materi ini berisi tentang pengetahuan psikologis yang mungkin lebih mudah dipahami untuk anak usia 8 tahun ke atas"
+		attention: " "
 	)
 	
 	static let finish = CourseFinish(
-		imageDetails: ["c6_finish", "Dua anak tersenyum"]
+		imageDetails: ["c9_finish", "Anak perempuan tersenyum"]
 	)
 	
 	static let content = CourseContent(
 		content: [
 			[//page1
+                StoryLabel(
+                 text: "Bu, mengapa temanku di sekolah tidak merasakan sakit perut sepertiku ketika akan menstruasi?",
+                 alignment: .center,
+                 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
 				StoryImage(
-				 imageDetails: ["c6_page1", "Anak perempuan sedang makan"],
-				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 300, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Suatu hari pada waktu makan malam,  Putra tidak sengaja menjatuhkan kue cokelat yang hendak dimakan Putri.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "“Ups maaf akan--,” belum sempat Putra selesai berbicara, hal yang mengejutkan terjadi.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Tiba-tiba saja Putri menangis! Padahal detik sebelumnya, Putri masih tertawa.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+				 imageDetails: ["c9_1", "Anak perempuan sedang bertanya pada ibunya"],
+                    padding:  UIEdgeInsets(top: 55, left: 10, bottom: 50, right: 10),
 				 size: .zero
 				)
 			],
 			
 			[//page2
-				StoryImage(
-				 imageDetails: ["c6_page2", "Anak perempuan menangis di samping ibu"],
-				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 260, right: 35),
+				
+				StoryLabel(
+				 text: "Gejala yang dirasakan perempuan ketika mendekati dinamakan Premenstrual Syndrome (PMS). PMS ini berbeda-beda untuk setiap orang.",
+                    type: .highlight,
+                    targetText: ["Premenstrual Syndrome (PMS)"],
+				 alignment: .left,
+				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				),
+                StoryImage(
+                 imageDetails: ["c9_2", "Anak perempuan dikelilingi gejala-gejala menstruasi"],
+                 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 260, right: 35),
+                 size: .zero
+                ),
 				StoryLabel(
-				 text: "Putra pun kebingungan dengan sikap saudarinya yang tiba-tiba saja menangis, dan Putra semakin heran karena ibu dan ayahnya justru terlihat tenang. ",
+				 text: "Bahkan ada juga yang tidak mengalaminya sama sekali.",
 				 alignment: .left,
 				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				),
-				StoryLabel(
-				 text: "Hanya mengusap-usap pundak Putri itu hingga saudarinya tenang.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				)
+                StoryLabel(
+                 text: "Apa saja tanda-tanda PMS?",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                )
 			],
 			
-			[//page3
-				StoryImage(
-				 imageDetails: ["c6_page3", "Perbedaan anak perempuan saat tersenyum senang dan sedih"],
-				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 300, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Dan ketika akhirnya Putri selesai menangis, Putra kembali terkejut karena Putri langsung meminta maaf.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 10, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "“Ibu, ayah, akhir-akhir ini aku merasa aneh. Suatu saat aku merasa gembira, namun tiba-tiba saja aku merasa ingin menangis tanpa alasan jelas. Dan yang membuatku kesal, aku sering kesulitan mengontrolnya,” ujar Putri.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				)
-			],
 			
 			[//page4
 				StoryLabel(
-				 text: "Putra kemudian teringat dengan kejadian dua hari yang lalu. Dia juga pernah merasakan hal yang sama.",
+				 text: "Kram Perut",
 				 alignment: .left,
+                    fontsize: 25,
 				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				),
+                StoryLabel(
+                 text: "Sakit pada perut bagian bawah yang muncul sebelum dan di hari awal haid.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
 				StoryImage(
-				 imageDetails: ["c6_page4", "Perbedaan anak laki-lakisaat tersenyum senang dan sedih"],
-				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 300)
+				 imageDetails: ["c9_3", "Anak perempuan memegang perutnya yang sakit"],
+				 padding:  UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
+				 size: CGSize(width: 0, height: 250)
 				),
-				StoryLabel(
-				 text: "Tiba-tiba saja dia merasa sangat marah ketika temannya menyenggol lengannya saat ia sedang mencatat. Padahal itu masalah yang sangat sepele.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				)
+                StoryLabel(
+                 text: "Memeluk sebotol air hangat di perut dapat membantu meredakan rasa sakit.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryLabel(
+                 text: "Selain itu, perbanyak minum air putih dan istirahat yang cukup.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                )
+				
 			],
 			
 			[//page5
-				StoryImage(
-				 imageDetails: ["c6_page5", "Penggambaran molekul hormon-hormon pada tubuh"],
-				 padding: UIEdgeInsets(top: 150, left: 35, bottom: 300, right: 35),
-					size: .zero
-				),
-				StoryLabel(
-				 text: "Pernahkah kamu merasakan hal yang dirasakan Putri dan Putra?",
-					type: .bold,
-					targetText: ["Pernahkah kamu merasakan hal yang dirasakan Putri dan Putra?"],
-				 alignment: .center,
-					fontsize: 25,
-				 padding: UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 35),
-					size: .zero
-				)
+                StoryLabel(
+                 text: "Jerawat",
+                 alignment: .left,
+                    fontsize: 25,
+                 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryLabel(
+                 text: "Menjelang menstruasi, beberapa perempuan akan memiliki jerawat akibat perubahan hormon.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryImage(
+                 imageDetails: ["c9_4", "Anak perempuan memperhatikan jerawat di wajahnya di depan kaca"],
+                 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: CGSize(width: 0, height: 250)
+                ),
+                StoryLabel(
+                 text: "Perbanyak minum air putih, konsumsi makanan sehat, serta mencuci wajah 2x sehari akan membantu meredakan jerawat.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                )
 			],
 			
 			[//page6
-				StoryLabel(
-				 text: "Hal itu disebut dengan perubahan suasana hati",
-					type: .highlight,
-					targetText: ["perubahan suasana hati"],
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryImage(
-				 imageDetails: ["c6_page6", "Penggambaran molekul hormon-hormon pada tubuh"],
-				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 240)
-				),
-				StoryLabel(
-				 text: "Ketika manusia akan beranjak dewasa, tubuh mulai memproduksi beberapa hormon baru. Hormon-hormon baru ini sering kali menyebabkan perubahan emosi yang sulit dikontrol.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Namun, seiring berjalannya waktu, kita akan belajar bagaimana cara mengontrol emosi dengan baik.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				)
+                StoryLabel(
+                 text: "Nyeri Payudara",
+                 alignment: .left,
+                    fontsize: 25,
+                 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryLabel(
+                 text: "Payudara akan terasa sakit, bengkak atau tak nyaman pada beberapa hari sebelum haid sampai saat awal menstruasi.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryImage(
+                 imageDetails: ["c9_5", "Anak perempuan memegang dadanya yang nyeri"],
+                 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: CGSize(width: 0, height: 250)
+                ),
+                StoryLabel(
+                 text: "Gunakan bra dan pakaian yang longgar agar tidak terlalu nyeri.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryLabel(
+                 text: "Namun jika terjadi benjolan atau nyeri  yang mengganggu tidur dan aktivitas sehari-hari, lebih baik periksa ke dokter.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                )
 			],
 			
 			[ //page7
-				StoryLabel(
-				 text: "“Mulai sekarang, jika kalian merasakan perubahan emosi, tahan untuk tidak berbicara berbicara. Karena Itu berpotensi menyakiti orang lain. Coba untuk menarik napas terlebih dahulu lalu hembuskan sebanyak lima kali agar tenang,” ujar ibu.",
-					type: .highlight,
-					targetText: ["menarik napas"],
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryImage(
-				 imageDetails: ["c6_page7", ""],
-				 padding:  UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 200)
-				),
-				 StoryButton(
-					 title: "Atur Napas",
-					 destination: "Breathing",
-					 padding: UIEdgeInsets(top: 70, left: 120, bottom: 0, right: 120),
-					 size: CGSize(width: 0, height: 40)
-				 )
+                StoryLabel(
+                 text: "Sakit Kepala",
+                 alignment: .left,
+                    fontsize: 25,
+                 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryLabel(
+                 text: "Kepala akan terasa sakit sebelum hingga berakhir menstruasi karena perubahan hormon dan banyaknya darah yang keluar selama menstruasi.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryImage(
+                 imageDetails: ["c9_6", "Anak perempuan memegang kepalanya yang sakit"],
+                 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: CGSize(width: 0, height: 250)
+                ),
+                StoryLabel(
+                 text: "Mengompres dingin area kepala yang sakit dapat membantu meredakan rasa sakitnya.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 5, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                )
+                
 			],
 			
-			[//page6
-				StoryLabel(
-				 text: "“Perubahan suasana hati bukan sesuatu yang aneh, kok. Ayah dan Ibu ketika sedang melewati masa pubertas juga mengalami hal yang sama. Yang penting adalah, kita mau belajar untuk mengontrolnya. Paham, nak?”",
-					type: .highlight,
-					targetText: ["bukan sesuatu yang aneh"],
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryImage(
-				 imageDetails: ["c6_page8", "Keluarga makan bersama di ruang makan"],
-				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 200)
-				),
-				StoryLabel(
-				 text: "Putra dan Putri menangguk serempak, “Paham!”",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Bagaimana denganmu?",
-					type: .bold,
-					targetText: ["Bagaimana denganmu?"],
-				 alignment: .center,
-				 padding: UIEdgeInsets(top: 30, left: 35, bottom: 0, right: 35),
-					size: .zero
-				),
-				StoryButton(
-					title: "Paham",
-					destination: "CourseEnd",
-					padding: UIEdgeInsets(top: 20, left: 120, bottom: 0, right: 120),
-					size: CGSize(width: 0, height: 40)
-				)
+            [ //page8
+                StoryLabel(
+                 text: "Perubahan Emosi",
+                 alignment: .left,
+                    fontsize: 25,
+                 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryLabel(
+                 text: "Kamu mungkin akan mudah tersinggung dan merasa kesal menjelang menstruasi. Atau mungkin juga sering menangis dan merasa cemas.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 5, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryImage(
+                 imageDetails: ["c9_7", "Anak perempuan memegang kepalanya yang sakit"],
+                 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: CGSize(width: 0, height: 250)
+                ),
+                StoryLabel(
+                 text: "Olahraga dan tidur dapat membantu menghilangkannya. ",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                
+                StoryLabel(
+                 text: "Namun jika kamu merasa sedih, putus asa, atau kekurangan energi selama dua minggu lebih, sebaiknya segera bicara dengan dokter.",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                )
+            ],
+            
+            [ //page7
+                StoryLabel(
+                 text: "Semua itu adalah beberapa PMS yang biasanya dirasakan oleh para perempuan.",
+                    type: .highlight,
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryLabel(
+                 text: "Kamu masih ingat apa saja gejala dan solusi masing-masing? Yuk coba bantu Putri meredakan gejalanya!",
+                    type: .highlight,
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryImage(
+                 imageDetails: ["c9_8", ""],
+                 padding:  UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
+                 size: CGSize(width: 0, height: 250)
+                ),
+                 StoryButton(
+                     title: "Pasang",
+                     destination: "PMS",
+                     padding: UIEdgeInsets(top: 30, left: 120, bottom: 0, right: 120),
+                     size: CGSize(width: 0, height: 40)
+                 )
+            ],
+            
+            [//page6
+                StoryLabel(
+                 text: "Dan masih banyak lagi bentuk PMS yang memang normal terjadi pada  5 - 14 hari sebelum hingga pada awal menstruasi. Jadi kamu tidak perlu khawatir.",
+                    type: .highlight,
+                    targetText: ["normal"],
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                StoryImage(
+                 imageDetails: ["c9_9", "Ibu menunjukkan kalendar menstruasi"],
+                 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
+                 size: CGSize(width: 0, height: 260)
+                ),
+                StoryLabel(
+                 text: "Apa sekarang kamu sudah paham?",
+                 alignment: .left,
+                 padding: UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
+                 size: .zero
+                ),
+                
+                StoryButton(
+                    title: "Paham",
+                    destination: "CourseEnd",
+                    padding: UIEdgeInsets(top: 20, left: 120, bottom: 0, right: 120),
+                    size: CGSize(width: 0, height: 40)
+                )
 			]
 		]
 	)

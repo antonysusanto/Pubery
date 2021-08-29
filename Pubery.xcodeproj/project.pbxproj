@@ -211,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				0ABF51D526B6C68D009A934F /* Courses.swift */,
+				0AFBFBB426AF49E20023A4DF /* Home */,
 				0A5212A926B9001200292FA2 /* CourseHome.swift */,
 				0A5212AD26B9005300292FA2 /* CourseIntroduction.swift */,
 				0A5212AB26B9003F00292FA2 /* CourseDetail.swift */,
@@ -412,7 +413,6 @@
 			isa = PBXGroup;
 			children = (
 				0AFBFBB126AF49C00023A4DF /* Onboarding */,
-				0AFBFBB426AF49E20023A4DF /* Home */,
 				0AFBFBB226AF49CD0023A4DF /* Course */,
 				0A69C25A26B12DA5002439E9 /* Games */,
 				0AFBFBB326AF49D50023A4DF /* Profile */,
