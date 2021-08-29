@@ -16,8 +16,8 @@ struct C11_MenghargaiSesama_Data {
 	
 	static let detail = CourseDetail(
 		category: "Sosial dan Emosi",
-		title: "Perubahan Suasana Hati",
-		age: "Disarankan untuk anak usia 8 tahun ke atas",
+		title: "Menghargai Sesama",
+		age: "",
 		imageDetails: ["c6_cover", "Dua anak menyapa dengan mengangkat tangan"]
 	)
 	
@@ -34,45 +34,38 @@ struct C11_MenghargaiSesama_Data {
 	static let content = CourseContent(
 		content: [
 			[//page1
-				StoryImage(
-				 imageDetails: ["c6_page1", "Anak perempuan sedang makan"],
-				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 300, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Suatu hari pada waktu makan malam,  Putra tidak sengaja menjatuhkan kue cokelat yang hendak dimakan Putri.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "“Ups maaf akan--,” belum sempat Putra selesai berbicara, hal yang mengejutkan terjadi.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Tiba-tiba saja Putri menangis! Padahal detik sebelumnya, Putri masih tertawa.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				)
+                StoryLabel(
+                text: "Sore adalah waktu untuk Putra dan Putri bermain usai belajar. Mereka belajar tentang nama-nama hewan.",
+                alignment: .left,
+                padding: UIEdgeInsets(top: 80, left: 35, bottom: 0, right: 35),
+                size: .zero
+                ),
+                StoryLabel(
+                text: "Putra dan Putri  mengenal hewan-hewn baru dan berhasil menyebut semua hewan tersebut.",
+                alignment: .left,
+                padding: UIEdgeInsets(top: 10, left: 35, bottom: 90, right: 35),
+                size: .zero
+                ),
+                StoryImage(
+                imageDetails: ["c11_page1", "Meja belajar dan jam dinding"],
+                padding:  UIEdgeInsets(top: 50, left: 35, bottom: 80, right: 35),
+                size: .zero)
 			],
 			
 			[//page2
 				StoryImage(
-				 imageDetails: ["c6_page2", "Anak perempuan menangis di samping ibu"],
+				 imageDetails: ["c11_page2", "Anak perempuan sedang menggambar dan anak laki-laki memegang bolą"],
 				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 260, right: 35),
 				 size: .zero
 				),
 				StoryLabel(
-				 text: "Putra pun kebingungan dengan sikap saudarinya yang tiba-tiba saja menangis, dan Putra semakin heran karena ibu dan ayahnya justru terlihat tenang. ",
+				 text: "“Apa Putri mau main bola denganku?”",
 				 alignment: .left,
 				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				),
 				StoryLabel(
-				 text: "Hanya mengusap-usap pundak Putri itu hingga saudarinya tenang.",
+				 text: "Namun tidak biasanya, waktu istirahat Putri ingin ia pakai untuk menggambar.“Tidak, aku memilih untuk menggambar saja”",
 				 alignment: .left,
 				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
 				 size: .zero
@@ -80,145 +73,86 @@ struct C11_MenghargaiSesama_Data {
 			],
 			
 			[//page3
-				StoryImage(
-				 imageDetails: ["c6_page3", "Perbedaan anak perempuan saat tersenyum senang dan sedih"],
-				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 300, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Dan ketika akhirnya Putri selesai menangis, Putra kembali terkejut karena Putri langsung meminta maaf.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 10, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "“Ibu, ayah, akhir-akhir ini aku merasa aneh. Suatu saat aku merasa gembira, namun tiba-tiba saja aku merasa ingin menangis tanpa alasan jelas. Dan yang membuatku kesal, aku sering kesulitan mengontrolnya,” ujar Putri.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				)
+                StoryLabel(
+                text: "“Tidak biasanya kamu menggambar. Sekarang ini lebih seru main bola”",
+                alignment: .left,
+                padding: UIEdgeInsets(top: 80, left: 35, bottom: 0, right: 35),
+                size: .zero
+                ),
+                StoryImage(
+                 imageDetails: ["c11_page3", "Anak perempuan cemberut"],
+                 padding:  UIEdgeInsets(top: 50, left: 45, bottom: 300, right: 45),
+                 size: .zero
+                ),
+                StoryLabel(
+                text: "Hal ini membuat Putri jengkel. “Menggambar juga seru",
+                alignment: .left, padding: UIEdgeInsets(top: 10, left: 50, bottom: 0, right: 50),
+                size: .zero
+                ),
+                StoryLabel(
+                text: "Perselisihan Putra dan Putri ini kecil namun menjadi perselisihan besar.",
+                alignment: .left, padding: UIEdgeInsets(top: 10, left: 50, bottom: 0, right: 50),
+                size: .zero)
 			],
 			
 			[//page4
-				StoryLabel(
-				 text: "Putra kemudian teringat dengan kejadian dua hari yang lalu. Dia juga pernah merasakan hal yang sama.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
 				StoryImage(
-				 imageDetails: ["c6_page4", "Perbedaan anak laki-lakisaat tersenyum senang dan sedih"],
-				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 300)
-				),
-				StoryLabel(
-				 text: "Tiba-tiba saja dia merasa sangat marah ketika temannya menyenggol lengannya saat ia sedang mencatat. Padahal itu masalah yang sangat sepele.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				)
+				 imageDetails: ["c11_page4", "Anak perempuan sedang marah"],
+				 padding:  UIEdgeInsets(top: 30, left: 35, bottom: 200, right: 60),
+                    size: .zero
+                ),
+                StoryLabel(
+                text: "Persetujuan didapat saat kedua orang setuju dengan tindakan yang akan mereka lakukan. Tandanya juga mereka nyaman dengan kehadiran satu sama lain.",
+                alignment: .left,
+                padding: UIEdgeInsets(top: 0, left: 35, bottom: 100, right: 35),
+                size: .zero)
 			],
 			
 			[//page5
 				StoryImage(
-				 imageDetails: ["c6_page5", "Penggambaran molekul hormon-hormon pada tubuh"],
-				 padding: UIEdgeInsets(top: 150, left: 35, bottom: 300, right: 35),
-					size: .zero
-				),
-				StoryLabel(
-				 text: "Pernahkah kamu merasakan hal yang dirasakan Putri dan Putra?",
-					type: .bold,
-					targetText: ["Pernahkah kamu merasakan hal yang dirasakan Putri dan Putra?"],
-				 alignment: .center,
-					fontsize: 25,
-				 padding: UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 35),
-					size: .zero
-				)
+                imageDetails: ["c11_page5", "Anak laki-laki meminta maaf sambil memberi krayon"],
+                padding: UIEdgeInsets(top: 30, left: 35, bottom: 200, right: 60),
+                size: .zero
+                ),
+                StoryLabel(
+                text: "Putra mengerti kemauan Putri dan meminta maaf. Putra dan Putri pun berbaikan dan berteman kembali.",
+                alignment: .left,
+                padding: UIEdgeInsets(top: 0, left: 35, bottom: 100, right: 35),
+                size: .zero
+                ),
+                StoryLabel(
+                text: "“Maaf Putri nih kamu boleh pake krayonku”",
+                alignment: .left,
+                padding: UIEdgeInsets(top: 10, left: 35, bottom: 90, right: 35),
+                size: .zero)
 			],
 			
 			[//page6
-				StoryLabel(
-				 text: "Hal itu disebut dengan perubahan suasana hati",
-					type: .highlight,
-					targetText: ["perubahan suasana hati"],
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
 				StoryImage(
-				 imageDetails: ["c6_page6", "Penggambaran molekul hormon-hormon pada tubuh"],
-				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 240)
-				),
-				StoryLabel(
-				 text: "Ketika manusia akan beranjak dewasa, tubuh mulai memproduksi beberapa hormon baru. Hormon-hormon baru ini sering kali menyebabkan perubahan emosi yang sulit dikontrol.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Namun, seiring berjalannya waktu, kita akan belajar bagaimana cara mengontrol emosi dengan baik.",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				)
-			],
-			
-			[ //page7
-				StoryLabel(
-				 text: "“Mulai sekarang, jika kalian merasakan perubahan emosi, tahan untuk tidak berbicara berbicara. Karena Itu berpotensi menyakiti orang lain. Coba untuk menarik napas terlebih dahulu lalu hembuskan sebanyak lima kali agar tenang,” ujar ibu.",
-					type: .highlight,
-					targetText: ["menarik napas"],
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryImage(
-				 imageDetails: ["c6_page7", ""],
-				 padding:  UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 200)
-				),
-				 StoryButton(
-					 title: "Atur Napas",
-					 destination: "Breathing",
-					 padding: UIEdgeInsets(top: 70, left: 120, bottom: 0, right: 120),
-					 size: CGSize(width: 0, height: 40)
-				 )
-			],
-			
-			[//page6
-				StoryLabel(
-				 text: "“Perubahan suasana hati bukan sesuatu yang aneh, kok. Ayah dan Ibu ketika sedang melewati masa pubertas juga mengalami hal yang sama. Yang penting adalah, kita mau belajar untuk mengontrolnya. Paham, nak?”",
-					type: .highlight,
-					targetText: ["bukan sesuatu yang aneh"],
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryImage(
-				 imageDetails: ["c6_page8", "Keluarga makan bersama di ruang makan"],
-				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 200)
-				),
-				StoryLabel(
-				 text: "Putra dan Putri menangguk serempak, “Paham!”",
-				 alignment: .left,
-				 padding: UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: .zero
-				),
-				StoryLabel(
-				 text: "Bagaimana denganmu?",
-					type: .bold,
-					targetText: ["Bagaimana denganmu?"],
-				 alignment: .center,
-				 padding: UIEdgeInsets(top: 30, left: 35, bottom: 0, right: 35),
-					size: .zero
-				),
-				StoryButton(
-					title: "Paham",
-					destination: "CourseEnd",
-					padding: UIEdgeInsets(top: 20, left: 120, bottom: 0, right: 120),
-					size: CGSize(width: 0, height: 40)
+				 imageDetails: ["c11_page6", "Anak perempuan tersenyum memegang krayon"],
+				 padding:  UIEdgeInsets(top: 5, left: 50, bottom: 310, right: 40),
+                    size: .zero
+                 ),
+                StoryLabel(
+                text: "Putra meminta persetujuan Dani, dan Putri. Mereka paham meminta persetujuan dengan orang lain sebelum berinterkasi fisik itu penting.",
+                alignment: .left,
+                padding: UIEdgeInsets(top: 5, left: 35, bottom: 0, right: 35),
+                size: .zero
+                ),
+                StoryLabel(
+                text: "Bagaimana denganmu?",
+                type: .bold,
+                targetText: ["Bagaimana denganmu?"],
+                alignment: .center,
+                fontsize: 20,
+                padding: UIEdgeInsets(top: 40, left: 50, bottom: 0, right: 50),
+                size: .zero
+                ),
+                StoryButton(
+                title: "Paham",
+                destination: "CourseEnd",
+                padding: UIEdgeInsets(top: 25, left: 120, bottom: 0, right: 120),
+                size: CGSize(width: 0, height: 40)
 				)
 			]
 		]
