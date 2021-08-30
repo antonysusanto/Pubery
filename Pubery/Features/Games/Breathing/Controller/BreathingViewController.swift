@@ -52,6 +52,7 @@ class BreathingViewController: UIViewController {
 		DispatchQueue.main.async {
 			self.label.text = "Kerja bagus, Kamu telah berhasil mengontrol emosimu!"
 			self.button.isHidden = false
+			PlaySoundAsset.play("ok")
 		}
 	}
 	

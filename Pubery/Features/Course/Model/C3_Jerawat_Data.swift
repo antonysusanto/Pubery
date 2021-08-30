@@ -35,7 +35,7 @@ struct C3_Jerawat_Data {
 		content: [
 			[//page1
 				StoryImage(
-                imageDetails: ["c3_page1", "Dua anak sedan kebingungan"],
+                imageDetails: ["c3_page1", "Dua anak sedang kebingungan"],
                 padding:  UIEdgeInsets(top: 50, left: 10, bottom: 250, right: 10),
                 size: .zero
 				),

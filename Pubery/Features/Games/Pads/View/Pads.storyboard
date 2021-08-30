@@ -24,13 +24,17 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m1b_celana" translatesAutoresizingMaskIntoConstraints="NO" id="l4F-3I-13X">
                                 <rect key="frame" x="30" y="177" width="354" height="335"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="335" id="7nJ-GP-0pq"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m1b_pembalut_garis" translatesAutoresizingMaskIntoConstraints="NO" id="Dml-i5-haM">
-                                <rect key="frame" x="140" y="279" width="134" height="130"/>
+                                <rect key="frame" x="157" y="279.5" width="100" height="130"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KXs-vI-dds"/>
                                     <constraint firstAttribute="height" constant="130" id="daa-nC-3pz"/>
                                 </constraints>
                             </imageView>
@@ -55,7 +59,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DXj-xz-d5X">
-                                <rect key="frame" x="350" y="59" width="44" height="22"/>
+                                <rect key="frame" x="373" y="64" width="21" height="22"/>
                                 <color key="tintColor" red="0.78431372549019607" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
@@ -67,9 +71,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m1b_pembalut" translatesAutoresizingMaskIntoConstraints="NO" id="9KY-KE-k4q">
-                                <rect key="frame" x="140" y="512" width="134" height="145"/>
+                                <rect key="frame" x="157" y="512" width="100" height="145"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" allowsDirectInteraction="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="1WX-Mf-NJX"/>
+                                    <constraint firstAttribute="width" constant="100" id="JcC-dN-cXj"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -80,21 +89,16 @@
                             <constraint firstItem="l4F-3I-13X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6dn-oh-IsN"/>
                             <constraint firstItem="l4F-3I-13X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="133" id="8Le-x8-XCk"/>
                             <constraint firstItem="Dml-i5-haM" firstAttribute="centerX" secondItem="l4F-3I-13X" secondAttribute="centerX" id="A0n-tS-sBl"/>
-                            <constraint firstItem="9KY-KE-k4q" firstAttribute="top" secondItem="l4F-3I-13X" secondAttribute="bottom" id="BXo-vr-cQs"/>
-                            <constraint firstItem="Dml-i5-haM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="CcN-bX-qrd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lkM-3b-g9W" secondAttribute="bottom" constant="150" id="Khb-cQ-ZPD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l4F-3I-13X" secondAttribute="trailing" constant="30" id="M84-AX-bfH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DXj-xz-d5X" secondAttribute="trailing" constant="20" id="MTC-yh-h2l"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dml-i5-haM" secondAttribute="trailing" constant="140" id="Qzf-Lu-vlr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9KY-KE-k4q" secondAttribute="trailing" constant="140" id="U9S-rQ-QV9"/>
-                            <constraint firstItem="Dml-i5-haM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="235" id="W96-Ze-byW"/>
+                            <constraint firstItem="9KY-KE-k4q" firstAttribute="centerX" secondItem="8Cs-Wn-JSN" secondAttribute="centerX" id="RZX-aE-r7q"/>
                             <constraint firstItem="lkM-3b-g9W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xbc-j2-sDK"/>
                             <constraint firstItem="8Cs-Wn-JSN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bcs-pA-CxR"/>
-                            <constraint firstItem="9KY-KE-k4q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="dgW-6e-LRq"/>
-                            <constraint firstItem="DXj-xz-d5X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="350" id="fOJ-x9-uOU"/>
-                            <constraint firstItem="DXj-xz-d5X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="h63-cR-Z5M"/>
+                            <constraint firstItem="Dml-i5-haM" firstAttribute="centerY" secondItem="l4F-3I-13X" secondAttribute="centerY" id="gif-Mw-95w"/>
+                            <constraint firstItem="DXj-xz-d5X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="h63-cR-Z5M"/>
                             <constraint firstItem="8Cs-Wn-JSN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="hts-YY-6CI"/>
-                            <constraint firstItem="Dml-i5-haM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lWD-Mj-cTj"/>
+                            <constraint firstItem="9KY-KE-k4q" firstAttribute="top" secondItem="l4F-3I-13X" secondAttribute="bottom" id="o36-e5-Xul"/>
                             <constraint firstAttribute="bottom" secondItem="8Cs-Wn-JSN" secondAttribute="bottom" constant="90" id="u09-2I-YSd"/>
                         </constraints>
                     </view>
