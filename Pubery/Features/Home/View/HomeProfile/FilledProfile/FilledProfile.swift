@@ -11,7 +11,7 @@ class FilledProfile: UIView {
     
     @IBOutlet weak var namelabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
-    @IBOutlet weak var content: UIView!
+    @IBOutlet var content: UIView!
     @IBOutlet weak var progressView: CircularProgressBar!
 	var selectedChild: String!
 	
