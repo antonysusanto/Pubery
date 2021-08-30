@@ -60,19 +60,19 @@ class ShavingViewController: UIViewController {
             if movedView.frame.intersects(targetImage1.frame) {
                 counterIntersect += 1
                 targetImage1.alpha = CGFloat(Float(50-counterIntersect)/50)
-                if counterIntersect > 40 {
+                if counterIntersect > 30 {
                     targetImage1.isHidden = true
                 }
             } else if movedView.frame.intersects(targetImage2.frame) {
                 counterIntersect += 1
                 targetImage2.alpha = CGFloat(Float(50-counterIntersect)/50)
-                if counterIntersect > 40 {
+                if counterIntersect > 30 {
                     targetImage2.isHidden = true
                 }
             } else if movedView.frame.intersects(targetImage3.frame) {
                 counterIntersect += 1
                 targetImage3.alpha = CGFloat(Float(100-counterIntersect)/100)
-                if counterIntersect > 100 {
+                if counterIntersect > 30 {
                     targetImage3.isHidden = true
                 }
             } else if movedView.frame.intersects(targetImage4.frame){

@@ -47,7 +47,7 @@
                                     <action selector="endAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Inb-dA-1d1"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m7_muka" translatesAutoresizingMaskIntoConstraints="NO" id="WGG-KU-P1g">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M7_muka" translatesAutoresizingMaskIntoConstraints="NO" id="WGG-KU-P1g">
                                 <rect key="frame" x="60" y="224" width="294" height="246"/>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m7_alat1" translatesAutoresizingMaskIntoConstraints="NO" id="QvF-Pg-E8C">
@@ -154,6 +154,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="M7_muka" width="229" height="223"/>
         <image name="background" width="414" height="780"/>
         <image name="m7_alat1" width="75" height="122"/>
         <image name="m7_mini_kanan" width="75" height="73"/>
@@ -161,7 +162,6 @@
         <image name="m7_mini_palingKanan" width="77" height="72"/>
         <image name="m7_mini_palingKiri" width="77" height="81"/>
         <image name="m7_mini_tengah" width="130" height="71"/>
-        <image name="m7_muka" width="229" height="223"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>
