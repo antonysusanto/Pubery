@@ -36,7 +36,7 @@ struct C7_PertumbuhanRambut_Data {
 			[//page1
 				StoryImage(
 				 imageDetails: ["c7_page1", "tiga anak laki-laki sedang berjalan"],
-				 padding:  UIEdgeInsets(top: 120, left: 20, bottom: 200, right: 35),
+				 padding:  UIEdgeInsets(top: 120, left: 20, bottom: 220, right: 35),
 				 size: .zero
 				),
 				StoryLabel(
@@ -57,7 +57,7 @@ struct C7_PertumbuhanRambut_Data {
 				StoryImage(
 				 imageDetails: ["c7_page2", "anak laki-laki menunjuk papan iklan pencukur rambut"],
 				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 200, right: 35),
-				 size: .zero
+				 size: CGSize(width: 0, height: 250)
 				),
 				StoryLabel(
 				 text: " “Emang seumuran kita udah perlu beli ya?” timpal temannya.",
@@ -71,7 +71,7 @@ struct C7_PertumbuhanRambut_Data {
 				StoryImage(
 				 imageDetails: ["c7_page3", "Ketiga anak laki-laki saling melihat dagu Mereka"],
                     //padding:  UIEdgeInsets(top: 150, left: 20, bottom: 180, right: 35),
-				 padding:  UIEdgeInsets(top: 200, left: 20, bottom: 230, right: 35),
+				 padding:  UIEdgeInsets(top: 180, left: 20, bottom: 230, right: 35),
 				 size: .zero
 				),
 				StoryLabel(
@@ -99,7 +99,7 @@ struct C7_PertumbuhanRambut_Data {
 				StoryImage(
 				 imageDetails: ["c7_page4", "anak laki-laki memiliki jenggot pada dagunya"],
 				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 240)
+				 size: CGSize(width: 0, height: 220)
 				),
                 StoryButton(
                     title: "Cukur",
@@ -138,7 +138,7 @@ struct C7_PertumbuhanRambut_Data {
 				StoryImage(
 				 imageDetails: ["c7_page6", "Letak centang pada bagian tumbuhnya rambut pada kedua ketiak, jenggot dan kemaluan"],
 				 padding:  UIEdgeInsets(top: 45, left: 35, bottom: 0, right: 35),
-                    size: CGSize(width: 0, height: 305)
+                    size: CGSize(width: 0, height: 260)
                    // size: .zero
 				),
 				StoryLabel(
@@ -161,7 +161,7 @@ struct C7_PertumbuhanRambut_Data {
 				StoryImage(
 				 imageDetails: ["c7_page7", "ilustrasi struktur kulit dan rambut"],
 				 padding:  UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
-                    size: .zero
+                    size: CGSize(width: 0, height: 260)
 				),
                 StoryLabel(
                  text: "Selain itu, kondisi folikel pada kulit yang memproduksi rambut juga dapat mempengaruhi pertumbuhan rambut.",

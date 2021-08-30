@@ -107,7 +107,7 @@ struct C10_PersetujuanDanInteraksiFisik_Data {
                 StoryImage(
                 imageDetails: ["c10_page4", "Orang dewasa mencoba memeluk anak dan anak menolak"],
                 padding:  UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10),
-                size: CGSize(width: 0, height:300)
+                size: CGSize(width: 0, height: 280)
                 ),
                 StoryLabel(
                 text: "Kamu bisa menolak jika merasa dengan ucapan yang mudah dimengerti agar tidak menyakiti perasaan orang lain.",
@@ -137,7 +137,7 @@ struct C10_PersetujuanDanInteraksiFisik_Data {
                 StoryLabel(
                 text: "Persetujuan didapat saat kedua orang setuju dengan tindakan yang akan mereka lakukan. Tandanya juga mereka nyaman dengan kehadiran satu sama lain.",
                 alignment: .left,
-                padding: UIEdgeInsets(top: 65, left: 35, bottom: 0, right: 35),
+                padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
                 size: .zero)
 			],
 			

@@ -60,7 +60,7 @@ struct C9_GejalaMenstruasi_Data {
 				StoryImage(
 				 imageDetails: ["c9_2", "Anak perempuan dikelilingi gejala-gejala menstruasi"],
 				 padding:  UIEdgeInsets(top: 50, left: 35, bottom: 260, right: 35),
-				 size: .zero
+				 size: CGSize(width: 0, height: 280)
 				),
 				StoryLabel(
 				 text: "Bahkan ada juga yang tidak mengalaminya sama sekali.",
@@ -80,6 +80,8 @@ struct C9_GejalaMenstruasi_Data {
 			[//page4
 				StoryLabel(
 				 text: "Kram Perut",
+				type: .bold,
+				targetText: ["Kram Perut"],
 				 alignment: .left,
 					fontsize: 25,
 				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
@@ -94,7 +96,7 @@ struct C9_GejalaMenstruasi_Data {
 				StoryImage(
 				 imageDetails: ["c9_3", "Anak perempuan memegang perutnya yang sakit"],
 				 padding:  UIEdgeInsets(top: 40, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 250)
+				 size: CGSize(width: 0, height: 240)
 				),
 				StoryLabel(
 				 text: "Memeluk sebotol air hangat di perut dapat membantu meredakan rasa sakit.",
@@ -114,6 +116,8 @@ struct C9_GejalaMenstruasi_Data {
 			[//page5
 				StoryLabel(
 				 text: "Jerawat",
+				 type: .bold,
+				 targetText: ["Jerawat"],
 				 alignment: .left,
 					fontsize: 25,
 				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
@@ -128,7 +132,7 @@ struct C9_GejalaMenstruasi_Data {
 				StoryImage(
 				 imageDetails: ["c9_4", "Anak perempuan memperhatikan jerawat di wajahnya di depan kaca"],
 				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 250)
+				 size: CGSize(width: 0, height: 240)
 				),
 				StoryLabel(
 				 text: "Perbanyak minum air putih, konsumsi makanan sehat, serta mencuci wajah 2x sehari akan membantu meredakan jerawat.",
@@ -141,6 +145,8 @@ struct C9_GejalaMenstruasi_Data {
 			[//page6
 				StoryLabel(
 				 text: "Nyeri Payudara",
+				 type: .bold,
+				 targetText: ["Nyeri Payudara"],
 				 alignment: .left,
 					fontsize: 25,
 				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
@@ -155,7 +161,7 @@ struct C9_GejalaMenstruasi_Data {
 				StoryImage(
 				 imageDetails: ["c9_5", "Anak perempuan memegang dadanya yang nyeri"],
 				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 250)
+				 size: CGSize(width: 0, height: 220)
 				),
 				StoryLabel(
 				 text: "Gunakan bra dan pakaian yang longgar agar tidak terlalu nyeri.",
@@ -174,6 +180,8 @@ struct C9_GejalaMenstruasi_Data {
 			[ //page7
 				StoryLabel(
 				 text: "Sakit Kepala",
+				 type: .bold,
+				 targetText: ["Sakit Kepala"],
 				 alignment: .left,
 					fontsize: 25,
 				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
@@ -188,7 +196,7 @@ struct C9_GejalaMenstruasi_Data {
 				StoryImage(
 				 imageDetails: ["c9_6", "Anak perempuan memegang kepalanya yang sakit"],
 				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 250)
+				 size: CGSize(width: 0, height: 240)
 				),
 				StoryLabel(
 				 text: "Mengompres dingin area kepala yang sakit dapat membantu meredakan rasa sakitnya.",
@@ -202,6 +210,8 @@ struct C9_GejalaMenstruasi_Data {
 			[ //page8
 				StoryLabel(
 				 text: "Perubahan Emosi",
+				 type: .bold,
+				 targetText: ["Perubahan Emosi"],
 				 alignment: .left,
 					fontsize: 25,
 				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
@@ -216,7 +226,7 @@ struct C9_GejalaMenstruasi_Data {
 				StoryImage(
 				 imageDetails: ["c9_7", "Anak perempuan memegang kepalanya yang sakit"],
 				 padding:  UIEdgeInsets(top: 20, left: 35, bottom: 0, right: 35),
-				 size: CGSize(width: 0, height: 250)
+				 size: CGSize(width: 0, height: 220)
 				),
 				StoryLabel(
 				 text: "Olahraga dan tidur dapat membantu menghilangkannya. ",
@@ -245,7 +255,7 @@ struct C9_GejalaMenstruasi_Data {
 				 text: "Kamu masih ingat apa saja gejala dan solusi masing-masing? Yuk coba bantu Putri meredakan gejalanya!",
 					type: .highlight,
 				 alignment: .left,
-				 padding: UIEdgeInsets(top: 50, left: 35, bottom: 0, right: 35),
+				 padding: UIEdgeInsets(top: 30, left: 35, bottom: 0, right: 35),
 				 size: .zero
 				),
 				StoryImage(
