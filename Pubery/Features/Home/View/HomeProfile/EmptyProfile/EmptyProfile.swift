@@ -11,7 +11,7 @@ class EmptyProfile: UIView {
 
     @IBOutlet weak var line1Label: UILabel!
     @IBOutlet weak var line2Label: UILabel!
-    @IBOutlet weak var content: UIView!
+    @IBOutlet var content: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
