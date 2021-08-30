@@ -17,17 +17,20 @@ class PMSViewController: UIViewController {
 	@IBOutlet weak var answerView3: UIView!
 	@IBOutlet weak var answerView4: UIView!
 	@IBOutlet weak var answerView5: UIView!
+	@IBOutlet weak var stack1: UIStackView!
+	@IBOutlet weak var stack2: UIStackView!
+	@IBOutlet weak var finishOverlay: UIView!
 	
-	var mainImages = ["c2_page1", "c2_page2", "c2_page3"]
+	var mainImages = ["c9_3", "c9_5", "c9_7"]
 	var symptoms = ["Kram Perut", "Nyeri Payudara", "Perubahan Emosi"]
 	var questions = ["Apa yang Putri butuhkan?"]
-	var answers = [3, 4, 1]
+	var answers = [4, 1, 3]
 	var index = 0
 	var timer: Timer?
 	var timerCounter = 0
 	var views:[UIView] = []
+	var lastTag = 0
 	let alert = CustomAlert()
-	let alert2 = CustomAlert()
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +81,12 @@ class PMSViewController: UIViewController {
 						} else {
 							//finish
 							
-							self.alert2.showAlert(with: "Putri merasa lebih baik, kerja bagus!", on: self)
+							self.mainImage.isHidden = true
+							self.symptom.isHidden = true
+							self.question.isHidden = true
+							self.stack1.isHidden = true
+							self.stack2.isHidden = true
+							self.finishOverlay.isHidden = false
 						}
 					}
 					
@@ -101,23 +109,42 @@ class PMSViewController: UIViewController {
 		self.navigationController?.popViewController(animated: false)
 	}
 	
+	@IBAction func finish(_ sender: Any) {
+		self.navigationController?.popViewController(animated: false)
+	}
+	
 	@IBAction func answer1(_ sender: UIButton) {
-		answer(view: answerView1, answerGiven: sender.tag)
+		if (lastTag != sender.tag){
+			lastTag = sender.tag
+			answer(view: answerView1, answerGiven: sender.tag)
+		}
 	}
 	
 	@IBAction func answer2(_ sender: UIButton) {
-		answer(view: answerView2, answerGiven: sender.tag)
+		if (lastTag != sender.tag){
+			lastTag = sender.tag
+			answer(view: answerView2, answerGiven: sender.tag)
+		}
 	}
 	
 	@IBAction func answer3(_ sender: UIButton) {
-		answer(view: answerView3, answerGiven: sender.tag)
+		if (lastTag != sender.tag){
+			lastTag = sender.tag
+			answer(view: answerView3, answerGiven: sender.tag)
+		}
 	}
 	
 	@IBAction func answer4(_ sender: UIButton) {
-		answer(view: answerView4, answerGiven: sender.tag)
+		if (lastTag != sender.tag){
+			lastTag = sender.tag
+			answer(view: answerView4, answerGiven: sender.tag)
+		}
 	}
 	
 	@IBAction func answer5(_ sender: UIButton) {
-		answer(view: answerView5, answerGiven: sender.tag)
+		if (lastTag != sender.tag){
+			lastTag = sender.tag
+			answer(view: answerView5, answerGiven: sender.tag)
+		}
 	}
 }
